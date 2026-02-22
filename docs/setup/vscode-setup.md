@@ -1,4 +1,4 @@
-# Set Up VS Code for Claude Code
+# Set Up "VS Code"
 
 **VS Code is a free code editor by Microsoft. You don't need to write code — it's just the container that makes Claude Code easier to use.**
 
@@ -89,7 +89,9 @@ Click any file in the Explorer to open it in the editor. For example, if your pr
 
 ![VS Code with a project file open in the editor and terminal on the right](../images/vscode-project-with-file.png)
 
-This is the layout you'll use daily: **files on the left, document in the center, Claude on the right**. As you develop proposals, papers, or any other documents, you can read and edit them directly in the center panel while Claude works alongside you in the terminal.
+This is a very early-stage project — a nascent study exploring randomized trials of gang peace mediation and focused deterrence-style policing in Cali, Colombia. You can see the folder structure is basic: just a few subfolders and a `PROJECT_INDEX.md` that I created with Claude Code to start organizing things. Not much has happened here yet, and that's fine. Every project starts like this.
+
+This is the layout you'll use daily: **files on the left, document in the center, Claude on the right**. As you develop proposals, papers, or any other documents, you can read and edit them directly in the center panel while Claude works alongside you in the terminal. For a look at what a more mature project looks like, see [below](#what-a-real-project-looks-like).
 
 ---
 
@@ -106,6 +108,31 @@ Claude Code will start up and show a welcome message. You're now ready to go. So
 - **Start a conversation** — just type what you want to do in plain English
 - **Use `/prompt`** — if you want to paste a big block of text or do something complex, this formats it into a structured prompt before executing
 - **Use `/resume`** — to pick up where you left off in a previous session
+
+---
+
+## What a Real Project Looks Like
+
+The Cali example above is a project in its infancy. Here's what a more developed project looks like — the Medellin Mental Health Study, a set of experiments testing in-person and AI-based ways of improving adolescent mental health and reducing school dropouts:
+
+![A mature research project in VS Code — sophisticated folder structure, proposal draft, and Claude Code running](../images/vscode-full-project.png)
+
+A few things to notice:
+
+**The folder structure on the left is much more developed.** This project has dedicated folders for the paper, presentations, literature, referee reports, submissions, grants (with subfolders for different funders and years), survey instruments, field materials, IRB documents, and a project index. Claude Code helped build this structure using the [project management workflow](../workflows/project-management.md), and it maintains a living `PROJECT_INDEX.md` that tracks the status of everything.
+
+**The center panel shows an active proposal draft.** This was written using Claude Code's [proposal writing skills](../workflows/index.md) — I tell Claude the funder, the theme, and what I want the proposal to cover, and it draws on the project's Google Doc (which has previous proposals from earlier stages), the research progress document, and the project index to make sure every person, timeline, and budget figure is correct. I can iterate on the draft with Claude or edit it manually — my choice.
+
+**Claude Code is running on the right, ready for whatever comes next.** At this stage of a project, I'm not just using basic commands. I might:
+
+- **Run `/prompt`** to format a complex request before executing it
+- **Use `/write-proposal`** to draft or revise a funding proposal that pulls from all the project's documents
+- **Launch `/review-plan`** to stress-test a research design before committing to it
+- **Ask Claude to act as a critical reviewer** — an education economist, a clinical psychologist, a sociologist, or an AI specialist — and generate the kind of feedback you'd get at a seminar or from a journal referee
+- **Run `/checkin`** to get a morning briefing on what's happened across email, calendar, and project docs since the last session
+- **Use `/project-status-update`** to generate a status report for collaborators
+
+For more on these workflows, see [Skills in Action](../workflows/index.md) and the [Executive Assistant](../toolkit/executive-assistant.md) workflow.
 
 ---
 

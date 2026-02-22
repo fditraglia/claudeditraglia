@@ -37,7 +37,7 @@ The two most popular options:
 |------|---------------|------|
 | **[Install — Mac](../toolkit/install-mac.md)** | Install Claude Code on macOS. No prior Terminal experience needed. | 15 min |
 | **[Install — Windows](../toolkit/install-windows.md)** | Install Claude Code on Windows. No prior PowerShell experience needed. | 15 min |
-| **[Set Up VS Code](vscode-setup.md)** *(optional)* | Install VS Code and the Claude Code extension. My preferred way to work, but not required. | 15 min |
+| **[Set Up "VS Code"](vscode-setup.md)** *(optional)* | Install VS Code and the Claude Code extension. My preferred way to work, but not required. | 15 min |
 | **[Your CLAUDE.md](../toolkit/claude-md.md)** | Create the instruction file that makes Claude Code work *for you*. | 30 min |
 | **[MCP Setup](../toolkit/mcp-setup.md)** | Connect Claude Code to Gmail, Google Docs, Calendar, and other services. | 30-60 min |
 

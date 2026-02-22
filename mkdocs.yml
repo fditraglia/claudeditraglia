@@ -73,7 +73,7 @@ nav:
     - setup/index.md
     - Install (Mac): toolkit/install-mac.md
     - Install (Windows): toolkit/install-windows.md
-    - Set Up VS Code: setup/vscode-setup.md
+    - Set Up "VS Code": setup/vscode-setup.md
     - Your CLAUDE.md: toolkit/claude-md.md
     - MCP Setup: toolkit/mcp-setup.md
     - How Skills Work: toolkit/skills-guide.md
