@@ -78,6 +78,21 @@ h1, h2 {
   opacity: 0.85;
 }
 
+/* Teal inline badge for cards */
+.badge-teal {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--md-accent-fg-color);
+  border: 1.5px solid var(--md-accent-fg-color);
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
 /* "Start here" badge — visually distinct from Early access */
 .badge-start {
   display: inline-block;
