@@ -24,17 +24,17 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 ## What You Can Do Right Away
 
 <div class="bento-grid" markdown>
-<div class="bento-cell bento-cell--featured" markdown>
-:material-microphone-outline:{ .bento-icon } **[Speak, don't type](essentials/wispr-flow.md)** — Dictate into any app at full speaking speed. Wispr Flow transcribes with context-awareness; what takes 10 minutes to type takes 90 seconds to say. <span class="bento-tag bento-tag--nocode">No code needed</span>
+<div class="bento-cell" markdown>
+:material-microphone-outline:{ .bento-icon } **[Speak, don't type](essentials/wispr-flow.md)** — Dictate into any app at full speaking speed. What takes 10 minutes to type takes 90 seconds to say. <span class="bento-tag bento-tag--nocode">No code needed</span>
+</div>
+<div class="bento-cell" markdown>
+:material-clipboard-text-clock-outline:{ .bento-icon } **[Transcribe and track everything](essentials/granola.md)** — Meetings, phone calls, and hallway conversations become searchable transcripts, action items, and project logs — automatically. <span class="bento-tag bento-tag--nocode">No code needed</span>
 </div>
 <div class="bento-cell" markdown>
 :material-head-lightbulb-outline:{ .bento-icon } **[Use AI without guessing](essentials/prompting.md)** — Know which tool to use for which task, how to write prompts that get useful answers, and when not to bother. <span class="bento-tag bento-tag--nocode">No code needed</span>
 </div>
 <div class="bento-cell" markdown>
 :material-email-check-outline:{ .bento-icon } **[Inbox zero, in seconds](toolkit/executive-assistant.md)** — AI triage that learns your priorities and sorts hundreds of emails. The cleanup took me from 5,000 unread to six. <span class="bento-tag">Claude Code</span>
-</div>
-<div class="bento-cell" markdown>
-:material-clipboard-text-clock-outline:{ .bento-icon } **[Meetings that remember themselves](toolkit/executive-assistant.md)** — Transcripts become decisions, action items, and project log entries — without you touching a keyboard. <span class="bento-tag">Claude Code</span>
 </div>
 <div class="bento-cell" markdown>
 :material-view-dashboard-outline:{ .bento-icon } **[Run 10 projects at once](toolkit/skill-library.md)** — Status dashboards, session capture, and weekly reviews that write themselves. <span class="bento-tag">Claude Code</span>
