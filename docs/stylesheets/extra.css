@@ -276,6 +276,83 @@ h1, h2 {
   font-size: 0.7rem;
 }
 
+/* ============================
+   Behind the Build — narrative blocks
+   ============================ */
+.narrative-block {
+  border-left: 3px solid var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 4%, var(--md-default-bg-color));
+  border-radius: 0 8px 8px 0;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+[data-md-color-scheme="slate"] .narrative-block {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 6%, var(--md-default-bg-color));
+}
+
+/* Teaser line — always visible hook */
+.md-typeset .narrative-teaser {
+  font-size: 1.05rem !important;
+  font-style: italic;
+  color: var(--md-default-fg-color);
+  margin-bottom: 0.6rem !important;
+  line-height: 1.55;
+}
+
+.narrative-icon {
+  color: var(--md-accent-fg-color);
+  margin-right: 0.3rem;
+}
+
+/* Nested details inside narrative block */
+.narrative-block details {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+.narrative-block details summary {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--md-accent-fg-color);
+  padding: 0.4rem 0;
+}
+
+.narrative-block details[open] summary {
+  border-bottom: 1px solid color-mix(in srgb, var(--md-accent-fg-color) 20%, transparent);
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+}
+
+.md-typeset .narrative-block details p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Field notes — inline narrative at decision points */
+.md-typeset .admonition.field-note,
+.md-typeset details.field-note {
+  border-left-color: var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 3%, var(--md-default-bg-color));
+  font-size: 0.88rem;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.field-note,
+[data-md-color-scheme="slate"] .md-typeset details.field-note {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 5%, var(--md-default-bg-color));
+}
+
+/* What I Wish I'd Known — bottom summary */
+.md-typeset .admonition.lessons,
+.md-typeset details.lessons {
+  border-left-color: var(--md-accent-fg-color);
+}
+
 /* Keyboard nav accessibility for cards */
 .md-typeset .grid.cards > ul > li:focus-within {
   border-color: var(--md-accent-fg-color);
