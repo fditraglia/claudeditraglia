@@ -5,7 +5,7 @@ hide:
 
 # Claude Blattman
 
-<p class="hero-pitch">Tools I use to manage 15 research projects across several countries (and my life, so I can do more research). Examples and tutorials for productivity and sanity.</p>
+<p class="hero-pitch">Tools I use to manage 15+ research and related projects across several countries (and my life, so I can do more research). Examples and tutorials for productivity and sanity.</p>
 
 <div class="hero-buttons">
 <a href="toolkit/" class="md-button md-button--primary">Get the system</a>
@@ -16,7 +16,7 @@ hide:
 </div>
 
 <div class="credibility-strip" markdown>
-By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I manage more than a dozen research projects across multiple countries. A year ago I started building AI workflows with Claude Code. What seemed impossible then — inbox triage, meeting capture, proposal drafting, project dashboards — is running today. Claude Blattman isn't real, but the tools are.
+By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I manage 15+ research and related projects across multiple countries. A year ago I started building AI workflows with Claude Code. What seemed impossible then — inbox triage, meeting capture, proposal drafting, project dashboards — is running today. Claude Blattman isn't real, but the tools are.
 </div>
 
 ## What You Can Do Right Away
@@ -81,7 +81,7 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 
     <span class="badge-start">Project management, research workflows, and the skills I actually use</span>
 
-    The original stuff. 30+ downloadable skills built by a professor managing 15 active research projects: email triage that learns your priorities, meeting-to-action-item pipelines, project dashboards, proposal drafting, and literature workflows. This is also where you learn the intermediate arts — recursive self-improvement, teaching Claude your preferences, and building workflows that get better as you correct them.
+    The original stuff. 30+ downloadable skills built by a professor managing 15+ research and related projects: email triage that learns your priorities, meeting-to-action-item pipelines, project dashboards, proposal drafting, and literature workflows. This is also where you learn the intermediate arts — recursive self-improvement, teaching Claude your preferences, and building workflows that get better as you correct them.
 
     **What you get:** A skill library you can install and use immediately, plus the thinking behind how they work.
 

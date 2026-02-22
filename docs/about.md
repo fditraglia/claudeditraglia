@@ -24,7 +24,7 @@ I'm not a coder. The closest I come to programming is writing statistical analys
 
 ## How I Got Here
 
-Like most academics, the work that matters — [the research](https://chrisblattman.com/research/), the writing, the thinking — gets buried under an avalanche of email, coordination, proposals, and administrative overhead. I manage more than a dozen research projects simultaneously, each with distributed teams across multiple countries. I spend more time answering emails and writing grant reports than doing the science I was trained for.
+Like most academics, the work that matters — [the research](https://chrisblattman.com/research/), the writing, the thinking — gets buried under an avalanche of email, coordination, proposals, and administrative overhead. I manage 15+ research and related projects simultaneously, each with distributed teams across multiple countries. I spend more time answering emails and writing grant reports than doing the science I was trained for.
 
 About a year ago, I started using AI chatbots. They were useful — better drafts, faster brainstorming, decent writing feedback. But they were essentially fancy text boxes. Copy in, copy out. The time savings were real but modest.
 
