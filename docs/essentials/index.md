@@ -12,7 +12,7 @@
 
     I also recommend using projects (available in both ChatGPT and Claude) to organize your chats into themes and groups. Below I show some powerful examples of how to use project folders to take advantage of all the power they bring.
 
-**One warning:** Chatbots hallucinate. They invent citations, state falsehoods confidently, and get current events wrong. Trust the reasoning and the structure, verify the facts. Think of them as a brilliant, well-read colleague with a tendency to make things up — though the advice here will help you get that under control.
+    **One warning:** Chatbots hallucinate. They invent citations, state falsehoods confidently, and get current events wrong. Trust the reasoning and the structure, verify the facts. Think of them as a brilliant, well-read colleague with a tendency to make things up — though the advice here will help you get that under control.
 
 ---
 
