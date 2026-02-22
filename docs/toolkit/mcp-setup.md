@@ -2,6 +2,13 @@
 
 MCP (Model Context Protocol) servers extend Claude Code's capabilities by connecting to external services. Once connected, Claude can read your email, search your documents, check your calendar, and more — directly from the terminal.
 
+!!! info "Time and difficulty"
+    **Google Workspace** (Gmail, Docs, Calendar): ~45-60 minutes. The OAuth credential setup is the hardest part — it requires creating a project in Google Cloud Console. Follow each step carefully.
+    **Zotero, Apple apps**: ~10 minutes each. Just an API key or a quick install.
+    **WhatsApp**: ~15 minutes, but sessions can drop and require re-setup.
+
+    **Don't want to set up MCP yet?** That's fine. Claude Code works without any integrations — it can read and edit files, format prompts, review plans, and capture session notes. The [First Session Skills](../workflows/first-session-skills.md) all work without MCP. You can always come back and add integrations later.
+
 ---
 
 ## What MCP Does
@@ -23,6 +30,35 @@ You don't need all of these. Start with whichever service you use most (Gmail is
 
 ---
 
+## Don't Want MCP Yet? That's Fine.
+
+MCP is powerful but optional. Claude Code works without any integrations — it can read and edit files on your computer, format prompts, review plans, and capture session notes. All of the [First Session Skills](../workflows/first-session-skills.md) work without MCP.
+
+**What you can do without MCP:**
+
+- `/prompt` — format and execute structured prompts
+- `/review-plan` — stress-test any plan with expert critique
+- `/done` — capture session decisions and follow-ups
+- Edit files, organize folders, draft documents
+- Everything in the [Essentials](../essentials/index.md) section
+
+**What requires MCP:**
+
+- Email triage and inbox management (Gmail MCP)
+- Calendar queries and scheduling (Google Calendar MCP)
+- Weekly project reviews that pull from Google Docs (Google Docs MCP)
+- Meeting transcript integration (Granola MCP)
+
+You can always come back and add MCP integrations later. The system is designed to layer — start simple, add complexity when you need it.
+
+!!! ask-claude "Getting an error? Ask Claude."
+    If something goes wrong during any MCP setup step, paste the error into the
+    Claude Code terminal — for example:
+    `I'm getting an error trying to connect. Here's what I see: [paste the error]`
+    Press Enter. Claude can often diagnose MCP configuration issues on the spot.
+
+---
+
 ## How MCP Configuration Works
 
 MCP servers are configured in a JSON file that tells Claude Code how to connect to each service:
@@ -36,6 +72,8 @@ Each MCP server entry specifies a command to run and any required credentials (A
 ---
 
 ## Google Workspace (Recommended First)
+
+<span class="badge-teal">⏱ 45-60 min</span> <span class="badge-preview">Moderate — OAuth setup required</span>
 
 This single server provides access to Gmail, Google Docs, Sheets, Calendar, Drive, and Tasks. It's the highest-value MCP integration for most users.
 
@@ -78,8 +116,8 @@ This is the most involved step. You need to create a "project" in Google Cloud C
 5. Application type: **Desktop app**
 6. Download the client ID and secret
 
-!!! tip "Testing vs Production mode"
-    By default, your Google Cloud project is in "Testing" mode, which means OAuth tokens expire after 7 days and you'll need to re-authenticate weekly. To fix this, go to **Google Auth platform > Audience** in the Cloud Console and switch to "Production." This makes tokens persist indefinitely.
+!!! warning "Important: Switch to Production mode"
+    By default, your Google Cloud project is in "Testing" mode, which means **OAuth tokens expire after 7 days** — you'll need to re-authenticate weekly, which is the single most common frustration with this setup. To fix it: go to **Google Auth platform > Audience** in the Cloud Console and switch to "Production." This makes tokens persist indefinitely. Do this during setup, not later.
 
 **4. Add to your Claude configuration:**
 
@@ -122,13 +160,14 @@ If Claude can read your email, the connection is working.
 ### Known Limitations
 
 - Cannot create Google Doc tabs (must create manually)
-- Cannot apply heading styles in Docs (use font size + bold instead)
 - No suggesting mode / track changes
 - Uses significant context (~26K tokens for all tools). If you hit context limits, enable only the tools you need by adjusting the `--tools` argument.
 
 ---
 
 ## WhatsApp
+
+<span class="badge-teal">⏱ 15 min</span> <span class="badge-start">Easy — QR code scan</span>
 
 Read messages and search conversation history.
 
@@ -146,9 +185,19 @@ Read messages and search conversation history.
 - Session drops when your laptop sleeps — you'll need to re-scan the QR code
 - Chat metadata can be stale — always fetch messages directly rather than relying on chat lists
 
+!!! note "Slack and Microsoft Teams"
+    This guide covers MCP servers the author has personally tested. Slack and Teams
+    MCP servers exist on GitHub but vary in quality and maintenance. Before investing
+    setup time: search GitHub, check the repo's recent commit activity and open issues,
+    and verify it supports your plan type (some require Enterprise). The configuration
+    pattern (clone repo, add JSON config, restart Claude Code) is the same as described
+    above — the work is finding a well-maintained server.
+
 ---
 
 ## Zotero (Reference Management)
+
+<span class="badge-teal">⏱ 10 min</span> <span class="badge-start">Easy — API key only</span>
 
 Search your Zotero library and retrieve citations.
 
@@ -177,6 +226,8 @@ Add to `~/.claude.json`:
 
 ## Apple Apps (Mac Only)
 
+<span class="badge-teal">⏱ 10 min</span> <span class="badge-start">Easy — quick install</span>
+
 Access Notes, Calendar, Contacts, Reminders, Messages, and Mail through Apple's native apps.
 
 **Package:** `apple-mcp` (runs via Bun)
@@ -204,6 +255,8 @@ Replace `/path/to/` with your actual home directory path.
 ---
 
 ## Granola (Meeting Transcripts)
+
+<span class="badge-teal">⏱ 15 min</span> <span class="badge-preview">Moderate — requires Python 3.12+</span>
 
 Access meeting notes and summaries from Granola.
 

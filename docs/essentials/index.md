@@ -1,5 +1,7 @@
 # Chatbot Essentials
 
+<span class="badge-teal">No Claude Code required</span> Everything on this page works with Claude.ai or ChatGPT — no terminal, no installation needed.
+
 **I don't know if I have the best habits in the world, but these ones really changed my research and my life.**
 
 ??? tip "Some very basic advice before you dive in"
@@ -84,3 +86,13 @@ My current daily toolkit, for reference:
 | **Granola** | Meeting transcription | $10/mo | Recommended if you have meetings |
 
 You don't need all of these. Start with one chatbot subscription and add tools as you see the value. The [Cost Reality](cost.md) page breaks this down in detail.
+
+!!! tip "Different platform or tools? Ask AI to help you adapt"
+    This site documents a Mac + Zoom + WhatsApp + Gmail workflow — that's what I use.
+    If you're on Windows, or your team uses Slack or Teams instead of WhatsApp, the
+    concepts and skills still transfer but some setup steps will differ. Try asking
+    Claude or ChatGPT: *"I use [your platform and tools]. How would I adapt this
+    system for my setup?"* That's more useful than reading around steps that don't
+    apply. And for any tool recommendation on this site, AI chatbots can help you
+    find the right alternative for your workflow — just verify pricing and availability
+    on the tool's own website.

@@ -31,7 +31,7 @@ Dictation isn't new. But previous tools (Apple's built-in, Google's, Dragon) wer
 
 **Cost:** ~$10/month.
 
-**Platforms:** Mac and iOS. No Windows or Android version (as of February 2026).
+**Platforms:** Mac, Windows, and iOS. No Android version (as of February 2026).
 
 ---
 

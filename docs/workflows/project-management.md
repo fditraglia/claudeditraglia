@@ -14,6 +14,15 @@ I'd walk into a meeting and spend the first ten minutes trying to remember what 
 
 I know some managers, companies, and labs use Slack to manage all of this. I tried it for one project and found it didn't fit my workflow. The volume of threads was overwhelming — too many conversations that weren't crucial to me, and not great at surfacing strategic priorities. That could be my inexperience, and in a year I might be a Slack convert. But I found that building the system below really suited how I work — especially the project overviews and living documents I'm about to describe. Those then let me automate the most time-consuming parts: proposal and report writing for donors and partners, across complex field projects with large teams doing data collection and analysis in multiple countries.
 
+!!! note "If your team uses Slack or Teams"
+    Most of this system is communication-tool-agnostic. The folder structure (Layer 1),
+    meeting transcription (Layer 2), and proposal writing (Layer 4) work regardless of
+    how your team communicates. The weekly review (Layer 3) currently pulls from WhatsApp,
+    but it works without it — you still get value from transcripts, email, and documents.
+    Adapting it to pull from Slack channels instead would mean finding a maintained Slack
+    MCP server and modifying the weekly-review skill. That's a real technical project,
+    not a quick config change — but the other three layers work without any modification.
+
 The system didn't solve all of this overnight. Each layer took about three weeks of iteration. None worked perfectly on day one. But each one made the next possible.
 
 ---
@@ -88,7 +97,7 @@ This is where the system comes alive. The weekly review pulls from every source 
 
 **What it does:**
 
-- Collects data from WhatsApp group chats, meeting transcripts, all project-related emails, and working documents from Google Docs
+- Collects data from meeting transcripts, all project-related emails, and working documents from Google Docs — plus WhatsApp group chats if you have that integration configured
 - Synthesizes everything into a **project dashboard** (strategic objectives, operational status, team to-dos, critical success factors)
 - Produces a **detailed weekly log** with thematic analysis across all sources
 - Updates the Google Doc hub directly — no copy-pasting
