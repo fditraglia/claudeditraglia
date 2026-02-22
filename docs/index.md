@@ -21,7 +21,9 @@ By [Chris Blattman](https://chrisblattman.com), political economist at UChicago 
 
 ## What Is This?
 
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is a terminal-based AI tool that can read your files, search your email, manage your calendar, and run custom workflows — like having a smart assistant sitting at your computer with you. This site documents how I built a working system with it, and shares everything so you can do the same. No coding required.
+This site is a guide to getting real work done with AI — from everyday chatbot use to advanced automation. It starts with [the essentials](essentials/index.md): choosing a chatbot, writing better prompts, hands-free dictation, and meeting transcription. No installation needed.
+
+From there it goes deeper into [Claude Code](https://docs.anthropic.com/en/docs/claude-code), a terminal-based AI tool that can read your files, search your email, manage your calendar, and run custom workflows — like having a smart assistant sitting at your computer with you. The site documents how I built a working system with it, and shares everything so you can do the same. No coding required.
 
 ## Where to Start
 
@@ -55,15 +57,15 @@ By [Chris Blattman](https://chrisblattman.com), political economist at UChicago 
 
     ---
 
-    I had emails, docs, meetings, and WhatsApp scattered across 5 platforms with no project memory. Now every project has a living dashboard that writes itself. Proposals draft themselves from the project record.
+    A system for tracking complex projects across email, docs, meetings, and messaging. Each project gets a living dashboard with status, history, and next steps — maintained automatically from meeting transcripts and project documents.
 
     [:octicons-arrow-right-24: Project Management Workflow](workflows/project-management.md)
 
--   **:material-email-check-outline: Inbox Zero + Daily Briefings**
+-   **:material-email-check-outline: Executive Assistant**
 
     ---
 
-    I went from 5,000 unread emails to six. Morning briefings, smart triage, and calendar awareness — built one skill at a time over three weeks. The real payoff isn't time saved. It's the stress that disappears.
+    Email triage, morning briefings, calendar queries, and communication drafting. A set of skills that handle the daily overhead of managing a busy schedule and high-volume inbox.
 
     [:octicons-arrow-right-24: Executive Assistant Workflow](toolkit/executive-assistant.md)
 
