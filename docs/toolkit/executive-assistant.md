@@ -1,7 +1,6 @@
 # Building an AI Executive Assistant
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
+*Reading time: 5 minutes*
 
 This page describes how to assemble Claude Code's individual capabilities — MCP integrations, skills, and persistent context — into something that functions as an executive assistant: a system that manages your inbox, tracks your projects, processes your meetings, and drafts your communications.
 
@@ -20,6 +19,18 @@ Not a single skill or product. A *system* built from components:
 | **Schedule management** | Checks calendar, identifies conflicts | Calendar MCP |
 
 Each component works independently. You don't need all of them. Start with whichever solves your biggest pain point.
+
+---
+
+## The Honest Assessment
+
+Before you invest setup time, here's what you should know:
+
+**What works well:** Email triage saves real time once your rules are dialed in. Meeting extraction turns messy transcripts into structured records. Session capture creates institutional memory that persists across sessions. Communication drafting is faster than writing from scratch, especially with voice training.
+
+**What's still rough:** Calendar management is read-mostly — creating and modifying events works but isn't as smooth as reading. Cross-platform coordination (e.g., linking an email to a calendar event to a project doc) requires explicit instructions each time. Voice training takes iteration — Claude won't perfectly match your style on day one. The initial setup takes hours — it's an investment that pays off over weeks, not immediately.
+
+**The meta-point:** No skill or configuration is perfect on first try. The value comes from **iterative improvement**: use it, notice what's wrong, fix it, repeat. After a month of regular use, the system works meaningfully better than it did on day one.
 
 ---
 
@@ -136,30 +147,6 @@ Turn successful patterns into skills:
 1. If your inbox triage prompt works well, save it as a skill
 2. Add voice/tone preferences to CLAUDE.md for email drafting
 3. Set up project-specific CLAUDE.md files for your main projects
-
----
-
-## The Honest Assessment
-
-### What Works Well
-
-- **Email triage** saves real time once your rules are dialed in
-- **Meeting extraction** turns messy transcripts into structured records
-- **Session capture** creates institutional memory that persists across sessions
-- **Communication drafting** is faster than writing from scratch, especially with voice training
-
-### What's Still Rough
-
-- **Calendar management** is read-mostly — creating and modifying events works but isn't as smooth as reading
-- **Cross-platform coordination** (e.g., linking an email to a calendar event to a project doc) requires explicit instructions each time
-- **Voice training** takes iteration — Claude won't perfectly match your style on day one
-- **The initial setup takes hours** — it's an investment that pays off over weeks, not immediately
-
-### The Meta-Point
-
-No skill or configuration is perfect on first try. The value of the EA system comes from **iterative improvement**: use it, notice what's wrong, fix it, repeat. After a month of regular use and refinement, the system works meaningfully better than it did on day one.
-
-This is the [Build Your Own](../system/index.md) philosophy in practice.
 
 ---
 

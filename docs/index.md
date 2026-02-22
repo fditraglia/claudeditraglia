@@ -67,7 +67,7 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 
     ---
 
-    <span class="badge-preview" style="margin-bottom: 0.5rem;">Start here</span>
+    <span class="badge-start">Start here</span>
 
     *From zero to a working system*
 

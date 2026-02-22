@@ -1,7 +1,6 @@
 # The Cost Reality
 
-!!! warning "Early Preview — Prices Pending"
-    This page needs updated subscription prices for all tools. The framework is here; exact numbers are being verified. Current as of February 2026.
+*Reading time: 3 minutes*
 
 Let's be honest about what building an AI workflow costs, who it makes sense for, and who should start smaller.
 

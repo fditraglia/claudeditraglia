@@ -1,7 +1,6 @@
 # Agents vs Skills
 
-!!! warning "Early Preview"
-    This section has initial content with more detail coming. Current as of February 2026.
+*Reading time: 4 minutes*
 
 Claude Code has two main building blocks: **skills** (slash commands that run in the main conversation) and **agents** (subprocesses that run in a separate context). Choosing the right one matters for reliability and quality.
 

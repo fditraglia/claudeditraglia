@@ -1,8 +1,5 @@
 # Build Your Own
 
-!!! warning "Early Preview — Coming Soon"
-    This section is under active development. The pages below have initial content, with more detail coming in the weeks after launch. Current as of February 2026.
-
 **How to create your own skills, agents, and self-improving workflows.**
 
 The Essentials taught you to use AI tools. The Toolkit gave you a configured system. This path teaches you to *build* — to create custom tools that solve your specific problems and a system that gets better the more you use it.

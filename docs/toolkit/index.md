@@ -1,8 +1,5 @@
 # The Toolkit
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
-
 **Claude Code setup, configuration, and downloadable skills. From "what is this?" to a working system.**
 
 This path takes you from installing Claude Code to having a configured system with custom skills, external integrations, and workflows that handle real tasks — email triage, meeting summaries, project management, proposal drafting.

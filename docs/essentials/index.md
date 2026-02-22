@@ -1,8 +1,5 @@
 # The Essentials
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
-
 **Tools and foundations everyone can use today. No coding, no command line, no setup beyond creating an account.**
 
 This path covers the AI tools and techniques that give the biggest return for the least effort. Everything here works with a web browser and (in some cases) a phone app.

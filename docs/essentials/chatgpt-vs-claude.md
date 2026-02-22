@@ -1,7 +1,6 @@
 # ChatGPT vs Claude
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
+*Reading time: 4 minutes*
 
 I pay for and use both ChatGPT and Claude every day. Here's an honest comparison from someone with no loyalty to either company.
 

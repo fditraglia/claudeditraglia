@@ -12,6 +12,7 @@ extra_css:
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -63,10 +64,10 @@ nav:
     - Install (Windows): toolkit/install-windows.md
     - Your CLAUDE.md: toolkit/claude-md.md
     - MCP Setup: toolkit/mcp-setup.md
-    - Skills Guide: toolkit/skills-guide.md
-    - Skill Library: toolkit/skill-library.md
+    - How Skills Work: toolkit/skills-guide.md
+    - Download Skills: toolkit/skill-library.md
     - Executive Assistant: toolkit/executive-assistant.md
-  - Build Your Own:
+  - Advanced:
     - system/index.md
     - Building Skills: system/building-skills.md
     - Agents vs Skills: system/agents-vs-skills.md

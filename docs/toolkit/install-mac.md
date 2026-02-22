@@ -1,7 +1,6 @@
 # Install Claude Code (Mac)
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
+*Reading time: 6 minutes*
 
 **A beginner's guide for Terminal newcomers. No prior command-line experience needed.**
 

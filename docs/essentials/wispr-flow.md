@@ -1,7 +1,6 @@
 # Wispr Flow
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
+*Reading time: 3 minutes*
 
 Wispr Flow is a dictation tool that works everywhere — any text box on your Mac, any app on your iPhone, any field in a web browser. You talk, it types. It learns your vocabulary over time.
 

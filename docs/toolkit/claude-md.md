@@ -1,7 +1,6 @@
 # Your CLAUDE.md File
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
+*Reading time: 6 minutes*
 
 A `CLAUDE.md` file is a personal instruction document that Claude Code reads automatically every time you start a session. It tells Claude who you are, how you work, what tools you use, and what you need help with.
 

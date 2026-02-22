@@ -1,7 +1,6 @@
 # Skill Library
 
-!!! warning "Early Preview"
-    This site is growing weekly. More skills will be added over time. Current as of February 2026.
+*Reading time: 6 minutes*
 
 Downloadable skills (slash commands) and agents for Claude Code. Each one is a markdown file you save to your commands folder.
 

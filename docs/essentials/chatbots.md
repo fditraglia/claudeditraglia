@@ -1,7 +1,6 @@
 # Chatbots Done Right
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
+*Reading time: 7 minutes*
 
 Most people use AI chatbots the way they use Google: type a question, get an answer, move on. That works, but it leaves 90% of the value on the table.
 

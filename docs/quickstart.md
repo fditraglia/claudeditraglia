@@ -1,7 +1,6 @@
 # Quickstart: Your First 5 Minutes
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
+*Reading time: 3 minutes*
 
 **Goal:** Paste one prompt into Claude (or ChatGPT) and get something immediately useful. No setup required.
 

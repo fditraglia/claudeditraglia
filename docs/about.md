@@ -66,8 +66,9 @@ The content was written with help from Claude (naturally). The skills and workfl
 
 ## Contact & Feedback
 
-- **Questions about the site or tools:** [GitHub Discussions](https://github.com/chrisblattman/claudeblattman/discussions)
+- **Quick feedback on any page:** [Email me](mailto:claudeblattman+feedback@gmail.com)
 - **Bug reports or corrections:** [GitHub Issues](https://github.com/chrisblattman/claudeblattman/issues)
+- **Discussion & questions:** [GitHub Discussions](https://github.com/chrisblattman/claudeblattman/discussions)
 - **Research inquiries:** See [chrisblattman.com](https://chrisblattman.com)
 
 ---

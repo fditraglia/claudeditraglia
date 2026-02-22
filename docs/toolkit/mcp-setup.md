@@ -1,7 +1,6 @@
 # MCP Setup
 
-!!! warning "Early Preview"
-    This site is growing weekly. MCP servers and their setup procedures change frequently. Current as of February 2026.
+*Reading time: 5 minutes*
 
 MCP (Model Context Protocol) servers extend Claude Code's capabilities by connecting to external services. Once connected, Claude can read your email, search your documents, check your calendar, and more — directly from the terminal.
 

@@ -1,7 +1,6 @@
 # Patterns
 
-!!! warning "Early Preview"
-    This section has initial content with more detail coming. Current as of February 2026.
+*Reading time: 4 minutes*
 
 Reusable design patterns for skills and workflows. These show up repeatedly in well-designed Claude Code tools.
 

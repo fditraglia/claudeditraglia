@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block announce %}
+  <style>
+    .md-banner {
+      background: color-mix(in srgb, var(--md-accent-fg-color) 15%, var(--md-default-bg-color));
+      color: var(--md-default-fg-color--light);
+      font-size: 0.75rem;
+    }
+    .feedback-line {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--md-default-fg-color--lightest);
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+    .feedback-line:hover { opacity: 0.85; }
+  </style>
+  Early preview &mdash; content added weekly. Current as of February 2026.
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
+  <p class="feedback-line">
+    Found this helpful? Something wrong?
+    <a href="mailto:claudeblattman+feedback@gmail.com?subject=Feedback%3A%20{{ page.title | urlencode }}">Send quick feedback</a>
+  </p>
+{% endblock %}

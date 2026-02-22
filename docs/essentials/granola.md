@@ -1,7 +1,6 @@
 # Granola
 
-!!! warning "Early Preview"
-    This site is growing weekly. Current as of February 2026.
+*Reading time: 3 minutes*
 
 Granola is a meeting transcription tool that works on Zoom calls, phone calls, and in-person meetings (phone in your pocket). It transcribes everything, provides AI summaries, and — critically — gives you the raw transcript so you can do your own analysis.
 
