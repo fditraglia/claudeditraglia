@@ -1,0 +1,107 @@
+site_name: Claude Blattman
+site_url: https://claudeblattman.com
+site_description: A professor's guide to building AI workflows — from chatbots to self-improving systems
+site_author: Chris Blattman
+repo_url: https://github.com/chrisblattman/claudeblattman
+repo_name: chrisblattman/claudeblattman
+
+edit_uri: ""
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Essentials:
+    - essentials/index.md
+    - Chatbots Done Right: essentials/chatbots.md
+    - Prompt Engineering: essentials/prompting.md
+    - Wispr Flow: essentials/wispr-flow.md
+    - Granola: essentials/granola.md
+    - ChatGPT vs Claude: essentials/chatgpt-vs-claude.md
+    - The Cost Reality: essentials/cost.md
+  - Toolkit:
+    - toolkit/index.md
+    - Install (Mac): toolkit/install-mac.md
+    - Install (Windows): toolkit/install-windows.md
+    - Your CLAUDE.md: toolkit/claude-md.md
+    - MCP Setup: toolkit/mcp-setup.md
+    - Skills Guide: toolkit/skills-guide.md
+    - Skill Library: toolkit/skill-library.md
+    - Executive Assistant: toolkit/executive-assistant.md
+  - Build Your Own:
+    - system/index.md
+    - Building Skills: system/building-skills.md
+    - Agents vs Skills: system/agents-vs-skills.md
+    - Patterns: system/patterns.md
+  - Resources: resources.md
+  - About: about.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/chrisblattman/claudeblattman
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/chaborr
+
+copyright: >
+  Built by <a href="https://chrisblattman.com">Chris Blattman</a> &mdash;
+  shared freely under MIT License

@@ -1,0 +1,199 @@
+# Chatbots Done Right
+
+!!! warning "Early Preview"
+    This site is growing weekly. Current as of February 2026.
+
+Most people use AI chatbots the way they use Google: type a question, get an answer, move on. That works, but it leaves 90% of the value on the table.
+
+This page covers the techniques that separate casual users from people who get genuinely useful work out of ChatGPT, Claude, and similar tools. None of this requires coding. All of it works today with a free or basic subscription.
+
+---
+
+## Pick the Right Model
+
+This is the single highest-leverage thing most people aren't doing.
+
+Every major AI provider offers multiple models at different capability levels. The default is usually *not* the best one. It's the cheapest one they can serve at scale.
+
+| Provider | Weaker Default | Stronger Option | How to Switch |
+|----------|---------------|----------------|---------------|
+| **Claude** | Sonnet (the default on free/Pro) | Opus (more capable, slower) | Click the model selector in Claude.ai, or use `/model opus` in Claude Code |
+| **ChatGPT** | GPT-4o (the default) | o1-pro or o3 (stronger reasoning) | Click the model dropdown in ChatGPT |
+
+**The practical difference:** For quick questions, the default model is fine. For anything that requires reasoning, synthesis, or careful writing — research summaries, proposal drafts, data analysis plans — the stronger model produces noticeably better results. It's the difference between a competent undergraduate and a sharp colleague.
+
+**Cost reality:** Stronger models are either restricted to paid tiers or use more of your usage allowance. But if you're already paying for a subscription, you're leaving money on the table by not using the best model available to you.
+
+---
+
+## Give It Context About You
+
+A chatbot with no context about you gives generic advice. A chatbot that knows your role, your projects, and your preferences gives advice you'd actually follow.
+
+### The Basics: Just Tell It
+
+At the start of any conversation, spend 30 seconds on context:
+
+> *I'm an assistant professor of economics studying labor markets in developing countries. I run two active RCTs in Colombia and Kenya. I manage 4 research assistants. I'm writing a grant proposal for the Weiss Fund that's due March 15.*
+
+Now every response is calibrated to your actual situation instead of a generic "researcher."
+
+### The Power Move: Saved Context
+
+Both Claude and ChatGPT let you save persistent context that applies to every conversation:
+
+| Platform | Feature | Where to Set It |
+|----------|---------|----------------|
+| **Claude.ai** | Projects | Create a Project, add instructions and files. Every conversation in that project starts with your context. |
+| **ChatGPT** | Custom Instructions + Memory | Settings > Personalization > Custom Instructions. Applies to all conversations. ChatGPT also builds memory from your conversations over time. |
+
+**What to put in saved context:**
+
+- Your role and field
+- Your current projects (brief descriptions)
+- Your preferences (writing style, level of detail, how you like feedback)
+- Common tasks you'll ask about
+
+**Example** (for a Claude.ai Project called "Grant Writing"):
+
+```text
+I'm an economics professor at a research university. I write 3-5 grant
+proposals per year, primarily for foundations (not government agencies).
+
+My writing style: Direct, evidence-first, short sentences. No jargon
+unless the funder expects it. Numbers over adjectives.
+
+Current proposals in progress:
+- Weiss Fund: Crime intervention study in Medellin. Due March 15.
+- PGFA: Youth employment RCT in Nairobi. Due April 30.
+
+When I ask for help with proposals:
+- Always start with the key claim, then evidence
+- Flag where I'm making assertions without data
+- Keep paragraphs under 5 sentences
+- Tell me if a section is too long for the typical funder attention span
+```
+
+With this in place, every conversation in that project starts with full context. You never have to re-explain who you are or what you're working on.
+
+---
+
+## Structure Your Requests
+
+The [Quickstart](../quickstart.md) demonstrated this, but it bears repeating: structured prompts get dramatically better results.
+
+**The pattern:**
+
+1. **Context** — what the AI needs to know about the situation
+2. **Task** — what you want it to do (be specific)
+3. **Format** — how you want the output structured
+4. **Constraints** — length, tone, what to avoid, what to prioritize
+
+**Weak prompt:**
+> *Help me write an abstract for my paper.*
+
+**Strong prompt:**
+> *Write a 250-word abstract for an economics paper. The paper uses a randomized controlled trial to test whether cognitive behavioral therapy reduces criminal behavior among high-risk young men in Bogota. Main finding: 20% reduction in arrests at 12 months, driven by changes in self-regulation rather than employment. The audience is the American Economic Review. Lead with the research question, then design, then result, then implication. Avoid jargon that wouldn't appear in a top-5 journal.*
+
+The second version takes 60 seconds longer to write and saves 20 minutes of back-and-forth.
+
+---
+
+## Use Conversations, Not One-Shots
+
+Chatbots have memory within a conversation. Use it.
+
+**The one-shot mistake:** Asking one big question, getting one long answer, starting a new conversation for the next question.
+
+**The conversational approach:** Build up context through a series of exchanges.
+
+```text
+You:    Here's my draft introduction. What are the weakest points?
+Claude: [identifies 3 issues]
+You:    Rewrite paragraph 2 addressing your first point. Keep my voice.
+Claude: [rewrites]
+You:    Good direction, but too formal. More like my blog voice —
+        shorter sentences, occasional humor.
+Claude: [revises]
+You:    Perfect. Now do the same for paragraph 4.
+```
+
+Each exchange builds on the last. The AI learns your preferences *within the session* and gets better as you go. This is dramatically more effective than starting fresh each time.
+
+---
+
+## Know What Chatbots Are Bad At
+
+Being honest about limitations saves more time than any prompting technique.
+
+**Chatbots are unreliable for:**
+
+- **Factual claims** — They hallucinate citations, invent statistics, and state falsehoods confidently. Always verify facts, especially numbers and references.
+- **Math** — Don't trust arithmetic in conversational responses. For any calculation that matters, ask the chatbot to write and run code, or verify externally.
+- **Current events** — Training data has a cutoff. Web search features help but aren't comprehensive.
+- **Legal, medical, or financial advice** — Useful for general orientation, dangerous for specific decisions.
+
+**Chatbots are genuinely good at:**
+
+- **Drafting and editing** — First drafts, rewrites, tone adjustments, structural suggestions
+- **Synthesis** — Combining multiple sources or ideas into coherent summaries
+- **Brainstorming** — Generating options you hadn't considered
+- **Explaining** — Breaking down complex topics for different audiences
+- **Format conversion** — Turning notes into tables, bullets into prose, data into narratives
+
+**The right mental model:** A chatbot is a brilliant, well-read colleague with no memory and a tendency to make things up. Trust the reasoning, verify the facts.
+
+---
+
+## Build a Library of Good Prompts
+
+When you find a prompt that works well for a recurring task, save it. Build a personal collection.
+
+Start simple — a text file, a note in your phone, a Google Doc. The format doesn't matter. What matters is that you don't reinvent the wheel every time you need to:
+
+- Draft a recommendation letter
+- Summarize a paper for a non-academic audience
+- Turn meeting notes into action items
+- Review a draft for logical gaps
+
+Over time, this library becomes the seed of something more powerful. On this site, the [Toolkit](../toolkit/index.md) path shows how to turn saved prompts into automated skills that run in seconds. But even without that, a simple collection of your best prompts is one of the highest-value things you can build.
+
+---
+
+## Next Steps
+
+<div class="grid cards" markdown>
+
+-   **Level up your prompts**
+
+    ---
+
+    Prompt engineering as a structured skill, not just tips and tricks.
+
+    [:octicons-arrow-right-24: Prompt Engineering](prompting.md)
+
+-   **Add power tools**
+
+    ---
+
+    Dictation and transcription tools that multiply the value of everything above.
+
+    [:octicons-arrow-right-24: Wispr Flow](wispr-flow.md) &middot; [:octicons-arrow-right-24: Granola](granola.md)
+
+-   **Understand the landscape**
+
+    ---
+
+    Honest comparison of when to use which tool.
+
+    [:octicons-arrow-right-24: ChatGPT vs Claude](chatgpt-vs-claude.md)
+
+-   **Go deeper**
+
+    ---
+
+    When chatbots aren't enough, Claude Code turns AI into a workflow tool.
+
+    [:octicons-arrow-right-24: The Toolkit](../toolkit/index.md)
+
+</div>

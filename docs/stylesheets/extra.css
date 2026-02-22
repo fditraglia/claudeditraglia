@@ -1,0 +1,140 @@
+/* Dark mode: warm teal-gray instead of cold gray */
+[data-md-color-scheme="slate"] {
+  --md-hue: 190;
+}
+
+/* Landing page: larger title */
+.md-content__inner > h1:first-child {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+/* Hero pitch line — visually dominant value prop */
+.hero-pitch {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--md-default-fg-color);
+  line-height: 1.5;
+  margin: 0.75rem 0 1.5rem;
+  max-width: 640px;
+}
+
+/* Hero CTA buttons */
+.hero-cta {
+  display: inline-flex;
+  gap: 1rem;
+  margin: 0.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+/* Early access badge */
+.badge-preview {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--md-accent-fg-color);
+  border: 1px solid var(--md-accent-fg-color);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
+}
+
+/* Credibility strip */
+.credibility-strip {
+  font-size: 0.92rem;
+  color: var(--md-default-fg-color--light);
+  border-left: 3px solid var(--md-accent-fg-color);
+  padding-left: 1rem;
+  margin: 0 0 2.5rem;
+  line-height: 1.6;
+}
+
+/* Bento grid: 2-col on desktop, 1-col on mobile */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.bento-cell {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bento-cell:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* Wide bento cell spans both columns */
+.bento-cell--wide {
+  grid-column: span 2;
+}
+
+/* Bento icon size */
+.bento-icon {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+
+/* Card grid: softer borders, hover effect */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Softer admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* Mobile: scale title down */
+@media (max-width: 600px) {
+  .md-content__inner > h1:first-child {
+    font-size: 1.8rem;
+  }
+
+  .hero-pitch {
+    font-size: 1.15rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-cell--wide {
+    grid-column: span 1;
+  }
+
+  .md-typeset .grid.cards > ul > li {
+    padding: 1rem 1rem;
+  }
+
+  .md-typeset .grid.cards > ul > li + li {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Keyboard nav accessibility for cards */
+.md-typeset .grid.cards > ul > li:focus-within {
+  border-color: var(--md-accent-fg-color);
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
