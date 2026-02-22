@@ -25,26 +25,6 @@ This site is a guide to getting real work done with AI — from everyday chatbot
 
 From there it goes deeper into [Claude Code](https://docs.anthropic.com/en/docs/claude-code), a terminal-based AI tool that can read your files, search your email, manage your calendar, and run custom workflows — like having a smart assistant sitting at your computer with you. The site documents how I built a working system with it, and shares everything so you can do the same. No coding required.
 
-## Three Levels of AI Use
-
-```mermaid
-graph LR
-    T1["<b>Essentials</b><br/><small>No install needed</small><br/><small>─────────────</small><br/><small>Pick a chatbot</small><br/><small>Write better prompts</small><br/><small>Dictation & transcription</small>"]
-    T2["<b>Claude Code</b><br/><small>One-time setup</small><br/><small>─────────────</small><br/><small>Read & edit your files</small><br/><small>Connect email & calendar</small><br/><small>Run custom skills</small>"]
-    T3["<b>Full Automation</b><br/><small>Built over weeks</small><br/><small>─────────────</small><br/><small>Project dashboards</small><br/><small>Weekly reviews</small><br/><small>Proposal drafting</small>"]
-
-    T1 -->|"ready for more"| T2
-    T2 -->|"add integrations"| T3
-
-    style T1 fill:#e8f5e9, stroke:#66bb6a, color:#1b5e20
-    style T2 fill:#e0f2f1, stroke:#009688, color:#004d40
-    style T3 fill:#b2dfdb, stroke:#00796b, color:#004d40
-```
-
-Start wherever you are. Each level builds on the last, but the Essentials work on their own — no installation, no terminal, no coding.
-
----
-
 ## Where to Start
 
 <div class="grid cards" markdown>

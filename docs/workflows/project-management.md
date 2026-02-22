@@ -236,11 +236,7 @@ graph TD
     L2 --> L4
     L3 --> L4
 
-    style L0 stroke-dasharray: 5 5, fill:#f9f9f9, color:#666
-    style L1 fill:#e0f2f1, stroke:#009688
-    style L2 fill:#e0f2f1, stroke:#009688
-    style L3 fill:#b2dfdb, stroke:#009688
-    style L4 fill:#80cbc4, stroke:#00796b, color:#004d40
+    style L0 stroke-dasharray: 5 5
 ```
 
 Start anywhere. Layer 1 works on its own. Each additional layer builds on what came before — but you don't need all four to get value.

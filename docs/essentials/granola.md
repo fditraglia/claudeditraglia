@@ -40,19 +40,13 @@ Meetings generate decisions, action items, and context that live in people's hea
 
 ```mermaid
 graph LR
-    M["🎙️ <b>Meeting</b><br/><small>Zoom, phone,<br/>or in-person</small>"]
-    G["📝 <b>Granola</b><br/><small>Transcribes<br/>automatically</small>"]
-    F["📁 <b>Project Folder</b><br/><small>Raw transcript<br/>archived</small>"]
-    C["🤖 <b>Claude Code</b><br/><small>Extracts decisions,<br/>action items</small>"]
-    D["📊 <b>Meeting Log</b><br/><small>Searchable<br/>project record</small>"]
+    M["Meeting<br/><small>Zoom, phone,<br/>or in-person</small>"]
+    G["Granola<br/><small>Transcribes<br/>automatically</small>"]
+    F["Project Folder<br/><small>Raw transcript<br/>archived</small>"]
+    C["Claude Code<br/><small>Extracts decisions,<br/>action items</small>"]
+    D["Meeting Log<br/><small>Searchable<br/>project record</small>"]
 
     M --> G --> F --> C --> D
-
-    style M fill:#fff3e0, stroke:#ff9800
-    style G fill:#e8f5e9, stroke:#66bb6a
-    style F fill:#e3f2fd, stroke:#42a5f5
-    style C fill:#e0f2f1, stroke:#009688
-    style D fill:#f3e5f5, stroke:#ab47bc
 ```
 
 A 60-minute meeting becomes a structured project record in about 2 minutes of post-processing.
