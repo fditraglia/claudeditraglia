@@ -28,6 +28,12 @@ The closest thing to what I'm building, but for econometrics. Pedro is an academ
 
 A four-pillar structure (Communicate, Learn, Deepen Relationships, Achieve Goals) for using Claude as an executive assistant. The Goals.yaml as a single source of truth, the `/gm` morning briefing command, and the idea of CLAUDE.md as "your AI operating system" all shaped my approach. My `/morning-brief` and `/checkin` skills descend directly from this repo.
 
+### Dave Killeen — Dex
+
+[:octicons-link-external-16: GitHub](https://github.com/davekilleen/Dex)
+
+An extension of Murchison's Chief of Staff pattern that adds structured pillars (`pillars.yaml`), session learnings capture, and usage logging. If Murchison's repo is the architecture, Dex is the operational layer. I used it alongside the original when designing my session capture (`/done`) and goal alignment (`/goals-review`) skills. Discovered February 2026.
+
 ### Ethan Mollick — One Useful Thing
 
 [:octicons-link-external-16: oneusefulthing.org](https://www.oneusefulthing.org/)
@@ -103,6 +109,8 @@ Resources I've found useful for thinking about AI in research and professional w
 | [AI for Economists (AEA)](https://www.aeaweb.org/resources/ai) | The American Economic Association's hub for AI resources in economics research. |
 | [Claude Code projects on GitHub](https://github.com/topics/claude-code) | Community projects, extensions, and configurations tagged with "claude-code" on GitHub. |
 | [r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/) | Active subreddit for Claude users. Good for troubleshooting and discovering new patterns. |
+| [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) | Curated index of Claude Code skills, hooks, slash commands, and CLAUDE.md patterns. The closest thing to a package manager catalog for the ecosystem. |
+| [LangChain Executive AI Assistant](https://github.com/langchain-ai/executive-ai-assistant) | Production-ready Gmail-monitoring AI agent framework. Their "draft-only" pattern and human-in-the-loop review influenced how I built inbox triage. |
 
 ---
 

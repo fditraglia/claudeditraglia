@@ -178,6 +178,26 @@ Claude writes emails, messages, and updates that sound like you.
 - Voice/tone guidelines in CLAUDE.md (e.g., "Direct, friendly, no corporate jargon")
 - Gmail MCP for drafting and sending
 
+**Deciding what Claude should draft vs. what you write yourself:**
+
+Not all communication is equal. Research on AI-assisted email (Cardon & Coman, 2025, published in the *International Journal of Business Communication*) found that recipients barely notice AI involvement in routine and informational messages — but trust drops sharply for relationship-oriented communication like praise, recommendations, or personal feedback.
+
+A practical split:
+
+| AI-appropriate (draft freely) | Write yourself |
+|------|------|
+| Meeting scheduling and coordination | Recommendation letters |
+| Status requests and updates | Sensitive advising conversations |
+| Administrative logistics | Performance feedback |
+| Deadline reminders | Expressions of gratitude or praise |
+| Form acknowledgments | Conflict resolution |
+| Information distribution | Anything where the recipient would feel slighted to learn AI composed it |
+
+The heuristic I use: **if you'd be embarrassed for the recipient to learn AI wrote it, write it yourself.**
+
+??? note "Source"
+    The AI-appropriate/human-required split draws on two 2025 studies I reviewed when building my email system: Cardon & Coman (2025) in the *International Journal of Business Communication* (surveyed 1,100+ professionals — 83% rated AI-assisted routine messages as sincere, but only 40-52% for relationship-oriented messages) and a 13-experiment study in the *Journal of Experimental Social Psychology* on the "transparency paradox" (disclosure is ethically necessary but empirically costly to trust). Full research notes in my [EA research folder](https://github.com/chrisblattman/claudeblattman). Research conducted February 2026.
+
 ### 5. Schedule Management
 
 Claude checks your calendar and helps manage time.
@@ -188,6 +208,57 @@ Claude checks your calendar and helps manage time.
 
 **What you need:**
 - Google Calendar MCP configured
+
+---
+
+## Define Your Policies
+
+One of the most important things I built — and the thing I wish I'd done *first* — was a set of written policy files that define what Claude can and cannot do. Not guidelines. Hard rules.
+
+**Why this matters:** Without explicit policies, every session starts with ambiguity. Can Claude mark emails as read? Send messages? Move calendar events? You'll waste time re-explaining boundaries, or worse, Claude will take an action you didn't authorize. Written policies eliminate this class of problem permanently.
+
+**What a policy file looks like:**
+
+A policy is a markdown file with clear "never do" and "OK to do" sections. Here's a simplified example based on what I use:
+
+```markdown
+# Email Policy
+
+## Never Do (Without Explicit Instruction)
+- Mark emails as read
+- Send emails without approval
+- Delete emails
+- Make commitments on my behalf
+
+## OK to Do
+- Apply Gmail labels
+- Draft replies (shown, not sent)
+- Create Gmail filters
+- Search and read emails
+
+## Graduated Autonomy
+- Start with "propose actions" (read-only)
+- Graduate to low-risk writes (labels, drafts)
+- Only later: medium-risk writes (sending, with guardrails)
+```
+
+I keep policy files for email, calendar, expenses, reminders, and travel. Each one took 15-30 minutes to write and has saved hours of confusion.
+
+**The graduated autonomy pattern** — start read-only, then allow low-risk writes, then cautiously allow higher-risk actions — comes from a progression recommended in several open-source EA implementations. [Mike Murchison's Claude Chief of Staff](https://github.com/mimurchison/claude-chief-of-staff) uses a similar "propose → approve → execute" trust model, and it's the single best pattern I've found for building trust with an AI assistant without getting burned.
+
+!!! tip "Start here"
+    Before building any skills, write an email policy. Even a 10-line version that says "never send without approval" and "never mark as read without instruction" will prevent the most common mistakes. You can refine it as you learn what Claude gets wrong.
+
+??? note "Where I got these patterns (research notes)"
+    The policy and graduated-autonomy patterns emerged from research I did in January–February 2026, documented in my [EA research playbook](https://github.com/chrisblattman/claudeblattman). Key sources that shaped the approach:
+
+    - **[Claude Chief of Staff](https://github.com/mimurchison/claude-chief-of-staff)** (Mike Murchison) — Goal alignment, operating modes, and the "push philosophy" where Claude challenges your time allocation. My `/morning-brief` and `/checkin` skills descend from this repo's `/gm` command.
+    - **[Dex](https://github.com/davekilleen/Dex)** (Dave Killeen) — Extends the chief-of-staff pattern with pillars, session learnings capture, and usage logging.
+    - **[LangChain Executive AI Assistant (EAIA)](https://github.com/langchain-ai/executive-ai-assistant)** — A production-ready framework for Gmail-monitoring AI agents with triage, drafting, and human-in-the-loop review. Their "draft-only pattern" (capture 80% of time savings with zero send risk) directly influenced my approach.
+    - **[Claude Code Personal Assistant](https://github.com/c0dezli/claude-code-personal-assistant)** (c0dezli) — A template using Notion + Google Workspace integrations, with a `profile.md` pattern similar to CLAUDE.md.
+    - The "propose → approve → automate" trust progression appears independently in most serious EA implementations — it's emerging as a consensus best practice in the Claude Code community (see the [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) index for more examples).
+
+    Research conducted January–February 2026. Links verified February 2026.
 
 ---
 
@@ -280,3 +351,4 @@ The high-value action isn't reorganizing files — it's creating an inventory fi
 - **[Build Your Own](../system/index.md)** — Learn to create and refine your own skills
 - **[CLAUDE.md Guide](claude-md.md)** — Configure your persistent context
 - **[Downloads & Reference Library](../downloads/index.md)** — Guides, templates, and deep dives from my setup
+- **[Resources](../resources.md)** — Reference implementations, tools, and further reading that shaped this project
