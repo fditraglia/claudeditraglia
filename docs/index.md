@@ -7,38 +7,50 @@ hide:
 
 # Claude Blattman
 
-<p class="hero-pitch">A working AI system you can download and install — not a guide telling you what's possible.</p>
+<p class="hero-pitch">This is what I actually use to manage 15 research projects across several countries — and my life, so I can do more research. Not a course. Not a pitch. Just the system, documented.</p>
 
 <div class="hero-cta">
 <a href="toolkit/" class="md-button md-button--primary">Get the system</a>
-<a href="about/#how-i-got-here" class="md-button">Read the story</a>
+<a href="about/#how-i-got-here" class="md-button">Read the background</a>
+</div>
+
+<div class="social-links" markdown>
+[:fontawesome-brands-x-twitter: @cblatts](https://twitter.com/cblatts){ .md-button .social-btn }
+[:material-web: My research](https://chrisblattman.com){ .md-button .social-btn }
+[:fontawesome-brands-github: Source](https://github.com/chrisblattman/claudeblattman){ .md-button .social-btn }
 </div>
 
 <div class="credibility-strip" markdown>
-By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I manage ten research projects across multiple countries. A year ago I started building AI workflows with Claude Code. What seemed impossible then — inbox triage, meeting capture, proposal drafting, project dashboards — is running today. Claude Blattman isn't real, but the tools are.
+By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I manage more than a dozen research projects across multiple countries. A year ago I started building AI workflows with Claude Code. What seemed impossible then — inbox triage, meeting capture, proposal drafting, project dashboards — is running today. Claude Blattman isn't real, but the tools are.
 </div>
 
-## What You Get
+## What You Can Do Right Away
 
 <div class="bento-grid" markdown>
-<div class="bento-cell bento-cell--wide" markdown>
-:material-email-fast-outline:{ .bento-icon } **Inbox zero, in seconds** — AI triage that learns your priorities and sorts hundreds of emails. The one-time cleanup took me from 5,000 unread to six.
+<div class="bento-cell bento-cell--featured" markdown>
+:material-microphone-outline:{ .bento-icon } **Speak, don't type** — Dictate into any app at full speaking speed. Wispr Flow transcribes with context-awareness; what takes 10 minutes to type takes 90 seconds to say. <span class="bento-tag bento-tag--nocode">No code needed</span>
 </div>
 <div class="bento-cell" markdown>
-:material-microphone-outline:{ .bento-icon } **Never lose a meeting** — auto-transcription to decisions, action items, and project logs.
+:material-head-lightbulb-outline:{ .bento-icon } **Use AI without guessing** — Know which tool to use for which task, how to write prompts that get useful answers, and when not to bother. <span class="bento-tag bento-tag--nocode">No code needed</span>
 </div>
 <div class="bento-cell" markdown>
-:material-folder-multiple-outline:{ .bento-icon } **Manage 10 projects at once** — status dashboards, session capture, weekly reviews that write themselves.
+:material-email-check-outline:{ .bento-icon } **Inbox zero, in seconds** — AI triage that learns your priorities and sorts hundreds of emails. The cleanup took me from 5,000 unread to six. <span class="bento-tag">Claude Code</span>
 </div>
 <div class="bento-cell" markdown>
-:material-account-tie-outline:{ .bento-icon } **An AI chief of staff** — morning briefings, calendar queries, email drafts, and project check-ins.
+:material-clipboard-text-clock-outline:{ .bento-icon } **Meetings that remember themselves** — Transcripts become decisions, action items, and project log entries — without you touching a keyboard. <span class="bento-tag">Claude Code</span>
 </div>
 <div class="bento-cell" markdown>
-:material-file-edit-outline:{ .bento-icon } **Draft proposals in your voice** — writing and methodology review by AI agents who don't pull punches.
+:material-view-dashboard-outline:{ .bento-icon } **Run 10 projects at once** — Status dashboards, session capture, and weekly reviews that write themselves. <span class="bento-tag">Claude Code</span>
+</div>
+<div class="bento-cell" markdown>
+:material-account-supervisor-outline:{ .bento-icon } **A chief of staff, always on** — Morning briefings, calendar queries, email drafts, and project check-ins. <span class="bento-tag">Claude Code</span>
+</div>
+<div class="bento-cell" markdown>
+:material-draw-pen:{ .bento-icon } **Proposals in your voice** — AI writing and methodology agents review drafts and flag weaknesses. Not encouragement — critique. <span class="bento-tag">Claude Code</span>
 </div>
 </div>
 
-## Choose Your Path
+## Or Choose Your Starting Point
 
 <div class="grid cards" markdown>
 
@@ -57,6 +69,8 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 -   **:material-rocket-launch-outline: Claude Code Newbies**{ .lg }
 
     ---
+
+    <span class="badge-preview" style="margin-bottom: 0.5rem;">Start here</span>
 
     *From zero to a working system*
 

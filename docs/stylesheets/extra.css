@@ -1,59 +1,84 @@
+/* ============================
+   Fraunces display font for headings
+   ============================ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap');
+
 /* Dark mode: warm teal-gray instead of cold gray */
 [data-md-color-scheme="slate"] {
   --md-hue: 190;
 }
 
-/* Landing page: larger title */
-.md-content__inner > h1:first-child {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 0.2rem;
+/* ============================
+   Fraunces on display headings
+   ============================ */
+h1, h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
-/* Hero pitch line — visually dominant value prop */
+/* Landing page: large title */
+.md-content__inner > h1:first-child {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.03em;
+}
+
+/* Hero pitch line — readable, not oversized */
 .hero-pitch {
-  font-size: 1.35rem;
-  font-weight: 500;
-  color: var(--md-default-fg-color);
-  line-height: 1.5;
-  margin: 0.75rem 0 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.55;
+  margin: 0.5rem 0 1.2rem;
   max-width: 640px;
 }
 
-/* Hero CTA buttons */
+/* Hero CTA buttons — compact, inline with social */
 .hero-cta {
   display: inline-flex;
-  gap: 1rem;
-  margin: 0.5rem 0 2rem;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-/* Early access badge */
+.hero-cta .md-button {
+  font-size: 0.78rem;
+  padding: 0.3rem 0.85rem;
+}
+
+/* Early access badge (also used for START HERE on cards) */
 .badge-preview {
   display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--md-accent-fg-color);
   border: 1px solid var(--md-accent-fg-color);
-  border-radius: 4px;
-  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  padding: 2px 6px;
   margin-bottom: 0.75rem;
   opacity: 0.85;
 }
 
-/* Credibility strip */
+/* Credibility strip with bottom rule */
 .credibility-strip {
   font-size: 0.92rem;
   color: var(--md-default-fg-color--light);
   border-left: 3px solid var(--md-accent-fg-color);
+  border-bottom: 1px solid color-mix(in srgb, var(--md-accent-fg-color) 20%, transparent);
   padding-left: 1rem;
+  padding-bottom: 1.5rem;
   margin: 0 0 2.5rem;
   line-height: 1.6;
 }
 
-/* Bento grid: 2-col on desktop, 1-col on mobile */
+/* ============================
+   Bento grid
+   ============================ */
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -73,9 +98,15 @@
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
 }
 
-/* Wide bento cell spans both columns */
-.bento-cell--wide {
+/* Featured bento cell: spans full width + tinted background */
+.bento-cell--featured {
   grid-column: span 2;
+  background: color-mix(in srgb, var(--md-accent-fg-color) 8%, var(--md-default-bg-color));
+  border-color: color-mix(in srgb, var(--md-accent-fg-color) 35%, transparent);
+}
+
+[data-md-color-scheme="slate"] .bento-cell--featured {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 12%, var(--md-default-bg-color));
 }
 
 /* Bento icon size */
@@ -85,7 +116,50 @@
   margin-right: 0.25rem;
 }
 
-/* Card grid: softer borders, hover effect */
+/* Bento tags: Claude Code / No code needed */
+.bento-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.bento-tag--nocode {
+  color: var(--md-accent-fg-color);
+  border-color: color-mix(in srgb, var(--md-accent-fg-color) 50%, transparent);
+}
+
+/* ============================
+   Social link buttons — same row as CTAs
+   ============================ */
+.social-links {
+  display: inline-flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.social-btn {
+  font-size: 0.72rem !important;
+  padding: 0.25rem 0.7rem !important;
+  opacity: 0.8;
+}
+
+.social-btn:hover {
+  opacity: 1;
+}
+
+/* ============================
+   Card grid
+   ============================ */
 .md-typeset .grid.cards > ul > li {
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 8px;
@@ -105,21 +179,23 @@
   box-shadow: none;
 }
 
-/* Mobile: scale title down */
+/* ============================
+   Mobile responsive
+   ============================ */
 @media (max-width: 600px) {
   .md-content__inner > h1:first-child {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .hero-pitch {
-    font-size: 1.15rem;
+    font-size: 0.95rem;
   }
 
   .bento-grid {
     grid-template-columns: 1fr;
   }
 
-  .bento-cell--wide {
+  .bento-cell--featured {
     grid-column: span 1;
   }
 

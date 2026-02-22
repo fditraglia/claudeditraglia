@@ -10,7 +10,7 @@ The name is a joke. The tools are real.
 
 ## About Chris Blattman
 
-I'm a professor at the [Harris School of Public Policy](https://harris.uchicago.edu/) at the University of Chicago. My research focuses on violence, crime, and poverty — I design and test interventions in cities across Latin America and Africa.
+I'm a professor at the [Harris School of Public Policy](https://harris.uchicago.edu/) at the University of Chicago. My research focuses on violence, crime, and poverty — I design and test interventions in cities across Latin America and Africa. You can read more about my research and writing at [chrisblattman.com](https://chrisblattman.com).
 
 I'm not a coder. The closest I come to programming is writing statistical analysis files in Stata and R. Everything on this site was built using AI tools by someone with no software engineering background.
 
@@ -18,17 +18,17 @@ I'm not a coder. The closest I come to programming is writing statistical analys
 
 **Book:** [Why We Fight](https://chrisblattman.com/why-we-fight/) — a book about the causes of war and peace
 
-**Social:** [@chaborr on X/Twitter](https://twitter.com/chaborr)
+**Social:** [@cblatts on X/Twitter](https://twitter.com/cblatts)
 
 ---
 
 ## How I Got Here
 
-Like most academics, the work that matters — the research, the writing, the thinking — gets buried under an avalanche of email, coordination, proposals, and administrative overhead. I manage ten research projects simultaneously, each with distributed teams across multiple countries. I spend more time answering emails and writing grant reports than doing the science I was trained for.
+Like most academics, the work that matters — [the research](https://chrisblattman.com/research/), the writing, the thinking — gets buried under an avalanche of email, coordination, proposals, and administrative overhead. I manage more than a dozen research projects simultaneously, each with distributed teams across multiple countries. I spend more time answering emails and writing grant reports than doing the science I was trained for.
 
 About a year ago, I started using AI chatbots. They were useful — better drafts, faster brainstorming, decent writing feedback. But they were essentially fancy text boxes. Copy in, copy out. The time savings were real but modest.
 
-Then something changed. I discovered Claude Code, and the center of gravity shifted from chatbots to *agentic tools* — AI that can read your files, search your email, manage your calendar, and build workflows that improve themselves over time.
+Then something changed. I discovered [Claude Code](https://docs.anthropic.com/en/docs/claude-code), and the center of gravity shifted from chatbots to *agentic tools* — AI that can read your files, search your email, manage your calendar, and build workflows that improve themselves over time.
 
 I went down a rabbit hole. I spent hours daily for a month building skills and processes. I won't pretend the time investment has paid off yet in pure hours saved. But I can already see where this is going. And the things that seemed impossible six months ago — a system that triages my inbox, summarizes my meetings, tracks my projects, and drafts my proposals — are working today.
 
@@ -42,11 +42,13 @@ That one-time cleanup sold me. Not because AI did it perfectly — it didn't —
 
 ### Why I'm Sharing This
 
-I built this site because I'm in the same position as most of my readers: buried in admin, not a developer, trying to claw back time for work that actually matters.
+I built this site because I'm in the same position as most of my readers: buried in admin, not a developer, trying to claw back time for [work that actually matters](https://chrisblattman.com/research/).
 
 If a non-technical professor can build a working AI workflow system, you can too.
 
 This site is the whole thing — tutorials, downloadable tools, honest assessments of what works and what doesn't — shared freely as a public good. It's not a product. It's not a course. It's one person's system, documented so you can learn from it and build your own.
+
+I write about research, conflict, policy, and increasingly about AI tools on [X/Twitter (@cblatts)](https://twitter.com/cblatts) and at [chrisblattman.com](https://chrisblattman.com).
 
 ---
 

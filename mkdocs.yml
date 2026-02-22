@@ -1,4 +1,4 @@
-site_name: Claude Blattman
+site_name: Claude Blattman · AI for Researchers & Managers
 site_url: https://claudeblattman.com
 site_description: A professor's guide to building AI workflows — from chatbots to self-improving systems
 site_author: Chris Blattman
@@ -13,13 +13,6 @@ extra_css:
 theme:
   name: material
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: blue grey
-      accent: teal
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: blue grey
@@ -27,8 +20,15 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
   font:
-    text: Inter
+    text: DM Sans
     code: JetBrains Mono
   features:
     - navigation.tabs
