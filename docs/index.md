@@ -9,15 +9,12 @@ hide:
 
 <p class="hero-pitch">This is what I actually use to manage 15 research projects across several countries — and my life, so I can do more research. Not a course. Not a pitch. Just the system, documented.</p>
 
-<div class="hero-cta">
+<div class="hero-buttons">
 <a href="toolkit/" class="md-button md-button--primary">Get the system</a>
 <a href="about/#how-i-got-here" class="md-button">Read the background</a>
-</div>
-
-<div class="social-links" markdown>
-[:fontawesome-brands-x-twitter: @cblatts](https://twitter.com/cblatts){ .md-button .social-btn }
-[:material-web: My research](https://chrisblattman.com){ .md-button .social-btn }
-[:fontawesome-brands-github: Source](https://github.com/chrisblattman/claudeblattman){ .md-button .social-btn }
+<a href="https://twitter.com/cblatts" class="md-button social-btn">𝕏 @cblatts</a>
+<a href="https://chrisblattman.com" class="md-button social-btn">My research</a>
+<a href="https://github.com/chrisblattman/claudeblattman" class="md-button social-btn">GitHub</a>
 </div>
 
 <div class="credibility-strip" markdown>

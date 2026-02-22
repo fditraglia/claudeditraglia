@@ -25,28 +25,28 @@ h1, h2 {
   letter-spacing: -0.03em;
 }
 
-/* Hero pitch line — readable, not oversized */
-.hero-pitch {
-  font-size: 1.05rem;
+/* Hero pitch line — readable, not oversized (high specificity to override md-typeset) */
+.md-typeset .hero-pitch {
+  font-size: 0.92rem !important;
   font-weight: 400;
   color: var(--md-default-fg-color--light);
   line-height: 1.55;
-  margin: 0.5rem 0 1.2rem;
+  margin: 0.4rem 0 1rem;
   max-width: 640px;
 }
 
-/* Hero CTA buttons — compact, inline with social */
-.hero-cta {
-  display: inline-flex;
+/* Hero buttons row: CTAs + social all on one line */
+.hero-buttons {
+  display: flex;
   gap: 0.5rem;
-  margin: 0 0 1rem;
+  margin: 0 0 1.2rem;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.hero-cta .md-button {
-  font-size: 0.78rem;
-  padding: 0.3rem 0.85rem;
+.hero-buttons .md-button {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
 }
 
 /* Early access badge (also used for START HERE on cards) */
