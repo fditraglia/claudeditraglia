@@ -55,7 +55,7 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 
     ---
 
-    *No Claude Code required*
+    <span class="badge-start">No Claude Code required</span>
 
     Get more from the AI tools you already have. Prompt engineering that actually works — not generic tips, but tested frameworks for research, writing, and admin. Side-by-side comparisons of ChatGPT, Claude, and Gemini. Hands-free dictation with Wispr Flow. Meeting transcripts that write themselves with Granola. Plus an honest cost breakdown.
 
@@ -67,7 +67,7 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 
     ---
 
-    <span class="badge-start">Start here</span>
+    <span class="badge-start">Start here for basics</span>
 
     *From zero to a working system*
 
