@@ -79,6 +79,8 @@ nav:
     - Workflows:
       - workflows/index.md
       - Project Management: workflows/project-management.md
+      - "Example: Project Dashboard": workflows/examples/project-overview-example.md
+      - "Example: Research Design Doc": workflows/examples/research-design-example.md
       - Executive Assistant: toolkit/executive-assistant.md
   - Advanced:
     - system/index.md

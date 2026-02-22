@@ -321,6 +321,6 @@ The domain changes. The structure doesn't.
 
     When project folders aren't enough, Claude Code turns recurring tasks into automated workflows.
 
-    [:octicons-arrow-right-24: The Toolkit](../toolkit/index.md)
+    [:octicons-arrow-right-24: Get Started](../setup/index.md)
 
 </div>

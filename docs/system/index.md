@@ -35,7 +35,7 @@ You should have:
 
 - A working Claude Code installation ([Install guides](../toolkit/install-mac.md))
 - A configured CLAUDE.md file ([Setup guide](../toolkit/claude-md.md))
-- Some experience using existing skills ([Skill Library](../toolkit/skill-library.md))
+- Some experience using existing skills ([Skill Library](../setup/skill-reference.md))
 - Comfort reading and editing markdown files
 
 You don't need to know how to code. Skills are written in markdown (structured text), not a programming language.

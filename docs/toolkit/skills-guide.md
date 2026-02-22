@@ -159,7 +159,7 @@ The [Build Your Own](../system/building-skills.md) section goes deeper into skil
 
 ## Tips
 
-**Start by using skills before building them.** Install 2-3 from the [Skill Library](skill-library.md), use them for a week, and notice what works and what you'd change. That's the best way to learn what makes a good skill.
+**Start by using skills before building them.** Install 2-3 from the [Skill Library](../setup/skill-reference.md), use them for a week, and notice what works and what you'd change. That's the best way to learn what makes a good skill.
 
 **Skills should do one thing well.** A skill that tries to triage email, update your calendar, and draft responses will be fragile. Three focused skills are better than one bloated one.
 
@@ -171,5 +171,5 @@ The [Build Your Own](../system/building-skills.md) section goes deeper into skil
 
 ## What's Next
 
-- **[Skill Library](skill-library.md)** — Browse and download pre-built skills
+- **[Skill Library](../setup/skill-reference.md)** — Browse and download pre-built skills
 - **[Building Skills](../system/building-skills.md)** — Learn to create your own

@@ -165,5 +165,5 @@ See [Patterns](patterns.md) for the full catalog.
 
 - **[Agents vs Skills](agents-vs-skills.md)** — When to use a subagent instead
 - **[Patterns](patterns.md)** — Reusable design patterns and quality checklist
-- **[Skill Library](../toolkit/skill-library.md)** — Study existing skills as examples
+- **[Skill Library](../setup/skill-reference.md)** — Study existing skills as examples
 - **[Skill Design Patterns](../downloads/skill-patterns.md)** — Downloadable reference with archetypes, quality checklist, and performance logging conventions (February 2026)

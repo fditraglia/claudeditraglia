@@ -104,7 +104,7 @@ To build EA capabilities, you need:
 1. **Claude Code installed and configured** ([Install guide](install-mac.md))
 2. **CLAUDE.md with your role, preferences, and projects** ([Setup guide](claude-md.md))
 3. **At least Gmail MCP configured** ([MCP guide](mcp-setup.md))
-4. **A few skills installed** ([Skill Library](skill-library.md))
+4. **A few skills installed** ([Skill Library](../setup/skill-reference.md))
 
 ---
 
@@ -205,7 +205,7 @@ These two give the fastest payoff. Set up:
 
 Build the persistence layer:
 
-1. Install the `/done` skill from the [Skill Library](skill-library.md)
+1. Install the `/done` skill from the [Skill Library](../setup/skill-reference.md)
 2. Run `/done` at the end of each work session
 3. Review your session log after a week — notice what's useful
 
@@ -276,7 +276,7 @@ The high-value action isn't reorganizing files — it's creating an inventory fi
 
 ## Further Reading
 
-- **[Skill Library](skill-library.md)** — Download skills for inbox triage, session capture, and more
+- **[Skill Library](../setup/skill-reference.md)** — Download skills for inbox triage, session capture, and more
 - **[Build Your Own](../system/index.md)** — Learn to create and refine your own skills
 - **[CLAUDE.md Guide](claude-md.md)** — Configure your persistent context
 - **[Downloads & Reference Library](../downloads/index.md)** — Guides, templates, and deep dives from my setup

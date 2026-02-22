@@ -14,7 +14,7 @@ This page covers prompt engineering as a *structured practice* — not a collect
     [Jump to the how-to below.](#make-the-ai-do-this-for-you)
 
     Once you start using Claude Code, you can automate this further with
-    a [`/prompt` skill](../toolkit/skill-library.md) that formats and
+    a [`/prompt` skill](../setup/skill-reference.md) that formats and
     executes prompts in a single command.
 
 ---
@@ -206,7 +206,7 @@ Now when you dump a rough idea into this project — dictated, messy, whatever �
 
 ## Going Further
 
-Once you find prompts that work well for recurring tasks, save them. A text file, a note on your phone — the format doesn't matter. Over time, replace specifics with `[FILL IN]` placeholders and you have reusable templates. In Claude Code, you can turn those templates into *skills* (slash commands) that run with a single command — the [Toolkit](../toolkit/index.md) path shows how.
+Once you find prompts that work well for recurring tasks, save them. A text file, a note on your phone — the format doesn't matter. Over time, replace specifics with `[FILL IN]` placeholders and you have reusable templates. In Claude Code, you can turn those templates into *skills* (slash commands) that run with a single command — the [Get Started](../setup/index.md) path shows how.
 
 ---
 
@@ -233,7 +233,7 @@ These are the actual files I use. Download, adapt, and paste them into your own 
 
     The `/prompt` skill automates prompt formatting inside Claude Code.
 
-    [:octicons-arrow-right-24: Skill Library](../toolkit/skill-library.md)
+    [:octicons-arrow-right-24: Skill Library](../setup/skill-reference.md)
 
 -   **Add dictation to the pipeline**
 

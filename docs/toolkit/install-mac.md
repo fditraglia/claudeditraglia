@@ -206,7 +206,7 @@ You've installed Claude Code and had your first conversation. The recommended ne
 
 3. **[Connect external services](mcp-setup.md)** — Give Claude access to Gmail, Google Docs, or Calendar so it can help with real tasks. (~30-60 minutes)
 
-4. **[Explore the Skill Library](skill-library.md)** — Download pre-built skills that automate common workflows.
+4. **[Explore the Skill Library](../setup/skill-reference.md)** — Download pre-built skills that automate common workflows.
 
 ---
 

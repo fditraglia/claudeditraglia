@@ -32,9 +32,9 @@ These reports surface useful, detailed information that would take hours of manu
 
 ## 3. Claude Code for Project Management
 
-Where project folders give you better *conversations*, Claude Code gives you better *systems*. The [Toolkit](../../toolkit/index.md) section covers this in depth, but the short version: skills build on each other.
+Where project folders give you better *conversations*, Claude Code gives you better *systems*. The [Get Started](../../setup/index.md) section covers this in depth, but the short version: skills build on each other.
 
-I started with a [weekly review](../../toolkit/skill-library.md) skill that summarized what happened across my projects each week. That led to project management skills that tracked status, decisions, and next steps across 15+ simultaneous research projects. Those in turn made it possible to build proposal drafting skills — because the AI already knew the project context, the team, and the timeline.
+I started with a [weekly review](../../setup/skill-reference.md) skill that summarized what happened across my projects each week. That led to project management skills that tracked status, decisions, and next steps across 15+ simultaneous research projects. Those in turn made it possible to build proposal drafting skills — because the AI already knew the project context, the team, and the timeline.
 
 Each layer made the next one possible. That compounding is the real payoff of Claude Code, and it's what I'll document here when this page expands.
 
@@ -52,6 +52,6 @@ Each layer made the next one possible. That compounding is the real payoff of Cl
 
     ---
 
-    [:octicons-arrow-right-24: The Toolkit](../../toolkit/index.md)
+    [:octicons-arrow-right-24: Get Started](../../setup/index.md)
 
 </div>

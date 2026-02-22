@@ -311,4 +311,4 @@ If you use Claude Code on multiple computers:
 With MCP configured:
 
 1. **[Learn about skills](skills-guide.md)** — Automated workflows that use your MCP connections
-2. **[Browse the Skill Library](skill-library.md)** — Pre-built skills with MCP integration
+2. **[Browse the Skill Library](../setup/skill-reference.md)** — Pre-built skills with MCP integration

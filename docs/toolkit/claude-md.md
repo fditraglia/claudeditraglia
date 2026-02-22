@@ -264,4 +264,4 @@ This is useful when you work on multiple projects with different conventions, te
 With your CLAUDE.md in place:
 
 1. **[Connect external services](mcp-setup.md)** — Give Claude access to email, docs, and calendar
-2. **[Explore skills](skill-library.md)** — Download tools that automate common workflows
+2. **[Explore skills](../setup/skill-reference.md)** — Download tools that automate common workflows

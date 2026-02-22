@@ -163,7 +163,7 @@ Start simple — a text file, a note in your phone, a Google Doc. The format doe
 - Turn meeting notes into action items
 - Review a draft for logical gaps
 
-Over time, this library becomes the seed of something more powerful. On this site, the [Toolkit](../toolkit/index.md) path shows how to turn saved prompts into automated skills that run in seconds. But even without that, a simple collection of your best prompts is one of the highest-value things you can build.
+Over time, this library becomes the seed of something more powerful. On this site, the [Get Started](../setup/index.md) path shows how to turn saved prompts into automated skills that run in seconds. But even without that, a simple collection of your best prompts is one of the highest-value things you can build.
 
 ---
 
@@ -201,6 +201,6 @@ Over time, this library becomes the seed of something more powerful. On this sit
 
     When chatbots aren't enough, Claude Code turns AI into a workflow tool.
 
-    [:octicons-arrow-right-24: The Toolkit](../toolkit/index.md)
+    [:octicons-arrow-right-24: Get Started](../setup/index.md)
 
 </div>
