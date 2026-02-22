@@ -1,32 +1,29 @@
 # The Essentials
 
-**Tools and foundations everyone can use today. No coding, no command line, no setup beyond creating an account.**
+**No coding, no command line. Just a paid chatbot subscription and the right habits.**
 
-This path covers the AI tools and techniques that give the biggest return for the least effort. Everything here works with a web browser and (in some cases) a phone app.
+Get a paid subscription to Claude or ChatGPT (or both). Use the heaviest thinking model available to you — always. The quality difference is not subtle.
+
+For complex tasks, you need prompt engineering. I give details on the [Prompt Engineering](prompting.md) page and use it almost by default. But at the very least, think in terms of a long conversation. Give any AI project a runway: tell it the role, the context, the goals.
+
+If you're in a hurry and working narratively — especially if you're dictating with something like [Wispr Flow](wispr-flow.md) — give the AI that runway in multiple prompts. Bursts of information each time, telling it to just listen and absorb, not respond. Repeat until you've gotten everything out, then ask it to organize everything above and start the task. The [Prompt Engineering](prompting.md) page formalizes this approach.
+
+I also recommend using projects (available in both ChatGPT and Claude) to organize your chats into themes and groups. Below I show some powerful examples of how to use project folders to take advantage of all the power they bring.
+
+**One warning:** Chatbots hallucinate. They invent citations, state falsehoods confidently, and get current events wrong. Trust the reasoning and the structure, verify the facts. Think of them as a brilliant, well-read colleague with a tendency to make things up.
 
 ---
 
 ## What's Here
 
-| Page | What You'll Learn | Time |
-|------|------------------|------|
-| **[Chatbots Done Right](chatbots.md)** | The techniques that separate casual chatbot users from power users. Model selection, saved context, structured prompts, honest limitations. | 15 min read |
-| **[AI Project Folders](project-folders.md)** | Build a reusable planning system for any recurring task — vacations, shopping, health, professional workflows. The most powerful no-code chatbot technique. | 14 min read |
-| **[Prompt Engineering](prompting.md)** | Prompt writing as a structured skill. The bridge between casual use and building real workflows. | 15 min read |
-| **[Wispr Flow](wispr-flow.md)** | Dictation that actually works — on your phone, your laptop, in any text box. Why I basically never type anymore. | 5 min read |
-| **[Granola](granola.md)** | Meeting transcription that works on Zoom, phone calls, and in-person meetings. How I turn conversations into structured project records. | 5 min read |
-| **[ChatGPT vs Claude](chatgpt-vs-claude.md)** | An honest comparison from someone who pays for and uses both daily. When each one wins. | 10 min read |
-| **[The Cost Reality](cost.md)** | What this actually costs. ROI analysis at different budget levels. What's worth it and what isn't. | 5 min read |
-
----
-
-## Where to Start
-
-**If you're new to AI tools:** Start with [Chatbots Done Right](chatbots.md). It covers the fundamentals that make everything else work better.
-
-**If you already use ChatGPT or Claude:** Skip to [Prompt Engineering](prompting.md) or browse [Wispr Flow](wispr-flow.md) / [Granola](granola.md) for tools you might not know about.
-
-**If you want to go deeper:** Once you're comfortable here, the [Toolkit](../toolkit/index.md) path shows how to turn these foundations into automated workflows using Claude Code.
+| Page | What You'll Learn |
+|------|------------------|
+| **[Prompt Engineering](prompting.md)** | Prompt writing as a structured skill. The bridge between casual use and building real workflows. |
+| **[AI Project Folders](project-folders.md)** | Build a reusable planning system for any recurring task — vacations, shopping, health, professional workflows. |
+| **[Wispr Flow](wispr-flow.md)** | Dictation that actually works — on your phone, your laptop, in any text box. Why I basically never type anymore. |
+| **[Granola](granola.md)** | Meeting transcription that works on Zoom, phone calls, and in-person meetings. How I turn conversations into structured project records. |
+| **[ChatGPT vs Claude](chatgpt-vs-claude.md)** | An honest comparison from someone who pays for and uses both daily. When each one wins. |
+| **[The Cost Reality](cost.md)** | What this actually costs. ROI analysis at different budget levels. What's worth it and what isn't. |
 
 ---
 

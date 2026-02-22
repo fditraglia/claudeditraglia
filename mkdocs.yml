@@ -54,10 +54,9 @@ nav:
   - Quickstart: quickstart.md
   - Essentials:
     - essentials/index.md
-    - Chatbots Done Right: essentials/chatbots.md
+    - Prompt Engineering: essentials/prompting.md
     - AI Project Folders: essentials/project-folders.md
     - "Example: Vacation Planning": essentials/folders/vacation.md
-    - Prompt Engineering: essentials/prompting.md
     - Wispr Flow: essentials/wispr-flow.md
     - Granola: essentials/granola.md
     - ChatGPT vs Claude: essentials/chatgpt-vs-claude.md

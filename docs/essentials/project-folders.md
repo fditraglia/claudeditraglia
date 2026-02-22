@@ -1,6 +1,6 @@
 # AI Project Folders: Turn Any Recurring Task into a System
 
-*Reading time: 8 minutes* · *Ready to build? [Skip to the setup](#build-your-first-file).*
+*Ready to build? [Skip to the setup](#build-your-first-file).*
 
 A single file stores your stable preferences, hard constraints, and behavioral rules for a recurring domain. Every new conversation starts from that file instead of from scratch. I use this for vacation planning, shopping decisions, health management, professional writing, finances — any domain where you have stable preferences and learn from experience.
 
@@ -219,41 +219,21 @@ Don't expect your file to be good on day one. It follows a predictable arc:
 
 ## See It in Action
 
+The domain changes. The structure doesn't. A few examples:
+
 <div class="grid cards" markdown>
 
 -   **Vacation Planning**
 
     ---
 
-    The full case study: an annotated project file, trip briefs, field notes from real trips, and copy-ready templates.
-
     [:octicons-arrow-right-24: Read the example](folders/vacation.md)
 
--   **Shopping Decisions**
+-   **Shopping** — *Coming soon*
 
-    ---
-
-    Stable preferences, size/brand rules, budget thresholds, and purchase history as evidence. *Coming soon.*
-
--   **Health & Fitness**
-
-    ---
-
-    Exercise constraints, dietary preferences, medical considerations, and what's worked vs. what hasn't. *Coming soon.*
+-   **Health & Fitness** — *Coming soon*
 
 </div>
-
----
-
-## Where People Use This
-
-The domain changes. The structure doesn't:
-
-- **Shopping.** Stable preferences per family member, size/brand preferences, budget thresholds, retailer avoids, past purchases that worked or didn't.
-- **Health & fitness.** Exercise constraints, dietary preferences, medical considerations, what's worked and what hasn't, provider preferences.
-- **Rock climbing trip planning.** Grade ranges per climber, gear availability, approach difficulty limits, seasonal access windows.
-- **Professional: referee reports, recommendation letters.** Your stable preferences for voice, emphasis, and standards don't change — only the subject does.
-- **Finances & taxes.** Recurring annual processes with stable rules. Account structures, tax categories, deduction patterns, filing preferences.
 
 ---
 
@@ -286,14 +266,6 @@ The domain changes. The structure doesn't:
 ## Next Steps
 
 <div class="grid cards" markdown>
-
--   **See the full vacation example**
-
-    ---
-
-    Annotated project file, trip briefs, field notes, and copy-ready templates.
-
-    [:octicons-arrow-right-24: Vacation Planning](folders/vacation.md)
 
 -   **Level up your prompts**
 

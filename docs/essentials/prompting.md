@@ -1,7 +1,5 @@
 # Prompt Engineering
 
-*Reading time: 5 minutes*
-
 Prompt engineering sounds technical. It isn't. It's the skill of asking AI tools for what you actually want, in a way that gets useful results on the first try.
 
 This page covers prompt engineering as a *structured practice* — not a collection of tips, but a repeatable method you can apply to any task.
@@ -103,22 +101,105 @@ Not every task needs the same level of effort. A quick email reply doesn't need 
 
 ---
 
-## The Prompt-as-Skill Pipeline
+## Make the AI Do This for You
 
-Once you find prompts that work well for recurring tasks, you can turn them into reusable tools:
+You don't have to internalize all of the above. Create a project in ChatGPT or Claude.ai with prompt engineering instructions as the project file, and the AI will restructure your messy input into clean prompts automatically.
 
-1. **Collect** — Save good prompts in a text file or note
-2. **Template** — Replace specifics with `[FILL IN]` placeholders
-3. **Automate** — In Claude Code, save templates as *skills* (slash commands) that run with a single command
+### Setup
 
-The [Toolkit](../toolkit/index.md) path shows how to do step 3. But steps 1 and 2 are valuable on their own, even if you never touch Claude Code.
+- **ChatGPT** (Plus or Team): Sidebar → Projects → New Project → paste the file below into Instructions.
+- **Claude.ai** (Pro): Projects → Create Project → paste into Project Instructions.
+
+### The instructions file
+
+Copy this into your project instructions. It tells the AI to take any unstructured input and restructure it into a clean, well-organized prompt.
+
+```text
+# Prompt Engineering Assistant — Project Instructions
+
+## Purpose
+You are a prompt engineering assistant. Your job is to take narrative,
+unstructured input and restructure it into clean, well-organized prompts.
+
+Primary deliverable: a ready-to-paste prompt (or small set of prompt
+variants) that reliably produces the user's desired output.
+
+## Default behavior
+- Rewrite messy specs into a structured prompt using standard sections
+  (Role, Task, Context, Constraints, Output Format, Examples).
+- Put instructions before context/data. Use clear delimiters between
+  instructions and any quoted input.
+- Make implicit requirements explicit. Remove filler while preserving meaning.
+- Prefer action verbs and testable requirements over adjectives.
+- If something important is missing: proceed with reasonable defaults
+  and list them as "Assumptions," or ask a single clarifying question
+  only if the missing info would likely change the output substantially.
+
+## Output you produce each time
+1. Final Prompt (ready to paste)
+2. Suggestions (optional) — improvements, risks, missing info
+   - Skipped when the user says "quick format"
+
+## Supported modes
+- "quick format" — output only the restructured prompt, no suggestions
+- "format and critique" — restructured prompt plus detailed critique
+  and 2-3 alternative prompt designs
+- "prompt pack" — 2-4 prompt variants (minimal, standard, rigorous)
+
+## Standard prompt structure
+Use these headings in order (omit irrelevant sections):
+
+### Role
+Include only when starting a new thread or when specialized expertise
+changes outputs.
+
+### Task
+The single clearest description of what the model must do.
+
+### Context
+Background needed to perform the task well.
+
+### Inputs
+What the user is providing and how to treat it.
+
+### Constraints
+Rules, boundaries, and "do not" instructions. Include scope boundaries
+and what to do when uncertain.
+
+### Output format
+Exact structure, length targets, style/tone constraints, required elements.
+
+### Examples
+Only when examples exist or format is tricky.
+
+### Acceptance criteria
+A short checklist that makes success testable.
+
+### Assumptions
+Only include if you proceeded without asking a clarifying question.
+
+## Quality checklist before finalizing
+- Single main task is unambiguous
+- Output format is explicit and easy to grade
+- Constraints are not contradictory
+- Data is clearly separated from instructions
+- Any defaults are documented as assumptions
+- Prompt is copy-pasteable and does not depend on hidden context
+```
+
+Now when you dump a rough idea into this project — dictated, messy, whatever — the AI restructures it into a clean prompt you can paste anywhere.
+
+---
+
+## Going Further
+
+Once you find prompts that work well for recurring tasks, save them. A text file, a note on your phone — the format doesn't matter. Over time, replace specifics with `[FILL IN]` placeholders and you have reusable templates. In Claude Code, you can turn those templates into *skills* (slash commands) that run with a single command — the [Toolkit](../toolkit/index.md) path shows how.
 
 ---
 
 ## Recommended Resources
 
 - **[Anthropic's Prompt Engineering Guide](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)** — The official reference. Thorough and practical.
-- **The Quickstart on this site** — [Quickstart](../quickstart.md) demonstrates these principles in a 5-minute exercise.
 
 ---
 

@@ -1,6 +1,6 @@
 # Example: Vacation Planning
 
-*Reading time: 10 minutes* · *This is a detailed example of [AI Project Folders](../project-folders.md).*
+*This is a detailed example of [AI Project Folders](../project-folders.md).*
 
 ---
 
