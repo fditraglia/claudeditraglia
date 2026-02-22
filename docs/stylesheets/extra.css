@@ -91,6 +91,15 @@ h1, h2 {
   border-radius: 10px;
   padding: 1.2rem 1.4rem;
   transition: border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Make bento cell title link cover the entire cell */
+.bento-cell > p > strong > a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .bento-cell:hover {
@@ -165,6 +174,19 @@ h1, h2 {
   border-radius: 8px;
   padding: 1.2rem 1.4rem;
   transition: border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Make the arrow link cover the entire card */
+.md-typeset .grid.cards > ul > li > p:last-child > a {
+  position: static;
+}
+
+.md-typeset .grid.cards > ul > li > p:last-child > a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .md-typeset .grid.cards > ul > li:hover {

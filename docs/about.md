@@ -54,7 +54,7 @@ I write about research, conflict, policy, and increasingly about AI tools on [X/
 
 ## How This Site Was Built
 
-This site is built with [MkDocs Material](https://squidfork.github.io/mkdocs-material/), hosted on [GitHub Pages](https://pages.github.com/), and auto-deploys on every push via GitHub Actions.
+This site is built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/), hosted on [GitHub Pages](https://pages.github.com/), and auto-deploys on every push via GitHub Actions.
 
 The content was written with help from Claude (naturally). The skills and workflows documented here are the same ones I use daily.
 

@@ -56,7 +56,7 @@ The protocol that lets Claude Code talk to Gmail, Google Calendar, Google Docs, 
 
 ### MkDocs Material
 
-[:octicons-link-external-16: squidfunk.github.io](https://squidfork.github.io/mkdocs-material/)
+[:octicons-link-external-16: squidfunk.github.io](https://squidfunk.github.io/mkdocs-material/)
 
 The framework this site is built with. If you want to build something similar — a documentation site for your own tools or research — Material is the best option I've found. Free, well-maintained, and the configuration is all YAML (no JavaScript required).
 
