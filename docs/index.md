@@ -7,7 +7,7 @@ hide:
 
 # Claude Blattman
 
-<p class="hero-pitch">This is what I actually use to manage 15 research projects across several countries — and my life, so I can do more research. Not a course. Not a pitch. Just the system, documented.</p>
+<p class="hero-pitch">Tools I use to manage 15 research projects across several countries (and my life, so I can do more research). Examples and tutorials for productivity and sanity.</p>
 
 <div class="hero-buttons">
 <a href="toolkit/" class="md-button md-button--primary">Get the system</a>
