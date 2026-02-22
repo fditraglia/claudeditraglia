@@ -29,6 +29,46 @@ This page describes how to assemble Claude Code's individual capabilities — MC
 
 ---
 
+## Choose Your Infrastructure
+
+Before building the EA workflow, make two decisions: where to manage your calendar, and where to track persistent action items.
+
+### Calendar: Google Calendar vs Apple Calendar
+
+| | Google Calendar | Apple Calendar |
+|---|---|---|
+| **AI automation** | Full MCP support — Claude reads, creates, modifies events | Read-only via Calendar.app (no MCP) |
+| **Team collaboration** | Native sharing, free/busy visibility | Limited sharing, iCloud-dependent |
+| **Cross-platform** | Works everywhere via web | Best on Apple devices |
+| **Privacy** | Google ecosystem | Data stays on-device |
+| **Best for** | Work scheduling + AI workflows | Personal events + privacy |
+
+**Recommendation:** Use Google Calendar as the source of truth for work scheduling and AI automation. Keep Apple Calendar for personal events if you prefer. Claude Code can only read and write to Google Calendar via MCP.
+
+### Reminders: Where to Track Action Items
+
+| | Apple Reminders | Google Tasks | Todoist |
+|---|---|---|---|
+| **AI integration** | Via osascript (macOS only) | Google Tasks MCP | API available, no MCP yet |
+| **Siri / voice** | Native Siri support | Google Assistant | Limited voice |
+| **Cross-platform** | Apple devices only | Everywhere via web | Everywhere |
+| **Complexity** | Simple lists + smart lists | Basic lists only | Projects, labels, filters |
+| **Best for** | Apple-ecosystem users | Google-ecosystem users | Power users needing advanced filtering |
+
+**What I chose:** Apple Reminders. The Siri integration means I can capture tasks by voice from any Apple device. The macOS `osascript` bridge lets Claude Code create reminders directly. The trade-off is it's Apple-only — if you need cross-platform, Google Tasks integrates better with the Google MCP ecosystem.
+
+---
+
+## About the To-Do Skills
+
+An important distinction: the `/todoa`, `/todor`, and `/todoq` skills manage **session-level** task tracking within Claude Code. They are *not* a replacement for Apple Reminders, Google Tasks, or Todoist.
+
+- **Persistent action items** (things due this week, follow-ups, deadlines) belong in your real reminder system
+- **Session tasks** (things to do right now in this Claude Code session) go in `/todoa`
+- The executive assistant workflow builds on your real reminder system — `/morning-brief` reads from Apple Reminders or Google Tasks, not from `/todoa`
+
+---
+
 ## What "Executive Assistant" Means Here
 
 Not a single skill or product. A *system* built from components:
