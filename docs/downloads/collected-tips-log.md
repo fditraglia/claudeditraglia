@@ -1,5 +1,5 @@
 # Collected Tips Log
-*Processed by /curate-tips. Search by keyword or tag.*
+*Processed by /tips-curate. Search by keyword or tag.*
 *Tags: [skill-design] [prompting] [agent-pattern] [tool] [tool-comparison] [workflow] [mcp] [context-management] [coding] [productivity]*
 *Quality: [high] [medium]*
 
