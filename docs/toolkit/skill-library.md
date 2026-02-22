@@ -1,8 +1,86 @@
-# Skill Library
+# Download Skills
 
 *Reading time: 6 minutes*
 
 Downloadable skills (slash commands) and agents for Claude Code. Each one is a markdown file you save to your commands folder.
+
+---
+
+## Start With These 3
+
+New to skills? Install these first — they're the most universally useful and have no external dependencies.
+
+<div class="grid cards" markdown>
+
+-   **:material-check-circle-outline: /done — Session Capture**
+
+    ---
+
+    Captures decisions, questions, and follow-ups from your work session. Run it every time you finish working. Builds searchable history across sessions.
+
+    *No MCP needed*
+
+    [:octicons-arrow-right-24: Install & details](#done-session-capture)
+
+-   **:material-format-text: /prompt — Format & Execute**
+
+    ---
+
+    Takes your rough, conversational request and turns it into a structured prompt — then executes it. Essential for dictation users. Comes with 3 variants.
+
+    *No MCP needed*
+
+    [:octicons-arrow-right-24: Install & details](#prompt-format-and-execute)
+
+-   **:material-clipboard-check-outline: /review-plan — Plan Review**
+
+    ---
+
+    Stress-tests any plan with expert critique. Auto-detects the domain, assigns a reviewer persona, flags red/yellow/green issues. Catches blind spots.
+
+    *Web search optional*
+
+    [:octicons-arrow-right-24: Install & details](#review-plan-plan-review)
+
+</div>
+
+---
+
+## Browse All Skills & Agents
+
+<div class="grid cards" markdown>
+
+-   :material-check-circle-outline: **[/done](#done-session-capture)** — Session capture
+    { .card-mini }
+
+-   :material-format-text: **[/prompt](#prompt-format-and-execute)** — Format & execute prompts
+    { .card-mini }
+
+-   :material-format-text: **[/prompt-only](#prompt-only-format-without-executing)** — Format without executing
+    { .card-mini }
+
+-   :material-format-text: **[/prompt-refine](#prompt-refine-review-and-improve-a-prompt)** — Improve existing prompts
+    { .card-mini }
+
+-   :material-clipboard-check-outline: **[/review-plan](#review-plan-plan-review)** — Stress-test plans
+    { .card-mini }
+
+-   :material-folder-cog-outline: **[/setup-project-management](#setup-project-management-project-setup)** — Initialize project tracking
+    { .card-mini }
+
+-   :material-draw-pen: **[Writing Reviewer](#writing-reviewer)** — Academic prose QA (agent)
+    { .card-mini }
+
+-   :material-flask-outline: **[Methodology Reviewer](#methodology-reviewer)** — Empirical methods QA (agent)
+    { .card-mini }
+
+-   :material-file-document-outline: **[CLAUDE.md Template](#claudemd-template)** — Starter config file
+    { .card-mini }
+
+-   :material-bullseye-arrow: **[Goals Template](#goals-template)** — Project & priority tracker
+    { .card-mini }
+
+</div>
 
 ---
 
