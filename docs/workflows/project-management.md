@@ -107,6 +107,53 @@ The dashboard prioritizes strategic objectives first, then operational objective
 ??? quote "How this evolved"
     The first version was a wall of text. Too much detail, no prioritization. Over three weeks I iterated: What should the dashboard emphasize? What's noise vs. signal? The breakthrough was organizing around strategic priorities rather than chronological events. I also had to tune the email filtering — too broad and you get newsletters mixed in, too narrow and you miss important threads from collaborators. The skill got better every week as I corrected it.
 
+??? example "See what this produces — full synthetic example"
+
+    The example below uses a fictional project ("Kingston Youth Futures" — a youth violence prevention RCT in Jamaica) to show the actual structure and level of detail that `/weekly-review` generates. The project, team, and data are invented. The format is real.
+
+    **Tab 1: Project Overview & Meeting Log** — the dashboard that opens every meeting:
+
+    ```
+    === PROJECT STATUS DASHBOARD ===
+
+    STRATEGIC OBJECTIVE (NORTH STAR)
+    Estimate the causal impact of "Pathways" (adapted CBT + life skills
+    + mentorship) on youth violence among high-risk adolescents in Kingston...
+
+    STRATEGIC PRIORITIES
+    1. Complete Cohort 2 screening and randomization by March 15
+    2. Maintain Cohort 1 treatment fidelity above 80% session attendance
+    3. Finalize midline survey instrument and pilot by end of February
+
+    CRITICAL SUCCESS FACTORS
+    - Community liaison trust .............. GREEN (Andre Campbell)
+    - Screening tool validity .............. GREEN (Marcus Chen)
+    - Treatment fidelity ................... YELLOW (Karen Thompson)
+    - IRB compliance ....................... GREEN (Chris Blattman)
+
+    CURRENT PRIORITIES BY PERSON
+      Chris: Review midline instrument, power calc memo, USAID visit prep
+      Karen: Facilitator remediation, list experiment design
+      Marcus: Complete Cohort 2 screening, randomization protocol
+      ...
+
+    [Full meeting summaries with decisions, action items, attribution]
+    ```
+
+    **Tab 2: Research Design & Progress** — the living research design that proposals draw from:
+
+    ```
+    Section 0: Strategic Orientation (north star, critical success factors)
+    Section 1: Executive Snapshot (design table, team, status by phase)
+    Section 2: Paper Plan
+      Track A: Descriptive papers (screening validation, gang risk factors)
+      Track B: Experimental papers (main RCT results, component analysis)
+    ```
+
+    [:octicons-file-code-24: Full example — Tab 1 (Project Overview)](examples/project-overview-example.md){ .md-button }
+    [:octicons-file-code-24: Full example — Tab 2 (Research Design)](examples/research-design-example.md){ .md-button }
+    [:octicons-link-external-16: View as Google Doc](https://docs.google.com/document/d/1tDWbJuR_O8Tmd9ttWam8xhElStOGfHHYMmZblxhwcmw/edit){ .md-button }
+
 ---
 
 ## Layer 4: Proposals and Reports on Demand
