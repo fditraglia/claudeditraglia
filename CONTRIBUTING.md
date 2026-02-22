@@ -1,6 +1,6 @@
 # Contributing to Claude Blattman
 
-This guide is primarily for Chris's research assistants (Shay, Maksym) who maintain the site, but contributions from others are welcome too.
+This guide is primarily for site maintainers, but contributions from others are welcome too.
 
 ---
 

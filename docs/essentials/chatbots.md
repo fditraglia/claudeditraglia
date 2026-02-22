@@ -33,7 +33,7 @@ A chatbot with no context about you gives generic advice. A chatbot that knows y
 
 At the start of any conversation, spend 30 seconds on context:
 
-> *I'm an assistant professor of economics studying labor markets in developing countries. I run two active RCTs in Colombia and Kenya. I manage 4 research assistants. I'm writing a grant proposal for the Weiss Fund that's due March 15.*
+> *I'm an assistant professor of economics studying labor markets in developing countries. I run two active RCTs. I manage 4 research assistants. I'm writing a grant proposal for a foundation that's due March 15.*
 
 Now every response is calibrated to your actual situation instead of a generic "researcher."
 
@@ -63,8 +63,8 @@ My writing style: Direct, evidence-first, short sentences. No jargon
 unless the funder expects it. Numbers over adjectives.
 
 Current proposals in progress:
-- Weiss Fund: Crime intervention study in Medellin. Due March 15.
-- PGFA: Youth employment RCT in Nairobi. Due April 30.
+- Foundation A: Crime intervention study in Latin America. Due March 15.
+- Foundation B: Youth employment RCT in East Africa. Due April 30.
 
 When I ask for help with proposals:
 - Always start with the key claim, then evidence
@@ -92,7 +92,7 @@ The [Quickstart](../quickstart.md) demonstrated this, but it bears repeating: st
 > *Help me write an abstract for my paper.*
 
 **Strong prompt:**
-> *Write a 250-word abstract for an economics paper. The paper uses a randomized controlled trial to test whether cognitive behavioral therapy reduces criminal behavior among high-risk young men in Bogota. Main finding: 20% reduction in arrests at 12 months, driven by changes in self-regulation rather than employment. The audience is the American Economic Review. Lead with the research question, then design, then result, then implication. Avoid jargon that wouldn't appear in a top-5 journal.*
+> *Write a 250-word abstract for an economics paper. The paper uses a randomized controlled trial to test whether cognitive behavioral therapy reduces criminal behavior among high-risk young men in a major Latin American city. Main finding: 20% reduction in arrests at 12 months, driven by changes in self-regulation rather than employment. The audience is the American Economic Review. Lead with the research question, then design, then result, then implication. Avoid jargon that wouldn't appear in a top-5 journal.*
 
 The second version takes 60 seconds longer to write and saves 20 minutes of back-and-forth.
 
