@@ -103,8 +103,8 @@ h1, h2 {
 
 .bento-cell {
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 8px;
-  padding: 0.6rem 0.8rem !important;
+  border-radius: 6px;
+  padding: 0.45rem 0.65rem !important;
   transition: border-color 0.2s, box-shadow 0.2s;
   position: relative;
   cursor: pointer;
@@ -112,9 +112,9 @@ h1, h2 {
 
 /* Force compact text inside bento cells */
 .md-typeset .bento-cell p {
-  font-size: 0.78rem !important;
-  line-height: 1.4 !important;
-  margin-bottom: 0.3rem !important;
+  font-size: 0.68rem !important;
+  line-height: 1.35 !important;
+  margin-bottom: 0.15rem !important;
   margin-top: 0 !important;
 }
 
@@ -143,15 +143,15 @@ h1, h2 {
 
 /* Bento icon size */
 .bento-icon {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   vertical-align: middle;
-  margin-right: 0.25rem;
+  margin-right: 0.15rem;
 }
 
 /* Bento tags: Claude Code / No code needed */
 .bento-tag {
   display: inline-block;
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;

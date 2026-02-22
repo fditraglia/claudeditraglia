@@ -25,25 +25,25 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 
 <div class="bento-grid" markdown>
 <div class="bento-cell bento-cell--featured" markdown>
-:material-head-lightbulb-outline:{ .bento-icon } **[Master the chatbots](essentials/prompting.md)** — Prompt engineering that works. Which model to use and when. Why thinking mode changes everything. How to set up project folders with custom instructions. Build a system, not a habit of guessing. <span class="bento-tag bento-tag--nocode">No code needed</span>
+:material-head-lightbulb-outline:{ .bento-icon } **[Master the chatbots](essentials/prompting.md)** — Which model, when. Thinking mode. Project folders with custom instructions. Prompt engineering that works. <span class="bento-tag bento-tag--nocode">No code needed</span>
 </div>
 <div class="bento-cell" markdown>
-:material-microphone-outline:{ .bento-icon } **[Speak, don't type](essentials/wispr-flow.md)** — Dictate into any app at full speaking speed. What takes 10 minutes to type takes 90 seconds to say. <span class="bento-tag bento-tag--nocode">No code needed</span>
+:material-microphone-outline:{ .bento-icon } **[Speak, don't type](essentials/wispr-flow.md)** — Dictate into any app. 10 minutes of typing in 90 seconds. <span class="bento-tag bento-tag--nocode">No code needed</span>
 </div>
 <div class="bento-cell" markdown>
-:material-clipboard-text-clock-outline:{ .bento-icon } **[Transcribe and track everything](essentials/granola.md)** — Meetings, phone calls, and hallway conversations become searchable transcripts, action items, and project logs — automatically. <span class="bento-tag bento-tag--nocode">No code needed</span>
+:material-clipboard-text-clock-outline:{ .bento-icon } **[Transcribe everything](essentials/granola.md)** — Meetings, calls, and hallway chats become searchable transcripts and action items. <span class="bento-tag bento-tag--nocode">No code needed</span>
 </div>
 <div class="bento-cell" markdown>
-:material-email-check-outline:{ .bento-icon } **[Inbox zero, in seconds](toolkit/executive-assistant.md)** — AI triage that learns your priorities and sorts hundreds of emails. The cleanup took me from 5,000 unread to six. <span class="bento-tag">Claude Code</span>
+:material-email-check-outline:{ .bento-icon } **[Inbox zero](toolkit/executive-assistant.md)** — AI triage that sorts hundreds of emails. I went from 5,000 unread to six. <span class="bento-tag">Claude Code</span>
 </div>
 <div class="bento-cell" markdown>
-:material-view-dashboard-outline:{ .bento-icon } **[Run 10 projects at once](toolkit/skill-library.md)** — Status dashboards, session capture, and weekly reviews that write themselves. <span class="bento-tag">Claude Code</span>
+:material-view-dashboard-outline:{ .bento-icon } **[Run 10 projects](toolkit/skill-library.md)** — Dashboards, session capture, and weekly reviews that write themselves. <span class="bento-tag">Claude Code</span>
 </div>
 <div class="bento-cell" markdown>
-:material-account-supervisor-outline:{ .bento-icon } **[A chief of staff, always on](toolkit/executive-assistant.md)** — Morning briefings, calendar queries, email drafts, and project check-ins. <span class="bento-tag">Claude Code</span>
+:material-account-supervisor-outline:{ .bento-icon } **[Chief of staff](toolkit/executive-assistant.md)** — Morning briefings, calendar queries, email drafts, project check-ins. <span class="bento-tag">Claude Code</span>
 </div>
 <div class="bento-cell" markdown>
-:material-draw-pen:{ .bento-icon } **[Proposals in your voice](toolkit/skill-library.md)** — AI writing and methodology agents review drafts and flag weaknesses. Not encouragement — critique. <span class="bento-tag">Claude Code</span>
+:material-draw-pen:{ .bento-icon } **[Proposals in your voice](toolkit/skill-library.md)** — Writing and methodology agents that critique, not encourage. <span class="bento-tag">Claude Code</span>
 </div>
 </div>
 
@@ -55,7 +55,7 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 
     ---
 
-    *No terminal required*
+    *No Claude Code required*
 
     Get more from the AI tools you already have. Prompt engineering that actually works — not generic tips, but tested frameworks for research, writing, and admin. Side-by-side comparisons of ChatGPT, Claude, and Gemini. Hands-free dictation with Wispr Flow. Meeting transcripts that write themselves with Granola. Plus an honest cost breakdown.
 
