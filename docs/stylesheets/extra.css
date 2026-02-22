@@ -245,6 +245,24 @@ h1, h2 {
   }
 }
 
+/* ============================
+   Table of contents — right sidebar
+   ============================ */
+
+/* TOC title in teal */
+.md-nav--secondary > .md-nav__title {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+}
+
+/* Bullet markers on TOC items */
+.md-nav--secondary .md-nav__item::before {
+  content: "•";
+  color: var(--md-default-fg-color--lightest);
+  margin-right: 0.4rem;
+  font-size: 0.7rem;
+}
+
 /* Keyboard nav accessibility for cards */
 .md-typeset .grid.cards > ul > li:focus-within {
   border-color: var(--md-accent-fg-color);
