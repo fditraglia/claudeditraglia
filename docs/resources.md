@@ -34,6 +34,18 @@ A four-pillar structure (Communicate, Learn, Deepen Relationships, Achieve Goals
 
 An extension of Murchison's Chief of Staff pattern that adds structured pillars (`pillars.yaml`), session learnings capture, and usage logging. If Murchison's repo is the architecture, Dex is the operational layer. I used it alongside the original when designing my session capture (`/done`) and goal alignment (`/goals-review`) skills. Discovered February 2026.
 
+### Obie Fernandez — Building a Personal CTO Operating System
+
+[:octicons-link-external-16: Medium](https://obie.medium.com/building-a-personal-cto-operating-system-with-claude-code-b3fb9c4933c7)
+
+A real workflow where Claude Code acts as an EA for a CTO: managing priorities, shipping work, and maintaining an operational cadence. What's useful here isn't the CTO-specific parts — it's the pattern of encoding your daily rhythm into skills so Claude runs your system instead of you running Claude. The "operating system" framing influenced how I think about the whole EA layer.
+
+### Chris Wiles — Claude Code Showcase
+
+[:octicons-link-external-16: GitHub](https://github.com/ChrisWiles/claude-code-showcase)
+
+A full example of a `.claude/` directory structure with hooks, skills, agents, commands, and GitHub workflows. If you want to see what a well-organized Claude Code project looks like before building your own, this is the best single reference. I used it as a structural template when organizing my own skills and hooks directories.
+
 ### Ethan Mollick — One Useful Thing
 
 [:octicons-link-external-16: oneusefulthing.org](https://www.oneusefulthing.org/)
