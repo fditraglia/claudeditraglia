@@ -100,6 +100,23 @@ The dashboard prioritizes strategic objectives first, then operational objective
 
 **The real value:** Week-to-week accountability. Meeting prep that takes seconds instead of hours. A team that stays focused because the review surfaces what matters. New team members who can read two months of weekly reviews and understand the project's trajectory.
 
+??? tip "How the Google Doc formatting works"
+
+    Claude Code formats your Google Doc programmatically via the API — applying heading styles (H1 for major sections, H2 for subsections, H3 for person names and meeting topics), bold for team member names, and italic for metadata. This means the dashboard structure is consistent every time the weekly review runs.
+
+    **The first time takes some back-and-forth.** When you set up a new project's Google Doc, expect a collaborative process: Claude applies the formatting it can, you review the result and flag what needs adjusting, and Claude refines. Some formatting — like adjusting spacing, tweaking font sizes for emphasis, or fixing paragraph breaks where content ran together — is easier to do manually in the Google Doc than to program via the API. This is normal. Think of the first formatting pass as calibration.
+
+    **After the first time, the structure persists.** When `/weekly-review` overwrites the dashboard each week, it applies the same heading hierarchy and formatting rules. The Google Doc retains its structure across updates. You shouldn't need to reformat manually after the initial setup — though you can always tweak if your preferences change.
+
+    **What Claude handles vs. what you handle:**
+
+    | Claude (automatic) | You (manual, first time only) |
+    |---|---|
+    | Heading styles (H1-H3) for all section headers | Fine-tuning spacing between sections |
+    | Bold for team member names throughout | Adjusting any paragraph breaks that merged during import |
+    | Italic for dates and metadata lines | Custom colors or highlighting for emphasis |
+    | Consistent structure across weekly updates | Tab creation (Claude can't create tabs via API) |
+
 !!! info "Before you start"
     **Requires:** Layer 1 (project folder + config) complete. Google Docs MCP. Gmail MCP. WhatsApp MCP optional. Granola optional.
     **Time:** First run takes 30-60 minutes (fetching and processing all sources). Subsequent runs: 10-20 minutes.
