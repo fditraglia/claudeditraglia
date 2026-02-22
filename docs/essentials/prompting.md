@@ -4,6 +4,17 @@ Prompt engineering sounds technical. It isn't. It's the skill of asking AI tools
 
 This page covers prompt engineering as a *structured practice* — not a collection of tips, but a repeatable method you can apply to any task.
 
+!!! tip "The single most important thing on this page"
+
+    Don't memorize prompt engineering rules — **make the AI do it for you.**
+    Create a prompt engineering project in ChatGPT or Claude, and it will
+    restructure your messy input into clean prompts automatically.
+    [Jump to the how-to below.](#make-the-ai-do-this-for-you)
+
+    Once you start using Claude Code, you can automate this further with
+    a [`/prompt` skill](../toolkit/skill-library.md) that formats and
+    executes prompts in a single command.
+
 ---
 
 ## Why This Matters
@@ -196,6 +207,13 @@ Now when you dump a rough idea into this project — dictated, messy, whatever �
 Once you find prompts that work well for recurring tasks, save them. A text file, a note on your phone — the format doesn't matter. Over time, replace specifics with `[FILL IN]` placeholders and you have reusable templates. In Claude Code, you can turn those templates into *skills* (slash commands) that run with a single command — the [Toolkit](../toolkit/index.md) path shows how.
 
 ---
+
+## Downloadable References
+
+These are the actual files I use. Download, adapt, and paste them into your own projects.
+
+- **[My Prompt Preferences](../downloads/prompt-preferences-template.md)** — A template showing how to document your personal prompting style: standard sections, common constraints, preferred output formats, and roles. Adapt it to your own work.
+- **[Prompting Best Practices Guide](../downloads/prompting-guide.md)** — A comprehensive reference (400+ lines) covering core principles, task-specific guidance, prompt chaining, versioning, and a quality checklist.
 
 ## Recommended Resources
 

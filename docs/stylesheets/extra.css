@@ -17,6 +17,15 @@ h1, h2 {
   letter-spacing: -0.02em;
 }
 
+/* Featured section headings — bigger and teal */
+.md-typeset .section-hero {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--md-accent-fg-color);
+  letter-spacing: -0.03em;
+  margin-top: 2rem;
+}
+
 /* Page titles in teal */
 .md-content__inner > h1:first-child {
   font-weight: 700;

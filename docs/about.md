@@ -22,13 +22,13 @@ I'm not a coder. I've never written a line of code in my life. Everything on thi
 
 ---
 
-## How I Got Here
+## How I Got Here {: .section-hero }
 
 Like most academics, the work that matters — [the research](https://chrisblattman.com/research/), the writing, the thinking — gets buried under an avalanche of email, coordination, proposals, and administrative overhead. I manage 15+ research and related projects simultaneously, each with distributed teams across multiple countries. I spend more time answering emails and writing grant reports than doing the science I was trained for.
 
-For the past year I intensively used AI chatbots. They were invaluable — deep research, better drafts, faster brainstorming, decent writing feedback. But they were limited. The time savings were real but modest.
+For the past year I intensively used [AI chatbots](essentials/index.md). They were invaluable — deep research, better drafts, faster brainstorming, decent writing feedback. But they were limited. The time savings were real but modest.
 
-Then in January 2026 I discovered [Claude Code](https://docs.anthropic.com/en/docs/claude-code), and the center of gravity shifted from chatbots to *agentic tools* — AI that can read your files, search your email, manage your calendar, and build workflows that improve themselves over time.
+Then in January 2026 I discovered [Claude Code](https://docs.anthropic.com/en/docs/claude-code), and the center of gravity shifted from chatbots to agentic tools — AI that can read your files, search your email, manage your calendar, and build workflows that improve themselves over time.
 
 I went down a rabbit hole. I spent hours daily for a month building skills and processes. I won't pretend the time investment has paid off yet in pure hours saved. But I can already see where this is going. And things that seemed impossible — a system that triages my inbox, summarizes my meetings, tracks my projects, drafts my proposals, and plans my trips — are working today.
 
@@ -42,7 +42,7 @@ That one-time cleanup sold me. Not because AI did it perfectly — it didn't —
 
 ### Why I'm Sharing This
 
-I built this site because I'm in the same position as most of my readers: buried in admin, not a developer, trying to claw back time for [work that actually matters](https://chrisblattman.com/research/).
+I built this site because I'm in the same position as most of my readers: buried in admin, not a developer, trying to claw back time for work that actually matters.
 
 If a non-technical professor can build a working AI workflow system, you can too.
 
@@ -50,7 +50,7 @@ This site is the whole thing — tutorials, downloadable tools, honest assessmen
 
 I write about research, conflict, policy, and increasingly about AI tools on [X/Twitter (@cblatts)](https://twitter.com/cblatts) and at [chrisblattman.com](https://chrisblattman.com).
 
-### I've Been Doing This For a While
+### Other Advice Posts
 
 For over a decade I've written practical advice for academics and researchers on [my blog](https://chrisblattman.com) — everything from how to get into a PhD program to how to survive the tenure track:
 
