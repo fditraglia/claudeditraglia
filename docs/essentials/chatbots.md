@@ -75,6 +75,14 @@ When I ask for help with proposals:
 
 With this in place, every conversation in that project starts with full context. You never have to re-explain who you are or what you're working on.
 
+### The Next Level: Project Folders
+
+Saved context gets you started. But for recurring planning tasks — vacations, home projects, health goals — you can go further: a canonical file that stores your stable preferences, constraints, and past results so every new conversation starts from a consistent baseline and improves over time.
+
+I built one for family vacation planning. It knows our climate thresholds, each family member's activity preferences (and what they hate), our logistics constraints, and which past trips worked or failed. Every new trip starts with that file, not from scratch.
+
+[:octicons-arrow-right-24: Build an AI Project Folder](project-folders.md)
+
 ---
 
 ## Structure Your Requests

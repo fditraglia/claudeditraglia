@@ -55,6 +55,7 @@ nav:
   - Essentials:
     - essentials/index.md
     - Chatbots Done Right: essentials/chatbots.md
+    - AI Project Folders: essentials/project-folders.md
     - Prompt Engineering: essentials/prompting.md
     - Wispr Flow: essentials/wispr-flow.md
     - Granola: essentials/granola.md

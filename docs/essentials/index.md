@@ -11,6 +11,7 @@ This path covers the AI tools and techniques that give the biggest return for th
 | Page | What You'll Learn | Time |
 |------|------------------|------|
 | **[Chatbots Done Right](chatbots.md)** | The techniques that separate casual chatbot users from power users. Model selection, saved context, structured prompts, honest limitations. | 15 min read |
+| **[AI Project Folders](project-folders.md)** | Build a reusable planning system for any recurring task — vacations, shopping, health, professional workflows. The most powerful no-code chatbot technique. | 14 min read |
 | **[Prompt Engineering](prompting.md)** | Prompt writing as a structured skill. The bridge between casual use and building real workflows. | 15 min read |
 | **[Wispr Flow](wispr-flow.md)** | Dictation that actually works — on your phone, your laptop, in any text box. Why I basically never type anymore. | 5 min read |
 | **[Granola](granola.md)** | Meeting transcription that works on Zoom, phone calls, and in-person meetings. How I turn conversations into structured project records. | 5 min read |
