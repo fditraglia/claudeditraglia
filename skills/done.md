@@ -1,6 +1,6 @@
 # Session Capture
 
-*v1.0 — Captures decisions, questions, and follow-ups to a session log*
+*v1.1 — Session capture with handoff notes and archive pruning*
 
 Captures key decisions, open questions, and follow-ups from the current session. Writes a structured entry to the session log for cross-session continuity. Run at the end of any substantive work session.
 
@@ -83,6 +83,30 @@ If the file doesn't exist, create it with a header:
 
 **New entries go at the TOP** (after the header), reverse chronological.
 
+### Step 3.5: Generate Handoff Note
+
+Write a condensed handoff file to `~/.claude/handoff.md` for next-session resumption. This file is read by a SessionStart hook so the next session has immediate context.
+
+```markdown
+# Handoff — [YYYY-MM-DD]
+
+## Session Topic
+[1-line summary]
+
+## Key Decisions
+- [Decision 1]
+- [Decision 2]
+
+## Open Follow-ups
+- [ ] [Most important next step]
+- [ ] [Other follow-ups]
+
+## Context for Next Session
+[1-2 sentences: what the next session needs to know to pick up seamlessly]
+```
+
+Overwrite any existing `handoff.md` — only the most recent session's handoff matters.
+
 ### Step 4: Summary
 
 Display a brief confirmation:
@@ -100,11 +124,21 @@ Logged to: session-log.md
 Next time: [most important follow-up item]
 ```
 
+### Step 5: Maintenance
+
+1. **Prune old entries:** Scan `session-log.md` for entries older than 60 days. Remove them (or move to a `session-log-archive.md` if the user prefers archiving over deletion).
+
+2. **Log performance:**
+   ```bash
+   echo "$(date +%Y-%m-%d),done,TOOL_CALLS,NOTES" >> ~/.claude-assistant/logs/skill-performance.csv
+   ```
+   Replace `TOOL_CALLS` with the approximate number of tool calls in this skill run, and `NOTES` with a brief note (e.g., "3 decisions, 2 follow-ups" or "quick mode").
+
 ## Customization Points
 
 - **Log file location:** Change `~/Documents/session-log.md` to wherever you want session logs stored
 - **Project matching:** Add logic to match against your known projects list (e.g., from CLAUDE.md or a goals file)
-- **Archive threshold:** Add pruning logic if your log grows large (e.g., archive entries older than 60 days)
+- **Handoff file location:** Change `~/.claude/handoff.md` if your SessionStart hook reads from a different path
 
 ## Error Handling
 

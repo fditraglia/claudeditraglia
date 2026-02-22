@@ -1,6 +1,6 @@
 # Plan Review
 
-*v1.0 — Stress-test a plan with structured expert critique and best-practice research*
+*v1.1 — Stress-test a plan with structured expert critique, best-practice research, and optional fresh-context subagent review*
 
 Stress-test a plan with structured expert critique, web research on best practices, and a revised version if needed. Use after developing a plan, or on any plan file. Catches blind spots, missing steps, and wishful thinking.
 
@@ -63,6 +63,22 @@ Extract the plan's primary domain and approach. Build web search queries:
 Distill into 3-5 key principles relevant to this plan.
 
 ### Step 4: Structured Review
+
+**Why fresh-context review matters:** If you wrote or helped develop the plan, you carry planner bias — you're more likely to rationalize gaps than catch them. A fresh-context reviewer sees the plan cold, the way a colleague or referee would.
+
+**Fresh-context review (preferred):**
+Launch a subagent to perform the critique. This avoids the bias of reviewing your own plan.
+
+Use the Task tool with `subagent_type="general-purpose"` and a prompt containing:
+- The full plan text
+- The 6 review dimensions listed below
+- The best practices distilled from Step 3
+- Instructions to return findings in Red/Yellow/Green format (see classification below)
+
+If the subagent returns results, incorporate them into the output in Step 5.
+
+**Inline review (fallback):**
+If subagent dispatch isn't available or fails, perform the review inline using the critic stance below.
 
 **CRITIC STANCE:**
 > You are now the critic, not the planner. Do not rationalize. Your job is to find what's missing, what will break, and what's wishful thinking.

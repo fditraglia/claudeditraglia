@@ -70,6 +70,8 @@ Present findings:
    - **Quantitative RCT** — full folder structure with IRB, Survey Instruments, Field Materials
    - **Qualitative / Ethnographic** — replace IRB folder with Fieldwork (Interview Memos, Transcripts, Consent Forms)
    - **Theory / Writing** — minimal structure; may skip most folders
+   - **Policy Brief / Report** — streamlined for non-academic deliverables
+   - **Multi-method** — combines quantitative and qualitative structures
 
 2. **Folder structure:** Keep existing naming or adopt numbered system?
 
@@ -131,6 +133,8 @@ Only after approval:
 5. **Create AI collaboration folders:**
    - `AI_Collaboration/Transcripts/`
    - `AI_Collaboration/Weekly_Reviews/`
+
+6. **Link external sources:** If external sources are identified (shared drives, cloud storage, institutional repositories), offer to copy or link key files into the project structure. Confirm before moving or duplicating any files.
 
 ### Phase 6: Verification
 
