@@ -17,13 +17,17 @@ h1, h2 {
   letter-spacing: -0.02em;
 }
 
-/* Landing page: large title in teal */
+/* Page titles in teal */
 .md-content__inner > h1:first-child {
-  font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
   letter-spacing: -0.03em;
   color: var(--md-accent-fg-color);
+}
+
+/* Landing page: extra-large title */
+.md-content__inner > h1:first-child:is([id="claude-blattman"]) {
+  font-size: 3.5rem;
 }
 
 /* Hero pitch line — prominent value prop (high specificity to override md-typeset) */

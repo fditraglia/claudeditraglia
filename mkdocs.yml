@@ -57,9 +57,12 @@ nav:
     - Prompt Engineering: essentials/prompting.md
     - AI Project Folders: essentials/project-folders.md
     - "Example: Vacation Planning": essentials/folders/vacation.md
+    - "Example: Shopping Decisions": essentials/folders/shopping.md
+    - "Example: Health & Fitness": essentials/folders/health.md
+    - "Project Folders for Work": essentials/folders/work.md
     - Wispr Flow: essentials/wispr-flow.md
     - Granola: essentials/granola.md
-    - ChatGPT vs Claude: essentials/chatgpt-vs-claude.md
+    - "ChatGPT vs Claude: Chatbot Comparison": essentials/chatgpt-vs-claude.md
     - The Cost Reality: essentials/cost.md
   - Toolkit:
     - toolkit/index.md

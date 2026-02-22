@@ -50,6 +50,19 @@ This site is the whole thing — tutorials, downloadable tools, honest assessmen
 
 I write about research, conflict, policy, and increasingly about AI tools on [X/Twitter (@cblatts)](https://twitter.com/cblatts) and at [chrisblattman.com](https://chrisblattman.com).
 
+### I've Been Doing This For a While
+
+For over a decade I've written practical advice for academics and researchers on [my blog](https://chrisblattman.com) — everything from how to get into a PhD program to how to survive the tenure track:
+
+- [International Development](https://chrisblattman.com/development/)
+- [Undergrads & Masters](https://chrisblattman.com/undergrad-ma/)
+- [PhD Students](https://chrisblattman.com/phd-advice/)
+- [Faculty](https://chrisblattman.com/advice-professors/)
+- [Travel](https://chrisblattman.com/travel/)
+- [Writing Well](https://chrisblattman.com/writing/)
+
+Claude Blattman is the same impulse — figure out something useful, document it, share it — applied to a new set of tools.
+
 ---
 
 ## How This Site Was Built

@@ -2,7 +2,9 @@
 
 *Ready to build? [Skip to the setup](#build-your-first-file).*
 
-A single file stores your stable preferences, hard constraints, and behavioral rules for a recurring domain. Every new conversation starts from that file instead of from scratch. I use this for vacation planning, shopping decisions, health management, professional writing, finances — any domain where you have stable preferences and learn from experience.
+A single file stores your stable preferences, hard constraints, and behavioral rules for a recurring domain. Every new conversation starts from that file instead of from scratch.
+
+I use project folders for two things: **life** (travel, shopping, health) and **work** (research writing, proposals, course prep). The pattern is the same — I'll walk through it using family travel as the main example, then show how it applies across domains.
 
 This works in both ChatGPT Projects and Claude.ai Projects, with minor setup differences noted below.
 
@@ -50,10 +52,10 @@ But before you keep reading — open ChatGPT or Claude in another tab and think 
 
 ### Platform setup
 
-- **ChatGPT** (requires Plus or Team): Go to the sidebar → Projects → New Project → paste your file into the Instructions field. Every conversation in that project automatically starts with your instructions.
-- **Claude.ai** (requires Pro): Go to Projects → Create Project → paste your file into Project Instructions. Claude prepends it to every conversation in the project.
+- **ChatGPT** (requires Plus or Team): Sidebar → Projects → New Project. Paste your instructions in the Instructions field. You can also upload reference files as **sources** — ChatGPT draws on them in every conversation. I upload trip research and past itineraries as sources for vacation planning; for shopping, the instructions alone are enough.
+- **Claude.ai** (requires Pro): Projects → Create Project. Paste your instructions in **Project Instructions**. You can upload reference documents to the **project knowledge** base. Claude prepends instructions to every conversation and can search the knowledge files.
 
-Behavior differs slightly between platforms. ChatGPT persists instructions across all conversations in the project automatically. Claude prepends them to context. Both work — just be aware that if output feels different between platforms, the instruction handling may be why.
+Whether you need uploaded files depends on the domain. Travel planning benefits from source files (past itineraries, research). Shopping and health mostly need just the instructions file. Start with instructions only and add files when you feel the gap.
 
 ### Step 1: Narrate your situation
 
@@ -219,7 +221,9 @@ Don't expect your file to be good on day one. It follows a predictable arc:
 
 ## See It in Action
 
-The domain changes. The structure doesn't. A few examples:
+The domain changes. The structure doesn't.
+
+### Life
 
 <div class="grid cards" markdown>
 
@@ -227,11 +231,39 @@ The domain changes. The structure doesn't. A few examples:
 
     ---
 
+    The running example on this page. Family travel with constraints, thresholds, and an evidence bank.
+
     [:octicons-arrow-right-24: Read the example](folders/vacation.md)
 
--   **Shopping** — *Coming soon*
+-   **Shopping Decisions**
 
--   **Health & Fitness** — *Coming soon*
+    ---
+
+    Durability over price, curated shortlists, and a system that learns from every purchase.
+
+    [:octicons-arrow-right-24: Read the example](folders/shopping.md)
+
+-   **Health & Fitness**
+
+    ---
+
+    A master health profile that turns generic advice into advice that knows your body, your meds, and your goals.
+
+    [:octicons-arrow-right-24: Read the example](folders/health.md)
+
+</div>
+
+### Work
+
+<div class="grid cards" markdown>
+
+-   **Research, Writing & Project Management**
+
+    ---
+
+    The same principles applied to professional workflows — plus ChatGPT Deep Research and Claude Code skills that build on each other.
+
+    [:octicons-arrow-right-24: Read more](folders/work.md)
 
 </div>
 

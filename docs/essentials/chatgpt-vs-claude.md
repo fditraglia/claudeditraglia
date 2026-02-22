@@ -1,24 +1,6 @@
-# ChatGPT vs Claude
-
-*Reading time: 4 minutes*
+# ChatGPT vs Claude: Chatbot Comparison
 
 I pay for and use both ChatGPT and Claude every day. Here's an honest comparison from someone with no loyalty to either company.
-
----
-
-## The Short Version
-
-| Dimension | ChatGPT Wins | Claude Wins |
-|-----------|-------------|-------------|
-| **Web search & research** | Deep Research is genuinely excellent | |
-| **Image generation** | DALL-E / GPT-4o image capabilities | |
-| **Code & file management** | | Claude Code is unmatched |
-| **Long-form writing** | | Better at maintaining voice and structure |
-| **Memory & context** | Built-in memory across conversations | Projects with persistent instructions |
-| **Reasoning** | o1/o3 models for hard problems | Opus for nuanced analysis |
-| **Developer tools** | | Claude Code, MCP integrations, skills |
-| **Mobile** | Solid app | Solid app |
-| **Price** | $20/mo (Plus) to $200/mo (Pro) | $20/mo (Pro) to $100/mo (Max) |
 
 ---
 
@@ -62,15 +44,6 @@ For tasks that require careful, multi-step reasoning — research design, method
 ### Projects and Persistent Context
 
 Claude.ai's Projects feature lets you create a workspace with instructions and files that persist across conversations. This is better than ChatGPT's memory system for structured, project-based work.
-
----
-
-## What I Use Neither For
-
-- **Spreadsheet work** — Google Sheets + Gemini is better for heavy spreadsheet manipulation
-- **Video/audio analysis** — Gemini can process media directly; neither Claude nor ChatGPT can
-- **Citation-heavy research** — Perplexity provides inline citations and live sources more reliably
-- **Legal/medical/financial decisions** — Consult actual professionals
 
 ---
 
