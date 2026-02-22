@@ -64,20 +64,25 @@ nav:
     - Granola: essentials/granola.md
     - "ChatGPT vs Claude: Chatbot Comparison": essentials/chatgpt-vs-claude.md
     - The Cost Reality: essentials/cost.md
-  - Toolkit:
-    - toolkit/index.md
+  - Skills in Action:
+    - workflows/index.md
+    - Project Management: workflows/project-management.md
+    - Executive Assistant: toolkit/executive-assistant.md
+    - First Session Skills: workflows/first-session-skills.md
+  - Setup:
+    - setup/index.md
     - Install (Mac): toolkit/install-mac.md
     - Install (Windows): toolkit/install-windows.md
     - Your CLAUDE.md: toolkit/claude-md.md
     - MCP Setup: toolkit/mcp-setup.md
     - How Skills Work: toolkit/skills-guide.md
-    - Download Skills: toolkit/skill-library.md
-    - Executive Assistant: toolkit/executive-assistant.md
+    - Skill Reference: setup/skill-reference.md
   - Advanced:
     - system/index.md
     - Building Skills: system/building-skills.md
     - Agents vs Skills: system/agents-vs-skills.md
     - Patterns: system/patterns.md
+  - Downloads: downloads/index.md
   - Resources: resources.md
   - About: about.md
 

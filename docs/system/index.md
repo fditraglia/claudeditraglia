@@ -39,3 +39,16 @@ You should have:
 - Comfort reading and editing markdown files
 
 You don't need to know how to code. Skills are written in markdown (structured text), not a programming language.
+
+---
+
+## Reference Materials
+
+Downloadable guides from my setup, for when you want to go deeper:
+
+- **[Skill Design Patterns](../downloads/skill-patterns.md)** — Archetypes, quality checklist, and performance logging conventions
+- **[Agents vs Skills Decision Guide](../downloads/agents-vs-skills-guide.md)** — Detailed decision framework
+- **[Claude Code Under the Hood](../downloads/claude-under-the-hood.md)** — How the message stack, agentic loop, and context window actually work (16,000 words)
+- **[Collected Tips & Research Log](../downloads/collected-tips-log.md)** — Curated findings from ongoing research into prompting, agents, and context management
+
+See the full [Downloads & Reference Library](../downloads/index.md) for all available resources.

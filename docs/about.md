@@ -38,7 +38,7 @@ Here's what convinced me this was real: After 20 years of digital life, I had 5,
 
 It was like having a magic cleanup team come into a hoarder's basement.
 
-That one-time cleanup sold me. Not because AI did it perfectly — it didn't — but because it did in 36 hours what I'd been failing to do for a decade.
+That one-time cleanup sold me. Not because AI did it perfectly — it didn't — but because it did in 36 hours what I'd been failing to do for a decade. (I wrote up [the full process](toolkit/executive-assistant.md#the-one-time-cleanup) and a [detailed cloud storage guide](downloads/cloud-storage-guide.md) if you want to try it yourself.)
 
 ### Why I'm Sharing This
 

@@ -120,3 +120,5 @@ They run in parallel and return independent assessments.
 | Task needs conversation history | Skill | Agent doesn't see prior context |
 | Heavy task that would bloat context | Agent | Keeps main conversation lean |
 | One-time setup or configuration | Skill | Needs to read/write files and ask questions |
+
+For a more detailed decision framework with additional examples, see the [Agents vs Skills Decision Guide](../downloads/agents-vs-skills-guide.md) (February 2026).

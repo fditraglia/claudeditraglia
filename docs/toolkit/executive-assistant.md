@@ -1,7 +1,5 @@
 # Building an AI Executive Assistant
 
-*Reading time: 5 minutes*
-
 This page describes how to assemble Claude Code's individual capabilities — MCP integrations, skills, and persistent context — into something that functions as an executive assistant: a system that manages your inbox, tracks your projects, processes your meetings, and drafts your communications.
 
 <div class="narrative-block" markdown>
@@ -195,8 +193,50 @@ Turn successful patterns into skills:
 
 ---
 
+## The One-Time Cleanup
+
+Before building recurring workflows, there's a one-time cleanup that pays for itself immediately. This is the "magic cleanup team in a hoarder's basement" moment — the point where you realize AI tools can do in a day what you've been failing to do for years.
+
+My cleanup took about 36 hours spread across two days. Here's what it involved and how you can do something similar.
+
+### What I Cleaned Up
+
+| Area | Before | After | Time |
+|------|--------|-------|------|
+| **Email inbox** | 5,000 unread (years of backlog) | 6 unread | ~8 hours |
+| **Local disk** | 19 GB free on 1 TB drive | 500+ GB free | ~2 hours |
+| **Cloud storage** | Files scattered across 4 services, no catalog | Single inventory, stale folders identified | ~4 hours |
+| **Calendar** | Events split across iCalendar and Google | Consolidated to Google Calendar | ~2 hours |
+| **Reminders** | No system (used unread email as to-do list) | Apple Reminders with structured categories | ~2 hours |
+
+### How to Do It Yourself
+
+**Email cleanup** is covered in the inbox triage section above. The key insight: start with a *reminder system*, then use Claude to categorize and process your backlog in batches.
+
+**Local disk audit.** Ask Claude Code to scan your filesystem:
+
+> Scan my local filesystem to find where my disk space is going. Check ~/Library, /Applications, ~/Downloads, hidden directories, and anything else that looks large. Find the top 50 largest files. Present a ranked list of quick wins — things likely safe to delete with estimated space recoverable.
+
+Hidden directories are where the real bloat lives. Apps store data in dot-prefixed folders (`.app-name/`) that don't show up in Finder. Claude Code finds these instantly. In my case, a single hidden backup directory was consuming 79 GB.
+
+**Cloud storage inventory.** If you have files across Dropbox, Google Drive, Box, or iCloud:
+
+1. **Services with API access** (Dropbox, Google Drive via MCP): have Claude enumerate files programmatically and generate an inventory report
+2. **Services without API access** (Box, iCloud): take screenshots of the folder structure and have Claude catalog them — it reads images
+3. **Cross-reference** across services to find duplicates and stale folders
+
+The high-value action isn't reorganizing files — it's creating an inventory file that gives Claude awareness of where everything lives. My Dropbox had 630K files totaling 1,400 GB, but only 10% was actively used in the last 12 months. That data made selective sync decisions obvious.
+
+**Calendar consolidation.** If your events are split across multiple calendar systems, Claude Code can read your Google Calendar via MCP and help identify which events need migrating. The migration itself may require manual work in Calendar.app, but Claude can generate the list and track progress.
+
+!!! tip "Detailed walkthrough"
+    For a step-by-step guide covering disk audit, cloud storage inventory, selective sync optimization, and Google Drive cleanup — with reproducible prompts and time estimates — see the [Cloud Storage Organization Guide](../downloads/cloud-storage-guide.md).
+
+---
+
 ## Further Reading
 
 - **[Skill Library](skill-library.md)** — Download skills for inbox triage, session capture, and more
 - **[Build Your Own](../system/index.md)** — Learn to create and refine your own skills
 - **[CLAUDE.md Guide](claude-md.md)** — Configure your persistent context
+- **[Downloads & Reference Library](../downloads/index.md)** — Guides, templates, and deep dives from my setup

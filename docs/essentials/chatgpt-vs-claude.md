@@ -71,3 +71,5 @@ See [The Cost Reality](cost.md) for a full breakdown including other tools.
 **If you can afford both:** Use Claude as your primary tool and ChatGPT for Deep Research and web-heavy tasks. They're genuinely complementary.
 
 **If you're just starting:** Start with whichever one you already have. The techniques in [Chatbots Done Right](chatbots.md) and [Prompt Engineering](prompting.md) work with both.
+
+For a more detailed decision framework covering Claude Code, Claude.ai, ChatGPT, Gemini, and Perplexity — including when to switch tools — see the [Tool Limitations & When to Use What](../downloads/tool-limitations.md) guide.
