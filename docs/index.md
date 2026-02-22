@@ -3,8 +3,6 @@ hide:
   - navigation
 ---
 
-<span class="badge-preview">Early access — March 2026</span>
-
 # Claude Blattman
 
 <p class="hero-pitch">Tools I use to manage 15 research projects across several countries (and my life, so I can do more research). Examples and tutorials for productivity and sanity.</p>
