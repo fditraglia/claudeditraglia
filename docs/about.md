@@ -10,9 +10,9 @@ The name is a joke. The tools are real.
 
 ## About Chris Blattman
 
-I'm a professor at the [Harris School of Public Policy](https://harris.uchicago.edu/) at the University of Chicago. My research focuses on violence, crime, and poverty — I design and test interventions in cities across Latin America and Africa. You can read more about my research and writing at [chrisblattman.com](https://chrisblattman.com).
+I'm a political economist at the [Harris School of Public Policy](https://harris.uchicago.edu/) at the University of Chicago. My research focuses on violence, crime, and poverty — I design and test interventions in cities across Latin America and Africa. You can read more about my research and writing at [chrisblattman.com](https://chrisblattman.com).
 
-I'm not a coder. The closest I come to programming is writing statistical analysis files in Stata and R. Everything on this site was built using AI tools by someone with no software engineering background.
+I'm not a coder. I've never written a line of code in my life. Everything on this site was built using AI tools by someone with no software engineering background.
 
 **Website:** [chrisblattman.com](https://chrisblattman.com)
 
@@ -26,11 +26,11 @@ I'm not a coder. The closest I come to programming is writing statistical analys
 
 Like most academics, the work that matters — [the research](https://chrisblattman.com/research/), the writing, the thinking — gets buried under an avalanche of email, coordination, proposals, and administrative overhead. I manage 15+ research and related projects simultaneously, each with distributed teams across multiple countries. I spend more time answering emails and writing grant reports than doing the science I was trained for.
 
-About a year ago, I started using AI chatbots. They were useful — better drafts, faster brainstorming, decent writing feedback. But they were essentially fancy text boxes. Copy in, copy out. The time savings were real but modest.
+For the past year I intensively used AI chatbots. They were invaluable — deep research, better drafts, faster brainstorming, decent writing feedback. But they were limited. The time savings were real but modest.
 
-Then something changed. I discovered [Claude Code](https://docs.anthropic.com/en/docs/claude-code), and the center of gravity shifted from chatbots to *agentic tools* — AI that can read your files, search your email, manage your calendar, and build workflows that improve themselves over time.
+Then in January 2026 I discovered [Claude Code](https://docs.anthropic.com/en/docs/claude-code), and the center of gravity shifted from chatbots to *agentic tools* — AI that can read your files, search your email, manage your calendar, and build workflows that improve themselves over time.
 
-I went down a rabbit hole. I spent hours daily for a month building skills and processes. I won't pretend the time investment has paid off yet in pure hours saved. But I can already see where this is going. And the things that seemed impossible six months ago — a system that triages my inbox, summarizes my meetings, tracks my projects, and drafts my proposals — are working today.
+I went down a rabbit hole. I spent hours daily for a month building skills and processes. I won't pretend the time investment has paid off yet in pure hours saved. But I can already see where this is going. And things that seemed impossible — a system that triages my inbox, summarizes my meetings, tracks my projects, drafts my proposals, and plans my trips — are working today.
 
 ### The One-Time Cleanup
 

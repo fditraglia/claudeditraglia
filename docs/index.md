@@ -5,7 +5,7 @@ hide:
 
 # Claude Blattman
 
-<p class="hero-pitch">Tools I use to manage 15+ research and related projects across several countries (and my life, so I can do more research). Examples and tutorials for productivity and sanity.</p>
+<p class="hero-pitch">Tools I use to manage my schedule, communication, and complex projects with large teams across several countries. Examples and tutorials for productivity and sanity.</p>
 
 <div class="hero-buttons">
 <a href="toolkit/" class="md-button md-button--primary">Get the system</a>
@@ -16,14 +16,14 @@ hide:
 </div>
 
 <div class="credibility-strip" markdown>
-By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I manage 15+ research and related projects across multiple countries. A year ago I started building AI workflows with Claude Code. What seemed impossible then — inbox triage, meeting capture, proposal drafting, project dashboards — is running today. Claude Blattman isn't real, but the tools are.
+By [Chris Blattman](https://chrisblattman.com), political economist at UChicago Harris. In January 2026 I started building AI workflows with Claude Code. What seemed impossible then — inbox triage, meeting capture, proposal drafting, project dashboards, trip planning — is running today. Claude Blattman isn't real, but the tools are. I've never coded in my life, so if I can do this you can.
 </div>
 
 ## What You Can Do Right Away
 
 <div class="bento-grid" markdown>
 <div class="bento-cell bento-cell--featured" markdown>
-:material-head-lightbulb-outline:{ .bento-icon } **[Master the chatbots](essentials/prompting.md)** — Which model, when. Thinking mode. Project folders with custom instructions. Prompt engineering that works. <span class="bento-tag bento-tag--nocode">No code needed</span>
+:material-head-lightbulb-outline:{ .bento-icon } **[Master the chatbots](essentials/index.md)** — Which model, when. Thinking mode. [Project folders](essentials/project-folders.md) with custom instructions. Prompt engineering that works. <span class="bento-tag bento-tag--nocode">No code needed</span>
 </div>
 <div class="bento-cell" markdown>
 :material-microphone-outline:{ .bento-icon } **[Speak, don't type](essentials/wispr-flow.md)** — Dictate into any app. 10 minutes of typing in 90 seconds. <span class="bento-tag bento-tag--nocode">No code needed</span>
