@@ -1,7 +1,5 @@
 # Download Skills
 
-*Reading time: 12 minutes*
-
 Downloadable skills (slash commands) and agents for Claude Code. Each one is a markdown file you save to your commands folder.
 
 ---

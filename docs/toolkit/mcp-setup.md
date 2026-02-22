@@ -1,7 +1,5 @@
 # MCP Setup
 
-*Reading time: 5 minutes*
-
 MCP (Model Context Protocol) servers extend Claude Code's capabilities by connecting to external services. Once connected, Claude can read your email, search your documents, check your calendar, and more — directly from the terminal.
 
 ---

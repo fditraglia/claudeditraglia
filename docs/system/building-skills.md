@@ -1,7 +1,5 @@
 # Building Skills
 
-*Reading time: 4 minutes*
-
 Skills are the building blocks of a self-improving Claude Code system. This page covers how to create them from scratch.
 
 ---

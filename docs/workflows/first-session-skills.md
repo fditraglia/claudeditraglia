@@ -1,7 +1,5 @@
 # First Session Skills
 
-*Reading time: 5 minutes*
-
 These skills require nothing but Claude Code. No MCP integrations, no configuration files, no external services. Install them, use them, get better results immediately.
 
 ---

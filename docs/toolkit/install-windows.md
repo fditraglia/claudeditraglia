@@ -1,7 +1,5 @@
 # Install Claude Code (Windows)
 
-*Reading time: 6 minutes*
-
 **A beginner's guide for PowerShell newcomers. No prior command-line experience needed.**
 
 ---

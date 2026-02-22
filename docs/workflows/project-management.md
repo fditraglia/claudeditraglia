@@ -1,7 +1,5 @@
 # Project Management
 
-*Reading time: 12 minutes*
-
 How I went from scattered information across five platforms to living project dashboards that write weekly reviews and draft proposals on demand. Built in four layers over several months — each one building on the last.
 
 ---
@@ -17,6 +15,20 @@ I'd walk into a meeting and spend the first ten minutes trying to remember what 
 I know some managers, companies, and labs use Slack to manage all of this. I tried it for one project and found it didn't fit my workflow. The volume of threads was overwhelming — too many conversations that weren't crucial to me, and not great at surfacing strategic priorities. That could be my inexperience, and in a year I might be a Slack convert. But I found that building the system below really suited how I work — especially the project overviews and living documents I'm about to describe. Those then let me automate the most time-consuming parts: proposal and report writing for donors and partners, across complex field projects with large teams doing data collection and analysis in multiple countries.
 
 The system didn't solve all of this overnight. Each layer took about three weeks of iteration. None worked perfectly on day one. But each one made the next possible.
+
+---
+
+## Layer 0 (Optional): Clean Up Your Digital Life
+
+Before organizing individual projects, you might want to clean house. If you have thousands of unread emails, files scattered across Dropbox, Google Drive, Box, and iCloud, a full hard drive, and calendars split across platforms — a one-time cleanup makes everything that follows easier.
+
+This isn't required. You can skip straight to Layer 1 and organize projects on top of whatever mess currently exists. But if your digital infrastructure is chaotic, spending a day or two with Claude Code to get it under control pays dividends.
+
+**What the cleanup covers:** inbox triage (getting from thousands of unread to single digits), local disk audit (finding hidden space hogs), cloud storage inventory (cataloging everything across services), and calendar consolidation.
+
+[:octicons-arrow-right-24: The One-Time Cleanup](../toolkit/executive-assistant.md#the-one-time-cleanup) — what I cleaned, how long it took, and prompts you can use yourself
+
+[:octicons-download-16: Cloud Storage Organization Guide](../downloads/cloud-storage-guide.md) — detailed step-by-step walkthrough with scripts and decision frameworks
 
 ---
 
@@ -136,6 +148,7 @@ Two things matter more than any individual skill:
 You don't need to build all four at once. Start with organizing your folders. Add transcription when you're ready. The weekly review only works because the folder structure exists. The proposal skills only work because the weekly review keeps everything current.
 
 ```
+Layer 0: Digital cleanup    → Optional one-time reset (standalone)
 Layer 1: Project folder     → Foundation (works alone)
 Layer 2: Transcription      → Captures meetings (builds on L1)
 Layer 3: Weekly review      → Synthesizes everything (builds on L1+L2)

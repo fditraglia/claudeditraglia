@@ -1,7 +1,5 @@
 # Quickstart: Your First 5 Minutes
 
-*Reading time: 3 minutes*
-
 **Goal:** Paste one prompt into Claude (or ChatGPT) and get something immediately useful. No setup required.
 
 ---

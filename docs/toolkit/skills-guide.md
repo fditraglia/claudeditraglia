@@ -1,7 +1,5 @@
 # Skills Guide
 
-*Reading time: 4 minutes*
-
 Skills (also called slash commands) are reusable prompts that run inside Claude Code with a single command. Instead of typing out a detailed prompt every time you want to triage your inbox or summarize a meeting, you type `/done` or `/review-plan` and the skill handles the rest.
 
 ---

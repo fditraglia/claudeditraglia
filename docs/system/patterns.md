@@ -1,7 +1,5 @@
 # Patterns
 
-*Reading time: 4 minutes*
-
 Reusable design patterns for skills and workflows. These show up repeatedly in well-designed Claude Code tools.
 
 ---

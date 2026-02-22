@@ -1,7 +1,5 @@
 # The Cost Reality
 
-*Reading time: 3 minutes*
-
 Let's be honest about what building an AI workflow costs, who it makes sense for, and who should start smaller.
 
 ---

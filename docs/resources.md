@@ -1,7 +1,5 @@
 # Resources
 
-*Reading time: 4 minutes*
-
 A curated collection of the resources, tools, and reference implementations that shaped this project. Each entry includes a brief summary of what's useful and why I found it worth your time.
 
 ---
