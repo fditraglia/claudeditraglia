@@ -38,7 +38,7 @@ Use skills when the task is a **workflow that benefits from conversation context
 - `/weekly-review` -- needs project config, user decisions at each step, iterative refinement
 - `/triage-inbox` -- needs to show you emails and get your decisions
 - `/prompt` -- needs to read your conversational input and format it
-- `/todoa` -- quick interaction that creates a reminder
+- `/todo-add` -- quick interaction that creates a reminder
 
 **Pattern**: User triggers it, Claude works through steps, user provides input along the way.
 

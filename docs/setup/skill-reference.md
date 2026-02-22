@@ -224,7 +224,7 @@ curl -o ~/.claude/commands/setup-project-management.md \
 
 ---
 
-### /todoa — Add To-Do Item
+### /todo-add — Add To-Do Item
 `[EA]`
 
 **What it does:** Adds a to-do item to the correct list with duplicate checking. Routes items based on keywords.
@@ -233,22 +233,22 @@ curl -o ~/.claude/commands/setup-project-management.md \
 
 **Install:**
 ```bash
-curl -o ~/.claude/commands/todoa.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/todoa.md
+curl -o ~/.claude/commands/todo-add.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/todo-add.md
 ```
 
 **Usage:**
 ```
-/todoa Fix the authentication bug
-/todoa list:work Set up CI pipeline
+/todo-add Fix the authentication bug
+/todo-add list:work Set up CI pipeline
 ```
 
 !!! note "Session-scoped tasks"
-    `/todoa`, `/todor`, and `/todoq` manage Claude Code's *session-level* task tracking. They do **not** replace Apple Reminders, Google Tasks, or Todoist for persistent action items. Use your real reminder system for durable tasks; use these for within-session work management.
+    `/todo-add`, `/todo-review`, and `/todo-queue` manage Claude Code's *session-level* task tracking. They do **not** replace Apple Reminders, Google Tasks, or Todoist for persistent action items. Use your real reminder system for durable tasks; use these for within-session work management.
 
 ---
 
-### /todoq — Todo Queue
+### /todo-queue — Todo Queue
 `[EA]`
 
 **What it does:** Batch-processes emails in a designated Gmail label, converting them to Apple Reminders with timing extracted from email body.
@@ -257,20 +257,20 @@ curl -o ~/.claude/commands/todoa.md \
 
 **Install:**
 ```bash
-curl -o ~/.claude/commands/todoq.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/todoq.md
+curl -o ~/.claude/commands/todo-queue.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/todo-queue.md
 ```
 
 **Usage:**
 ```
-/todoq              # Process all pending
-/todoq dryrun       # Preview only
-/todoq limit:5      # Process first 5 only
+/todo-queue              # Process all pending
+/todo-queue dryrun       # Preview only
+/todo-queue limit:5      # Process first 5 only
 ```
 
 ---
 
-### /todor — To-Do Review
+### /todo-review — To-Do Review
 `[EA]`
 
 **What it does:** Reviews and consolidates to-do items across all configured files. Duplicate detection and batch actions.
@@ -279,14 +279,14 @@ curl -o ~/.claude/commands/todoq.md \
 
 **Install:**
 ```bash
-curl -o ~/.claude/commands/todor.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/todor.md
+curl -o ~/.claude/commands/todo-review.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/todo-review.md
 ```
 
 **Usage:**
 ```
-/todor           # Quick summary (high priority only)
-/todor full      # All priority levels
+/todo-review           # Quick summary (high priority only)
+/todo-review full      # All priority levels
 ```
 
 ---

@@ -1,4 +1,4 @@
-# Todo Queue (todoq)
+# Todo Queue
 *v1.0 — Adapted for public use*
 
 Batch-process emails in a designated Gmail label, converting them to Apple Reminders with timing extracted from the email body.
@@ -16,7 +16,7 @@ Using Task or ToolSearch will trigger unnecessary permission prompts.
 ## Usage
 
 ```
-/todoq
+/todo-queue
 ```
 
 ## Overview
@@ -144,9 +144,9 @@ To find these reminders:
 ## Examples
 
 ```
-/todoq              # Process all pending
-/todoq dryrun       # Preview only
-/todoq limit:5      # Process first 5 only
+/todo-queue              # Process all pending
+/todo-queue dryrun       # Preview only
+/todo-queue limit:5      # Process first 5 only
 ```
 
 ## Usage Examples (Email Side)
@@ -244,5 +244,5 @@ The default due time is 9:00 AM. To change it, find all references to "9am" and 
 If you have a morning briefing or weekly review skill, you can add a check for pending @ToSelf emails:
 ```
 if (unread @ToSelf emails found):
-    "You have N emails in your todo queue. Run /todoq? [Y/n]"
+    "You have N emails in your todo queue. Run /todo-queue? [Y/n]"
 ```

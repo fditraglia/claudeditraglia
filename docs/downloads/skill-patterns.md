@@ -59,7 +59,7 @@ How our 20 skills map to the three standard categories from Anthropic's guide:
 |-------|----------|-------|
 | filter-political | Triage | Single Gmail query + label |
 | doc-feedback | Triage | Collect friction points |
-| todoa | Workflow | Interactive single-item adder |
+| todo-add | Workflow | Interactive single-item adder |
 
 ### Medium Complexity (500-2000 words, multi-step)
 | Skill | Category | Notes |
@@ -67,9 +67,9 @@ How our 20 skills map to the three standard categories from Anthropic's guide:
 | prompt | Formatting | Depth-calibrated formatting + execution, references formatting-core.md |
 | prompt-only | Formatting | Depth-calibrated formatting, output only, references formatting-core.md |
 | prompt-refine | Formatting | Substance + structure checklists, references formatting-core.md |
-| todoq | Workflow | Gmail search → batch Reminders creation |
+| todo-queue | Workflow | Gmail search → batch Reminders creation |
 | auto-read-stale | Workflow | Age-based newsletter auto-read |
-| todor | Project Mgmt | Consolidated review across 3 lists |
+| todo-review | Project Mgmt | Consolidated review across 3 lists |
 | whatsapp-summary | Project Mgmt | Date-range WhatsApp digest |
 | task-from-email | Workflow | Email parsing → Reminder with confirmation |
 | write-proposal | Research | Checklist-first proposal drafting, plan-mode-aware, voice pack |
@@ -101,7 +101,7 @@ Add as the final step of any skill:
 echo "$(date +%Y-%m-%d),SKILL_NAME,TOOL_CALLS,NOTES" >> ~/Dropbox/Claude/Settings/logs/skill-performance.csv
 ```
 
-- `SKILL_NAME`: kebab-case skill name (e.g., `morning-brief`, `todoa`)
+- `SKILL_NAME`: kebab-case skill name (e.g., `morning-brief`, `todo-add`)
 - `TOOL_CALLS`: approximate count of MCP/tool calls made during execution (use `~N` if uncertain)
 - `NOTES`: brief dash-separated summary (e.g., `7-emails-3-labeled`, `status-only`)
 

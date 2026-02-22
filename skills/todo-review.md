@@ -66,7 +66,7 @@ Check `$ARGUMENTS`:
 - [date]: Item (List)
 
 ---
-*Quick view. Run `/todor full` for Medium/Low priority items.*
+*Quick view. Run `/todo-review full` for Medium/Low priority items.*
 ```
 
 ---
@@ -107,7 +107,7 @@ Show everything from Quick Mode, PLUS add these sections after "Recently Complet
 Options:
 1. Reprioritize an item
 2. Mark something complete
-3. Add a new item (runs /todoa)
+3. Add a new item (runs /todo-add)
 4. Remove a duplicate
 5. Done
 
@@ -162,4 +162,4 @@ Add more lists as needed:
 
 6. **Summary table columns**: The default table shows High/Medium/Low counts. If you use different priority tiers (e.g., P0/P1/P2/P3), adjust the column headers to match.
 
-7. **Action prompt**: The action menu references `/todoa` for adding new items. If you renamed that skill, update the reference in Step 4.
+7. **Action prompt**: The action menu references `/todo-add` for adding new items. If you renamed that skill, update the reference in Step 4.

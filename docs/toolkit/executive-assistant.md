@@ -61,11 +61,11 @@ Before building the EA workflow, make two decisions: where to manage your calend
 
 ## About the To-Do Skills
 
-An important distinction: the `/todoa`, `/todor`, and `/todoq` skills manage **session-level** task tracking within Claude Code. They are *not* a replacement for Apple Reminders, Google Tasks, or Todoist.
+An important distinction: the `/todo-add`, `/todo-review`, and `/todo-queue` skills manage **session-level** task tracking within Claude Code. They are *not* a replacement for Apple Reminders, Google Tasks, or Todoist.
 
 - **Persistent action items** (things due this week, follow-ups, deadlines) belong in your real reminder system
-- **Session tasks** (things to do right now in this Claude Code session) go in `/todoa`
-- The executive assistant workflow builds on your real reminder system — `/morning-brief` reads from Apple Reminders or Google Tasks, not from `/todoa`
+- **Session tasks** (things to do right now in this Claude Code session) go in `/todo-add`
+- The executive assistant workflow builds on your real reminder system — `/morning-brief` reads from Apple Reminders or Google Tasks, not from `/todo-add`
 
 ---
 

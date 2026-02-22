@@ -293,7 +293,7 @@ Sort VIP emails oldest-first (most days waiting at top). Display age as "[N]d" n
 #### Overdue Truncation
 
 Show a maximum of 10 overdue items (oldest first). If more than 10:
-`... and [N] more --- run /todor to review`
+`... and [N] more --- run /todo-review to review`
 
 #### Meeting Context Lines
 
@@ -370,7 +370,7 @@ Compose the briefing in this format. Omit sections with no data. Use tomorrow's 
 - **VIP needing response:** [name] ([N]d), [name] ([N]d) --- sorted oldest-first
 - [N] unread emails remain in inbox
 - [N] emails in @ToSelf (pending todo conversion)
-[If @ToSelf has items: "Run /todoq to process"]
+[If @ToSelf has items: "Run /todo-queue to process"]
 
 ## Waiting For
 - [Recipient name]: "[subject snippet]" ([N]d ago)
@@ -407,7 +407,7 @@ SKIPPED (left in inbox):
 ## Overdue ([N] items)
   N. [[list]] [task name] (N days overdue)
   ... [max 10 items, oldest first]
-[If >10: "... and [N] more --- run /todor to review"]
+[If >10: "... and [N] more --- run /todo-review to review"]
 [If none: omit section]
 
 To adjust reminders: tell me "defer 8-12 to Monday" or "move 9 to Someday"
@@ -510,7 +510,7 @@ When generating the email version, convert the briefing to HTML using this templ
 <ul style="margin: 0 0 12px 0; padding-left: 20px;">
   <li><b>VIP needing response:</b> Name (Nd), Name (Nd)</li>
   <li><b>[N]</b> unread emails remain in inbox</li>
-  <li><b>[N]</b> emails in @ToSelf <span style="color: #666;">(run /todoq to process)</span></li>
+  <li><b>[N]</b> emails in @ToSelf <span style="color: #666;">(run /todo-queue to process)</span></li>
 </ul>
 
 <!-- Waiting For -->
@@ -609,7 +609,7 @@ When generating the email version, convert the briefing to HTML using this templ
 - **Triage rules by reference:** This skill uses `/triage-inbox` classification logic and `triage-config.md` for data tables. Updates to those files propagate automatically --- no rules are duplicated here.
 - **Shared triage window:** Morning brief and `/triage-inbox` read the same `triage-run-state.json`. Whichever runs first sets the baseline for the next run. Morning brief uses a 2-day floor (vs 1 day for triage-inbox).
 - **VIP detection:** Uses the VIP list from `email-policy.md` to highlight unanswered emails from important senders.
-- **@ToSelf integration:** Checks for pending todo-queue items and reminds to run `/todoq`.
+- **@ToSelf integration:** Checks for pending todo-queue items and reminds to run `/todo-queue`.
 - **Goal alignment:** Reads `goals.yaml` for priorities. Keep this file updated for relevant suggestions.
 
 ## Performance Logging
