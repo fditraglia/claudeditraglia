@@ -99,7 +99,7 @@ Resources I've found useful for thinking about AI in research and professional w
 |----------|----------------------|
 | [Simon Willison's Blog](https://simonwillison.net/) | The most technically literate and honest AI blog. Simon builds tools and explains what works without hype. |
 | [AI for Economists (AEA)](https://www.aeaweb.org/resources/ai) | The American Economic Association's hub for AI resources in economics research. |
-| [Awesome Claude Code](https://github.com/topics/claude-code) | Community-maintained list of Claude Code projects, extensions, and configurations on GitHub. |
+| [Claude Code projects on GitHub](https://github.com/topics/claude-code) | Community projects, extensions, and configurations tagged with "claude-code" on GitHub. |
 | [r/ClaudeAI](https://www.reddit.com/r/ClaudeAI/) | Active subreddit for Claude users. Good for troubleshooting and discovering new patterns. |
 
 ---

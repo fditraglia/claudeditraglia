@@ -1,5 +1,7 @@
 # Chatbots Done Right
 
+<span class="badge-teal">No Claude Code required</span>
+
 Most people use AI chatbots the way they use Google: type a question, get an answer, move on. That works, but it leaves 90% of the value on the table.
 
 This page covers the techniques that separate casual users from people who get genuinely useful work out of ChatGPT, Claude, and similar tools. None of this requires coding. All of it works today with a free or basic subscription.

@@ -1,10 +1,14 @@
 # The Cost Reality
 
+<span class="badge-teal">No Claude Code required</span>
+
 Let's be honest about what building an AI workflow costs, who it makes sense for, and who should start smaller.
 
 ---
 
 ## The Full Stack
+
+*Prices as of February 2026 — AI tool pricing changes frequently. Verify at each tool's website for current rates.*
 
 Here's what my current setup costs per month:
 

@@ -6,6 +6,24 @@ Guides, templates, and reference documents from my actual setup. Download, adapt
 
 ---
 
+## Real Examples
+
+<div class="grid cards" markdown>
+
+-   **A Real CLAUDE.md — Annotated**
+
+    ---
+
+    *Updated February 2026*
+
+    A sanitized version of my actual production CLAUDE.md — the file that runs my daily workflow. 150+ lines of working configuration with annotations explaining why each section exists and how it evolved.
+
+    [:octicons-arrow-right-24: View](real-claude-md-example.md) · [:octicons-arrow-right-24: Related: CLAUDE.md Setup Guide](../toolkit/claude-md.md)
+
+</div>
+
+---
+
 ## Prompting
 
 <div class="grid cards" markdown>

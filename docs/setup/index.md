@@ -39,6 +39,7 @@ The two most popular options:
 | **[Install — Windows](../toolkit/install-windows.md)** | Install Claude Code on Windows. No prior PowerShell experience needed. | 15 min |
 | **[Set Up "VS Code"](vscode-setup.md)** *(optional)* | Install VS Code and the Claude Code extension. My preferred way to work, but not required. | 15 min |
 | **[Your CLAUDE.md](../toolkit/claude-md.md)** | Create the instruction file that makes Claude Code work *for you*. | 30 min |
+| **[How Claude Code Thinks](modes.md)** | Understand the three modes that control how Claude behaves. | 5 min read |
 | **[MCP Setup](../toolkit/mcp-setup.md)** | Connect Claude Code to Gmail, Google Docs, Calendar, and other services. | 30-60 min |
 
 ## Learn and Browse
@@ -46,7 +47,7 @@ The two most popular options:
 | Page | What You'll Learn | Time |
 |------|------------------|------|
 | **[How Skills Work](../toolkit/skills-guide.md)** | What skills (slash commands) are, how to use them, and how they change your workflow. | 15 min read |
-| **[Skill Reference](skill-reference.md)** | All downloadable skills with installation, usage, and customization details. | Browse |
+| **[Skill Library](skill-reference.md)** | All downloadable skills with installation, usage, and customization details. | Browse |
 
 ---
 
@@ -74,3 +75,22 @@ After working through this section:
 - **A system that improves over time** as you add skills and refine your configuration
 
 The whole setup takes a few hours spread over a couple of sessions. The time investment pays for itself within the first week of regular use.
+
+---
+
+## Common Issues
+
+If you get stuck during setup, check here before giving up:
+
+| Problem | Fix |
+|---------|-----|
+| **`node: command not found`** | Close Terminal and reopen it. If that doesn't work, reinstall Node.js from [nodejs.org](https://nodejs.org). |
+| **`npm: command not found`** | Same as above — npm comes with Node.js. |
+| **Permission errors during install** | Use `sudo npm install -g @anthropic-ai/claude-code` and enter your Mac password. |
+| **Browser doesn't open for authentication** | Copy the URL from Terminal and paste it into your browser manually. |
+| **Google OAuth tokens expire every 7 days** | Your Google Cloud project is in "Testing" mode. Switch to "Production" in the [Cloud Console](https://console.cloud.google.com) → Google Auth platform → Audience. See [MCP Setup](../toolkit/mcp-setup.md) for details. |
+| **MCP server not responding** | Check that all paths in `~/.claude.json` are correct and absolute. Run `claude doctor` for diagnostics. Restart Claude Code. |
+| **Skills don't appear after installing** | Restart Claude Code — new skills are only loaded at startup. |
+| **Claude can't see my files** | Make sure you opened a folder (`File → Open Folder` in VS Code, or `cd` to the folder before running `claude`), not just a single file. |
+
+For more help: [GitHub Issues](https://github.com/chrisblattman/claudeblattman/issues) or [GitHub Discussions](https://github.com/chrisblattman/claudeblattman/discussions).

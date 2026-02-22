@@ -95,6 +95,12 @@ npm install -g @anthropic-ai/claude-code
 
 **What to expect:** You'll see text scrolling by — this is normal. It's downloading and installing files. Wait until you see your prompt (`>`) appear again.
 
+!!! ask-claude "Stuck? Ask Claude."
+    If you've already started Claude Code (Step 4 below), you can type your problem
+    directly in the Claude Code terminal — for example:
+    `I got a permission error when installing. Can you help?`
+    Press Enter. Claude can see the context of your session and usually knows what went wrong.
+
 !!! tip "Permission errors?"
     Try opening PowerShell as Administrator:
 
@@ -139,6 +145,11 @@ Once Claude Code is running, just type like you would in any chat:
 ```
 
 Press Enter, and Claude will respond — but now Claude can actually look at your files and tell you what's there.
+
+!!! ask-claude "Not sure what to do first?"
+    In the Claude Code terminal, try typing:
+    `I just installed Claude Code. I'm a professor/researcher. What's the most useful thing I can do in the next 10 minutes?`
+    Press Enter. Claude will walk you through getting started based on your role.
 
 ### Useful to Know
 
@@ -187,8 +198,9 @@ claude
 ## What's Next
 
 1. **[Set up your CLAUDE.md file](claude-md.md)** — Tells Claude about you and your preferences. (~30 minutes)
-2. **[Connect external services](mcp-setup.md)** — Give Claude access to Gmail, Google Docs, etc. (~30-60 minutes)
-3. **[Explore the Skill Library](skill-library.md)** — Download pre-built skills for common workflows.
+2. **[How Claude Code Thinks](../setup/modes.md)** — Understand the three modes that control Claude's behavior (Default, Plan, Auto-Accept). (~5 minute read)
+3. **[Connect external services](mcp-setup.md)** — Give Claude access to Gmail, Google Docs, etc. (~30-60 minutes)
+4. **[Explore the Skill Library](skill-library.md)** — Download pre-built skills for common workflows.
 
 ---
 

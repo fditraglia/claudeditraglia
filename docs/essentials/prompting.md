@@ -1,5 +1,7 @@
 # Prompt Engineering
 
+<span class="badge-teal">No Claude Code required</span>
+
 Prompt engineering sounds technical. It isn't. It's the skill of asking AI tools for what you actually want, in a way that gets useful results on the first try.
 
 This page covers prompt engineering as a *structured practice* — not a collection of tips, but a repeatable method you can apply to any task.

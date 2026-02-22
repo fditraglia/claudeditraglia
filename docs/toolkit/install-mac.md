@@ -96,6 +96,12 @@ npm install -g @anthropic-ai/claude-code
 
 This may take a minute or two depending on your internet connection.
 
+!!! ask-claude "Stuck? Ask Claude."
+    If you've already started Claude Code (Step 4 below), you can type your problem
+    directly in the Claude Code terminal — for example:
+    `I got a permission error when installing. Can you help?`
+    Press Enter. Claude can see the context of your session and usually knows what went wrong.
+
 !!! tip "Permission errors?"
     If you see permission errors, try running the command with `sudo` in front:
     ```bash
@@ -138,6 +144,11 @@ Once Claude Code is running, you'll see a prompt where you can type messages. Ju
 ```
 
 Press Enter, and Claude will respond — but now Claude can actually look at your files and tell you what's there.
+
+!!! ask-claude "Not sure what to do first?"
+    In the Claude Code terminal, try typing:
+    `I just installed Claude Code. I'm a professor/researcher. What's the most useful thing I can do in the next 10 minutes?`
+    Press Enter. Claude will walk you through getting started based on your role.
 
 ### Useful to Know
 
@@ -191,9 +202,11 @@ You've installed Claude Code and had your first conversation. The recommended ne
 
 1. **[Set up your CLAUDE.md file](claude-md.md)** — This tells Claude about you, your work, and your preferences so every session starts with context. (~30 minutes)
 
-2. **[Connect external services](mcp-setup.md)** — Give Claude access to Gmail, Google Docs, or Calendar so it can help with real tasks. (~30-60 minutes)
+2. **[How Claude Code Thinks](../setup/modes.md)** — Understand the three modes that control Claude's behavior (Default, Plan, Auto-Accept). (~5 minute read)
 
-3. **[Explore the Skill Library](skill-library.md)** — Download pre-built skills that automate common workflows.
+3. **[Connect external services](mcp-setup.md)** — Give Claude access to Gmail, Google Docs, or Calendar so it can help with real tasks. (~30-60 minutes)
+
+4. **[Explore the Skill Library](skill-library.md)** — Download pre-built skills that automate common workflows.
 
 ---
 

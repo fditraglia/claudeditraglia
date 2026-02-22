@@ -1,5 +1,7 @@
 # ChatGPT vs Claude: Chatbot Comparison
 
+<span class="badge-teal">No Claude Code required</span>
+
 I pay for and use both ChatGPT and Claude every day. Here's an honest comparison from someone with no loyalty to either company.
 
 ---
@@ -49,14 +51,16 @@ Claude.ai's Projects feature lets you create a workspace with instructions and f
 
 ## Cost Comparison
 
+*Prices as of February 2026 — verify at [claude.ai](https://claude.ai) and [chatgpt.com/pricing](https://chatgpt.com/pricing) for current rates.*
+
 | Tier | ChatGPT | Claude |
 |------|---------|--------|
 | **Free** | GPT-4o (limited) | Sonnet (limited) |
 | **Basic paid** | Plus: $20/mo | Pro: $20/mo |
-| **Power user** | Pro: $200/mo | Max: $100/mo |
+| **Power user** | Pro: $200/mo | Max: $100-200/mo |
 | **API/developer** | Pay per token | Pay per token |
 
-The $200/mo ChatGPT Pro tier gets you unlimited access to all models including o1-pro. Claude's $100/mo Max tier gets you higher usage limits for Opus and Claude Code.
+The $200/mo ChatGPT Pro tier gets you unlimited access to all models including o1-pro. Claude's Max tiers ($100 or $200/mo) get you higher usage limits for Opus and Claude Code.
 
 **My setup:** Claude Max ($100/mo) + ChatGPT Plus ($20/mo). I use Claude for 80% of my work and ChatGPT for research and web tasks. Total: $120/mo.
 

@@ -17,8 +17,8 @@ You're going to give an AI chatbot a structured prompt that helps it organize a 
 
 You need one of these (free tiers work fine):
 
-- [Claude.ai](https://claude.ai) (Anthropic)
-- [ChatGPT](https://chat.openai.com) (OpenAI)
+- [Claude.ai](https://claude.ai) (Anthropic) — [sign up here](https://claude.ai/signup) if you don't have an account
+- [ChatGPT](https://chat.openai.com) (OpenAI) — [sign up here](https://chat.openai.com/auth/login) if you don't have an account
 
 Open whichever you have. If you have both, use Claude.
 

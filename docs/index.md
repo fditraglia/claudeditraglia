@@ -8,7 +8,7 @@ hide:
 <p class="hero-pitch">Tools I use to manage my schedule, communication, and complex projects with large teams across several countries. Examples and tutorials for productivity and sanity.</p>
 
 <div class="hero-buttons">
-<a href="workflows/" class="md-button md-button--primary">See the workflows</a>
+<a href="workflows/" class="md-button md-button--primary">See what it does</a>
 <a href="about/#how-i-got-here" class="md-button">Read the background</a>
 <a href="https://twitter.com/cblatts" class="md-button social-btn">&#x1d54f; @cblatts</a>
 <a href="https://chrisblattman.com" class="md-button social-btn">My research</a>
@@ -18,6 +18,10 @@ hide:
 <div class="credibility-strip" markdown>
 By [Chris Blattman](https://chrisblattman.com), political economist at UChicago Harris. In January 2026 I started building AI workflows with Claude Code. What seemed impossible then — inbox triage, meeting capture, proposal drafting, project dashboards, trip planning — is running today. Claude Blattman isn't real, but the tools are. I've never coded in my life, so if I can do this you can.
 </div>
+
+## What Is This?
+
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is a terminal-based AI tool that can read your files, search your email, manage your calendar, and run custom workflows — like having a smart assistant sitting at your computer with you. This site documents how I built a working system with it, and shares everything so you can do the same. No coding required.
 
 ## Where to Start
 

@@ -117,6 +117,12 @@ Claude Code will start up and show a welcome message. You're now ready to go. So
 - **Use `/prompt`** — if you want to paste a big block of text or do something complex, this formats it into a structured prompt before executing
 - **Use `/resume`** — to pick up where you left off in a previous session
 
+!!! ask-claude "Not sure what's happening?"
+    In the Claude Code terminal, try typing:
+    `What mode am I in right now?`
+    Press Enter. Claude will explain what mode you're in and how to switch between them.
+    See [How Claude Code Thinks](modes.md) for a full explanation of the three modes.
+
 ---
 
 ## What a Real Project Looks Like
@@ -192,5 +198,6 @@ For more on these workflows, see [Skills in Action](../workflows/index.md) and t
 With VS Code set up, continue with the rest of the setup:
 
 1. **[Your CLAUDE.md](../toolkit/claude-md.md)** — Create the instruction file that makes Claude work for you
-2. **[MCP Setup](../toolkit/mcp-setup.md)** — Connect Claude to Gmail, Google Docs, Calendar, and more
-3. **[How Skills Work](../toolkit/skills-guide.md)** — Learn about slash commands that automate recurring tasks
+2. **[How Claude Code Thinks](modes.md)** — Understand the three modes that control Claude's behavior
+3. **[MCP Setup](../toolkit/mcp-setup.md)** — Connect Claude to Gmail, Google Docs, Calendar, and more
+4. **[How Skills Work](../toolkit/skills-guide.md)** — Learn about slash commands that automate recurring tasks

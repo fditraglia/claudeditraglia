@@ -1,4 +1,4 @@
-# Skill Reference
+# Skill Library
 
 All downloadable skills, agents, and templates. Each entry includes installation commands, usage examples, and customization guidance.
 
@@ -7,6 +7,8 @@ All downloadable skills, agents, and templates. Each entry includes installation
 ---
 
 ## Quick Setup
+
+These commands create the folders where Claude Code looks for skills and agents. `mkdir -p` creates a folder (and any parent folders needed). `curl -o` (used below) downloads a file from the internet and saves it to your computer.
 
 ```bash
 # Create the directories (if they don't exist)

@@ -19,6 +19,10 @@ These four skills work the moment you install them. They make every Claude Code 
 This is especially powerful with dictation. Dictate a rambling request, get a crisp prompt, get a crisp answer.
 
 **Install (full bundle — 4 files):**
+
+!!! note "What these commands do"
+    `mkdir -p` creates a folder (and any parent folders needed). `curl -o` downloads a file from the internet and saves it to your computer at the path you specify. You're downloading skill files from this site's GitHub repository into Claude Code's commands folder.
+
 ```bash
 mkdir -p ~/.claude/commands/prompt-references
 
@@ -53,7 +57,7 @@ curl -o ~/.claude/commands/prompt-references/formatting-core.md \
 
 **What it does:** Stress-tests any plan with structured expert critique. Auto-detects the domain, assigns an appropriate expert persona, researches best practices, and provides a red/yellow/green assessment with specific recommendations.
 
-Use it after developing any plan — project plans, research designs, implementation strategies, grant proposals. It catches blind spots, missing steps, and wishful thinking.
+Use it after developing any plan — project plans, research designs, implementation strategies, grant proposals. It catches blind spots, missing steps, and wishful thinking. Pairs well with Plan mode — see [How Claude Code Thinks](../setup/modes.md).
 
 **Install:**
 ```bash

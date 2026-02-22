@@ -31,7 +31,7 @@ Claude Code looks for your CLAUDE.md here:
 
 The `~` means your home folder. The `.claude` folder is hidden (folders starting with `.` are hidden by default).
 
-**To create it on Mac:**
+**To create it on Mac** (`mkdir -p` creates a folder; `~` means your home directory):
 ```bash
 mkdir -p ~/.claude
 ```
@@ -41,6 +41,8 @@ mkdir -p ~/.claude
 ### Multiple Computers (Recommended)
 
 If you work across machines, store your CLAUDE.md in a synced folder and create a symlink:
+
+A symlink is a shortcut — it makes a file appear in two places at once. `ln -sf` creates one. This lets you store the real file in a synced folder while Claude Code finds it in its expected location.
 
 ```bash
 # Store the real file in your cloud sync folder
@@ -53,6 +55,11 @@ ln -sf ~/Dropbox/Claude/Settings/CLAUDE.md ~/.claude/CLAUDE.md
 ```
 
 Repeat the symlink step on each computer. Now your CLAUDE.md syncs automatically.
+
+!!! ask-claude "Not sure the symlink worked?"
+    In the Claude Code terminal, type:
+    `I set up the symlink but I'm not sure it worked. Can you verify it's connected properly?`
+    Press Enter. Claude can check the symlink and tell you if it's pointing to the right file.
 
 ---
 
@@ -111,6 +118,11 @@ Copy this template and fill in the sections relevant to you. Delete any sections
 |---------|---------|---------------|
 | [Name] | [Role] | [Phase] |
 ````
+
+!!! ask-claude "Let Claude help you fill it in."
+    In the Claude Code terminal, type something like:
+    `Help me fill out my CLAUDE.md. I'm a political science professor who studies conflict and development.`
+    Press Enter. Claude will ask follow-up questions and draft sections for you.
 
 ---
 
@@ -240,9 +252,10 @@ This is useful when you work on multiple projects with different conventions, te
 
 ---
 
-## Downloadable Template
+## Downloadable Template & Real Example
 
-A ready-to-use CLAUDE.md template is available in the [Skill Library](skill-library.md) and on [GitHub](https://github.com/chrisblattman/claudeblattman/blob/main/templates/claude-md-template.md).
+- **[CLAUDE.md Template](https://github.com/chrisblattman/claudeblattman/blob/main/templates/claude-md-template.md)** — The starter file. Fill in the blanks.
+- **[A Real CLAUDE.md — Annotated](../downloads/real-claude-md-example.md)** — My actual production CLAUDE.md (sanitized), showing what a mature configuration looks like after months of iteration. Study this when you're ready to level up.
 
 ---
 
