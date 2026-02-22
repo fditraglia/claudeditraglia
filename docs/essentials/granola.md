@@ -38,19 +38,36 @@ Meetings generate decisions, action items, and context that live in people's hea
 
 ### The Basic Flow
 
-1. **Meeting happens** — Granola records automatically (Zoom) or via phone app (calls/in-person)
-2. **After the meeting** — I get a transcript and AI summary in the Granola app
-3. **Export to my project** — I pull the raw transcript into my project folder
+```mermaid
+graph LR
+    M["🎙️ <b>Meeting</b><br/><small>Zoom, phone,<br/>or in-person</small>"]
+    G["📝 <b>Granola</b><br/><small>Transcribes<br/>automatically</small>"]
+    F["📁 <b>Project Folder</b><br/><small>Raw transcript<br/>archived</small>"]
+    C["🤖 <b>Claude Code</b><br/><small>Extracts decisions,<br/>action items</small>"]
+    D["📊 <b>Meeting Log</b><br/><small>Searchable<br/>project record</small>"]
 
-### Integration with Claude Code
+    M --> G --> F --> C --> D
+
+    style M fill:#fff3e0, stroke:#ff9800
+    style G fill:#e8f5e9, stroke:#66bb6a
+    style F fill:#e3f2fd, stroke:#42a5f5
+    style C fill:#e0f2f1, stroke:#009688
+    style D fill:#f3e5f5, stroke:#ab47bc
+```
+
+A 60-minute meeting becomes a structured project record in about 2 minutes of post-processing.
+
+### Without Claude Code
+
+Granola works fine standalone. You get a transcript and AI summary after every meeting. That alone is a huge upgrade over no transcription. The Claude Code integration below is what turns it into a project management tool.
+
+### With Claude Code
 
 This is where Granola becomes powerful. Instead of just reading summaries, I feed raw transcripts to Claude Code:
 
 1. Export the transcript to a project folder
 2. Ask Claude Code to extract specific information: *"What decisions were made about the survey instrument? What action items did each person commit to?"*
 3. Append the results to the project's meeting log
-
-This turns a 60-minute meeting into a structured project record in about 2 minutes of post-processing.
 
 ### Building a Meeting History
 

@@ -2,6 +2,8 @@
 
 A curated collection of the resources, tools, and reference implementations that shaped this project. Each entry includes a brief summary of what's useful and why I found it worth your time.
 
+Thanks to [Anup Malani](https://www.law.uchicago.edu/faculty/malani) for being my first tutor on the basics — he's the one who got me started with Claude Code and showed me what was possible.
+
 ---
 
 ## Reference Implementations

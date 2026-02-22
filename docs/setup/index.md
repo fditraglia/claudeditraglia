@@ -33,10 +33,46 @@ The two most popular options:
 
 ## Get Started (Do These in Order)
 
+### Step 1: Install Claude Code
+
+=== "Mac"
+
+    **Open Terminal** (Cmd + Space → "Terminal" → Enter), then run:
+
+    ```bash
+    # Install Node.js first from https://nodejs.org (LTS version)
+    node --version          # verify it worked
+
+    # Then install Claude Code
+    npm install -g @anthropic-ai/claude-code
+    claude                  # first run — authenticates in browser
+    ```
+
+    Permission error? Use `sudo npm install -g @anthropic-ai/claude-code`
+
+    [:octicons-arrow-right-24: Full Mac walkthrough](../toolkit/install-mac.md)
+
+=== "Windows"
+
+    **Open PowerShell** (Windows key → "PowerShell" → Enter), then run:
+
+    ```powershell
+    # Install Node.js first from https://nodejs.org (LTS version)
+    node --version          # verify it worked
+
+    # Then install Claude Code
+    npm install -g @anthropic-ai/claude-code
+    claude                  # first run — authenticates in browser
+    ```
+
+    Permission error? Right-click PowerShell → "Run as administrator" and retry.
+
+    [:octicons-arrow-right-24: Full Windows walkthrough](../toolkit/install-windows.md)
+
+### Steps 2-5: Configure
+
 | Step | What You'll Do | Time |
 |------|---------------|------|
-| **[Install — Mac](../toolkit/install-mac.md)** | Install Claude Code on macOS. No prior Terminal experience needed. | 15 min |
-| **[Install — Windows](../toolkit/install-windows.md)** | Install Claude Code on Windows. No prior PowerShell experience needed. | 15 min |
 | **[Set Up "VS Code"](vscode-setup.md)** *(optional)* | Install VS Code and the Claude Code extension. My preferred way to work, but not required. | 15 min |
 | **[Your CLAUDE.md](../toolkit/claude-md.md)** | Create the instruction file that makes Claude Code work *for you*. | 30 min |
 | **[How Claude Code Thinks](modes.md)** | Understand the three modes that control how Claude behaves. | 5 min read |

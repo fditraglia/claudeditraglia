@@ -35,50 +35,73 @@ Most bad interactions fail on #1 (no context) or #3 (no output specification). F
 
 ## The Anatomy of a Good Prompt
 
-### 1. Role (Optional)
+Here's a real prompt with each section labeled. Not every prompt needs all six parts — but knowing them lets you diagnose why a prompt isn't working.
 
-Tell the AI what perspective to take. This is useful when you need domain expertise.
+=== "Full example (labeled)"
 
-> *You are a senior economics journal referee reviewing a paper for the American Economic Review.*
+    !!! example "Role"
+        You are a senior economics journal referee reviewing a paper for the American Economic Review.
 
-Don't use roles for simple tasks. "You are a helpful assistant" adds nothing.
+    !!! info "Context"
+        I'm writing a grant proposal for a foundation that funds violence reduction programs. The proposal is for a randomized evaluation of a CBT intervention for high-risk youth in a Latin American city. Budget ceiling is $500K over 3 years.
 
-### 2. Context
+    !!! success "Task"
+        Draft the methodology section (800-1000 words). Focus on the randomization strategy, primary outcomes, and power calculations.
 
-What does the AI need to know about the situation? Include:
+    !!! warning "Constraints"
+        - Keep it under 1000 words
+        - Academic but accessible — like a top-5 journal, not a textbook
+        - Don't include a literature review — that's a separate section
+        - Focus on identification strategy. Spend less time on implementation details.
 
-- Who you are and what you're working on
-- Relevant constraints (deadlines, audiences, requirements)
-- What you've already tried or decided
+    !!! quote "Output Format"
+        Structure as: (1) Design overview, (2) Randomization, (3) Outcomes and measurement, (4) Power and sample size. Use short paragraphs. No bullet points — this is narrative prose.
 
-> *I'm writing a grant proposal for a foundation that funds violence reduction programs. The proposal is for a randomized evaluation of a CBT intervention for high-risk youth in a Latin American city. Budget ceiling is $500K over 3 years.*
+    !!! tip "Bookend"
+        Remember: the goal is a methodology section for a foundation grant, not a journal paper. Keep the tone accessible and emphasize the practical implementation plan.
 
-### 3. Task
+=== "Just the prompt (copy-paste)"
 
-State the core ask in 1-2 clear sentences. Front-load this — don't bury it after three paragraphs of context.
+    ```text
+    You are a senior economics journal referee reviewing a paper
+    for the American Economic Review.
 
-> *Draft the methodology section (800-1000 words). Focus on the randomization strategy, primary outcomes, and power calculations.*
+    I'm writing a grant proposal for a foundation that funds violence
+    reduction programs. The proposal is for a randomized evaluation
+    of a CBT intervention for high-risk youth in a Latin American
+    city. Budget ceiling is $500K over 3 years.
 
-### 4. Constraints
+    Draft the methodology section (800-1000 words). Focus on the
+    randomization strategy, primary outcomes, and power calculations.
 
-What should the AI do or avoid? Be specific.
+    Constraints:
+    - Keep it under 1000 words
+    - Academic but accessible — like a top-5 journal, not a textbook
+    - Don't include a literature review — that's a separate section
+    - Focus on identification strategy over implementation details
 
-- **Length:** "Keep it under 1000 words" not "be concise"
-- **Tone:** "Academic but accessible — like a top-5 journal, not a textbook"
-- **Exclusions:** "Don't include a literature review — that's a separate section"
-- **Priorities:** "Focus on identification strategy. Spend less time on implementation details."
+    Structure as: (1) Design overview, (2) Randomization,
+    (3) Outcomes and measurement, (4) Power and sample size.
+    Use short paragraphs. No bullet points — narrative prose.
 
-### 5. Output Format
+    Remember: the goal is a methodology section for a foundation
+    grant, not a journal paper. Keep the tone accessible and
+    emphasize the practical implementation plan.
+    ```
 
-How should the result be structured?
+### The six sections explained
 
-> *Structure as: (1) Design overview, (2) Randomization, (3) Outcomes and measurement, (4) Power and sample size. Use short paragraphs. No bullet points — this is narrative prose.*
+**1. Role** (optional) — Tell the AI what perspective to take. Useful when you need domain expertise. Skip for simple tasks — "You are a helpful assistant" adds nothing.
 
-### 6. Bookend (For Long Prompts)
+**2. Context** — What does the AI need to know? Who you are, what you're working on, relevant constraints, what you've already decided.
 
-If your prompt is more than a few paragraphs, restate the key instruction at the end. AI models sometimes lose focus on long inputs.
+**3. Task** — The core ask in 1-2 clear sentences. Front-load this — don't bury it after three paragraphs of context.
 
-> *Remember: the goal is a methodology section for a foundation grant, not a journal paper. Keep the tone accessible and emphasize the practical implementation plan.*
+**4. Constraints** — What should the AI do or avoid? Be specific: "Keep it under 1000 words" not "be concise." Include exclusions and priorities.
+
+**5. Output Format** — How should the result be structured? Sections, length, tone, style.
+
+**6. Bookend** (for long prompts) — Restate the key instruction at the end. AI models sometimes lose focus on long inputs.
 
 ---
 

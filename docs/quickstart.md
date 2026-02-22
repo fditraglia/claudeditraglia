@@ -57,14 +57,26 @@ available, tell me directly and suggest what to cut.
 
 ## Step 3: See the Difference
 
-Compare this to what you'd get if you just asked: *"Help me make a professional development plan."*
+=== "Vague prompt"
 
-The structured version works better because it:
+    **What you typed:**
 
-- **Gives context** so the AI doesn't waste time on generic advice
-- **Specifies the output format** so you get something actionable, not an essay
-- **Sets constraints** (time available, "be realistic") so the result fits your life
-- **Invites pushback** ("tell me directly") so the AI doesn't just agree with everything
+    > Help me make a professional development plan.
+
+    **What you get back:** A generic list of suggestions — "set SMART goals," "seek mentorship," "attend conferences" — that could apply to anyone in any field. No timeline. No awareness of your constraints. You close the tab.
+
+=== "Structured prompt"
+
+    **What you typed:** The prompt from Step 2, with your details filled in.
+
+    **What you get back:** A month-by-month plan calibrated to your role, your time budget, and your actual goals. Specific resources, not platitudes. Weekly actions small enough to actually do. And if something doesn't fit your schedule, the AI tells you what to cut — because you gave it permission to push back.
+
+**Why the structured version works:**
+
+- **Context** so the AI doesn't waste time on generic advice
+- **Output format** so you get something actionable, not an essay
+- **Constraints** (time available, "be realistic") so the result fits your life
+- **Pushback permission** ("tell me directly") so the AI doesn't just agree with everything
 
 ---
 

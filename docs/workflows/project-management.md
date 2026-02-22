@@ -220,13 +220,30 @@ Two things matter more than any individual skill:
 
 You don't need to build all four at once. Start with organizing your folders. Add transcription when you're ready. The weekly review only works because the folder structure exists. The proposal skills only work because the weekly review keeps everything current.
 
+```mermaid
+graph TD
+    L0["Layer 0: Digital Cleanup<br/><small>Optional one-time reset</small>"]
+    L1["Layer 1: Project Folder<br/><small>Foundation — works alone</small>"]
+    L2["Layer 2: Transcription<br/><small>Captures meetings</small>"]
+    L3["Layer 3: Weekly Review<br/><small>Synthesizes everything</small>"]
+    L4["Layer 4: Proposals & Reports<br/><small>Produces deliverables</small>"]
+
+    L0 -.->|optional| L1
+    L1 --> L2
+    L1 --> L3
+    L2 --> L3
+    L1 --> L4
+    L2 --> L4
+    L3 --> L4
+
+    style L0 stroke-dasharray: 5 5, fill:#f9f9f9, color:#666
+    style L1 fill:#e0f2f1, stroke:#009688
+    style L2 fill:#e0f2f1, stroke:#009688
+    style L3 fill:#b2dfdb, stroke:#009688
+    style L4 fill:#80cbc4, stroke:#00796b, color:#004d40
 ```
-Layer 0: Digital cleanup    → Optional one-time reset (standalone)
-Layer 1: Project folder     → Foundation (works alone)
-Layer 2: Transcription      → Captures meetings (builds on L1)
-Layer 3: Weekly review      → Synthesizes everything (builds on L1+L2)
-Layer 4: Proposals/reports  → Produces deliverables (builds on L1+L2+L3)
-```
+
+Start anywhere. Layer 1 works on its own. Each additional layer builds on what came before — but you don't need all four to get value.
 
 ### Every skill took about three weeks of iteration
 
