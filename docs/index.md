@@ -81,7 +81,7 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 
     ---
 
-    *Project management, research workflows, and the skills I actually use*
+    <span class="badge-start">Project management, research workflows, and the skills I actually use</span>
 
     The original stuff. 30+ downloadable skills built by a professor managing 15 active research projects: email triage that learns your priorities, meeting-to-action-item pipelines, project dashboards, proposal drafting, and literature workflows. This is also where you learn the intermediate arts — recursive self-improvement, teaching Claude your preferences, and building workflows that get better as you correct them.
 
@@ -93,7 +93,7 @@ By [Chris Blattman](https://chrisblattman.com), professor at UChicago Harris. I 
 
     ---
 
-    *Build your own skills, agents, and systems*
+    <span class="badge-start">Build your own skills, agents, and systems</span>
 
     How to write skills from scratch, when to use agents vs. skills, and patterns for self-improving systems. This is the advanced path — you'll learn to design agentic workflows, build custom tools for your research or institution, and create systems that compound over time. Everything here builds on the prompting and planning foundations from the earlier paths.
 
