@@ -8,13 +8,15 @@ How I went from scattered information across five platforms to living project da
 
 ## The Mess
 
-Anyone managing multiple research projects will recognize this.
+Anyone managing multiple research projects might recognize this.
 
 Emails scattered across Gmail and institutional accounts. Documents in Google Docs, papers in Overleaf, sensitive data in university Box folders, field project files on partner servers, personal files in Dropbox. Zoom meetings rarely transcribed — and when they were, Zoom's transcriptions were terrible. WhatsApp conversations across multiple groups. Overlapping projects with no central memory. No accountability system. No way to prepare for meetings without digging through five platforms. Years of discussions with no institutional record.
 
 I'd walk into a meeting and spend the first ten minutes trying to remember what we decided last time. An RA would ask about a decision from three months ago and I'd have to search through hundreds of emails. Proposals would cite outdated figures because nobody remembered which version was current.
 
-The system below didn't solve all of this overnight. Each layer took about three weeks of iteration. None worked perfectly on day one. But each one made the next possible.
+I know some managers, companies, and labs use Slack to manage all of this. I tried it for one project and found it didn't fit my workflow. The volume of threads was overwhelming — too many conversations that weren't crucial to me, and not great at surfacing strategic priorities. That could be my inexperience, and in a year I might be a Slack convert. But I found that building the system below really suited how I work — especially the project overviews and living documents I'm about to describe. Those then let me automate the most time-consuming parts: proposal and report writing for donors and partners, across complex field projects with large teams doing data collection and analysis in multiple countries.
+
+The system didn't solve all of this overnight. Each layer took about three weeks of iteration. None worked perfectly on day one. But each one made the next possible.
 
 ---
 
