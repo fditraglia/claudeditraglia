@@ -96,18 +96,20 @@ h1, h2 {
    ============================ */
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
   margin: 1.5rem 0 2.5rem;
 }
 
 .bento-cell {
   border: 1px solid var(--md-default-fg-color--lightest);
-  border-radius: 10px;
-  padding: 1.2rem 1.4rem;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
   transition: border-color 0.2s, box-shadow 0.2s;
   position: relative;
   cursor: pointer;
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 /* Make bento cell title link cover the entire cell */
@@ -124,7 +126,7 @@ h1, h2 {
 
 /* Featured bento cell: spans full width + tinted background */
 .bento-cell--featured {
-  grid-column: span 2;
+  grid-column: span 3;
   background: color-mix(in srgb, var(--md-accent-fg-color) 8%, var(--md-default-bg-color));
   border-color: color-mix(in srgb, var(--md-accent-fg-color) 35%, transparent);
 }
@@ -135,7 +137,7 @@ h1, h2 {
 
 /* Bento icon size */
 .bento-icon {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   vertical-align: middle;
   margin-right: 0.25rem;
 }
@@ -234,6 +236,10 @@ h1, h2 {
 
   .bento-cell--featured {
     grid-column: span 1;
+  }
+
+  .bento-cell {
+    font-size: 0.85rem;
   }
 
   .md-typeset .grid.cards > ul > li {
