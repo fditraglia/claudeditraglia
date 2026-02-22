@@ -104,12 +104,18 @@ h1, h2 {
 .bento-cell {
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 8px;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 0.8rem !important;
   transition: border-color 0.2s, box-shadow 0.2s;
   position: relative;
   cursor: pointer;
-  font-size: 0.82rem;
-  line-height: 1.45;
+}
+
+/* Force compact text inside bento cells */
+.md-typeset .bento-cell p {
+  font-size: 0.78rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0.3rem !important;
+  margin-top: 0 !important;
 }
 
 /* Make bento cell title link cover the entire cell */
