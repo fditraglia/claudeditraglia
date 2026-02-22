@@ -3,3 +3,7 @@ site/
 __pycache__/
 *.pyc
 .DS_Store
+planning/
+.env
+credentials/
+*.json.bak
