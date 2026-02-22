@@ -32,7 +32,7 @@ h1, h2 {
   color: var(--md-default-fg-color--light);
   line-height: 1.55;
   margin: 0.4rem 0 1rem;
-  max-width: 640px;
+  max-width: 100%;
 }
 
 /* Hero buttons row: CTAs + social all on one line */
