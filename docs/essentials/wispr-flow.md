@@ -4,6 +4,9 @@ Wispr Flow is a dictation tool that works everywhere — any text box on your Ma
 
 I basically never type anymore.
 
+!!! note "Why this tool"
+    I haven't tested every dictation app. I tried Apple's built-in dictation first and found it unreliable — too many errors, no vocabulary learning, and it only works in certain contexts. The dictation inside Claude and ChatGPT's own interfaces is surprisingly good, but it only works *inside those apps*. I wanted system-wide dictation: emails, VS Code, Claude Code, web forms, everything. Wispr Flow does that seamlessly. The alternatives below may work equally well — check them against your workflow.
+
 ---
 
 ## Why Dictation Changes Everything
@@ -65,11 +68,15 @@ If Wispr Flow doesn't work for your platform or budget:
 | Tool | Platform | Price | Notes |
 |------|----------|-------|-------|
 | **Apple Dictation** | Mac/iOS | Free | Built-in. Decent for short bursts. Doesn't learn vocabulary. |
-| **Google Voice Typing** | Any (via Google Docs) | Free | Works well. Requires Google Docs. |
-| **Whisper** (OpenAI) | Any (via apps) | Free/varies | Open-source speech-to-text. Requires technical setup or a third-party app. |
-| **Otter.ai** | Any | $10-20/mo | More meeting-focused. Good for transcription, less for dictation. |
+| [**Superwhisper**](https://superwhisper.com/) | Mac/iOS | $10/mo | Local AI processing (privacy-focused). Very accurate. Supports offline use. |
+| [**Aqua Voice**](https://www.aquavoice.com/) | Mac/Windows | $8/mo | Extremely fast (sub-50ms). System-wide, like Wispr Flow. |
+| [**Voibe**](https://www.getvoibe.com/) | Mac | Free-$10/mo | 100% offline, on-device processing. Good for privacy-sensitive work. |
+| **Google Voice Typing** | Any (via Google Docs) | Free | Works well. Requires Google Docs — not system-wide. |
+| [**Whisper**](https://github.com/openai/whisper) (OpenAI) | Any (via apps) | Free/varies | Open-source speech-to-text. Requires technical setup or a third-party app. |
 
 Wispr Flow's advantage is that it works everywhere on your Mac/iPhone without switching apps. But any dictation tool is better than no dictation tool.
+
+**Availability:** Wispr Flow works on Mac, Windows, and iOS. It's available globally and supports 100+ languages with automatic detection. There are no geographic restrictions as of early 2026.
 
 ---
 

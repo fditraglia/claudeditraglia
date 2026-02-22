@@ -2,6 +2,9 @@
 
 Granola is a meeting transcription tool that works on Zoom calls, phone calls, and in-person meetings (phone in your pocket). It transcribes everything, provides AI summaries, and — critically — gives you the raw transcript so you can do your own analysis.
 
+!!! note "Why this tool"
+    I haven't tested every transcription tool on the market. Granola is the one I settled on after comparing several options. The combination of in-person recording, raw transcript export, and easy integration with Claude Code is what won me over. The alternatives below are solid — check them against your own workflow.
+
 ---
 
 ## Why Meeting Transcription Matters
@@ -65,12 +68,15 @@ This is especially valuable for projects with distributed teams across time zone
 
 | Tool | Price | Notes |
 |------|-------|-------|
-| **Otter.ai** | $10-20/mo | Strong speaker identification. Good Zoom integration. More meeting-focused than Granola. |
+| [**Otter.ai**](https://otter.ai/) | $10-20/mo | Strong speaker identification. Good Zoom integration. More meeting-focused than Granola. |
+| [**tl;dv**](https://tldv.io/) | Free-$20/mo | Records Zoom and Google Meet with AI summaries. Good free tier. |
 | **Zoom's built-in transcription** | Included with Zoom | Basic but free. No in-person or phone support. |
-| **Notion AI** | Part of Notion subscription | Good if you're already in Notion. Less standalone utility. |
-| **Rev** | Pay-per-minute | Human transcription. Higher accuracy, much higher cost. Good for critical recordings. |
+| [**Notion AI**](https://www.notion.com/product/ai) | Part of Notion subscription | Good if you're already in Notion. Less standalone utility. |
+| [**Rev**](https://www.rev.com/) | Pay-per-minute | Human transcription. Higher accuracy, much higher cost. Good for critical recordings. |
 
 Granola's advantage for my workflow is the combination of in-person recording, raw transcript export, and integration with Claude Code. But any transcription tool is a massive improvement over no transcription.
+
+**Availability:** Granola works on Mac, Windows, and iOS. It's available globally, though transcription quality is strongest in English. There are no geographic restrictions as of early 2026.
 
 ---
 
