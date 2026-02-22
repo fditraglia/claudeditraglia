@@ -1,6 +1,6 @@
 # Download Skills
 
-*Reading time: 6 minutes*
+*Reading time: 12 minutes*
 
 Downloadable skills (slash commands) and agents for Claude Code. Each one is a markdown file you save to your commands folder.
 
@@ -68,6 +68,24 @@ New to skills? Install these first — they're the most universally useful and h
 -   :material-folder-cog-outline: **[/setup-project-management](#setup-project-management-project-setup)** — Initialize project tracking
     { .card-mini }
 
+-   :material-plus-circle-outline: **[/todoa](#todoa-add-to-do-item)** — Add a to-do item
+    { .card-mini }
+
+-   :material-format-list-checks: **[/todor](#todor-to-do-review)** — Review all to-do items
+    { .card-mini }
+
+-   :material-email-fast-outline: **[/todoq](#todoq-todo-queue)** — Email-to-reminder queue
+    { .card-mini }
+
+-   :material-inbox-arrow-down: **[/triage-inbox](#triage-inbox-smart-inbox-triage)** — Smart email triage
+    { .card-mini }
+
+-   :material-calendar-search: **[/schedule-query](#schedule-query-calendar-availability)** — Calendar availability
+    { .card-mini }
+
+-   :material-weather-sunny: **[/morning-brief](#morning-brief-daily-briefing)** — Daily morning briefing
+    { .card-mini }
+
 -   :material-draw-pen: **[Writing Reviewer](#writing-reviewer)** — Academic prose QA (agent)
     { .card-mini }
 
@@ -78,6 +96,15 @@ New to skills? Install these first — they're the most universally useful and h
     { .card-mini }
 
 -   :material-bullseye-arrow: **[Goals Template](#goals-template)** — Project & priority tracker
+    { .card-mini }
+
+-   :material-email-edit-outline: **[Email Policy Template](#email-policy-template)** — Email handling rules
+    { .card-mini }
+
+-   :material-tag-multiple-outline: **[Triage Config Template](#triage-config-template)** — Gmail label & classification config
+    { .card-mini }
+
+-   :material-calendar-edit: **[Calendar Policy Template](#calendar-policy-template)** — Scheduling preferences
     { .card-mini }
 
 </div>
@@ -127,9 +154,10 @@ curl -o ~/.claude/commands/done.md \
 
 **Customization points:**
 
-- **Log file location:** The default is `~/Documents/session-log.md`. Change this to wherever you want your session history (e.g., a project folder, a synced Dropbox directory).
+- **Log file location:** The default is `~/Documents/session-log.md`. Change this to wherever you want your session history (e.g., a project folder, a synced directory).
 - **Project matching:** Add logic to match against a projects list in your CLAUDE.md or a goals.yaml file, so sessions auto-tag by project.
-- **Archive threshold:** The default has no auto-archiving. Add pruning logic if your log exceeds 500 lines (e.g., archive entries older than 60 days).
+- **Handoff file location:** The default handoff note goes to `~/.claude/handoff.md`. This is read by SessionStart hooks for next-session context.
+- **Archive pruning:** v1.1 auto-prunes entries older than 60 days. Adjust the threshold in the Maintenance step.
 
 ---
 
@@ -263,6 +291,245 @@ curl -o ~/.claude/commands/setup-project-management.md \
 
 ---
 
+### /todoa — Add To-Do Item
+
+**What it does:** Adds a new to-do item to the correct list with duplicate checking. Routes items to configurable lists based on keywords and suggests priority.
+
+**MCP dependencies:** None — pure filesystem operation.
+
+**When to use:** Quick task capture from within Claude Code. Supports multiple to-do lists with keyword-based routing (e.g., email tasks go to one list, documentation tasks to another).
+
+**Install:**
+```bash
+curl -o ~/.claude/commands/todoa.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/todoa.md
+```
+
+**Usage:**
+```
+/todoa Fix the authentication bug
+/todoa list:work Set up CI pipeline
+```
+
+**Customization points:**
+
+- **File locations:** Default is `~/Documents/todo.md`. Configure one or multiple to-do files.
+- **Keyword routing:** Define which keywords route to which list (e.g., "email" → work list, "docs" → training list).
+- **Priority mapping:** Customize High/Medium/Low definitions or add your own levels.
+
+---
+
+### /todor — To-Do Review
+
+**What it does:** Reviews and consolidates to-do items across all your configured to-do files. Shows a summary with duplicate detection and offers actions (reprioritize, mark complete, add new, remove duplicate).
+
+**MCP dependencies:** None — pure filesystem operation.
+
+**When to use:** Regular task review — see all your to-dos in one view, find duplicates across lists, and take batch actions.
+
+**Install:**
+```bash
+curl -o ~/.claude/commands/todor.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/todor.md
+```
+
+**Usage:**
+```
+/todor           # Quick summary (high priority only)
+/todor full      # All priority levels
+```
+
+**Customization points:**
+
+- **File locations:** Configure which to-do files to scan.
+- **Priority sections:** Map your section headers to priority levels.
+- **Quick vs. full mode:** Customize which sections appear in each mode.
+
+---
+
+### /todoq — Todo Queue
+
+**What it does:** Batch-processes emails in a designated Gmail label, converting them to Apple Reminders with timing extracted from the email body. Forward any email to yourself with timing syntax (e.g., `due:Friday list:Personal`) and this skill processes the queue.
+
+**MCP dependencies:** Gmail MCP (search, read, modify labels). Apple Reminders via osascript (macOS only).
+
+**When to use:** Processing a batch of self-sent reminder emails. Works with the Gmail `+` alias trick — emails sent to `your-email+todo@gmail.com` auto-label and queue up.
+
+**Install:**
+```bash
+curl -o ~/.claude/commands/todoq.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/todoq.md
+```
+
+!!! warning "macOS only"
+    This skill uses `osascript` to create Apple Reminders. It won't work on Linux or Windows without modification.
+
+**First-time setup:**
+
+1. Create a Gmail label called `@ToSelf`
+2. Create a filter: emails to `your-email+todo@gmail.com` → apply `@ToSelf` label
+3. Note the label ID (run `list_gmail_labels` via MCP to find it)
+4. Update the label ID in the skill file
+
+**Usage:**
+```
+/todoq              # Process all pending
+/todoq dryrun       # Preview only
+/todoq limit:5      # Process first 5 only
+```
+
+**Customization points:**
+
+- **Gmail alias:** Set up your `+todo` address for email-to-task capture.
+- **Reminder lists:** Configure which Apple Reminder lists to use (Work, Personal, Someday).
+- **Default time:** Change the default reminder time from 9am.
+- **Label ID:** Replace `YOUR_LABEL_ID` with your actual Gmail label ID.
+
+---
+
+### /triage-inbox — Smart Inbox Triage
+
+**What it does:** Scans your inbox for emails that should be auto-labeled and archived — newsletters, announcements, receipts, and low-priority notifications. Uses header and content heuristics that Gmail filters can't do (List-Unsubscribe detection, body text analysis, multi-signal scoring).
+
+**MCP dependencies:** Gmail MCP (search, read, batch modify labels, create filters).
+
+**When to use:** Daily inbox cleanup. Catches new and unfamiliar senders that don't have permanent Gmail filters yet. Over time, you'll build permanent filters for the most common senders.
+
+**Install (skill + config files):**
+```bash
+# Install the skill
+curl -o ~/.claude/commands/triage-inbox.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/triage-inbox.md
+
+# Create config directory and download templates
+mkdir -p ~/.claude-assistant/config
+mkdir -p ~/.claude-assistant/state
+mkdir -p ~/.claude-assistant/logs
+
+curl -o ~/.claude-assistant/config/email-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/email-policy-template.md
+
+curl -o ~/.claude-assistant/config/triage-config.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/triage-config-template.md
+```
+
+!!! info "Setup required"
+    Before using this skill, you must fill in your config files: add your VIP list to `email-policy.md`, and add your Gmail label IDs to `triage-config.md`. See the template files for step-by-step instructions on finding label IDs.
+
+**Usage:**
+```
+/triage-inbox                    # Scan, report, and apply labels
+/triage-inbox noapply            # Preview only
+/triage-inbox days:14            # Scan last 14 days
+/triage-inbox limit:20           # Process first 20 emails
+```
+
+**Customization points:**
+
+- **VIP list:** Define who should never be auto-triaged.
+- **Label IDs:** Map your Gmail labels to the triage categories.
+- **Vendor domains:** Add your common receipt/expense senders.
+- **Score thresholds:** Tune how aggressive the classification is.
+- **Override table:** Add manual sender→category overrides as you correct mistakes.
+
+---
+
+### /schedule-query — Calendar Availability
+
+**What it does:** Checks calendar availability across all your Google calendars and drafts a scheduling reply with specific time proposals. Scores available slots by preference (morning deep work, meeting density, proximity).
+
+**MCP dependencies:** Google Calendar MCP (get events). Gmail MCP (optional, for finding recipient email and sending reply).
+
+**When to use:** When someone asks to meet and you need to propose times. Run standalone or as part of an email workflow.
+
+**Install (skill + config):**
+```bash
+curl -o ~/.claude/commands/schedule-query.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/schedule-query.md
+
+# If you haven't already:
+mkdir -p ~/.claude-assistant/config
+
+curl -o ~/.claude-assistant/config/calendar-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/calendar-policy-template.md
+```
+
+!!! info "Setup required"
+    Before using, fill in your calendar IDs and timezone in `calendar-policy.md`. See the template for instructions on finding Google Calendar IDs.
+
+**Usage:**
+```
+/schedule-query with:Jane duration:60
+/schedule-query range:7               # Look 7 days ahead
+/schedule-query email:msg_id          # Reply to a scheduling email
+```
+
+**Customization points:**
+
+- **Calendar IDs:** Add all calendars to check for conflicts.
+- **Working hours:** Set your actual availability window and timezone.
+- **Deep work protection:** Configure how aggressively to protect focus time.
+- **Reply tone:** Customize scheduling reply templates for different formality levels.
+
+---
+
+### /morning-brief — Daily Briefing
+
+**What it does:** Generates a comprehensive daily briefing combining calendar, reminders, inbox highlights, VIP tracking, overdue items, goal alignment, and optional auto-triage — all in one view. Can email the briefing to you as formatted HTML.
+
+**MCP dependencies:** Gmail MCP (required). Google Calendar MCP (required). Apple Reminders via osascript (macOS, optional). Granola MCP (optional, for meeting context).
+
+**When to use:** Start of your workday. Gives you a single view of everything that needs attention: today's schedule, urgent tasks, VIP emails, overdue items, and suggested priorities.
+
+**Install (skill + all config files):**
+```bash
+curl -o ~/.claude/commands/morning-brief.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/morning-brief.md
+
+# Create config directory (if not already done)
+mkdir -p ~/.claude-assistant/config
+mkdir -p ~/.claude-assistant/state
+mkdir -p ~/.claude-assistant/logs
+
+# Download all required config templates
+curl -o ~/.claude-assistant/config/email-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/email-policy-template.md
+
+curl -o ~/.claude-assistant/config/calendar-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/calendar-policy-template.md
+
+curl -o ~/.claude-assistant/config/triage-config.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/triage-config-template.md
+
+# Optional: goals file for goal alignment
+curl -o ~/.claude-assistant/config/goals.yaml \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/goals-yaml-template.yaml
+```
+
+!!! info "Setup required"
+    This skill needs all three config files filled in before first use. At minimum, set your calendar IDs and timezone in `calendar-policy.md` and your Gmail email in `email-policy.md`.
+
+**Usage:**
+```
+/morning-brief                    # Full briefing
+/morning-brief no-triage          # Skip auto-triage
+/morning-brief email              # Also email the briefing to yourself
+/morning-brief tomorrow           # Preview tomorrow's schedule
+/morning-brief no-reminders       # Skip Apple Reminders (non-macOS)
+```
+
+**Customization points:**
+
+- **Weather city:** Set your city in `calendar-policy.md` for the weather line.
+- **Timezone:** All times display in your configured timezone.
+- **Email delivery:** Opt-in — configure your email addresses to enable auto-emailing the briefing.
+- **Triage integration:** Uses the same classification logic as `/triage-inbox`. Runs automatically unless `no-triage` is specified.
+- **Goal alignment:** Reads `goals.yaml` to connect your schedule to your priorities.
+- **Deep work nudges:** Configure `push_level` (gentle/moderate/assertive) for focus time protection.
+- **Reminders:** macOS only (uses osascript). Skip with `no-reminders` on other platforms.
+
+---
+
 ## Agents
 
 Agents are subprocesses that Claude Code launches for specialized tasks. They run in a fresh context (avoiding the "blind spots" of the main session) and return results.
@@ -319,4 +586,37 @@ A YAML file for tracking goals, projects, and priorities. Referenced by skills t
 ```bash
 curl -o ~/.claude/goals.yaml \
   https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/goals-yaml-template.yaml
+```
+
+### Email Policy Template
+
+Defines your email handling rules: VIP contacts (never auto-triaged), auto-archive patterns, and label routing. Required by `/triage-inbox` and `/morning-brief`.
+
+**Download:**
+```bash
+mkdir -p ~/.claude-assistant/config
+curl -o ~/.claude-assistant/config/email-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/email-policy-template.md
+```
+
+### Triage Config Template
+
+Technical configuration mapping Gmail label names to label IDs and defining classification rules (scoring thresholds, vendor domains, overrides). Required by `/triage-inbox` and `/morning-brief`.
+
+**Download:**
+```bash
+mkdir -p ~/.claude-assistant/config
+curl -o ~/.claude-assistant/config/triage-config.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/triage-config-template.md
+```
+
+### Calendar Policy Template
+
+Calendar configuration with calendar IDs, scheduling preferences, timezone, deep work protection, and reply tone templates. Required by `/schedule-query` and `/morning-brief`.
+
+**Download:**
+```bash
+mkdir -p ~/.claude-assistant/config
+curl -o ~/.claude-assistant/config/calendar-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/calendar-policy-template.md
 ```
