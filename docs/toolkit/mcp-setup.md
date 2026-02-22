@@ -108,6 +108,9 @@ Add this to `~/.claude.json` under `mcpServers`:
 
 Replace the paths and credentials with your actual values. To find your `uv` path: `which uv`.
 
+!!! note "About `OAUTHLIB_INSECURE_TRANSPORT`"
+    This setting allows OAuth to work over HTTP on localhost, which is standard for desktop MCP apps that only talk to your local machine. Never set this in a production server environment.
+
 **5. Restart Claude Code** and test:
 
 ```
