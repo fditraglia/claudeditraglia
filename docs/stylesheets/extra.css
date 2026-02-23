@@ -389,19 +389,6 @@ h1, h2 {
 }
 
 /* ============================
-   Keep site name in header — prevent page title swap on scroll
-   ============================ */
-.md-header__title[data-md-state="active"] .md-header__topic:first-child {
-  transform: translateY(0) !important;
-  opacity: 1 !important;
-}
-
-.md-header__title[data-md-state="active"] .md-header__topic + .md-header__topic {
-  transform: translateY(100%) !important;
-  opacity: 0 !important;
-}
-
-/* ============================
    "Ask Claude" custom admonition
    ============================ */
 .md-typeset .admonition.ask-claude,
