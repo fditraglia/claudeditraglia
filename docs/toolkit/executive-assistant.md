@@ -3,7 +3,6 @@
 A system that manages your inbox, tracks your projects, processes your meetings, and drafts your communications — assembled from skills and integrations that compound over time.
 
 > *I started with 5,000 unread emails. A day and a half later, I had six.*
-> [:octicons-arrow-right-24: How I built this](#how-i-built-this)
 
 ---
 
