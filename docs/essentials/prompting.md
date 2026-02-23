@@ -310,7 +310,7 @@ Once you find prompts that work well for recurring tasks, save them. A text file
 These are the actual files I use. Download, adapt, and paste them into your own projects.
 
 - **[My Prompt Preferences](../downloads/prompt-preferences-template.md)** — A template showing how to document your personal prompting style: standard sections, common constraints, preferred output formats, and roles. Adapt it to your own work.
-- **[Prompting Best Practices Guide](../downloads/prompting-guide.md)** — A comprehensive reference (400+ lines) covering core principles, task-specific guidance, prompt chaining, versioning, and a quality checklist.
+- **[Prompting Best Practices Guide](../downloads/prompting-guide.md)** — A comprehensive reference covering core principles, depth calibration, XML tags, anti-patterns, task-specific guidance, prompt chaining, versioning, and a quality checklist.
 
 ## Recommended Resources
 

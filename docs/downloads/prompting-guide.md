@@ -21,7 +21,7 @@ State your task explicitly at the beginning. Provide context. Break complex task
 
 ---
 
-### 2. Use Examples
+### 2. Use Examples (But Try Without Them First)
 
 Show the AI what you want rather than just describing it. If you have a specific format or style, provide a sample.
 
@@ -36,7 +36,7 @@ Show the AI what you want rather than just describing it. If you have a specific
 - When detailed written instructions are clearer than showing
 - When you want the AI to suggest the best approach
 
-**Try zero-shot first:** Before adding examples, try the prompt without them. If the output format or style is wrong, tighten instructions or add output schema. Only add examples if that still fails.
+**Try zero-shot first:** Before adding examples, try the prompt without them. If the output format or style is wrong, tighten instructions or add an output schema. Only add examples if that still fails. When you do use examples, keep them compact — `input → output` pairs work better than verbose multi-paragraph samples.
 
 ---
 
@@ -127,23 +127,54 @@ When you need transparency, request structured output:
 
 ---
 
-### 9. When and How to Request Thoroughness
+### 9. Calibrate Depth to the Task
 
-Vague adjectives ("be thorough", "be meticulous") don't improve output. Specific action verbs do.
+Not every task needs the same level of effort. A quick email reply doesn't need the AI to "research best practices."
 
-**Action verbs that work:**
+| Level | When to Use | What to Add |
+|-------|-------------|-------------|
+| **Light** | Quick tasks, routine emails, simple lookups | Nothing extra — just format clearly |
+| **Standard** | Analysis, research writing, design decisions | Ask for assumptions and rationale: *"Include key assumptions (2-3 bullets) and brief rationale for major choices."* |
+| **Deep** | High-stakes writing, methodology, pre-analysis plans | Ask for verification: *"Research current best practices. Compare your approach against established standards. Flag where you deviate and why."* |
+
+**Default to Light.** Upgrade when the stakes justify it.
+
+---
+
+### 10. Use XML Tags for Structure
+
+When a prompt has multiple types of content — instructions, background data, documents to analyze — XML-style tags help the AI parse what's what.
+
+```text
+<instructions>
+Summarize the key findings from this paper. Focus on methodology
+and results. Keep it under 300 words.
+</instructions>
+
+<paper>
+[Full paper text pasted here...]
+</paper>
+
+<output_format>
+Three sections: (1) Method, (2) Key findings, (3) Limitations.
+</output_format>
+```
+
+Without tags, the AI has to figure out where your instructions end and the document begins. With tags, there's no ambiguity. You don't need tags for short, simple prompts — they're most useful when mixing instructions with pasted content.
+
+---
+
+### 11. Avoid Common Anti-Patterns
+
+**Vague thoroughness language.** "Be comprehensive" and "be meticulous" are empty calories. Replace with specific verbs:
+
+- "Compare against [specific standard]"
 - "Research current best practices for [domain]"
-- "Compare your approach against [named standard]"
-- "Flag where your approach deviates from [standard] and explain why"
-- "State your key assumptions (2-3 bullets)"
+- "Flag where your approach deviates from [benchmark]"
 
-**Self-verification steps** (add when reliability matters):
-- "Before answering, identify the 2-3 most likely failure modes"
-- "After drafting, check whether your response addresses [specific criteria]"
+**Over-prompting.** You don't need `CRITICAL: YOU MUST ABSOLUTELY...` — a calm, specific directive works better. Shouting in all-caps doesn't make the AI try harder.
 
-**What NOT to do:**
-- Don't add "CRITICAL", "YOU MUST", "ABSOLUTELY" — a calm, specific directive works better
-- Don't pile on directives for simple tasks
+**No pushback permission.** If you want honest feedback, say so: *"Tell me directly if this approach has problems. Don't just agree with everything."*
 
 ---
 
@@ -228,10 +259,12 @@ Before sending a complex prompt:
 - [ ] Necessary context provided
 - [ ] Constraints and scope explicit
 - [ ] Desired output format specified
+- [ ] Depth calibrated — action-verb directives, not vague adjectives
 - [ ] Examples included if format/style matters (tried zero-shot first)
 - [ ] Role assigned if specialized expertise helps
+- [ ] XML tags used to separate instructions from pasted content (if applicable)
 - [ ] Critical instructions repeated at end (bookend pattern for long prompts)
-- [ ] Depth calibration — action-verb directives, not vague adjectives
+- [ ] No anti-patterns: no vague thoroughness language, no all-caps directives
 - [ ] System vs user separation clear (for reusable prompts)
 
 ---
