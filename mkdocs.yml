@@ -63,6 +63,7 @@ nav:
     - "Project Folders for Work": essentials/folders/work.md
     - Wispr Flow: essentials/wispr-flow.md
     - Granola: essentials/granola.md
+    - NotebookLM: essentials/notebooklm.md
     - "ChatGPT vs Claude": essentials/chatgpt-vs-claude.md
     - The Cost Reality: essentials/cost.md
   - Setup:

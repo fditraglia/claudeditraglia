@@ -54,6 +54,15 @@
 
     [:octicons-arrow-right-24: Read more](granola.md)
 
+-   **:material-notebook-outline: NotebookLM**
+
+    ---
+
+    Turn collections of PDFs, transcripts, and documents into searchable,
+    citable research libraries. How I do literature reviews across 300 papers.
+
+    [:octicons-arrow-right-24: Read more](notebooklm.md)
+
 -   **:material-swap-horizontal: ChatGPT vs Claude: Chatbot Comparison**
 
     ---
@@ -84,6 +93,7 @@ My current daily toolkit, for reference:
 | **ChatGPT** (Plus or Pro) | Deep research, web search, image generation | $20-200/mo | Recommended |
 | **Wispr Flow** | Dictation everywhere | $10/mo | Highly recommended |
 | **Granola** | Meeting transcription | $10/mo | Recommended if you have meetings |
+| **NotebookLM** | Document-corpus AI research | Free-$20/mo | Recommended for researchers |
 
 You don't need all of these. Start with one chatbot subscription and add tools as you see the value. The [Cost Reality](cost.md) page breaks this down in detail.
 

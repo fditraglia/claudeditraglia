@@ -193,9 +193,9 @@ Over time, this library becomes the seed of something more powerful. On this sit
 
     ---
 
-    Dictation and transcription tools that multiply the value of everything above.
+    Dictation, transcription, and document research tools that multiply the value of everything above.
 
-    [:octicons-arrow-right-24: Wispr Flow](wispr-flow.md) &middot; [:octicons-arrow-right-24: Granola](granola.md)
+    [:octicons-arrow-right-24: Wispr Flow](wispr-flow.md) &middot; [:octicons-arrow-right-24: Granola](granola.md) &middot; [:octicons-arrow-right-24: NotebookLM](notebooklm.md)
 
 -   **Understand the landscape**
 
