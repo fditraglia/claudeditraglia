@@ -140,7 +140,7 @@ A few things to notice:
 **Claude Code is running on the right, ready for whatever comes next.** At this stage of a project, I'm not just using basic commands. I might:
 
 - **Run `/prompt`** to format a complex request before executing it
-- **Use `/write-proposal`** to draft or revise a funding proposal that pulls from all the project's documents
+- **Use `/proposal-write`** to draft or revise a funding proposal that pulls from all the project's documents
 - **Launch `/review-plan`** to stress-test a research design before committing to it
 - **Ask Claude to act as a critical reviewer** — an education economist, a clinical psychologist, a sociologist, or an AI specialist — and generate the kind of feedback you'd get at a seminar or from a journal referee
 - **Run `/checkin`** to get a morning briefing on what's happened across email, calendar, and project docs since the last session

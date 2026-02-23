@@ -72,8 +72,8 @@ How our 20 skills map to the three standard categories from Anthropic's guide:
 | todo-review | Project Mgmt | Consolidated review across 3 lists |
 | whatsapp-summary | Project Mgmt | Date-range WhatsApp digest |
 | task-from-email | Workflow | Email parsing → Reminder with confirmation |
-| write-proposal | Research | Checklist-first proposal drafting, plan-mode-aware, voice pack |
-| revise-proposal | Research | Collaborator handoff pattern, conditional reviewer categorization, voice pack |
+| proposal-write | Research | Checklist-first proposal drafting, plan-mode-aware, voice pack |
+| proposal-revise | Research | Collaborator handoff pattern, conditional reviewer categorization, voice pack |
 | review-plan | Workflow | Structured expert critique of plans, web research, 6-dimension review, iteration loop |
 
 ### Complex / Stateful (> 2000 words, multi-source, stateful)
@@ -116,7 +116,7 @@ Currently only "High-tier" skills log consistently. Extend this to all skills so
   - Share domain-specific reference files (voice packs, templates)
   - May be used by team members independently
   - Belong logically with their domain data, not with general tools
-- **Current symlinked skills**: `write-proposal`, `revise-proposal`, `donor-profile` (all from `Proposal_Resources/skills/`)
+- **Current symlinked skills**: `proposal-write`, `proposal-revise`, `donor-profile` (all from `Proposal_Resources/skills/`)
 
 ---
 

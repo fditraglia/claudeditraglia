@@ -10,7 +10,7 @@
 ### SDD (Spec-Driven Development) Pattern [skill-design] [agent-pattern] [workflow] [high]
 - **Source:** Antonio Mele (@antoniomele101) on X (Feb 19, 2026)
 - **Insight:** Build a spec-driven development skill + sdd-orchestrator subagent that runs before any implementation. Generates structured planning docs (intent.md + others) that feed into AGENTS.md or CLAUDE.md as a single source of truth before code is written. Forces structured thinking before coding.
-- **Action:** Consider adding a spec/planning phase to complex skill workflows — e.g., before /write-proposal or new skill creation, have Claude generate intent.md as a structured brief that guides the session.
+- **Action:** Consider adding a spec/planning phase to complex skill workflows — e.g., before /proposal-write or new skill creation, have Claude generate intent.md as a structured brief that guides the session.
 - **URL:** https://x.com/antoniomele101 (forwarded post)
 
 ### AI Tool Selection — Claude Chrome Plugin, Cowork [tool-comparison] [medium]

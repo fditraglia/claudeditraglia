@@ -206,7 +206,7 @@ This is why **long tool results are expensive**. When `/weekly-review` fetches 1
 
 A triage skill with `model: sonnet` is exactly the right call. Triage is a structured, rule-following task: read policy → search inbox → classify by decision tree → apply labels. It doesn't need deep reasoning. Sonnet handles this well and runs much faster.
 
-For `/write-proposal`, you don't specify a model (defaulting to whatever Claude Code is set to). This is fine — proposal writing benefits from Opus's stronger reasoning and writing quality.
+For `/proposal-write`, you don't specify a model (defaulting to whatever Claude Code is set to). This is fine — proposal writing benefits from Opus's stronger reasoning and writing quality.
 
 **Rule of thumb:** Use Sonnet for classification, triage, data collection, and structured workflows. Use Opus for writing, strategic analysis, and tasks requiring judgment.
 
@@ -299,7 +299,7 @@ A weekly review skill might specify separate templates for a dashboard and detai
 **Example:** Major skills can parse `$ARGUMENTS`:
 - `/triage-inbox noapply days:3` → skip label application, search 3 days
 - `/weekly-review tab1only skipwhatsapp` → generate only dashboard, skip WhatsApp
-- `/write-proposal "Grant Name" resubmission budget:150000` → load previous submission, reviewer comments
+- `/proposal-write "Grant Name" resubmission budget:150000` → load previous submission, reviewer comments
 
 **Formal concept:** This is **parameterized prompting** — the same prompt template produces different behaviors based on input variables. It's what makes a single skill useful across many scenarios.
 
@@ -408,7 +408,7 @@ One line. Updated when you change the skill. Priceless when debugging.
 
 **Where it matters:**
 - **Classification tasks** (triage-inbox): Would benefit from `temperature: 0` — you want consistent, deterministic classification, not creative interpretation.
-- **Writing tasks** (write-proposal): Default temperature is fine — you want some variation and creativity.
+- **Writing tasks** (proposal-write): Default temperature is fine — you want some variation and creativity.
 - **Data collection** (weekly-review Step 2): Lower temperature would reduce inconsistency in how Claude summarizes similar content across runs.
 
 Note: Claude Code's skill headers currently support `model:` but not `temperature:`. This is a feature to watch for. In the meantime, you can add instructions like "Be deterministic in classification — when in doubt, apply the most conservative label" to approximate low-temperature behavior.

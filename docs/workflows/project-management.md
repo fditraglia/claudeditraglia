@@ -153,17 +153,17 @@ The dashboard prioritizes strategic objectives first, then operational objective
 
 ## Layer 4: Proposals and Reports on Demand
 
-**Skills:** [`/write-proposal`](../setup/skill-reference.md#write-proposal-proposal-drafting) and [`/revise-proposal`](../setup/skill-reference.md#revise-proposal-proposal-revision) `[PM]`
+**Skills:** [`/proposal-write`](../setup/skill-reference.md#proposal-write-proposal-drafting) and [`/proposal-revise`](../setup/skill-reference.md#proposal-revise-proposal-revision) `[PM]`
 
 Because the Google Doc hub contains the research design, project history, all prior proposals (successful, unsuccessful, pending), and the weekly review keeps everything current — Claude Code can draft almost anything.
 
 **What these do:**
 
-- `/write-proposal` drafts funding proposals, LOIs, donor summary reports, status updates, and abstracts
+- `/proposal-write` drafts funding proposals, LOIs, donor summary reports, status updates, and abstracts
 - Takes an input checklist (funder, template, budget, deadline) and auto-gathers context from the project record
 - Looks up donor profiles to tailor framing
 - For resubmissions: categorizes reviewer comments and maps responses to sections
-- `/revise-proposal` applies feedback from collaborators, reviewers, or self-review
+- `/proposal-revise` applies feedback from collaborators, reviewers, or self-review
 - Both enforce voice consistency through a configurable voice pack
 
 **How it works in practice:** A collaborator reads the draft, dictates their feedback in one stream, and Claude extracts the actionable items and applies them. Nobody edits markdown directly. The revision skill tracks changes, backs up the previous version, and reports what moved.
@@ -230,7 +230,7 @@ All skills referenced above are available for download:
 |-------|-------------|---------|
 | `/setup-project-management` | Interactive project folder setup | [Details](../setup/skill-reference.md#setup-project-management-project-setup) |
 | `/weekly-review` | Multi-source weekly synthesis | [Details](../setup/skill-reference.md#weekly-review-weekly-project-review) |
-| `/write-proposal` | Draft proposals from project context | [Details](../setup/skill-reference.md#write-proposal-proposal-drafting) |
-| `/revise-proposal` | Apply feedback to drafts | [Details](../setup/skill-reference.md#revise-proposal-proposal-revision) |
+| `/proposal-write` | Draft proposals from project context | [Details](../setup/skill-reference.md#proposal-write-proposal-drafting) |
+| `/proposal-revise` | Apply feedback to drafts | [Details](../setup/skill-reference.md#proposal-revise-proposal-revision) |
 | Writing Reviewer | Academic prose QA (agent) | [Details](../setup/skill-reference.md#review-writing) |
 | Methodology Reviewer | Empirical methods QA (agent) | [Details](../setup/skill-reference.md#review-methodology) |

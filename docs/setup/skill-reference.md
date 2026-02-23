@@ -141,7 +141,7 @@ curl -o ~/.claude/commands/review-plan.md \
 
 ---
 
-### /revise-proposal — Proposal Revision
+### /proposal-revise — Proposal Revision
 `[PM]`
 
 **What it does:** Applies reviewer, collaborator, or self-review feedback to an existing proposal draft while maintaining voice consistency. Handles dictated feedback, comment files, and formal reviewer comments (with categorization).
@@ -150,21 +150,21 @@ curl -o ~/.claude/commands/review-plan.md \
 
 **Install:**
 ```bash
-curl -o ~/.claude/commands/revise-proposal.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/revise-proposal.md
+curl -o ~/.claude/commands/proposal-revise.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/proposal-revise.md
 ```
 
 **Usage:**
 ```
 # Self-review — dictate feedback directly
-/revise-proposal 05_Submissions/Grants/Draft.md
+/proposal-revise 05_Submissions/Grants/Draft.md
 Tighten the intro. Cut 200 words from methodology.
 
 # Collaborator feedback from file
-/revise-proposal Draft.md comments:~/Downloads/feedback.txt
+/proposal-revise Draft.md comments:~/Downloads/feedback.txt
 
 # Formal reviewer comments (shows categorization before applying)
-/revise-proposal Draft.md reviewer:~/Downloads/reviews.pdf
+/proposal-revise Draft.md reviewer:~/Downloads/reviews.pdf
 ```
 
 **Customization:** Voice pack path, donor profile directory, backup behavior.
@@ -346,7 +346,7 @@ curl -o ~/.claude/commands/weekly-review.md \
 
 ---
 
-### /write-proposal — Proposal Drafting
+### /proposal-write — Proposal Drafting
 `[PM]`
 
 **What it does:** Drafts a funding proposal from structured inputs — application template, research design, project context, and donor intelligence. Auto-gathers context from the project record and enforces voice consistency.
@@ -355,16 +355,16 @@ curl -o ~/.claude/commands/weekly-review.md \
 
 **Install:**
 ```bash
-curl -o ~/.claude/commands/write-proposal.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/write-proposal.md
+curl -o ~/.claude/commands/proposal-write.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/proposal-write.md
 ```
 
 **Usage:**
 ```
-/write-proposal "Example Foundation" deadline:2026-06-01
-/write-proposal "Impact Funder" template:~/Downloads/template.pdf budget:150000
-/write-proposal "Foundation X" resubmission
-/write-proposal "Foundation Y" dryrun
+/proposal-write "Example Foundation" deadline:2026-06-01
+/proposal-write "Impact Funder" template:~/Downloads/template.pdf budget:150000
+/proposal-write "Foundation X" resubmission
+/proposal-write "Foundation Y" dryrun
 ```
 
 **Customization:** Voice pack path and style, donor profile directory, context gathering sources, word budgets, default proposal structure.

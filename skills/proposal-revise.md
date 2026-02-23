@@ -27,7 +27,7 @@ If not found, the skill uses general academic voice rules.
 Look for the draft in this order:
 1. Path provided in `$ARGUMENTS`
 2. Most recent `*_Draft.md` in `05_Submissions/Grants/` — confirm with user
-3. If not found: "Usage: /revise-proposal <draft-path> [feedback]"
+3. If not found: "Usage: /proposal-revise <draft-path> [feedback]"
 
 Read the full draft. Parse revision notes (if present) to understand prior inputs and remaining placeholders.
 
@@ -49,7 +49,7 @@ Feedback can come from any combination:
 
 Example:
 ```
-/revise-proposal 05_Submissions/Grants/Draft.md
+/proposal-revise 05_Submissions/Grants/Draft.md
 Tighten the intro. The power calc section needs updated numbers.
 Cut 200 words from methodology. Add cost-per-unit breakdowns to budget.
 ```
@@ -93,7 +93,7 @@ For each piece of feedback:
 ## Revision Notes
 
 **Draft created:** [original date]
-**Last revised:** [today] by `/revise-proposal`
+**Last revised:** [today] by `/proposal-revise`
 **Revision round:** [increment]
 **Changes this round:**
 - [Brief list of major changes]
@@ -130,14 +130,14 @@ Next steps:
 
 ```
 # Self-review
-/revise-proposal 05_Submissions/Grants/Draft.md
+/proposal-revise 05_Submissions/Grants/Draft.md
 Tighten the intro. Cut 200 words from methodology.
 
 # Collaborator feedback from file
-/revise-proposal Draft.md comments:~/Downloads/feedback.txt
+/proposal-revise Draft.md comments:~/Downloads/feedback.txt
 
 # Formal reviewer comments
-/revise-proposal Draft.md reviewer:~/Downloads/reviews.pdf
+/proposal-revise Draft.md reviewer:~/Downloads/reviews.pdf
 ```
 
 ## Error Handling

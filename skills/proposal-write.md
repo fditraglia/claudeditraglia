@@ -178,7 +178,7 @@ Placeholders remaining: [count]
 Next steps:
 1. Review and edit the draft
 2. Fill in budget figures / placeholders
-3. Run /revise-proposal with collaborator feedback
+3. Run /proposal-revise with collaborator feedback
 4. Run Writing Reviewer agent for voice/clarity check
 5. Run Methodology Reviewer agent for design validation
 ```
@@ -200,15 +200,15 @@ Next steps:
 ## Examples
 
 ```
-/write-proposal "Example Foundation" deadline:2026-06-01
-/write-proposal "Impact Funder" template:~/Downloads/template.pdf budget:150000
-/write-proposal "Foundation X" resubmission
-/write-proposal "Foundation Y" dryrun
+/proposal-write "Example Foundation" deadline:2026-06-01
+/proposal-write "Impact Funder" template:~/Downloads/template.pdf budget:150000
+/proposal-write "Foundation X" resubmission
+/proposal-write "Foundation Y" dryrun
 ```
 
 ## Error Handling
 
-- If no funder name: "Usage: /write-proposal <funder> [options]"
+- If no funder name: "Usage: /proposal-write <funder> [options]"
 - If no application template: HARD STOP (template gate)
 - If project config missing: "No .claude/CLAUDE.md found. Run from a configured project directory."
 - If voice pack not found: Continue with general voice rules
