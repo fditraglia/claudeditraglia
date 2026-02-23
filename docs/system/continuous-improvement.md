@@ -2,6 +2,8 @@
 
 Most AI setups are static. You configure once and hope it holds. The tips pipeline makes your system learn — capturing discoveries as you encounter them and converting them into concrete changes to your configuration files.
 
+There are a hundred ways to build a continuous improvement loop. This is the one I invented for my own workflow. It's opinionated, it's specific to Gmail and Claude Code, and it may not be your style. But the principle — *capture discoveries, filter them, and turn them into config changes* — is universal. Steal the idea and build your own version if this one doesn't fit.
+
 ---
 
 ## The idea

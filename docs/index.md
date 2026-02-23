@@ -69,7 +69,7 @@ From there it goes deeper into [Claude Code](https://docs.anthropic.com/en/docs/
 
     [:octicons-arrow-right-24: Executive Assistant Workflow](toolkit/executive-assistant.md)
 
--   **:material-sync-circle: Continuous Improvement** <span class="badge-teal">Advanced</span>
+-   **:material-sync-circle: Continuous Improvement**
 
     ---
 
