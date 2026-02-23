@@ -1,7 +1,5 @@
 # Chatbot Essentials
 
-<span class="badge-teal">No Claude Code required</span> Everything on this page works with Claude.ai or ChatGPT — no terminal, no installation needed.
-
 **I don't know if I have the best habits in the world, but these ones really changed my research and my life.**
 
 ??? tip "Some very basic advice before you dive in"
@@ -21,6 +19,14 @@
 ## What's Here
 
 <div class="grid cards" markdown>
+
+-   **:material-chat-outline: Chatbots Done Right**
+
+    ---
+
+    The techniques that separate casual chatbot use from genuinely useful work. Models, context, prompts, conversations.
+
+    [:octicons-arrow-right-24: Read more](chatbots.md)
 
 -   **:material-text-box-edit-outline: Prompt Engineering**
 
