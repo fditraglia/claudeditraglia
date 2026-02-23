@@ -5,8 +5,6 @@ A system that manages your inbox, tracks your projects, processes your meetings,
 > *I started with 5,000 unread emails. A day and a half later, I had six.*
 > [:octicons-arrow-right-24: How I built this](#how-i-built-this)
 
-![Inbox zero in Gmail](../images/inbox-zero.png){ style="max-width: 480px" }
-
 ---
 
 ## What You'll Build
@@ -22,6 +20,87 @@ A system that manages your inbox, tracks your projects, processes your meetings,
 | **Goals tracking** | Quarterly objectives, progress scores, stalled-goal alerts | [`/goals-review`](../setup/skill-reference.md#goals-review-goals-review) |
 
 Each skill works on its own — you can install just `/triage-inbox` and get value from day one. But they compound: `/triage-inbox` runs standalone, and `/checkin` wraps triage + briefing into one interactive session. The advantage of installing `/triage-inbox` first is that you can run it standalone, review what it does, and tune your config before adding more complex sessions. `/goals-review` adds a strategic layer that aligns everything toward your quarterly objectives. The recommended path: start with triage, add the check-in, then layer on the briefing and goals.
+
+<span id="how-i-built-this"></span>
+
+??? quote "How I built this — the full story"
+
+    I started with about 5,000 unread emails going back years. This was partly because I used my unread mails like a to-do list. Any tasks that needed to be done or email that needed to be responded to, I left it unread until I got around to it. It worked well enough — I'm more on top of email than most — but the backlog was a constant low-grade source of stress. I always knew it was an inadequate system of organization. I just never had a better option.
+
+    **The first fix was not about email — it was about reminders.** I wasn't using Google Tasks or Apple Reminders at all, which in retrospect was a mistake. After researching and testing both, I chose Apple Reminders for the flexibility and Siri integration. The key insight: emails that create to-do items should become reminders, not stay unread. That's what the triage-inbox skill does — it converts actionable emails into reminders and gets everything else out of the way.
+
+    **The triage skill took the most iteration.** I did deep research on best practices, had Claude analyze my actual inbox patterns, and we went back and forth on filter systems. The biggest lift was distinguishing the fundamental things I had to see and respond to (which stay in my inbox) from everything else (newsletters, announcements, school emails) that I can review once a day or skip entirely.
+
+    A word of advice if you're building something like this: this is where it helps to understand planning mode and to have Claude critically evaluate its own plans from different perspectives. I had to keep a close eye on false positives and false negatives — important emails getting auto-archived, or junk still cluttering my inbox.
+
+    **The folder system evolved organically.** Newsletters, announcements, family, school — each got its own category. Anyone with school-aged children knows the volume: long, detailed emails where 95% is irrelevant and 5% is critical. One of my next projects is a skill that extracts just the essential information from school emails.
+
+    **Maintenance is small and shrinking.** A few weeks in, I still occasionally train it — usually when a type of email shows up for the first time, or something that only arrives monthly. I give feedback during my daily check-in, and the system learns. It takes less attention every week.
+
+    **The honest time savings?** Maybe an hour or two per week of direct time. Substantial, but not the main benefit. The real value is psychological. Knowing I'm on top of things. Knowing nothing will get lost. The occasional exhilaration of reaching actual inbox zero. I don't get sucked into newsletters first thing in the morning anymore. I'm more focused during the day and less likely to fall into email before bed.
+
+    I wouldn't call inbox triage my biggest time saver. But it might be the single biggest *stress* saver. The psychological weight of knowing everything is captured in an iron-clad system of reminders — and that the check-in skill helps triage those reminders too — is pretty terrific.
+
+    ---
+
+    **The Honest Assessment**
+
+    **What works well:** Email triage saves real time once your rules are dialed in. Meeting extraction turns messy transcripts into structured records. Session capture creates institutional memory that persists across sessions. Communication drafting is faster than writing from scratch, especially with voice training.
+
+    **What's still rough:** Calendar management is read-mostly — creating and modifying events works but isn't as smooth as reading. Cross-platform coordination (e.g., linking an email to a calendar event to a project doc) requires explicit instructions each time. Voice training takes iteration — Claude won't perfectly match your style on day one. The initial setup takes hours — it's an investment that pays off over weeks, not immediately.
+
+    **The meta-point:** No skill or configuration is perfect on first try. The value comes from **iterative improvement**: use it, notice what's wrong, fix it, repeat.
+
+    !!! tip "What I wish I'd known"
+
+        - **Start with reminders, not email rules.** The biggest payoff was converting my "unread = to-do" habit into actual reminders. Everything else followed from that.
+        - **Start with broad categories, not detailed ones.** Fewer buckets, higher accuracy. You can split later.
+        - **Watch the first week carefully.** False negatives (important emails getting auto-archived) are worse than false positives. Review what's being filtered until you trust it.
+        - **Use planning mode for complex skills.** Have Claude critically evaluate its own triage plans from different perspectives before you run them on real email.
+        - **Real time savings: 1-2 hours/week.** But the real value is psychological — the stress of a chaotic inbox disappearing is worth more than the hours.
+        - **Maintenance shrinks over time.** Early on I gave daily feedback. Now it's every few days, and mostly for new senders the system hasn't seen before.
+        - **No skill is perfect on first try.** The value comes from iterative improvement — use it, notice what's wrong, fix it, repeat. After a month it works meaningfully better than day one.
+
+<span id="the-one-time-cleanup"></span>
+
+??? note "The one-time cleanup — start fresh before building habits"
+
+    Before building recurring workflows, there's a one-time cleanup that pays for itself immediately. This is the "magic cleanup team in a hoarder's basement" moment — the point where you realize AI tools can do in a day what you've been failing to do for years.
+
+    My cleanup took about 36 hours spread across two days. Here's what it involved and how you can do something similar.
+
+    ### What I Cleaned Up
+
+    | Area | Before | After | Time |
+    |------|--------|-------|------|
+    | **Email inbox** | 5,000 unread (years of backlog) | 6 unread | ~8 hours |
+    | **Local disk** | 19 GB free on 1 TB drive | 500+ GB free | ~2 hours |
+    | **Cloud storage** | Files scattered across 4 services, no catalog | Single inventory, stale folders identified | ~4 hours |
+    | **Calendar** | Events split across iCalendar and Google | Consolidated to Google Calendar | ~2 hours |
+    | **Reminders** | No system (used unread email as to-do list) | Apple Reminders with structured categories | ~2 hours |
+
+    ### How to Do It Yourself
+
+    **Email cleanup** is covered in the inbox triage section above. The key insight: start with a *reminder system*, then use Claude to categorize and process your backlog in batches.
+
+    **Local disk audit.** Ask Claude Code to scan your filesystem:
+
+    > Scan my local filesystem to find where my disk space is going. Check ~/Library, /Applications, ~/Downloads, hidden directories, and anything else that looks large. Find the top 50 largest files. Present a ranked list of quick wins — things likely safe to delete with estimated space recoverable.
+
+    Hidden directories are where the real bloat lives. Apps store data in dot-prefixed folders (`.app-name/`) that don't show up in Finder. Claude Code finds these instantly. In my case, a single hidden backup directory was consuming 79 GB.
+
+    **Cloud storage inventory.** If you have files across Dropbox, Google Drive, Box, or iCloud:
+
+    1. **Services with API access** (Dropbox, Google Drive via MCP): have Claude enumerate files programmatically and generate an inventory report
+    2. **Services without API access** (Box, iCloud): take screenshots of the folder structure and have Claude catalog them — it reads images
+    3. **Cross-reference** across services to find duplicates and stale folders
+
+    The high-value action isn't reorganizing files — it's creating an inventory file that gives Claude awareness of where everything lives. My Dropbox had 630K files totaling 1,400 GB, but only 10% was actively used in the last 12 months. That data made selective sync decisions obvious.
+
+    **Calendar consolidation.** If your events are split across multiple calendar systems, Claude Code can read your Google Calendar via MCP and help identify which events need migrating. The migration itself may require manual work in Calendar.app, but Claude can generate the list and track progress.
+
+    !!! tip "Detailed walkthrough"
+        For a step-by-step guide covering disk audit, cloud storage inventory, selective sync optimization, and Google Drive cleanup — with reproducible prompts and time estimates — see the [Cloud Storage Organization Guide](../downloads/cloud-storage-guide.md).
 
 ---
 
@@ -319,91 +398,6 @@ Restart Claude Code, then try: `/checkin quick` (abbreviated version — good fo
 ### After You're Comfortable
 
 Once `/triage-inbox` and `/checkin` are running daily, add [`/morning-brief`](../setup/skill-reference.md#morning-brief-daily-briefing) if you want a lighter passive report alongside your interactive session. Set up [`/goals-review`](../setup/skill-reference.md#goals-review-goals-review) to maintain the `goals.yaml` file that powers goal alignment in both `/checkin` and `/morning-brief`.
-
----
-
-<span id="how-i-built-this"></span>
-
-??? quote "How I built this — the full story"
-
-    I started with about 5,000 unread emails going back years. This was partly because I used my unread mails like a to-do list. Any tasks that needed to be done or email that needed to be responded to, I left it unread until I got around to it. It worked well enough — I'm more on top of email than most — but the backlog was a constant low-grade source of stress. I always knew it was an inadequate system of organization. I just never had a better option.
-
-    **The first fix was not about email — it was about reminders.** I wasn't using Google Tasks or Apple Reminders at all, which in retrospect was a mistake. After researching and testing both, I chose Apple Reminders for the flexibility and Siri integration. The key insight: emails that create to-do items should become reminders, not stay unread. That's what the triage-inbox skill does — it converts actionable emails into reminders and gets everything else out of the way.
-
-    **The triage skill took the most iteration.** I did deep research on best practices, had Claude analyze my actual inbox patterns, and we went back and forth on filter systems. The biggest lift was distinguishing the fundamental things I had to see and respond to (which stay in my inbox) from everything else (newsletters, announcements, school emails) that I can review once a day or skip entirely.
-
-    A word of advice if you're building something like this: this is where it helps to understand planning mode and to have Claude critically evaluate its own plans from different perspectives. I had to keep a close eye on false positives and false negatives — important emails getting auto-archived, or junk still cluttering my inbox.
-
-    **The folder system evolved organically.** Newsletters, announcements, family, school — each got its own category. Anyone with school-aged children knows the volume: long, detailed emails where 95% is irrelevant and 5% is critical. One of my next projects is a skill that extracts just the essential information from school emails.
-
-    **Maintenance is small and shrinking.** A few weeks in, I still occasionally train it — usually when a type of email shows up for the first time, or something that only arrives monthly. I give feedback during my daily check-in, and the system learns. It takes less attention every week.
-
-    **The honest time savings?** Maybe an hour or two per week of direct time. Substantial, but not the main benefit. The real value is psychological. Knowing I'm on top of things. Knowing nothing will get lost. The occasional exhilaration of reaching actual inbox zero. I don't get sucked into newsletters first thing in the morning anymore. I'm more focused during the day and less likely to fall into email before bed.
-
-    I wouldn't call inbox triage my biggest time saver. But it might be the single biggest *stress* saver. The psychological weight of knowing everything is captured in an iron-clad system of reminders — and that the check-in skill helps triage those reminders too — is pretty terrific.
-
-    ---
-
-    **The Honest Assessment**
-
-    **What works well:** Email triage saves real time once your rules are dialed in. Meeting extraction turns messy transcripts into structured records. Session capture creates institutional memory that persists across sessions. Communication drafting is faster than writing from scratch, especially with voice training.
-
-    **What's still rough:** Calendar management is read-mostly — creating and modifying events works but isn't as smooth as reading. Cross-platform coordination (e.g., linking an email to a calendar event to a project doc) requires explicit instructions each time. Voice training takes iteration — Claude won't perfectly match your style on day one. The initial setup takes hours — it's an investment that pays off over weeks, not immediately.
-
-    **The meta-point:** No skill or configuration is perfect on first try. The value comes from **iterative improvement**: use it, notice what's wrong, fix it, repeat.
-
-    !!! tip "What I wish I'd known"
-
-        - **Start with reminders, not email rules.** The biggest payoff was converting my "unread = to-do" habit into actual reminders. Everything else followed from that.
-        - **Start with broad categories, not detailed ones.** Fewer buckets, higher accuracy. You can split later.
-        - **Watch the first week carefully.** False negatives (important emails getting auto-archived) are worse than false positives. Review what's being filtered until you trust it.
-        - **Use planning mode for complex skills.** Have Claude critically evaluate its own triage plans from different perspectives before you run them on real email.
-        - **Real time savings: 1-2 hours/week.** But the real value is psychological — the stress of a chaotic inbox disappearing is worth more than the hours.
-        - **Maintenance shrinks over time.** Early on I gave daily feedback. Now it's every few days, and mostly for new senders the system hasn't seen before.
-        - **No skill is perfect on first try.** The value comes from iterative improvement — use it, notice what's wrong, fix it, repeat. After a month it works meaningfully better than day one.
-
----
-
-<span id="the-one-time-cleanup"></span>
-
-??? note "The one-time cleanup — start fresh before building habits"
-
-    Before building recurring workflows, there's a one-time cleanup that pays for itself immediately. This is the "magic cleanup team in a hoarder's basement" moment — the point where you realize AI tools can do in a day what you've been failing to do for years.
-
-    My cleanup took about 36 hours spread across two days. Here's what it involved and how you can do something similar.
-
-    ### What I Cleaned Up
-
-    | Area | Before | After | Time |
-    |------|--------|-------|------|
-    | **Email inbox** | 5,000 unread (years of backlog) | 6 unread | ~8 hours |
-    | **Local disk** | 19 GB free on 1 TB drive | 500+ GB free | ~2 hours |
-    | **Cloud storage** | Files scattered across 4 services, no catalog | Single inventory, stale folders identified | ~4 hours |
-    | **Calendar** | Events split across iCalendar and Google | Consolidated to Google Calendar | ~2 hours |
-    | **Reminders** | No system (used unread email as to-do list) | Apple Reminders with structured categories | ~2 hours |
-
-    ### How to Do It Yourself
-
-    **Email cleanup** is covered in the inbox triage section above. The key insight: start with a *reminder system*, then use Claude to categorize and process your backlog in batches.
-
-    **Local disk audit.** Ask Claude Code to scan your filesystem:
-
-    > Scan my local filesystem to find where my disk space is going. Check ~/Library, /Applications, ~/Downloads, hidden directories, and anything else that looks large. Find the top 50 largest files. Present a ranked list of quick wins — things likely safe to delete with estimated space recoverable.
-
-    Hidden directories are where the real bloat lives. Apps store data in dot-prefixed folders (`.app-name/`) that don't show up in Finder. Claude Code finds these instantly. In my case, a single hidden backup directory was consuming 79 GB.
-
-    **Cloud storage inventory.** If you have files across Dropbox, Google Drive, Box, or iCloud:
-
-    1. **Services with API access** (Dropbox, Google Drive via MCP): have Claude enumerate files programmatically and generate an inventory report
-    2. **Services without API access** (Box, iCloud): take screenshots of the folder structure and have Claude catalog them — it reads images
-    3. **Cross-reference** across services to find duplicates and stale folders
-
-    The high-value action isn't reorganizing files — it's creating an inventory file that gives Claude awareness of where everything lives. My Dropbox had 630K files totaling 1,400 GB, but only 10% was actively used in the last 12 months. That data made selective sync decisions obvious.
-
-    **Calendar consolidation.** If your events are split across multiple calendar systems, Claude Code can read your Google Calendar via MCP and help identify which events need migrating. The migration itself may require manual work in Calendar.app, but Claude can generate the list and track progress.
-
-    !!! tip "Detailed walkthrough"
-        For a step-by-step guide covering disk audit, cloud storage inventory, selective sync optimization, and Google Drive cleanup — with reproducible prompts and time estimates — see the [Cloud Storage Organization Guide](../downloads/cloud-storage-guide.md).
 
 ---
 
