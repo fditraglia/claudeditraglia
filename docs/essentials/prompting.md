@@ -146,6 +146,10 @@ You don't have to internalize all of the above. Create a project in ChatGPT or C
 - **ChatGPT** (Plus or Team): Sidebar → Projects → New Project → paste the file below into Instructions.
 - **Claude.ai** (Pro): Projects → Create Project → paste into Project Instructions.
 
+Here's what the ChatGPT Projects interface looks like — the Sources tab is where your instruction files live:
+
+![ChatGPT Projects interface showing uploaded instruction files](../images/chatgpt-projects-v1.png){ alt="ChatGPT Projects interface with uploaded instruction files" width="500" }
+
 ### The instructions file
 
 Copy this into your project instructions. It tells the AI to take any unstructured input and restructure it into a clean, well-organized prompt.

@@ -19,6 +19,8 @@ Every major AI provider offers multiple models at different capability levels. T
 | **Claude** | Sonnet (the default on free/Pro) | Opus (more capable, slower) | Click the model selector in Claude.ai, or use `/model opus` in Claude Code |
 | **ChatGPT** | GPT-4o (the default) | o1-pro or o3 (stronger reasoning) | Click the model dropdown in ChatGPT |
 
+![Claude.ai model selector showing Opus 4.6, Extended thinking toggle, and additional models](../images/claude-model-selector-v1.png){ alt="Claude.ai interface showing the model selector dropdown with Opus 4.6 selected, Extended thinking toggle, and More models menu expanded to show Sonnet 4.6, Haiku 4.5, Opus 4.5, Opus 3, and Sonnet 4.5" width="500" }
+
 **The practical difference:** For quick questions, the default model is fine. For anything that requires reasoning, synthesis, or careful writing — research summaries, proposal drafts, data analysis plans — the stronger model produces noticeably better results. It's the difference between a competent undergraduate and a sharp colleague.
 
 **Cost reality:** Stronger models are either restricted to paid tiers or use more of your usage allowance. But if you're already paying for a subscription, you're leaving money on the table by not using the best model available to you.
@@ -45,6 +47,8 @@ Both Claude and ChatGPT let you save persistent context that applies to every co
 |----------|---------|----------------|
 | **Claude.ai** | Projects | Create a Project, add instructions and files. Every conversation in that project starts with your context. |
 | **ChatGPT** | Custom Instructions + Memory | Settings > Personalization > Custom Instructions. Applies to all conversations. ChatGPT also builds memory from your conversations over time. |
+
+![ChatGPT Projects interface showing a project with instructions and uploaded files](../images/chatgpt-projects-v1.png){ alt="ChatGPT Projects interface showing a Prompt Engineer project with Sources tab, uploaded instruction files, and Extended thinking model selected" width="500" }
 
 **What to put in saved context:**
 
