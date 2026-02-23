@@ -24,7 +24,7 @@ I'm not a coder. I've never written a line of code in my life. Everything on thi
 
 ## How I Got Here {: .section-hero }
 
-Like most academics, the work that matters — [the research](https://chrisblattman.com/research/), the writing, the thinking — gets buried under an avalanche of email, coordination, proposals, and administrative overhead. I manage 15+ research and related projects simultaneously, each with distributed teams across multiple countries. I spend more time answering emails and writing grant reports than doing the science I was trained for.
+Like most academics, the work that matters — [the research](https://chrisblattman.com/research/), the writing, the thinking — gets buried under an avalanche of email, coordination, proposals, and administrative overhead. I manage a large portfolio of research projects simultaneously, each with distributed teams across multiple countries. I spend more time answering emails and writing grant reports than doing the science I was trained for.
 
 For the past year I intensively used [AI chatbots](essentials/index.md). They were invaluable — deep research, better drafts, faster brainstorming, decent writing feedback. But they were limited. The time savings were real but modest.
 
@@ -34,7 +34,7 @@ I went down a rabbit hole. I spent hours daily for a month building skills and p
 
 ### The One-Time Cleanup
 
-Here's what convinced me this was real: After 20 years of digital life, I had 5,000 unread emails, calendars scattered across iCalendar and Google, files across Dropbox, Google Drive, Box, and iCloud, and an overflowing hard drive. A day and a half with Claude Code and my inbox was down to six emails, my calendars were consolidated, obsolete cloud folders were shut down, and everything was cataloged.
+Here's what convinced me this was real: After 20 years of digital life, I had thousands of unread emails, fragmented calendars, files scattered across multiple cloud services, and an overflowing hard drive. A day and a half with Claude Code and my inbox was nearly empty, my calendars were consolidated, obsolete cloud folders were shut down, and everything was cataloged.
 
 It was like having a magic cleanup team come into a hoarder's basement.
 

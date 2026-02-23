@@ -82,7 +82,7 @@ nav:
     - Executive Assistant: toolkit/executive-assistant.md
     - Project Management: workflows/project-management.md
     - "Example: Project Dashboard": workflows/examples/project-overview-example.md
-    - "Example: Research Design Doc": workflows/examples/research-design-example.md
+    - "Example: Research Design": workflows/examples/research-design-example.md
   - Advanced:
     - system/index.md
     - Building Skills: system/building-skills.md
