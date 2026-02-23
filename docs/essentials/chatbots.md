@@ -48,7 +48,13 @@ Both Claude and ChatGPT let you save persistent context that applies to every co
 | **Claude.ai** | Projects | Create a Project, add instructions and files. Every conversation in that project starts with your context. |
 | **ChatGPT** | Custom Instructions + Memory | Settings > Personalization > Custom Instructions. Applies to all conversations. ChatGPT also builds memory from your conversations over time. |
 
-![ChatGPT Projects interface showing a project with instructions and uploaded files](../images/chatgpt-projects-v1.png){ alt="ChatGPT Projects interface showing a Prompt Engineer project with Sources tab, uploaded instruction files, and Extended thinking model selected" width="500" }
+=== "Claude.ai Projects"
+
+    ![Claude.ai Projects interface showing Memory, Instructions, and Files panels](../images/claude-projects-v1.png){ alt="Claude.ai Projects interface with Memory panel, Instructions section, and uploaded Files including prompt preference documents" }
+
+=== "ChatGPT Projects"
+
+    ![ChatGPT Projects interface showing a project with instructions and uploaded files](../images/chatgpt-projects-v1.png){ alt="ChatGPT Projects interface showing a Prompt Engineer project with Sources tab, uploaded instruction files, and Extended thinking model selected" }
 
 **What to put in saved context:**
 
