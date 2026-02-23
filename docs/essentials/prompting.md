@@ -148,11 +148,11 @@ You don't have to internalize all of the above. Create a project in ChatGPT or C
 
 === "Claude.ai"
 
-    ![Claude.ai Projects interface with Memory, Instructions, and Files](../images/claude-projects-v1.png){ alt="Claude.ai Projects interface showing where to add instructions and upload files" }
+    ![Claude.ai Projects interface with Memory, Instructions, and Files](../images/claude-projects-v1.png){ alt="Claude.ai Projects interface showing where to add instructions and upload files" style="max-width: 550px" }
 
 === "ChatGPT"
 
-    ![ChatGPT Projects interface with Sources and uploaded files](../images/chatgpt-projects-v1.png){ alt="ChatGPT Projects interface showing Sources tab with uploaded instruction files" }
+    ![ChatGPT Projects interface with Sources and uploaded files](../images/chatgpt-projects-v1.png){ alt="ChatGPT Projects interface showing Sources tab with uploaded instruction files" style="max-width: 550px" }
 
 ### The instructions file
 

@@ -139,11 +139,11 @@ The dashboard prioritizes strategic objectives first, then operational objective
 
     **Tab 1: Project Overview & Meeting Log** — the dashboard that opens every meeting:
 
-    ![Project dashboard showing strategic objective, priorities, and critical success factors](../images/project-overview-dashboard-v1.png){ alt="Google Doc project dashboard with strategic objectives, priorities, and critical success factors color-coded by status" }
+    ![Project dashboard showing strategic objective, priorities, and critical success factors](../images/project-overview-dashboard-v1.png){ alt="Google Doc project dashboard with strategic objectives, priorities, and critical success factors" style="max-width: 500px" }
 
     **Tab 2: Research Design & Progress** — the living research design that proposals draw from:
 
-    ![Research design snapshot showing study design table with key parameters](../images/research-design-snapshot-v1.png){ alt="Google Doc research design section with study design at a glance table showing design, location, sample, intervention, and outcomes" }
+    ![Research design snapshot showing study design table with key parameters](../images/research-design-snapshot-v1.png){ alt="Google Doc research design section with study design at a glance table" style="max-width: 500px" }
 
     [:octicons-file-code-24: Full example — Tab 1 (Project Overview)](examples/project-overview-example.md){ .md-button }
     [:octicons-file-code-24: Full example — Tab 2 (Research Design)](examples/research-design-example.md){ .md-button }
