@@ -70,3 +70,17 @@ From there it goes deeper into [Claude Code](https://docs.anthropic.com/en/docs/
     [:octicons-arrow-right-24: Executive Assistant Workflow](toolkit/executive-assistant.md)
 
 </div>
+
+## Going Further
+
+<div class="grid cards" markdown>
+
+-   **:material-sync-circle: Continuous Improvement** <span class="badge-teal">Advanced</span>
+
+    ---
+
+    Email yourself tips and discoveries from any device. Two skills curate them, then propose concrete changes to your CLAUDE.md, skills, and rules — so your system gets better every week.
+
+    [:octicons-arrow-right-24: The Tips Pipeline](system/continuous-improvement.md)
+
+</div>

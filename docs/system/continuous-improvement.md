@@ -205,3 +205,11 @@ Both skills have configurable paths and behaviors:
 - Pruning intervals (deferred items: 90 days, old change summaries: 6 months)
 
 Edit the skill files directly to change defaults. Both files are plain markdown — find the path strings or default values in the relevant step and update them. Changes take effect on the next Claude Code restart.
+
+---
+
+## See also
+
+- **[`/review-plan` — Plan Review](../workflows/first-session-skills.md#2-plan-review-review-plan)** — Stress-test any plan with structured expert critique before you build it. Pairs well with the tips pipeline: curate ideas, then review plans before implementing them.
+- **[Resources & Reference Implementations](../resources.md)** — Open-source repos and frameworks that inspired this system, including chief-of-staff patterns, delegation frameworks, and community skill libraries.
+- **[Skill Design Patterns](../downloads/skill-patterns.md)** — If you want to build your own skills, these patterns show how production skills are structured.
