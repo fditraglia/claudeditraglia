@@ -26,3 +26,20 @@
     <a href="mailto:claudeblattman+feedback@gmail.com?subject=Feedback%3A%20{{ page.title | urlencode }}">Send Claude Blattman quick feedback</a>
   </p>
 {% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    /* Make the site title text clickable — navigates home like the logo icon */
+    (function() {
+      var title = document.querySelector('.md-header__title');
+      if (title) {
+        title.style.cursor = 'pointer';
+        title.addEventListener('click', function() {
+          var logo = document.querySelector('.md-header__button.md-logo');
+          if (logo) logo.click();
+        });
+      }
+    })();
+  </script>
+{% endblock %}
