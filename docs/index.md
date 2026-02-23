@@ -78,3 +78,6 @@ From there it goes deeper into [Claude Code](https://docs.anthropic.com/en/docs/
     [:octicons-arrow-right-24: The Tips Pipeline](system/continuous-improvement.md)
 
 </div>
+
+!!! tip "Help other researchers find this"
+    If this guide has been useful, consider [starring it on GitHub](https://github.com/chrisblattman/claudeblattman) or sharing the link with a colleague. The more people find it, the better it gets. Feedback and suggestions are welcome — [send a quick note](mailto:claudeblattman+feedback@gmail.com?subject=Feedback).
