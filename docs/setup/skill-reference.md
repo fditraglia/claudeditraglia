@@ -388,6 +388,8 @@ curl -o ~/.claude/commands/todo-review.md \
 
 **Install:**
 ```bash
+mkdir -p ~/.claude-assistant/tips
+
 curl -o ~/.claude/commands/tips-curate.md \
   https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/tips-curate.md
 ```
@@ -400,7 +402,7 @@ curl -o ~/.claude/commands/tips-curate.md \
 /tips-curate all          # Loop through all unread in batches of 5
 ```
 
-**Customization:** Quality thresholds, tip format, log file location (default `~/.claude-assistant/tips/collected-tips-log.md`), @ToSelf label name.
+**Customization:** Batch size, log file location (default `~/.claude-assistant/tips/collected-tips-log.md`), @ToSelf label name.
 
 **Learn more:** [Continuous Improvement](../system/continuous-improvement.md)
 
@@ -431,6 +433,8 @@ curl -o ~/.claude/commands/tips-integrate-references/scanning-rules.md \
 /tips-integrate dryrun       # Preview proposals without writing
 /tips-integrate since:2026-02-01  # Only items after this date
 ```
+
+**Output files:** Investigation proposals are written to `~/.claude-assistant/tasks/todo-items.md` (created automatically if it doesn't exist).
 
 **Customization:** Source selection, state file location (default `~/.claude-assistant/state/integrate-state.json`), target config files.
 

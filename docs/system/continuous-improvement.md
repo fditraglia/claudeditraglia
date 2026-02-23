@@ -8,13 +8,26 @@ Most AI setups are static. You configure once and hope it holds. The tips pipeli
 
 You're reading an article on your phone. A colleague shares a Claude Code trick over coffee. You stumble on a workflow pattern at midnight. These discoveries are valuable, but they evaporate unless you capture them *and* act on them.
 
-The tips pipeline solves this with a two-step loop:
+The tips pipeline solves this with three steps:
 
 1. **Capture** — Email tips to yourself, tagged `@ToSelf`. Any device, any time.
 2. **Curate** — `/tips-curate` fetches those emails, researches them, quality-filters, and builds a searchable log.
 3. **Integrate** — `/tips-integrate` scans the log and proposes concrete changes to your CLAUDE.md, skills, and rules files.
 
 The result: your system gets better every two weeks, driven by your own discoveries.
+
+---
+
+## Prerequisites
+
+| Requirement | Notes |
+|-------------|-------|
+| Claude Code installed | Required for all skills |
+| Gmail MCP configured | Required for `/tips-curate`. See [MCP Setup](../toolkit/mcp-setup.md). |
+| Gmail account | Used for the @ToSelf label below |
+| `/tips-curate` run at least once | Required before `/tips-integrate` does anything useful |
+
+If you haven't set up Gmail MCP yet, `/tips-curate` will report "Gmail integration unavailable" on first run. Follow the [MCP Setup guide](../toolkit/mcp-setup.md) first.
 
 ---
 
@@ -70,6 +83,8 @@ This skill connects to Gmail, fetches unread @ToSelf emails, and processes each 
 
 What you approve gets appended to a searchable tips log file with tags, source attribution, and a concrete action proposal.
 
+If the skill can't extract content from a URL (paywalled, video-only, or X.com), it flags the item as "NEEDS YOUR HELP" in the review report. You can paste the content manually or type "skip."
+
 **MCP required:** Gmail MCP (to read and mark emails).
 
 ### Step 3: Integrate (`/tips-integrate`)
@@ -79,7 +94,9 @@ This skill scans your tips log (and optionally session follow-ups and reference 
 - **Direct proposals** — Ready-to-apply edits to specific config files. Shows you the current state, the proposed change, and the rationale.
 - **Investigation proposals** — Items that need more research before they become edits. These get added to your to-do list as development tasks.
 
-Every proposal gets your approval before anything changes. The skill tracks what it has already processed so it never re-proposes the same item.
+Every proposal gets your approval before anything changes. The skill tracks what it has already processed so it never re-proposes the same item. Investigation proposals are written to a to-do file (`~/.claude-assistant/tasks/todo-items.md`), created automatically if it doesn't exist.
+
+On first run, `/tips-integrate` will warn that tips have never been curated and ask whether to continue. This is expected if you haven't run `/tips-curate` yet.
 
 **MCP required:** None. This skill is filesystem-only.
 
@@ -165,7 +182,7 @@ A snapshot of my own tips log is available as a download: [Collected Tips & Rese
 | `/tips-curate` | **Required** — reads and marks @ToSelf emails | None |
 | `/tips-integrate` | Not needed | None — filesystem only |
 
-You can run `/tips-integrate` without `/tips-curate` if you maintain the tips log file manually. The log format is documented in the [scanning rules reference](https://github.com/chrisblattman/claudeblattman/blob/main/skills/tips-integrate-references/scanning-rules.md).
+You can run `/tips-integrate` without `/tips-curate` if you maintain the tips log file manually. The log format is documented in the scanning rules file included with `/tips-integrate` (see `~/.claude/commands/tips-integrate-references/scanning-rules.md` after installation).
 
 ---
 
@@ -187,4 +204,4 @@ Both skills have configurable paths and behaviors:
 - Target config files (CLAUDE.md, skills directory, rules directory)
 - Pruning intervals (deferred items: 90 days, old change summaries: 6 months)
 
-Edit the skill files directly to change defaults. Both files are well-commented markdown — no code required.
+Edit the skill files directly to change defaults. Both files are plain markdown — find the path strings or default values in the relevant step and update them. Changes take effect on the next Claude Code restart.
