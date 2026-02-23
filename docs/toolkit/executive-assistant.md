@@ -2,14 +2,10 @@
 
 A system that manages your inbox, tracks your projects, processes your meetings, and drafts your communications — assembled from skills and integrations that compound over time.
 
-<div class="narrative-block" markdown>
+> *I started with 5,000 unread emails. A day and a half later, I had six.*
+> [:octicons-arrow-right-24: How I built this](#how-i-built-this)
 
-:material-book-open-page-variant:{ .narrative-icon } *I started with 5,000 unread emails and used "unread" as my to-do list. A day and a half later, I had six.*
-{ .narrative-teaser }
-
-[:octicons-arrow-right-24: Read the full story](#how-i-built-this)
-
-</div>
+![Inbox zero in Gmail](../images/inbox-zero.png){ style="max-width: 480px" }
 
 ---
 
@@ -17,15 +13,15 @@ A system that manages your inbox, tracks your projects, processes your meetings,
 
 | Component | What It Does | Skill |
 |-----------|-------------|-------|
-| **Inbox triage** | Categorizes email by priority, auto-labels and archives low-value mail | `/triage-inbox` |
-| **Morning briefing** | Daily summary: calendar, reminders, inbox highlights, goal alignment | `/morning-brief` |
-| **Daily check-in** | Interactive session: triage, reminders, meeting prep, email drafting | `/checkin` |
-| **Schedule management** | Calendar availability, conflict detection, scheduling replies | `/schedule-query` |
-| **Session capture** | Records decisions, follow-ups, and handoff notes after each session | `/done` |
-| **To-do management** | Add, review, and batch-process tasks across lists | `/todo-add`, `/todo-review`, `/todo-queue` |
-| **Goals tracking** | Quarterly objectives, progress scores, stalled-goal alerts | `/goals-review` |
+| **Inbox triage** | Categorizes email by priority, auto-labels and archives low-value mail | [`/triage-inbox`](../setup/skill-reference.md#triage-inbox-smart-inbox-triage) |
+| **Morning briefing** | Daily summary: calendar, reminders, inbox highlights, goal alignment | [`/morning-brief`](../setup/skill-reference.md#morning-brief-daily-briefing) |
+| **Daily check-in** | Interactive session: triage, reminders, meeting prep, email drafting | [`/checkin`](../setup/skill-reference.md#checkin-daily-check-in-session) |
+| **Schedule management** | Calendar availability, conflict detection, scheduling replies | [`/schedule-query`](../setup/skill-reference.md#schedule-query-calendar-availability) |
+| **Session capture** | Records decisions, follow-ups, and handoff notes after each session | [`/done`](../setup/skill-reference.md#done-session-capture) |
+| **To-do management** | Add, review, and batch-process tasks across lists | [`/todo-add`](../setup/skill-reference.md#todo-add-add-to-do-item), [`/todo-review`](../setup/skill-reference.md#todo-review-to-do-review), [`/todo-queue`](../setup/skill-reference.md#todo-queue-todo-queue) |
+| **Goals tracking** | Quarterly objectives, progress scores, stalled-goal alerts | [`/goals-review`](../setup/skill-reference.md#goals-review-goals-review) |
 
-Each component works independently. Start with whichever solves your biggest pain point.
+Each skill works on its own — you can install just `/triage-inbox` and get value from day one. But they compound: `/triage-inbox` runs standalone, and `/checkin` wraps triage + briefing into one interactive session. The advantage of installing `/triage-inbox` first is that you can run it standalone, review what it does, and tune your config before adding more complex sessions. `/goals-review` adds a strategic layer that aligns everything toward your quarterly objectives. The recommended path: start with triage, add the check-in, then layer on the briefing and goals.
 
 ---
 
@@ -39,234 +35,6 @@ To build EA capabilities, you need:
 4. **Google Calendar MCP configured** (recommended) — same [MCP guide](mcp-setup.md)
 
 Time estimate: If you haven't done MCP setup yet, budget 1-2 hours for Gmail + Calendar.
-
----
-
-## Step 1: Install Config Templates
-
-These templates define your email handling rules, calendar preferences, and goal tracking. Skills reference them at runtime — install once, customize to fit your setup.
-
-```bash
-# Create config directory
-mkdir -p ~/.claude-assistant/config
-
-# Email policy — VIP contacts, auto-archive patterns, label routing
-curl -o ~/.claude-assistant/config/email-policy.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/email-policy-template.md
-
-# Triage config — Gmail label IDs, classification rules, score thresholds
-curl -o ~/.claude-assistant/config/triage-config.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/triage-config-template.md
-
-# Calendar policy — calendar IDs, working hours, timezone, deep work protection
-curl -o ~/.claude-assistant/config/calendar-policy.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/calendar-policy-template.md
-
-# Goals — quarterly objectives for goal alignment in briefings and check-ins
-curl -o ~/.claude-assistant/config/goals.yaml \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/goals-yaml-template.yaml
-```
-
-**After installing:** Open each file and customize the bracketed fields. At minimum, update `email-policy.md` with your VIP contacts and `calendar-policy.md` with your timezone.
-
----
-
-## Step 2: Skill Dependency Order
-
-Install skills in this order — later skills depend on earlier ones.
-
-<!-- UPDATE THIS TABLE when adding or removing EA skills -->
-
-| Order | Skill | Requires | What It Does |
-|:-----:|-------|----------|-------------|
-| 1 | `/done` | Nothing | Session capture — decisions, follow-ups, handoff notes |
-| 2 | `/triage-inbox` | email-policy, triage-config | Smart inbox triage — categorize, label, archive |
-| 3 | `/morning-brief` | email-policy, calendar-policy, triage-config | Daily briefing — calendar, reminders, inbox, goals |
-| 4 | `/schedule-query` | calendar-policy | Calendar availability and scheduling replies |
-| 5 | `/todo-add` | Nothing | Add items to session task list |
-| 6 | `/todo-review` | Nothing | Review and consolidate to-do items |
-| 7 | `/todo-queue` | Gmail MCP, Apple Reminders | Batch-convert emails to reminders |
-| 8 | `/checkin` | `/triage-inbox`, goals.yaml | Interactive daily session (wraps triage + briefing) |
-| 9 | `/goals-review` | goals.yaml | Quarterly goal review and recalibration |
-
----
-
-## Quickstart: Your First Three Skills
-
-Don't install everything at once. Start with these three and use them for a week before adding more.
-
-### 1. Session Capture (`/done`)
-
-The easiest win. No config needed. Run it at the end of every Claude Code session.
-
-```bash
-mkdir -p ~/.claude/commands
-curl -o ~/.claude/commands/done.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/done.md
-```
-
-Restart Claude Code, then try: `/done`
-
-### 2. Inbox Triage (`/triage-inbox`)
-
-The highest-value EA skill for most people. Requires Gmail MCP and the config templates from Step 1.
-
-```bash
-mkdir -p ~/.claude-assistant/state ~/.claude-assistant/logs
-curl -o ~/.claude/commands/triage-inbox.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/triage-inbox.md
-```
-
-Restart Claude Code, then try: `/triage-inbox noapply` (preview mode — see what it would do before applying)
-
-!!! quote "Field note"
-    My first version had too many categories. I collapsed to a few broad buckets — urgent, needs response, FYI, skip — and accuracy jumped. Start broad. Watch for false negatives in the first week — review what's being auto-archived until you trust it.
-
-### 3. Morning Briefing (`/morning-brief`)
-
-Your daily summary. Requires Gmail + Calendar MCP and the config templates from Step 1.
-
-```bash
-curl -o ~/.claude/commands/morning-brief.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/morning-brief.md
-```
-
-Restart Claude Code, then try: `/morning-brief`
-
----
-
-## Week-by-Week Progression
-
-### Week 1: Triage + Session Capture
-
-1. Run `/triage-inbox` daily — review what it categorizes, correct mistakes
-2. Run `/done` at the end of each session
-3. Customize `email-policy.md` as you discover edge cases
-
-### Week 2: Briefing + Scheduling
-
-1. Run `/morning-brief` each morning
-2. Install `/schedule-query` for calendar queries
-3. Add voice/tone preferences to CLAUDE.md for email drafting
-
-### Week 3: Full Check-In
-
-1. Install `/checkin` — it wraps triage + briefing into one interactive session
-2. Install `/goals-review` and set up your `goals.yaml`
-3. Set up project-specific CLAUDE.md files for your main projects
-
-### After You're Comfortable
-
-Once `/triage-inbox` and `/morning-brief` are running smoothly, [`/checkin`](../setup/skill-reference.md#checkin-daily-check-in-session) becomes your single daily command. Set up [`/goals-review`](../setup/skill-reference.md#goals-review-goals-review) to maintain the `goals.yaml` file that powers goal alignment in both `/checkin` and `/morning-brief`.
-
----
-
-??? example "Install all EA skills at once (after completing setup above)"
-
-    Only use this after you've installed the config templates (Step 1) and tested your first three skills. Running this before setup is complete will install skills that can't work yet.
-
-    ```bash
-    # Last verified: 2026-02-22. If any curl fails, check the Skill Library for current URLs.
-    mkdir -p ~/.claude/commands ~/.claude-assistant/config \
-      ~/.claude-assistant/state ~/.claude-assistant/logs
-
-    # EA skills (dependency order)
-    for skill in done triage-inbox morning-brief schedule-query \
-      todo-add todo-review todo-queue checkin goals-review; do
-      curl -o ~/.claude/commands/$skill.md \
-        https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/$skill.md
-    done
-    ```
-
-    Restart Claude Code after installing. All EA skills will be available as slash commands.
-
----
-
-??? info "The building blocks — how each component works"
-
-    ### Inbox Triage
-
-    Instead of scanning hundreds of emails, Claude categorizes them and tells you what needs attention.
-
-    **How it works:**
-
-    - Claude searches your Gmail using MCP
-    - Applies categorization rules (from your config templates)
-    - Presents a prioritized summary: urgent, needs response, FYI, can ignore
-
-    **Example interaction:**
-    ```
-    > Triage my inbox from the last 24 hours. Flag anything from
-      collaborators or about upcoming deadlines. Skip newsletters
-      and automated notifications.
-    ```
-
-    Over time, you encode your triage rules into a skill so you can just type `/triage-inbox` instead of writing the prompt each time.
-
-    ### Meeting Processing
-
-    After every meeting, Claude extracts the important parts.
-
-    **How it works:**
-
-    - You provide a transcript (from Granola, Zoom, or manual notes)
-    - Claude extracts: decisions made, action items, open questions, key discussion points
-    - Results go to a project meeting log or Google Doc
-
-    **What you need:**
-
-    - Meeting transcripts (Granola MCP, or exported transcript files)
-    - A project folder or Google Doc to store the results
-
-    !!! quote "Field note"
-        Meetings were the second thing I automated, after inbox triage. The value isn't the transcript — it's never having to remember what was decided. The key design choice: meetings go at the TOP of the log in reverse chronological order, so the most recent context is always first.
-
-    ### Project Tracking
-
-    Claude maintains awareness of your projects through persistent context.
-
-    **How it works:**
-
-    - Your CLAUDE.md lists active projects with brief status
-    - Project-specific CLAUDE.md files (in each project folder) contain detailed context
-    - Skills like `/done` capture session decisions and follow-ups
-    - Weekly reviews pull together updates across projects
-
-    ### Communication Drafting
-
-    Claude writes emails, messages, and updates that sound like you.
-
-    **How it works:**
-
-    - Your CLAUDE.md includes voice and tone preferences
-    - Claude drafts based on context (who you're writing to, what about)
-    - You review and approve before sending
-
-    **Deciding what Claude should draft vs. what you write yourself:**
-
-    Research on AI-assisted email (Cardon & Coman, 2025, *International Journal of Business Communication*) found that recipients barely notice AI involvement in routine messages — but trust drops sharply for relationship-oriented communication.
-
-    | AI-appropriate (draft freely) | Write yourself |
-    |------|------|
-    | Meeting scheduling and coordination | Recommendation letters |
-    | Status requests and updates | Sensitive advising conversations |
-    | Administrative logistics | Performance feedback |
-    | Deadline reminders | Expressions of gratitude or praise |
-    | Form acknowledgments | Conflict resolution |
-    | Information distribution | Anything where the recipient would feel slighted to learn AI composed it |
-
-    The heuristic: **if you'd be embarrassed for the recipient to learn AI wrote it, write it yourself.**
-
-    ### Schedule Management
-
-    Claude checks your calendar and helps manage time.
-
-    **How it works:**
-
-    - Calendar MCP reads your Google Calendar
-    - Claude identifies conflicts, suggests meeting times, summarizes your day
-
----
 
 ??? info "Choose your infrastructure — calendar and reminders"
 
@@ -306,6 +74,37 @@ Once `/triage-inbox` and `/morning-brief` are running smoothly, [`/checkin`](../
 
 ---
 
+## Step 1: Install Config Templates
+
+These templates define your email handling rules, calendar preferences, and goal tracking. Skills reference them at runtime — install once, customize to fit your setup.
+
+**Run these commands in your Mac Terminal** (or Windows PowerShell) — not inside Claude Code. They create the config directory and download template files.
+
+```bash
+# Create config directory
+mkdir -p ~/.claude-assistant/config
+
+# Email policy — VIP contacts, auto-archive patterns, label routing
+curl -o ~/.claude-assistant/config/email-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/email-policy-template.md
+
+# Triage config — Gmail label IDs, classification rules, score thresholds
+curl -o ~/.claude-assistant/config/triage-config.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/triage-config-template.md
+
+# Calendar policy — calendar IDs, working hours, timezone, deep work protection
+curl -o ~/.claude-assistant/config/calendar-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/calendar-policy-template.md
+
+# Goals — quarterly objectives for goal alignment in briefings and check-ins
+curl -o ~/.claude-assistant/config/goals.yaml \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/goals-yaml-template.yaml
+```
+
+Once installed, you'll customize these files by editing them directly or by asking Claude Code to help you fill them in.
+
+**After installing:** Open each file and customize the bracketed fields. At minimum, update `email-policy.md` with your VIP contacts and `calendar-policy.md` with your timezone.
+
 ??? info "Define your policies — what Claude can and cannot do"
 
     One of the most important things I built — and the thing I wish I'd done *first* — was a set of written policy files that define what Claude can and cannot do. Not guidelines. Hard rules.
@@ -341,6 +140,185 @@ Once `/triage-inbox` and `/morning-brief` are running smoothly, [`/checkin`](../
 
     !!! tip "Start here"
         Before building any skills, write an email policy. Even a 10-line version that says "never send without approval" and "never mark as read without instruction" will prevent the most common mistakes.
+
+---
+
+## Step 2: Skill Dependency Order
+
+Install skills roughly in this order. Each works independently, but this sequence builds naturally.
+
+<!-- UPDATE THIS TABLE when adding or removing EA skills -->
+
+| Order | Skill | Works best with | What It Does |
+|:-----:|-------|----------|-------------|
+| 1 | `/done` | Nothing | Session capture — decisions, follow-ups, handoff notes |
+| 2 | `/triage-inbox` | email-policy, triage-config | Smart inbox triage — categorize, label, archive |
+| 3 | `/checkin` | `/triage-inbox`, goals.yaml | Interactive daily session (wraps triage + briefing) |
+| 4 | `/morning-brief` | email-policy, calendar-policy, triage-config | Daily briefing (standalone alternative to checkin) |
+| 5 | `/schedule-query` | calendar-policy | Calendar availability and scheduling replies |
+| 6 | `/todo-add` | Nothing | Add items to session task list |
+| 7 | `/todo-review` | Nothing | Review and consolidate to-do items |
+| 8 | `/todo-queue` | Gmail MCP, Apple Reminders | Batch-convert emails to reminders |
+| 9 | `/goals-review` | goals.yaml | Quarterly goal review and recalibration |
+
+??? example "Install all EA skills at once (after completing setup above)"
+
+    Only use this after you've installed the config templates (Step 1) and tested your first three skills. Running this before setup is complete will install skills that can't work yet.
+
+    ```bash
+    # Last verified: 2026-02-22. If any curl fails, check the Skill Library for current URLs.
+    mkdir -p ~/.claude/commands ~/.claude-assistant/config \
+      ~/.claude-assistant/state ~/.claude-assistant/logs
+
+    # EA skills (dependency order)
+    for skill in done triage-inbox checkin morning-brief schedule-query \
+      todo-add todo-review todo-queue goals-review; do
+      curl -o ~/.claude/commands/$skill.md \
+        https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/$skill.md
+    done
+    ```
+
+    Restart Claude Code after installing. All EA skills will be available as slash commands.
+
+---
+
+## Quickstart: Your First Three Skills
+
+Don't install everything at once. Start with these three and use them for a week before adding more.
+
+### 1. Session Capture (`/done`)
+
+The easiest win. No config needed. Run it at the end of every Claude Code session.
+
+```bash
+mkdir -p ~/.claude/commands
+curl -o ~/.claude/commands/done.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/done.md
+```
+
+Restart Claude Code, then try: `/done`
+
+### 2. Inbox Triage (`/triage-inbox`)
+
+The highest-value EA skill for most people. Requires Gmail MCP and the config templates from Step 1.
+
+```bash
+mkdir -p ~/.claude-assistant/state ~/.claude-assistant/logs
+curl -o ~/.claude/commands/triage-inbox.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/triage-inbox.md
+```
+
+Restart Claude Code, then try: `/triage-inbox noapply` (preview mode — see what it would do before applying)
+
+**How it works under the hood:** `/triage-inbox` is a filtering system. On each run, it reads your recent emails via Gmail MCP, classifies each message against your rules in `email-policy.md` and `triage-config.md` (VIP senders, keywords, sender patterns), then applies Gmail labels and optionally archives low-priority mail. Over time, you train it: flag false positives (important mail that got archived) and false negatives (junk that stayed), and it refines its classification. It also reads emails and makes judgment calls — recognizing when a "newsletter" actually contains a time-sensitive request, or when a routine sender has something urgent. Think of it as a smart, trainable mail sorter that gets better the more feedback you give it.
+
+!!! quote "Field note"
+    My first version had too many categories. I collapsed to a few broad buckets — urgent, needs response, FYI, skip — and accuracy jumped. Start broad. Watch for false negatives in the first week — review what's being auto-archived until you trust it.
+
+??? info "Beyond triage — what else the EA does"
+
+    ### Meeting Processing
+
+    After every meeting, Claude extracts the important parts.
+
+    **How it works:**
+
+    - You provide a transcript (from Granola, Zoom, or manual notes)
+    - Claude extracts: decisions made, action items, open questions, key discussion points
+    - Results go to a project meeting log or Google Doc
+
+    **What you need:**
+
+    - Meeting transcripts (Granola MCP, or exported transcript files)
+    - A project folder or Google Doc to store the results
+
+    !!! quote "Field note"
+        Meetings were the second thing I automated, after inbox triage. The value isn't the transcript — it's never having to remember what was decided. The key design choice: meetings go at the TOP of the log in reverse chronological order, so the most recent context is always first.
+
+    ### Communication Drafting
+
+    Claude writes emails, messages, and updates that sound like you.
+
+    **How it works:**
+
+    - Your CLAUDE.md includes voice and tone preferences
+    - Claude drafts based on context (who you're writing to, what about)
+    - You review and approve before sending
+
+    **Deciding what Claude should draft vs. what you write yourself:**
+
+    Research on AI-assisted email (Cardon & Coman, 2025, *International Journal of Business Communication*) found that recipients barely notice AI involvement in routine messages — but trust drops sharply for relationship-oriented communication.
+
+    | AI-appropriate (draft freely) | Write yourself |
+    |------|------|
+    | Meeting scheduling and coordination | Recommendation letters |
+    | Status requests and updates | Sensitive advising conversations |
+    | Administrative logistics | Performance feedback |
+    | Deadline reminders | Expressions of gratitude or praise |
+    | Form acknowledgments | Conflict resolution |
+    | Information distribution | Anything where the recipient would feel slighted to learn AI composed it |
+
+    The heuristic: **if you'd be embarrassed for the recipient to learn AI wrote it, write it yourself.**
+
+    ### Project Tracking
+
+    Claude maintains awareness of your projects through persistent context.
+
+    **How it works:**
+
+    - Your CLAUDE.md lists active projects with brief status
+    - Project-specific CLAUDE.md files (in each project folder) contain detailed context
+    - Skills like `/done` capture session decisions and follow-ups
+    - Weekly reviews pull together updates across projects
+
+    ### Schedule Management
+
+    Claude checks your calendar and helps manage time.
+
+    **How it works:**
+
+    - Calendar MCP reads your Google Calendar
+    - Claude identifies conflicts, suggests meeting times, summarizes your day
+
+### 3. Daily Check-In (`/checkin`)
+
+Your daily interactive session. Wraps triage, calendar review, meeting prep, and email drafting into one 10-15 minute workflow. Requires Gmail MCP and the config templates from Step 1.
+
+```bash
+curl -o ~/.claude/commands/checkin.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/checkin.md
+```
+
+Restart Claude Code, then try: `/checkin quick` (abbreviated version — good for your first run)
+
+!!! quote "Field note"
+    I started with `/triage-inbox` alone for a week, then added `/checkin`. The check-in wraps triage into a broader daily session — calendar review, reminder triage, meeting prep, and email drafting. The `quick` flag skips the slower phases so you can ease in. After a few days, try the full `/checkin` for the complete workflow.
+
+---
+
+## Week-by-Week Progression
+
+### Week 1: Triage + Session Capture
+
+1. Run `/triage-inbox` daily — review what it categorizes, correct mistakes
+2. Run `/done` at the end of each session
+3. Customize `email-policy.md` as you discover edge cases
+
+### Week 2: Check-in + Scheduling
+
+1. Install `/checkin` — wraps triage into a broader interactive daily session
+2. Install `/schedule-query` for calendar queries
+3. Add voice/tone preferences to CLAUDE.md for email drafting
+
+### Week 3: Briefing + Goals
+
+1. Add `/morning-brief` if you want a lighter passive report alongside your interactive check-in
+2. Install `/goals-review` and set up your `goals.yaml`
+3. Set up project-specific CLAUDE.md files for your main projects
+
+### After You're Comfortable
+
+Once `/triage-inbox` and `/checkin` are running daily, add [`/morning-brief`](../setup/skill-reference.md#morning-brief-daily-briefing) if you want a lighter passive report alongside your interactive session. Set up [`/goals-review`](../setup/skill-reference.md#goals-review-goals-review) to maintain the `goals.yaml` file that powers goal alignment in both `/checkin` and `/morning-brief`.
 
 ---
 
