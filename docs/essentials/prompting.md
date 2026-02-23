@@ -121,6 +121,68 @@ Not every task needs the same level of effort. A quick email reply doesn't need 
 
 ---
 
+## Use Examples (But Try Without Them First)
+
+Examples are one of the most powerful prompting techniques — but they're also overused. The rule of thumb: **try without examples first.** If the output format or style is wrong, tighten your instructions or add an output schema. Only add examples if that still fails.
+
+When examples help most:
+
+- You need a specific format Claude doesn't know (a custom report template, your organization's style)
+- You want consistent voice across multiple outputs
+- Describing the format in words would take longer than showing it
+
+When you probably don't need them:
+
+- Standard formats (emails, summaries, bullet lists) — Claude already knows these
+- Tasks where you want Claude to suggest the best approach rather than match a template
+
+When you do use examples, keep them compact. `input → output` pairs work better than verbose multi-paragraph samples. Two good examples beat five mediocre ones.
+
+---
+
+## Use XML Tags for Structure
+
+When a prompt has multiple types of content — instructions, background data, documents to analyze — XML-style tags help Claude parse what's what. This is especially useful when you're pasting in text for Claude to work with.
+
+```text
+<instructions>
+Summarize the key findings from this paper. Focus on methodology
+and results. Keep it under 300 words.
+</instructions>
+
+<paper>
+[Full paper text pasted here...]
+</paper>
+
+<output_format>
+Three sections: (1) Method, (2) Key findings, (3) Limitations.
+</output_format>
+```
+
+Without tags, Claude has to figure out where your instructions end and the document begins. With tags, there's no ambiguity. You don't need tags for short, simple prompts — they're most useful when you're mixing instructions with pasted content.
+
+---
+
+## Break Complex Tasks into Steps
+
+A prompt that asks for a literature review, methodology section, budget narrative, and timeline will produce mediocre versions of all four. Break complex tasks into a sequence of focused prompts where each step builds on the previous one.
+
+**Single prompt (works for simple tasks):**
+
+> Analyze this dataset, identify trends, and write an executive summary.
+
+**Chained approach (better for complex work):**
+
+> *Prompt 1:* Analyze this dataset and identify the 5 most significant trends. For each, explain the evidence.
+>
+> *[Review output, then...]*
+>
+> *Prompt 2:* Based on those trends, write a 2-paragraph executive summary for a non-technical audience.
+
+Chaining works because you can course-correct between steps. If Prompt 1 misses something, you fix it before Prompt 2 builds on bad foundations. This matters most for research, analysis, and creative work — anything where direction might shift based on intermediate results.
+
+---
+
 ## Common Anti-Patterns
 
 **Vague thoroughness language.** "Be comprehensive" and "be meticulous" are empty calories. Replace with specific verbs:
@@ -129,9 +191,7 @@ Not every task needs the same level of effort. A quick email reply doesn't need 
 - "Research current best practices for [domain]"
 - "Flag where your approach deviates from [benchmark]"
 
-**Over-prompting.** Modern AI models are good at following instructions. You don't need `CRITICAL: YOU MUST ABSOLUTELY...` — a calm, specific directive works better. Shouting in all-caps doesn't make the AI try harder.
-
-**Asking for everything at once.** A prompt that asks for a literature review, methodology section, budget narrative, and timeline will produce mediocre versions of all four. Break complex tasks into focused steps.
+**Over-prompting.** Modern AI models are good at following instructions. You don't need `CRITICAL: YOU MUST ABSOLUTELY...` — a calm, specific directive works better. Shouting in all-caps doesn't make the AI try harder. In fact, [Anthropic's own guidance for Claude 4.6](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices) specifically warns that anti-laziness prompts like "be thorough" and "think carefully" can cause newer models to overthink and waste time.
 
 **No pushback permission.** If you want honest feedback, say so: *"Tell me directly if this approach has problems. Don't just agree with everything."* By default, AI tends toward politeness and agreement.
 
