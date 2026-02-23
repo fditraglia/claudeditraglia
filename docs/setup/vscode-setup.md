@@ -143,7 +143,7 @@ A few things to notice:
 - **Use `/proposal-write`** to draft or revise a funding proposal that pulls from all the project's documents
 - **Launch `/review-plan`** to stress-test a research design before committing to it
 - **Ask Claude to act as a critical reviewer** — an education economist, a clinical psychologist, a sociologist, or an AI specialist — and generate the kind of feedback you'd get at a seminar or from a journal referee
-- **Run `/checkin`** to get a morning briefing on what's happened across email, calendar, and project docs since the last session
+- **Run [`/checkin`](skill-reference.md#checkin-daily-check-in-session)** to get a morning briefing on what's happened across email, calendar, and project docs since the last session
 - **Use `/project-status-update`** to generate a status report for collaborators
 
 For more on these workflows, see [Skills in Action](../workflows/index.md) and the [Executive Assistant](../toolkit/executive-assistant.md) workflow.

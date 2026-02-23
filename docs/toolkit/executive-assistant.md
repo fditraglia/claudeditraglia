@@ -79,6 +79,7 @@ Not a single skill or product. A *system* built from components:
 | **Meeting processing** | Extracts decisions and action items from transcripts | Skill + Granola/transcripts |
 | **Project tracking** | Maintains status across multiple projects | CLAUDE.md + Google Docs MCP |
 | **Communication drafting** | Writes emails, messages, and updates in your voice | CLAUDE.md voice config + skills |
+| **Daily check-in** | Interactive session: triage, reminders, meeting prep, email drafting, priorities | `/checkin` skill |
 | **Schedule management** | Checks calendar, identifies conflicts | Calendar MCP |
 
 Each component works independently. You don't need all of them. Start with whichever solves your biggest pain point.
@@ -287,6 +288,10 @@ Turn successful patterns into skills:
 1. If your inbox triage prompt works well, save it as a skill
 2. Add voice/tone preferences to CLAUDE.md for email drafting
 3. Set up project-specific CLAUDE.md files for your main projects
+
+### After You're Comfortable
+
+Once `/triage-inbox` and `/morning-brief` are running smoothly, install [`/checkin`](../setup/skill-reference.md#checkin-daily-check-in-session) — it wraps both into a single interactive session that also handles reminder triage, meeting prep, and email drafting. Set up [`/goals-review`](../setup/skill-reference.md#goals-review-goals-review) to maintain the `goals.yaml` file that powers goal alignment in both `/checkin` and `/morning-brief`.
 
 ---
 

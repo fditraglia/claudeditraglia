@@ -26,12 +26,23 @@ Restart Claude Code after adding new commands.
 
 | Skill | Command | Dependencies | Description |
 |-------|---------|-------------|-------------|
+| **Check-In Session** | `/checkin` | Gmail MCP, Calendar MCP, goals.yaml | Interactive daily check-in: inbox triage, reminder triage, meeting prep, email drafting, priorities |
 | **Session Capture** | `/done` | None | Captures decisions, questions, and follow-ups from the current session |
+| **Goals Review** | `/goals-review` | goals.yaml | Review and update quarterly objectives, progress scores, and deadlines |
+| **Morning Briefing** | `/morning-brief` | Gmail MCP, Calendar MCP | Daily briefing: calendar, reminders, inbox highlights, VIP tracking, goal alignment, optional triage |
 | **Prompt Formatter** | `/prompt` | formatting-core.md | Formats informal requests into structured prompts, then executes |
 | **Prompt Only** | `/prompt-only` | formatting-core.md | Formats prompts without executing (for use in other tools) |
 | **Prompt Refine** | `/prompt-refine` | formatting-core.md | Reviews and improves existing prompts |
+| **Proposal Revision** | `/proposal-revise` | None | Applies reviewer/collaborator feedback to proposal drafts |
+| **Proposal Writing** | `/proposal-write` | None | Drafts funding proposals from structured inputs and project context |
 | **Plan Review** | `/review-plan` | None (web search optional) | Structured expert critique of plans |
+| **Schedule Query** | `/schedule-query` | Calendar MCP | Checks calendar availability and drafts scheduling replies |
 | **Project Setup** | `/setup-project-management` | None | Initializes project management system for research projects |
+| **Add To-Do** | `/todo-add` | None | Adds a to-do item to the correct list with duplicate checking |
+| **Todo Queue** | `/todo-queue` | Gmail MCP, Apple Reminders | Batch-processes emails into Apple Reminders with timing extraction |
+| **Todo Review** | `/todo-review` | None | Reviews and consolidates to-do items across configured files |
+| **Inbox Triage** | `/triage-inbox` | Gmail MCP | Smart email classification with heuristics Gmail filters can't replicate |
+| **Weekly Review** | `/weekly-review` | Google Docs MCP | Comprehensive weekly project summary from multiple data sources |
 
 ## Available Agents
 
@@ -66,7 +77,7 @@ curl -o ~/.claude/commands/prompt-references/formatting-core.md \
 | Template | Description |
 |----------|-------------|
 | `claude-md-template.md` | Starter CLAUDE.md file with all common sections |
-| `goals-yaml-template.yaml` | Goals and priorities tracking file |
+| `goals-yaml-template.yaml` | Goals and priorities tracking file (OKR format with weighted objectives) |
 
 ## Customization
 

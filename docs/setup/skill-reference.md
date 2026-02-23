@@ -80,6 +80,94 @@ curl -o ~/.claude-assistant/config/triage-config.md \
 
 ---
 
+### /checkin — Daily Check-In Session
+`[EA]`
+
+**What it does:** Interactive chief-of-staff session that combines inbox triage, reminder triage, meeting prep, email quick-fire drafting, and priority management into one 10-15 minute session. Where `/morning-brief` is a passive daily report, `/checkin` is an interactive session — it triages your inbox, triages your reminders, preps meetings, drafts emails, and surfaces priorities.
+
+**MCP dependencies:** Gmail MCP (required). Google Calendar MCP (required). Granola MCP (optional, for meeting context). Apple Reminders via osascript (macOS, optional).
+
+**Prerequisite skills:** `/triage-inbox` (recommended — without it, the triage phase is skipped).
+
+**Install:**
+```bash
+curl -o ~/.claude/commands/checkin.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/checkin.md
+
+# Config templates (if not already installed via /triage-inbox or /morning-brief)
+mkdir -p ~/.claude-assistant/config
+curl -o ~/.claude-assistant/config/email-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/email-policy-template.md
+curl -o ~/.claude-assistant/config/calendar-policy.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/calendar-policy-template.md
+curl -o ~/.claude-assistant/config/triage-config.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/triage-config-template.md
+curl -o ~/.claude-assistant/config/goals.yaml \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/goals-yaml-template.yaml
+```
+
+!!! note "If you already set up `/triage-inbox` and `/morning-brief`"
+    Most config files are already in place. You only need the skill file itself and possibly `goals.yaml`.
+
+**Usage:**
+```
+/checkin              # Full interactive session (10-15 min)
+/checkin quick        # Status + priorities only (30 seconds)
+/checkin no-email     # Skip email drafting phase
+/checkin no-triage    # Skip inbox triage
+/checkin tomorrow     # Preview tomorrow's schedule
+```
+
+**Customization:**
+
+| Setting | Where to Configure | Default |
+|---------|-------------------|---------|
+| **Model** | Frontmatter `model:` line | `sonnet` (remove to use default) |
+| **VIP list** | `email-policy.md` | No VIP highlighting |
+| **Calendar IDs** | `calendar-policy.md` | Primary only |
+| **Goal alignment** | `goals.yaml` | Section omitted |
+| **Push level** | `goals.yaml` → `meta.push_level` | `moderate` |
+| **Auto-triage** | Requires `/triage-inbox` | Skipped |
+| **Reminders** | Requires macOS | Phase skipped |
+
+---
+
+### /goals-review — Goals Review
+`[PM]`
+
+**What it does:** Reviews quarterly objectives, updates progress scores, surfaces deadlines, and recalibrates priorities. Manages the `goals.yaml` file that `/checkin` and `/morning-brief` read for goal alignment.
+
+**MCP dependencies:** All optional. Gmail MCP (for email evidence). Google Calendar MCP (for meeting evidence). Granola MCP (for transcript evidence). Apple Reminders (macOS, for task evidence).
+
+**Install:**
+```bash
+curl -o ~/.claude/commands/goals-review.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/goals-review.md
+
+# Goals template (if not already installed)
+mkdir -p ~/.claude-assistant/config
+curl -o ~/.claude-assistant/config/goals.yaml \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/goals-yaml-template.yaml
+```
+
+**Usage:**
+```
+/goals-review              # Full review with interactive updates
+/goals-review status       # Quick dashboard only
+/goals-review deadlines    # Show upcoming deadlines only
+```
+
+**Customization:**
+
+| Setting | Where to Configure | Default |
+|---------|-------------------|---------|
+| **Model** | Frontmatter `model:` line | `sonnet` (remove to use default) |
+| **Objectives** | `goals.yaml` → objectives | Template examples |
+| **Push level** | `goals.yaml` → `meta.push_level` | `moderate` |
+| **Review frequency** | Skill Step 5 | Biweekly (14 days) |
+
+---
+
 ### /prompt — Format and Execute
 `[First Session]`
 
@@ -477,10 +565,11 @@ curl -o ~/.claude/CLAUDE.md \
 
 ### Goals Template
 
-YAML file for tracking goals, projects, and priorities. Referenced by skills that need to know what you're working on.
+YAML file for tracking quarterly objectives with weighted OKR format. Referenced by `/checkin`, `/morning-brief`, and `/goals-review` for goal alignment, stalled-goal detection, and progress tracking.
 
 ```bash
-curl -o ~/.claude/goals.yaml \
+mkdir -p ~/.claude-assistant/config
+curl -o ~/.claude-assistant/config/goals.yaml \
   https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/templates/goals-yaml-template.yaml
 ```
 

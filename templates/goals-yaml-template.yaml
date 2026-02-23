@@ -1,52 +1,80 @@
-# Goals & Priorities Template
-# Save to ~/.claude/goals.yaml or wherever your CLAUDE.md references
-# Update weekly or as priorities shift
+# Goals & Objectives Template (OKR Format)
+# Save to: ~/.claude-assistant/config/goals.yaml
+#
+# Used by: /checkin (goal alignment, stalled-goal detection, writing hours)
+#          /morning-brief (goal alignment, research nudges)
+#          /goals-review (progress tracking, evidence gathering)
+#
+# MIGRATION NOTE: This template uses weighted OKR format with progress scores.
+# If upgrading from the simpler flat format (goals.professional, goals.system, etc.),
+# restructure your goals into weighted objectives with measurable key results.
 
-current_focus: "[What you're focused on this month]"
+meta:
+  quarter: "Q1-2026"           # Current planning quarter
+  push_level: moderate         # How aggressively Claude nudges about priorities:
+                               #   gentle   — show priorities, no nudging
+                               #   moderate — surface at-risk goals, suggest focus blocks
+                               #   assertive — flag calendar misalignment, challenge time allocation
+  next_review: "2026-03-15"    # When to run /goals-review next
 
-goals:
-  # Professional goals — research, career, organizational
-  professional:
-    - name: "[Goal 1, e.g., Submit paper to journal]"
-      status: "in_progress"  # not_started | in_progress | blocked | completed
-      deadline: "2026-03-15"
-      next_step: "[Specific next action]"
+objectives:
+  # --- Example Objective 1 ---
+  - id: research-output
+    name: "Research Output"
+    weight: 0.30               # Weights across all objectives should sum to 1.0
+    status: active             # active | paused | dormant
+    key_results:
+      - id: paper-submissions
+        description: "Submit 2 papers to journals this quarter"
+        progress: 0.0          # 0.0 (not started) to 1.0 (complete)
+        at_risk: false         # Set true when behind expected pace
+        notes: ""
 
-    - name: "[Goal 2, e.g., Complete grant proposal]"
-      status: "not_started"
-      deadline: "2026-04-30"
-      next_step: "[Specific next action]"
+      - id: writing-hours
+        description: "Average 6+ hours/week of dedicated writing time"
+        progress: 0.0
+        at_risk: false
+        notes: ""
+        # /checkin uses this key_result for writing-hours tracking.
+        # It looks for free blocks >= 45 min and compares to 1.0 hr/day target.
 
-  # System improvement goals — tools, workflows, automation
-  system:
-    - name: "[Goal, e.g., Set up weekly review workflow]"
-      status: "in_progress"
-      next_step: "[Specific next action]"
+  # --- Example Objective 2 ---
+  - id: grant-management
+    name: "Grant Management"
+    weight: 0.25
+    status: active
+    key_results:
+      - id: proposal-pipeline
+        description: "Submit 3 grant proposals"
+        progress: 0.0
+        at_risk: false
+        notes: ""
 
-  # Learning goals — skills, knowledge, capabilities
-  learning:
-    - name: "[Goal, e.g., Learn MCP integration basics]"
-      status: "in_progress"
-      next_step: "[Specific next action]"
+      - id: report-deadlines
+        description: "All progress reports submitted on time"
+        progress: 0.0
+        at_risk: false
+        notes: ""
 
-# Projects — active work with teams and deliverables
-projects:
-  - name: "[Project 1]"
-    role: "[Your role]"
-    status: "active"  # active | paused | completed
-    team: ["[Person 1]", "[Person 2]"]
-    next_milestone: "[What's due next]"
+  # Add more objectives as needed. Common categories:
+  # - Team Effectiveness (RA management, delegation, onboarding)
+  # - Teaching & Advising (courses, student supervision)
+  # - System Building (AI tools, workflows, automation)
+  #
+  # Tips:
+  # - 3-5 objectives is a good range. More becomes hard to track.
+  # - Weights should reflect actual priority, not aspiration.
+  # - Set status: dormant for objectives not active this quarter.
+  # - Mark at_risk: true when a key_result falls behind expected pace.
 
-  - name: "[Project 2]"
-    role: "[Your role]"
-    status: "active"
-    team: ["[Person 1]"]
-    next_milestone: "[What's due next]"
+upcoming_deadlines:
+  - date: "2026-03-15"
+    description: "Example: Grant report due to Foundation X"
+    objective: grant-management
 
-# Weekly review prompts (optional)
-# Use these to guide your weekly check-in with Claude
-weekly_review:
-  - "What progress was made on each goal this week?"
-  - "What's blocked and what would unblock it?"
-  - "Are my priorities still correct, or should something shift?"
-  - "What did I commit to this week that I haven't done?"
+  - date: "2026-03-31"
+    description: "Example: Paper revision due to Journal Y"
+    objective: research-output
+
+  # Add your real deadlines here. /goals-review surfaces these
+  # in the dashboard view and /checkin references them for priorities.
