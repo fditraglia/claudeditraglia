@@ -48,7 +48,7 @@
 ### Intelligent AI Delegation Framework [agent-pattern] [workflow] [high]
 - **Source:** arxiv paper 2602.11865 (Feb 17, 2026)
 - **Insight:** Academic framework for AI agent delegation that goes beyond simple task routing. Emphasizes transfer of authority, accountability, role boundaries, and trust mechanisms between agents — creating an "agentic web" of human + AI collaboration with explicit specifications for each handoff.
-- **Action:** Compare against current agent delegation patterns (writing-reviewer, methodology-reviewer, review-plan subagents). The accountability/trust structures could improve how skills delegate to subagents and how you evaluate their output.
+- **Action:** Compare against current agent delegation patterns (review-writing, review-methodology, review-plan subagents). The accountability/trust structures could improve how skills delegate to subagents and how you evaluate their output.
 - **URL:** https://arxiv.org/abs/2602.11865
 
 ### Claude Sonnet 4.6 + 1M Context Beta [tool] [context-management] [medium]
@@ -66,7 +66,7 @@
 ### Brendan Nyhan's Manuscript/PAP Feedback GPT [tool] [tool-comparison] [workflow] [high]
 - **Source:** Brendan Nyhan (@BrendanNyhan) on X (Aug 27, 2025)
 - **Insight:** Custom ChatGPT GPT built from 150+ of Nyhan's actual peer reviews. Identifies problems and provides actionable feedback on the issues he raises most frequently in manuscript and pre-analysis plan reviews. Public and free to use.
-- **Action:** Test on a current draft. Compare output against writing-reviewer and methodology-reviewer agents. If it catches things your agents miss, incorporate its review dimensions into your agent prompts.
+- **Action:** Test on a current draft. Compare output against review-writing and review-methodology agents. If it catches things your agents miss, incorporate its review dimensions into your agent prompts.
 - **Unfamiliar tool flagged:** Brendan Nyhan's manuscript/PAP feedback GPT (ChatGPT custom GPT)
 - **URL:** https://chatgpt.com/g/g-68af4d1939 (custom GPT)
 

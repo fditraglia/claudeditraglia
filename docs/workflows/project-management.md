@@ -232,5 +232,5 @@ All skills referenced above are available for download:
 | `/weekly-review` | Multi-source weekly synthesis | [Details](../setup/skill-reference.md#weekly-review-weekly-project-review) |
 | `/write-proposal` | Draft proposals from project context | [Details](../setup/skill-reference.md#write-proposal-proposal-drafting) |
 | `/revise-proposal` | Apply feedback to drafts | [Details](../setup/skill-reference.md#revise-proposal-proposal-revision) |
-| Writing Reviewer | Academic prose QA (agent) | [Details](../setup/skill-reference.md#writing-reviewer) |
-| Methodology Reviewer | Empirical methods QA (agent) | [Details](../setup/skill-reference.md#methodology-reviewer) |
+| Writing Reviewer | Academic prose QA (agent) | [Details](../setup/skill-reference.md#review-writing) |
+| Methodology Reviewer | Empirical methods QA (agent) | [Details](../setup/skill-reference.md#review-methodology) |

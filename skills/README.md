@@ -16,8 +16,8 @@ curl -o ~/.claude/commands/done.md \
   https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/done.md
 
 # Download an agent
-curl -o ~/.claude/agents/writing-reviewer.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/agents/writing-reviewer.md
+curl -o ~/.claude/agents/review-writing.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/agents/review-writing.md
 ```
 
 Restart Claude Code after adding new commands.

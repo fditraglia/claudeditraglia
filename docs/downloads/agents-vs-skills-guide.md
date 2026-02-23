@@ -55,13 +55,13 @@ Use agents when the task benefits from **fresh perspective or parallel execution
 
 ## Your Current Agents
 
-### `writing-reviewer`
+### `review-writing`
 - Reviews academic prose for clarity, argument structure, voice consistency
 - Model: Sonnet (fast, good at style analysis)
 - Tools: Read, Glob, Grep (read-only)
 - Use: After drafting a section, get fresh-eyes feedback
 
-### `methodology-reviewer`
+### `review-methodology`
 - Checks empirical claims, causal language, identification strategy, robustness
 - Model: Sonnet
 - Tools: Read, Glob, Grep (read-only)
@@ -73,8 +73,8 @@ Use agents when the task benefits from **fresh perspective or parallel execution
 Agents appear in Claude Code's Task tool. You can ask Claude to use them:
 
 ```
-"Run the writing-reviewer agent on my latest draft section"
-"Have the methodology-reviewer check the identification section"
+"Run the review-writing agent on my latest draft section"
+"Have the review-methodology agent check the identification section"
 "Run both reviewers in parallel on the paper"
 ```
 
@@ -108,8 +108,8 @@ tools:
 
 ### Draft Review (Parallel Agents)
 After writing a paper section:
-1. Launch `writing-reviewer` on the section
-2. Launch `methodology-reviewer` on the section (simultaneously)
+1. Launch `review-writing` on the section
+2. Launch `review-methodology` on the section (simultaneously)
 3. Both return structured feedback
 4. Address findings in priority order
 

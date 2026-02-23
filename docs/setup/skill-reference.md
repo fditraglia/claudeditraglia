@@ -375,33 +375,33 @@ curl -o ~/.claude/commands/write-proposal.md \
 
 Agents are subprocesses that Claude Code launches for specialized tasks. They run in fresh context (avoiding blind spots of the main session) and return structured results.
 
-### Writing Reviewer
+### Review Writing
 `[PM]`
 
 **What it does:** Reviews academic prose for clarity, argument structure, evidence integration, and voice consistency.
 
 **Install:**
 ```bash
-curl -o ~/.claude/agents/writing-reviewer.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/agents/writing-reviewer.md
+curl -o ~/.claude/agents/review-writing.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/agents/review-writing.md
 ```
 
-**Usage:** "Launch the writing reviewer agent on my draft at ~/Documents/paper-draft.md"
+**Usage:** "Launch the review-writing agent on my draft at ~/Documents/paper-draft.md"
 
 ---
 
-### Methodology Reviewer
+### Review Methodology
 `[PM]`
 
 **What it does:** Reviews empirical social science papers for causal language accuracy, identification strategy soundness, statistical practice, and robustness discussion.
 
 **Install:**
 ```bash
-curl -o ~/.claude/agents/methodology-reviewer.md \
-  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/agents/methodology-reviewer.md
+curl -o ~/.claude/agents/review-methodology.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/agents/review-methodology.md
 ```
 
-**Usage:** "Launch the methodology reviewer on sections 3-5 of the paper draft"
+**Usage:** "Launch the review-methodology agent on sections 3-5 of the paper draft"
 
 ---
 
