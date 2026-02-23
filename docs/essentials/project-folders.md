@@ -5,8 +5,7 @@
 -   :octicons-book-24: [**Vacation Planning**](folders/vacation.md)
 -   :octicons-book-24: [**Shopping Decisions**](folders/shopping.md)
 -   :octicons-book-24: [**Health & Fitness**](folders/health.md)
--   <!-- TODO: Replace with real links when work examples are published. Review by 2026-04-01. -->
-    :octicons-tools-24: **Work examples** — coming soon
+-   :octicons-tools-24: [**Work examples** — see Claude Code](../setup/index.md)
 
 </div>
 
