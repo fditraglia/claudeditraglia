@@ -128,7 +128,7 @@ Guides, templates, and reference documents from my actual setup. Download, adapt
 
     *Updated February 2026*
 
-    Curated log of 20+ deep research findings on prompting, agents, context management, and emerging patterns. Each entry includes source, insight, and action item. A living document showing how current research feeds into practice.
+    Curated log of 20+ deep research findings on prompting, agents, context management, and emerging patterns. Each entry includes source, insight, and action item. **Produced by the [`/tips-curate` pipeline](../system/continuous-improvement.md).**
 
     [:octicons-download-16: Download](collected-tips-log.md)
 

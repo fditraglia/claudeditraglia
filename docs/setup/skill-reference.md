@@ -2,7 +2,7 @@
 
 All downloadable skills, agents, and templates. Each entry includes installation commands, usage examples, and customization guidance.
 
-**Workflow tags:** Skills are tagged by which workflow they belong to — `[PM]` for [Project Management](../workflows/project-management.md), `[EA]` for [Executive Assistant](../toolkit/executive-assistant.md), `[First Session]` for [First Session Skills](../workflows/first-session-skills.md).
+**Workflow tags:** Skills are tagged by which workflow they belong to — `[PM]` for [Project Management](../workflows/project-management.md), `[EA]` for [Executive Assistant](../toolkit/executive-assistant.md), `[First Session]` for [First Session Skills](../workflows/first-session-skills.md), `[Advanced]` for [system-level tools](../system/continuous-improvement.md).
 
 ---
 
@@ -288,6 +288,65 @@ curl -o ~/.claude/commands/todo-review.md \
 /todo-review           # Quick summary (high priority only)
 /todo-review full      # All priority levels
 ```
+
+---
+
+### /tips-curate — Tip Curation
+`[Advanced]`
+
+**What it does:** Processes @ToSelf emails containing tips and research. Quality-filters (High/Medium/Low), enriches via web research, presents recommendations for approval, appends to a searchable tips log.
+
+**MCP dependencies:** Gmail MCP (required).
+
+**Install:**
+```bash
+curl -o ~/.claude/commands/tips-curate.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/tips-curate.md
+```
+
+**Usage:**
+```
+/tips-curate              # Process first 5 unread @ToSelf emails
+/tips-curate dryrun       # Preview classifications without saving or marking
+/tips-curate limit:3      # Process 3 at a time
+/tips-curate all          # Loop through all unread in batches of 5
+```
+
+**Customization:** Quality thresholds, tip format, log file location (default `~/.claude-assistant/tips/collected-tips-log.md`), @ToSelf label name.
+
+**Learn more:** [Continuous Improvement](../system/continuous-improvement.md)
+
+---
+
+### /tips-integrate — Tip Integration
+`[Advanced]`
+
+**What it does:** Converts collected tips into concrete system improvements — direct config edits or investigation tasks. Tracks what has been processed to avoid re-proposing.
+
+**MCP dependencies:** None (filesystem only).
+
+**Install:**
+```bash
+mkdir -p ~/.claude/commands/tips-integrate-references
+
+curl -o ~/.claude/commands/tips-integrate.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/tips-integrate.md
+
+curl -o ~/.claude/commands/tips-integrate-references/scanning-rules.md \
+  https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/tips-integrate-references/scanning-rules.md
+```
+
+**Usage:**
+```
+/tips-integrate              # Scan all sources
+/tips-integrate source:tips  # Only scan tips log (includes medium-rated items)
+/tips-integrate dryrun       # Preview proposals without writing
+/tips-integrate since:2026-02-01  # Only items after this date
+```
+
+**Customization:** Source selection, state file location (default `~/.claude-assistant/state/integrate-state.json`), target config files.
+
+**Learn more:** [Continuous Improvement](../system/continuous-improvement.md)
 
 ---
 

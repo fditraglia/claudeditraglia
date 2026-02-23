@@ -12,6 +12,7 @@ The Essentials taught you to use AI tools. The Toolkit gave you a configured sys
 |------|------------------|--------|
 | **[Building Skills](building-skills.md)** | How to create custom slash commands from scratch. The skill development lifecycle. | Initial content |
 | **[Agents vs Skills](agents-vs-skills.md)** | When to use a subagent vs. a skill. Architecture decisions for different workflows. | Initial content |
+| **[Continuous Improvement](continuous-improvement.md)** | The tips pipeline — capture discoveries, curate them, integrate them into your config. | Initial content |
 | **[Patterns](patterns.md)** | Reusable design patterns for skills and workflows. Quality checklist. | Initial content |
 
 ---
