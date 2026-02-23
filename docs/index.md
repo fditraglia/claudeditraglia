@@ -16,7 +16,7 @@ hide:
 </div>
 
 <div class="credibility-strip" markdown>
-By [Chris Blattman](https://chrisblattman.com), political economist at UChicago Harris. In January 2026 I started building AI workflows with Claude Code. What seemed impossible then — inbox triage, meeting capture, proposal drafting, project dashboards, trip planning — is running today. Claude Blattman isn't real, but the tools are. I've never coded in my life, so if I can do this you can.
+By [Chris Blattman](https://chrisblattman.com), political economist at UChicago Harris. In January 2026 I started building AI workflows with Claude Code. What seemed impossible then — inbox triage, meeting capture, proposal drafting, project dashboards, trip planning — is running today. Claude Blattman isn't real, but the tools are. I've never coded in my life, so if I can do this you can. Have a question, suggestion, or request? [Send Claude Blattman a note](mailto:claudeblattman+feedback@gmail.com?subject=Feedback).
 </div>
 
 ## What Is This?
