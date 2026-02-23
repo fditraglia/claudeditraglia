@@ -65,7 +65,7 @@ nav:
     - Granola: essentials/granola.md
     - "ChatGPT vs Claude": essentials/chatgpt-vs-claude.md
     - The Cost Reality: essentials/cost.md
-  - Get Started:
+  - Setup:
     - setup/index.md
     - Install (Mac): toolkit/install-mac.md
     - Install (Windows): toolkit/install-windows.md
@@ -75,13 +75,13 @@ nav:
     - MCP Setup: toolkit/mcp-setup.md
     - How Skills Work: toolkit/skills-guide.md
     - Skill Library: setup/skill-reference.md
+  - Workflows:
+    - workflows/index.md
     - First Session Skills: workflows/first-session-skills.md
-    - Workflows:
-      - workflows/index.md
-      - Project Management: workflows/project-management.md
-      - "Example: Project Dashboard": workflows/examples/project-overview-example.md
-      - "Example: Research Design Doc": workflows/examples/research-design-example.md
-      - Executive Assistant: toolkit/executive-assistant.md
+    - Executive Assistant: toolkit/executive-assistant.md
+    - Project Management: workflows/project-management.md
+    - "Example: Project Dashboard": workflows/examples/project-overview-example.md
+    - "Example: Research Design Doc": workflows/examples/research-design-example.md
   - Advanced:
     - system/index.md
     - Building Skills: system/building-skills.md
