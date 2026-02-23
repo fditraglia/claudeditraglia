@@ -1,5 +1,15 @@
 # AI Project Folders: Turn Any Recurring Task into a System
 
+<div class="grid cards" markdown>
+
+-   :octicons-book-24: [**Vacation Planning**](folders/vacation.md)
+-   :octicons-book-24: [**Shopping Decisions**](folders/shopping.md)
+-   :octicons-book-24: [**Health & Fitness**](folders/health.md)
+-   <!-- TODO: Replace with real links when work examples are published. Review by 2026-04-01. -->
+    :octicons-tools-24: **Work examples** — coming soon
+
+</div>
+
 *Ready to build? [Skip to the setup](#build-your-first-file).*
 
 A single file stores your stable preferences, hard constraints, and behavioral rules for a recurring domain. Every new conversation starts from that file instead of from scratch.
@@ -7,15 +17,6 @@ A single file stores your stable preferences, hard constraints, and behavioral r
 I use project folders for two things: **life** (travel, shopping, health) and **work** (research writing, proposals, course prep). The pattern is the same — I'll walk through it using family travel as the main example, then show how it applies across domains.
 
 This works in both ChatGPT Projects and Claude.ai Projects, with minor setup differences noted below.
-
-<div class="grid cards" markdown>
-
--   :octicons-arrow-right-24:{ .middle } **Jump to an example:** [Vacation Planning](folders/vacation.md) · [Shopping Decisions](folders/shopping.md) · [Health & Fitness](folders/health.md)
-
-    <!-- TODO: Replace with real links when work examples are published. Review by 2026-04-01. -->
-    Work examples (research writing, project management) are coming — they use Claude Code.
-
-</div>
 
 ---
 
