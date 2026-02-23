@@ -305,14 +305,28 @@ h1, h2 {
 }
 
 /* ============================
+   Blockquotes — compact
+   ============================ */
+.md-typeset blockquote {
+  padding: 0.4rem 0.8rem;
+  margin: 0.6rem 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.md-typeset blockquote p {
+  margin: 0.3rem 0;
+}
+
+/* ============================
    Behind the Build — narrative blocks
    ============================ */
 .narrative-block {
   border-left: 3px solid var(--md-accent-fg-color);
   background: color-mix(in srgb, var(--md-accent-fg-color) 4%, var(--md-default-bg-color));
   border-radius: 0 8px 8px 0;
-  padding: 1.2rem 1.5rem;
-  margin: 1.5rem 0 2rem;
+  padding: 0.7rem 1.1rem;
+  margin: 1rem 0 1.2rem;
 }
 
 [data-md-color-scheme="slate"] .narrative-block {
@@ -321,11 +335,11 @@ h1, h2 {
 
 /* Teaser line — always visible hook */
 .md-typeset .narrative-teaser {
-  font-size: 1.05rem !important;
+  font-size: 0.88rem !important;
   font-style: italic;
   color: var(--md-default-fg-color);
-  margin-bottom: 0.6rem !important;
-  line-height: 1.55;
+  margin-bottom: 0.3rem !important;
+  line-height: 1.5;
 }
 
 .narrative-icon {
