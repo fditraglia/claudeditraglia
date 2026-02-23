@@ -8,6 +8,15 @@ I use project folders for two things: **life** (travel, shopping, health) and **
 
 This works in both ChatGPT Projects and Claude.ai Projects, with minor setup differences noted below.
 
+<div class="grid cards" markdown>
+
+-   :octicons-arrow-right-24:{ .middle } **Jump to an example:** [Vacation Planning](folders/vacation.md) · [Shopping Decisions](folders/shopping.md) · [Health & Fitness](folders/health.md)
+
+    <!-- TODO: Replace with real links when work examples are published. Review by 2026-04-01. -->
+    Work examples (research writing, project management) are coming — they use Claude Code.
+
+</div>
+
 ---
 
 ## What This Actually Looks Like
