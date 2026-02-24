@@ -1,5 +1,5 @@
 # Weekly Project Review
-*v1.0 — Public release*
+*v1.2 — 3-marker system, batch updates, emoji placeholders*
 
 Generate a comprehensive weekly summary for the current research project, pulling from multiple sources.
 
@@ -10,6 +10,17 @@ This skill collects data from WhatsApp, meeting transcripts, and Gmail, then gen
 2. **Tab 2 content**: Detailed weekly log with thematic synthesis across all sources
 
 ## Instructions
+
+### Step 0a: Check Todo Queue (Before Project Work)
+
+Before starting the project review, check for pending todo emails:
+
+1. Search Gmail: `label:@ToSelf is:unread`
+2. If emails found: "You have N email(s) in your todo queue. Run /todo-queue to convert them to reminders? [Y/n/skip]"
+3. If user says Y: Run the `/todo-queue` workflow, then continue
+4. If no emails found: Continue silently
+
+> Requires `/todo-queue` skill. Skip this step if not installed.
 
 ### Step 0: Read Project Configuration
 - Read `.claude/CLAUDE.md` from the current project folder
@@ -94,8 +105,9 @@ Before generating content, verify all quantitative claims. Priority order:
 **FORMATTING RULES**:
 - **NO MARKDOWN TABLES** — use bullet/sub-bullet format for ALL structured data
 - Bold labels followed by content on same line or as sub-bullets
-- **ALWAYS bold team member names** throughout both Tab 1 and Tab 2
+- **ALWAYS bold team member names** throughout both Tab 1 and Tab 2 (do NOT use `**` markdown markers in the text — track bold ranges separately and apply formatting via the Google Docs API)
 - **Do NOT include** direct quotes. Paraphrase instead.
+- **ASCII emoji placeholders**: Use `[RED]`, `[GREEN]`, `[YELLOW]` instead of real emoji in generated text. Real emoji are supplementary-plane Unicode that break Google Docs index calculations. They are swapped to real emoji via `find_and_replace_doc` after all content is written.
 
 **Generate Tab 1 (Dashboard)**: Start from previous dashboard, update with this week's info. Structure:
 - Project overview and status
@@ -115,7 +127,30 @@ Before generating content, verify all quantitative claims. Priority order:
 
 ### Step 5: Update Google Doc
 
-Write Tab 1 and Tab 2 content to the Google Doc using batch update operations where possible. Use `batch_update_doc` to combine delete + insert + format operations into fewer API calls.
+**First-Time Setup**: Before first use, add these three marker lines to your Google Doc (Tab 1), each on its own line:
+
+```
+=== PROJECT STATUS DASHBOARD ===
+[your dashboard content]
+=== DASHBOARD END ===
+
+=== WEEKLY SUMMARIES START ===
+[weekly logs go here, newest on top]
+```
+
+**Precondition Check**: Before any writes, verify all 3 markers exist in the doc. If `DASHBOARD END` is missing, STOP and report — do not attempt to write.
+
+**Why 3 markers**: The explicit `DASHBOARD END` marker prevents boundary corruption that occurred with the original 2-marker approach.
+
+**6-Phase Protocol**:
+1. **Preparation** — Generate text with `[RED]`/`[GREEN]`/`[YELLOW]` ASCII placeholders; strip `**` markdown bold markers (bold is applied via API, not text)
+2. **Dashboard Replacement** — Delete content between `DASHBOARD` and `DASHBOARD END` markers, then insert new dashboard text (atomic batch operation)
+3. **Verification** — Confirm all 3 markers are intact after the dashboard write
+4. **Weekly Log Prepend** — Insert new entry at `WEEKLY SUMMARIES START` marker (newest on top)
+5. **Emoji Swap** — Use `find_and_replace_doc` to replace `[RED]` with real red circle, `[GREEN]` with green circle, `[YELLOW]` with yellow circle
+6. **Formatting** — Apply heading sizes and team name bolding using API-reported indices (from `inspect_doc_structure`), not calculated offsets
+
+**Batch operations**: Use `batch_update_doc` to combine delete + insert + format operations into a single call — this reduces 19-29 sequential API calls to 1-3.
 
 ### Step 6: Final Confirmation
 1. Confirm: "Weekly review complete. Google Doc updated."
@@ -131,6 +166,7 @@ Write Tab 1 and Tab 2 content to the Google Doc using batch update operations wh
 ## Arguments
 
 `$ARGUMENTS` can include:
+- `nosave` — Don't save intermediate files (WhatsApp summaries, local weekly review copy)
 - `tab1only` — Only generate Tab 1 dashboard
 - `tab2only` — Only generate Tab 2 detailed log
 - `days:N` — Override date range to last N days
