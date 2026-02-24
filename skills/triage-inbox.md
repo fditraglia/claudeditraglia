@@ -1,6 +1,6 @@
 # Smart Inbox Triage
 
-*v1.2 — Automated email classification with header/content heuristics that Gmail filters cannot do*
+*v1.3 — Phase 0.5 label-in-inbox sweep; auto-filter creation; clean inbox verification*
 
 Scan your inbox for emails that should be in labeled folders (@ToRead, @Announcements, @School, Expenses-Pending, Auto-Archive, etc.) but are not filtered there yet. Uses header and content heuristics that Gmail's native filters cannot replicate.
 
@@ -60,6 +60,41 @@ Before any classification, read these two files:
    - Classification score thresholds
    - Classification overrides table
    - Newsletter platform domains, school domains, @ToRead sender whitelist
+
+### Phase 1.5: Label-in-Inbox Sweep
+
+Before processing new emails, sweep for emails already carrying a skip-inbox label that are still in the main inbox. This catches Gmail filter misses (e.g., forwarded email bypass), prior batch_modify failures, and mobile labeling without archiving.
+
+**Single combined search:**
+```
+mcp__google_workspace__search_gmail_messages
+  user_google_email: your-email@gmail.com
+  query: "in:inbox (label:@Announcements OR label:@School OR label:@ToRead OR label:@FYI OR label:@ToDo OR label:@ToSelf)"
+  max_results: 50
+```
+If combined query fails, fall back to individual `in:inbox label:X` searches per label.
+
+**Two categories with different handling:**
+
+| Category | Labels | Remove INBOX? | Change read status? |
+|----------|--------|---------------|-------------------|
+| **A — Skip-inbox** (applied by triage/filters) | @Announcements, @School, @ToRead, @FYI | Yes | Yes — mark as read |
+| **B — Action** (applied by user manually) | @ToDo, @ToSelf | Yes | No — leave read/unread as-is |
+
+**@Family exclusion:** Do NOT sweep @Family. If your policy prohibits auto-archiving family emails, exclude that label from the sweep. If @Family emails are found in inbox, note count in the report but take no action.
+
+**After archiving:** Log swept message IDs to the run state file with `"label": "Phase0.5-sweep"`. This prevents repeat MCP calls on subsequent runs.
+
+**Report section** (added to the classification report):
+```
+LABEL-IN-INBOX SWEEP: [N archived]
+  Category A (skip-inbox): [N] — @Announcements: N, @School: N, @ToRead: N, @FYI: N
+  Category B (action labels): [N] — @ToDo: N, @ToSelf: N
+  @Family in inbox (not swept): [N]
+```
+Count >10 per run suggests recurring batch_modify failures or filter issues — flag for investigation.
+
+**Error handling:** If search fails, log "Phase 1.5 sweep failed — skipping" and continue to Phase 2. Do NOT block the main triage loop.
 
 ### Phase 2: Determine Search Window
 
@@ -267,6 +302,11 @@ Auto-Archive: [N]
   - [Sender] | [Subject] | [Date] | [Suggested sublabel]
   - ...
 
+LABEL-IN-INBOX SWEEP: [N archived]
+  Category A (skip-inbox): [N] — @Announcements: N, @School: N, @ToRead: N, @FYI: N
+  Category B (action labels): [N] — @ToDo: N, @ToSelf: N
+  @Family in inbox (not swept): [N]
+
 FILTER BYPASS RECOVERY: [N]
   - [Sender] | [Subject] | [Expected filter] | Applied: [action]
   - ...
@@ -328,6 +368,35 @@ mcp__google_workspace__create_gmail_filter
   action: {"addLabelIds": ["<ID from triage-config.md>"], "removeLabelIds": ["INBOX"]}
 ```
 
+**12b. Auto-create filters for high-confidence classifications:**
+
+After applying labels, check if any classified sender meets ALL of these criteria:
+- Exact sender match to a Classification Override entry, OR from a Newsletter Platform Domain, OR from a School Domain
+- The override/domain entry has been in config for >7 days (not a brand-new addition)
+- No existing Gmail filter already handles this sender (check `email-policy.md` Auto-Archive Filters)
+
+If all criteria met: automatically create a Gmail filter using `create_gmail_filter`. Log it in the report:
+```
+AUTO-CREATED FILTERS: [N]
+  - [sender@domain.com] -> [label] (was override/platform match, now permanent filter)
+```
+After creating the filter, note in report that the Classification Overrides entry can be removed from `triage-config.md` (do not auto-remove -- user confirms during review).
+
+**12c. Clean inbox verification:**
+
+After all labels are applied, run a verification query:
+```
+mcp__google_workspace__search_gmail_messages
+  user_google_email: your-email@gmail.com
+  query: "in:inbox is:unread"
+  max_results: 5
+```
+Report the residual count:
+```
+INBOX HEALTH: [N] unread emails remain in inbox after triage
+```
+This is informational -- a rising count across runs signals the system is underperforming.
+
 ### Phase 13: Update Run State
 
 After each successful label operation, append the message ID to `~/.claude-assistant/state/triage-run-state.json`. Also write a `last_run` ISO timestamp so the next run can auto-calculate the search window (see Phase 2). Format:
@@ -368,6 +437,7 @@ Append session summary to `~/.claude-assistant/logs/email-triage-observations.md
 
 | Metric | Count |
 |--------|-------|
+| Label-in-inbox sweep | [N] |
 | Emails scanned | [N] |
 | Deduped (previous run) | [N] |
 | @ToRead applied | [N] |
@@ -376,7 +446,9 @@ Append session summary to `~/.claude-assistant/logs/email-triage-observations.md
 | Expenses-Pending applied | [N] |
 | Auto-Archive applied | [N] |
 | Filter bypass recovery | [N] |
+| Auto-created filters | [N] |
 | Skipped | [N] |
+| Inbox residual (unread) | [N] |
 
 ### New filter suggestions:
 - [suggestions if any]
@@ -422,6 +494,13 @@ After each session, if corrections were made:
 1. Add the sender to the **Classification Overrides** table in `triage-config.md` with the correct classification
 2. Log the correction in `email-triage-observations.md` under the session's "Corrections needed" section
 3. If the same sender has been overridden 2-3 times, create a permanent Gmail filter (move from overrides table to `email-policy.md` Auto-Archive Filters) and remove the override entry
+
+**Override table hygiene (checked each run):** At the start of Phase 10, scan the Classification Overrides table for entries older than 14 days. Flag these in the report:
+```
+OVERRIDE TABLE AGING: [N] entries older than 14 days -- candidates for Gmail filter conversion
+  - [sender] | added [date] | recommended filter: [label]
+```
+The overrides table should be a temporary holding pen, not a permanent rule store. Entries that persist >14 days should become Gmail filters.
 
 ## Customization Points
 

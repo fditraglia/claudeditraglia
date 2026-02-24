@@ -41,7 +41,7 @@ Restart Claude Code after adding new commands.
 | **Add To-Do** | `/todo-add` | None | Adds a to-do item to the correct list with duplicate checking |
 | **Todo Queue** | `/todo-queue` | Gmail MCP, Apple Reminders | Batch-processes emails into Apple Reminders with timing extraction |
 | **Todo Review** | `/todo-review` | None | Reviews and consolidates to-do items across configured files |
-| **Inbox Triage** | `/triage-inbox` | Gmail MCP | Smart email classification with heuristics Gmail filters can't replicate |
+| **Inbox Triage** | `/triage-inbox` | Gmail MCP | Smart email classification with label-in-inbox sweep, auto-filter creation, and heuristics Gmail filters can't replicate |
 | **Weekly Review** | `/weekly-review` | Google Docs MCP | Comprehensive weekly project summary from multiple data sources |
 
 ## Available Agents
