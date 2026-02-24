@@ -77,6 +77,14 @@ From there it goes deeper into [Claude Code](https://docs.anthropic.com/en/docs/
 
     [:octicons-arrow-right-24: The Tips Pipeline](system/continuous-improvement.md)
 
+-   **:material-file-document-check-outline: Tax Season Case Study** <span class="badge-teal">New</span>
+
+    ---
+
+    A complete case study: using Claude Code to collect tax documents from email, compile deductions, and catch errors with a three-year review. What worked, what AI got wrong, and transferable patterns for any document-heavy workflow.
+
+    [:octicons-arrow-right-24: Tax Workflow](tax-workflow/index.md)
+
 </div>
 
 !!! tip "Help other managers and researchers find this"

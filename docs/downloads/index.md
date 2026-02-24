@@ -150,6 +150,66 @@ Starter configuration files for setting up your own system. All are in the [GitH
 
 ---
 
+## Tax Workflow Resources
+
+Resources from the [Tax Season Case Study](../tax-workflow/index.md). Checklists, templates, and architecture patterns for document-heavy workflows.
+
+<div class="grid cards" markdown>
+
+-   **Academic Tax Document Checklist**
+
+    ---
+
+    *Updated February 2026*
+
+    Comprehensive checklist of tax documents by income type, with "does this apply to you?" filters for each career stage (grad student, postdoc, assistant professor, senior faculty). Covers W-2s, 1099s, deductions, and international reporting triggers.
+
+    [:octicons-arrow-right-24: View](../tax-workflow/reference/academic-tax-basics.md) · [:octicons-arrow-right-24: Related: Tax Workflow](../tax-workflow/index.md)
+
+-   **Pre-Flight Privacy Checklist**
+
+    ---
+
+    *Updated February 2026*
+
+    One-page checklist of security decisions to make before using AI tools for sensitive personal tasks. Covers data flow awareness, SSN/bank exclusion rules, tool requirements, and post-season cleanup planning.
+
+    [:octicons-arrow-right-24: View](../tax-workflow/before-you-start/privacy-and-setup.md#pre-flight-privacy-checklist) · [:octicons-arrow-right-24: Related: Privacy & Setup](../tax-workflow/before-you-start/privacy-and-setup.md)
+
+-   **Workflow Architecture Patterns**
+
+    ---
+
+    *Updated February 2026*
+
+    Seven transferable patterns extracted from the tax workflow: Collection-Compilation-Review pipeline, tracking checklists, guided interviews, threshold gates, three-tier classification, historical comparison, and entry guides. Applicable to expense reports, grant management, insurance claims, and more.
+
+    [:octicons-arrow-right-24: View](../tax-workflow/build-your-own/architecture-patterns.md) · [:octicons-arrow-right-24: Related: Build Your Own](../tax-workflow/build-your-own/starter-templates.md)
+
+-   **Starter Templates**
+
+    ---
+
+    *Updated February 2026*
+
+    Five downloadable skill skeletons: Document Collector, Compilation with Guided Interview, Multi-Period Review, Tracking Checklist, and Privacy Policy template. Generic versions of the tax skills, ready to adapt for non-tax domains.
+
+    [:octicons-arrow-right-24: View](../tax-workflow/build-your-own/starter-templates.md)
+
+-   **Post-Season Cleanup Checklist**
+
+    ---
+
+    *Updated February 2026*
+
+    What to delete, archive, and rotate after filing. Covers conversation history, downloaded documents, generated spreadsheets, and credential rotation. One page you can print and check off.
+
+    [:octicons-arrow-right-24: View](../tax-workflow/reference/when-to-get-help.md) · [:octicons-arrow-right-24: Related: Privacy & Setup](../tax-workflow/before-you-start/privacy-and-setup.md)
+
+</div>
+
+---
+
 ## Keeping These Current
 
 These resources reflect my setup as of the dates shown. AI tools change fast — what works today may have better approaches tomorrow. I review and update these periodically. If something seems outdated, [let me know](mailto:claudeblattman+feedback@gmail.com).

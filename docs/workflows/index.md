@@ -30,6 +30,14 @@ These aren't individual tools — they're **systems** built from skills, integra
 
     [:octicons-arrow-right-24: Get started](first-session-skills.md)
 
+-   **:material-file-document-check-outline: Tax Season Case Study**
+
+    ---
+
+    A complete case study: collecting tax documents from email, compiling deductions into spreadsheets, and catching errors with a three-year review. Includes transferable patterns for any document-heavy workflow.
+
+    [:octicons-arrow-right-24: Read the full story](../tax-workflow/index.md)
+
 </div>
 
 ---
@@ -43,5 +51,6 @@ The three workflows serve different needs and timelines:
 | **First Session Skills** | Better prompts and session capture | 5 minutes | Day 1 |
 | **Executive Assistant** | Email, calendar, daily workflow | 1-3 weeks of iteration | After MCP is configured |
 | **Project Management** | Multi-project oversight and reporting | 3+ weeks of iteration | After EA basics are working |
+| **Tax Season** | Document collection, compilation, verification | 2-3 hours one-time | When you're comfortable with MCP + skills |
 
 You don't need all three. Start wherever your biggest pain point is. But they're designed to layer — the project management workflow works best when you already have inbox triage and meeting capture running.

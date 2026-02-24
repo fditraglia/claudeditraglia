@@ -83,6 +83,20 @@ nav:
     - Project Management: workflows/project-management.md
     - "Example: Project Dashboard": workflows/examples/project-overview-example.md
     - "Example: Research Design": workflows/examples/research-design-example.md
+  - "Tax Workflow":
+    - tax-workflow/index.md
+    - "/tax-guide": tax-workflow/tax-guide.md
+    - Privacy & Setup: tax-workflow/before-you-start/privacy-and-setup.md
+    - Meet the Personas: tax-workflow/before-you-start/meet-the-personas.md
+    - Workflow Overview: tax-workflow/case-study/the-workflow-overview.md
+    - Document Collection: tax-workflow/case-study/document-collection.md
+    - Compilation & Review: tax-workflow/case-study/compilation-and-review.md
+    - What AI Got Wrong: tax-workflow/case-study/what-ai-got-wrong.md
+    - Architecture Patterns: tax-workflow/build-your-own/architecture-patterns.md
+    - Validation Techniques: tax-workflow/build-your-own/validation-techniques.md
+    - Starter Templates: tax-workflow/build-your-own/starter-templates.md
+    - Academic Tax Basics: tax-workflow/reference/academic-tax-basics.md
+    - When to Get Help: tax-workflow/reference/when-to-get-help.md
   - Advanced:
     - system/index.md
     - Building Skills: system/building-skills.md
