@@ -162,6 +162,6 @@ If I were building this workflow again from scratch:
 
 ---
 
-**Next:** [Document Collection](document-collection.md) — deep dive into the first skill.
+**Next:** [Architecture Patterns](../build-your-own/architecture-patterns.md) — transferable patterns for building your own workflows.
 
 **Or:** [When to Get Help](../reference/when-to-get-help.md) — if this page convinced you to hire a professional.

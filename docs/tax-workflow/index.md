@@ -15,6 +15,14 @@ One honest caveat: I expect this entire section to be obsolete by next tax seaso
 
 ---
 
+!!! tip "Don't want to read all this?"
+    Two shortcuts:
+
+    1. **Install `/tax-guide`** (below) and let it ask you 8 questions — it'll tell you exactly which parts apply to your situation.
+    2. **Point Claude Code at this page.** Paste the URL `https://claudeblattman.com/tax-workflow/` into a Claude Code session and ask it to walk you through the workflow based on your tax situation. It can read the site, summarize the relevant parts, and help you decide what to do.
+
+---
+
 ## Start Here
 
 Install `/tax-guide` and answer 8 questions. You'll get a personalized plan: what documents to collect, whether to self-file or hire a professional, and which parts of this case study apply to you.

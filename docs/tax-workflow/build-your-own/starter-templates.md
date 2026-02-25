@@ -370,4 +370,4 @@ To make these templates concrete, here's how they adapt to other domains:
 
 **Back to:** [Architecture Patterns](architecture-patterns.md)
 
-**Or:** [The Workflow Overview](../case-study/the-workflow-overview.md) — see these patterns in action.
+**Reference:** [Academic Tax Basics](../reference/academic-tax-basics.md) | [When to Get Help](../reference/when-to-get-help.md)
