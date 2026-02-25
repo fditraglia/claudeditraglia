@@ -1,8 +1,12 @@
 # Using Claude Code for Tax Season
 
+*Claude Blattman — not quite a CPA.*
+
+In a former life — for about six to twelve months after college — I was an auditor and then a tax accountant. I was not particularly good at it, and I hated every minute. But I learned enough to be dangerous: enough to do my own taxes, and enough, I think, to teach Claude Code how to take the painful pieces away.
+
 This year I decided to use Claude Code for as much of my tax preparation as I could. I used it to assemble my charitable contributions from a sprawling Google Sheet, compile my itemized deductions from scattered receipts across email and credit card statements, and build a Schedule C for my consulting income. Some of it was still manual. I had to eyeball credit card statements to flag which charges were medical and which were childcare. But Claude Code is surprisingly good at the grunt work: sorting transactions, filtering by category, downloading and parsing CSV exports, and assembling it all into spreadsheets ready for tax software.
 
-It also helped me think through some tax planning decisions — weighing different filing software, running a rough cost-benefit on whether hiring an accountant was worth it given how I value my time. (For what it's worth, I think it overestimated how long the DIY route would take. I assembled and filed everything in a few hours.)
+It also helped me think through some tax planning decisions — weighing different filing software, running a rough cost-benefit on whether hiring an accountant was worth it given how I value my time. What I did in about three hours, I would have had to pay an accountant $1,000 for.
 
 Since I'm not going to post my actual tax details on the internet, I had Claude Code invent a few fictional profiles and walk through how they'd use the skills I built. The case study below is the result. Claude Code wrote nearly all of it with minimal input from me — I mostly iterated a few times and let review agents argue with each other about what to fix.
 
