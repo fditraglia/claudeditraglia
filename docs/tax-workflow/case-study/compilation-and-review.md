@@ -3,7 +3,7 @@
 This page covers the second skill — how collected documents become organized spreadsheets ready for tax software entry. The underlying pattern is "multi-source compilation with validation": gathering data from different formats and sources, structuring it consistently, and then cross-checking the result against historical data.
 
 !!! warning "This is not tax advice"
-    Educational content about AI workflow design. All examples use [fictional personas](../before-you-start/meet-the-personas.md) with fictional amounts.
+    Educational content about AI workflow design. All examples use [fictional personas](the-workflow-overview.md#the-personas) with fictional amounts.
 
 ---
 

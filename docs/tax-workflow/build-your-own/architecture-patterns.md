@@ -274,4 +274,34 @@ Here's how these patterns combine for a non-tax example — expense reporting:
 
 ---
 
-**Next:** [Validation Techniques](validation-techniques.md) — making AI check its own work.
+## Pattern 8: The Validation Stack
+
+AI tools are most dangerous when they're confidently wrong. Reliable workflows use multiple validation layers, each catching a different class of error:
+
+!!! warning "Extraction transmits document contents to the API"
+    Every file Claude reads — PDFs, CSVs, spreadsheet exports — is sent to Anthropic's API as conversation context. Redact sensitive identifiers (SSNs, EINs, account numbers) before processing. See [Privacy & Setup](../before-you-start/privacy-and-setup.md).
+
+| Layer | Principle | Key technique |
+|-------|-----------|---------------|
+| **Source verification** | Every extracted value verified against its original | Display extracted data with source reference; flag low-confidence extractions from scanned documents |
+| **Internal consistency** | Numbers should add up | Cross-reference totals (sum of parts = whole); check type and magnitude |
+| **Historical comparison** | Current period broadly consistent with prior periods | Year-over-year flagging (>15% change, sign reversals, missing items); payer reconciliation |
+| **Human review** | Contextual errors require real-world knowledge | Mandatory blocking gates before final output; anomaly narratives with investigation guidance |
+
+**No single layer is sufficient.** Source verification catches extraction errors but not categorization errors. Historical comparison catches anomalies but not consistent mistakes. Human review catches everything in theory but misses things in practice because humans skim. The layers reinforce each other.
+
+### Minimum viable validation
+
+For any skill that extracts or compiles data, add at minimum:
+
+1. **Display extracted values with source references** (Layer 1)
+2. **Sum-check any computed totals** (Layer 2)
+3. **Block before final output** with human approval (Layer 4)
+
+For high-stakes workflows, add historical comparison (Layer 3), confidence scoring, and anomaly narratives with investigation guidance. See [What AI Got Wrong](../case-study/what-ai-got-wrong.md) for how these layers work in practice.
+
+**Design for distrust.** PDF extraction fails silently — it returns plausible wrong numbers. Categorization errors look reasonable. Missing data produces results that look complete. Every output should earn confidence through verification, not receive it by default.
+
+---
+
+**Next:** [Starter Templates](starter-templates.md) — downloadable skill skeletons you can adapt.

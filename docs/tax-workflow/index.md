@@ -19,8 +19,62 @@ One honest caveat: I expect this entire section to be obsolete by next tax seaso
 
 Install `/tax-guide` and answer 8 questions. You'll get a personalized plan: what documents to collect, whether to self-file or hire a professional, and which parts of this case study apply to you.
 
-[:material-rocket-launch-outline: Install /tax-guide](tax-guide.md){ .md-button .md-button--primary }
-[:octicons-arrow-right-24: Or browse the case study](case-study/the-workflow-overview.md){ .md-button }
+### Install /tax-guide
+
+Copy [`tax-guide.md`](https://github.com/chrisblattman/claudeblattman/blob/main/skills/tax-guide.md) to your Claude Code commands directory:
+
+```bash
+cp tax-guide.md ~/.claude/commands/
+```
+
+Or create `~/.claude/commands/tax-guide.md` manually and paste the [skill file contents](https://github.com/chrisblattman/claudeblattman/blob/main/skills/tax-guide.md). Then type `/tax-guide` in Claude Code to start.
+
+??? example "Sample output — W-2 + side consulting profile"
+
+    ```
+    ══════════════════════════════════════════════════════════
+    YOUR TAX PREP GUIDE — 2025
+    ══════════════════════════════════════════════════════════
+
+    1. RECOMMENDATION
+    ─────────────────
+    Self-file with care
+
+    You have a straightforward W-2 plus 1-2 consulting 1099s.
+    This is manageable with tax software, but the Schedule C
+    requires careful expense categorization. The three-year
+    review step is especially important for your situation.
+
+    2. YOUR DOCUMENT CHECKLIST
+    ──────────────────────────
+      [ ] W-2 — from your employer's HR portal
+      [ ] 1099-NEC (×2) — from consulting clients, arriving by email
+      [ ] 1098 — from your mortgage lender
+      [ ] 1099-DIV, 1099-B — from your brokerage portal
+      [ ] Charitable donation receipts or tracking spreadsheet
+      [ ] Property tax bill — from county assessor website
+
+    3. SUGGESTED WORKFLOW
+    ─────────────────────
+      Step 1: Read Privacy & Setup before handling any documents
+      Step 2: Run /tax-collect to find documents in Gmail
+      Step 3: Download portal documents manually (brokerage, etc.)
+      Step 4: Run /tax-compile schedule-c for consulting expenses
+      Step 5: Run /tax-compile charitable for donation summary
+      Step 6: Run /tax-compile review for three-year comparison
+      Step 7: Read What AI Got Wrong before entering data
+      Step 8: Enter figures into tax software manually
+
+    4. PRIVACY NOTES
+    ────────────────
+      Gmail MCP: Active — will search email subjects and attachments
+      Local files: Credit card CSVs and PDFs stay on your machine
+      Claude conversation: Never paste SSNs or bank account numbers
+
+    ══════════════════════════════════════════════════════════
+    ```
+
+[:octicons-arrow-right-24: Or browse the case study directly](case-study/the-workflow-overview.md){ .md-button }
 
 ---
 
@@ -49,10 +103,9 @@ You do **not** need to:
 
     ---
 
-    Privacy decisions, data handling, and the fictional personas used throughout. Read this first.
+    Privacy decisions and data handling. Read this before processing any tax documents.
 
     [:octicons-arrow-right-24: Privacy & Setup](before-you-start/privacy-and-setup.md)
-    [:octicons-arrow-right-24: Meet the Personas](before-you-start/meet-the-personas.md)
 
 -   **:material-file-document-check-outline: The Case Study**
 
@@ -72,7 +125,6 @@ You do **not** need to:
     Transferable patterns for building document-collection and compilation workflows. Starter templates you can adapt for non-tax use cases.
 
     [:octicons-arrow-right-24: Architecture Patterns](build-your-own/architecture-patterns.md)
-    [:octicons-arrow-right-24: Validation Techniques](build-your-own/validation-techniques.md)
     [:octicons-arrow-right-24: Starter Templates](build-your-own/starter-templates.md)
 
 -   **:material-book-open-variant: Reference**
@@ -97,7 +149,7 @@ I built two Claude Code skills: one that searches Gmail for tax documents, downl
 
 ## How to Read This
 
-**Fastest path:** Run [`/tax-guide`](tax-guide.md) — it will tell you exactly which pages to read.
+**Fastest path:** Run `/tax-guide` (install above) — it will tell you exactly which pages to read.
 
 **If you just want the story:** Read the [Workflow Overview](case-study/the-workflow-overview.md) and [What AI Got Wrong](case-study/what-ai-got-wrong.md). Skip the technical sections.
 

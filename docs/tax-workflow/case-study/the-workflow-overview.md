@@ -3,7 +3,21 @@
 This page describes the full pipeline — what each stage does, how the pieces connect, and where human judgment enters. The next three pages go deep on individual stages.
 
 !!! warning "This is not tax advice"
-    Educational content about AI workflow design. All examples use [fictional personas](../before-you-start/meet-the-personas.md) with fictional amounts.
+    Educational content about AI workflow design. All examples use fictional personas with fictional amounts.
+
+---
+
+## The Personas
+
+All examples use three fictional composites — no character maps to a real person, and all dollar amounts are fictional.
+
+| Persona | Situation | Complexity | Role in case study |
+|---------|-----------|------------|-------------------|
+| **Elena Vasquez** | PhD candidate. Stipend (W-2) + one summer RA gig (1099-NEC). Standard deduction. | Low | Shows collection value even for simple returns |
+| **James Okafor** | Operations director. Company salary (W-2) + side consulting (1099-NEC) + investments. Itemizes. Schedule C. | Medium | Core walkthrough — the sweet spot for AI-assisted filing |
+| **Priya Chatterjee** | Full professor. Foreign consulting, rental property, K-1, FBAR. | High | Escalation case — [must hire a CPA](../reference/when-to-get-help.md) |
+
+James is the primary case study. His "main job plus side consulting" pattern is one of the most common paths into tax complexity. Elena shows the workflow's value even for simple returns. Priya illustrates where AI organizes documents for a professional rather than replacing one.
 
 ---
 

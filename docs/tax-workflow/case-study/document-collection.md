@@ -3,7 +3,7 @@
 This page is a deep dive into the first skill in the workflow — how it searches email for tax documents, downloads them, extracts key data, and tracks completeness. The underlying pattern — treating email as a searchable database for document retrieval — is transferable to any domain where important documents arrive by email.
 
 !!! warning "This is not tax advice"
-    Educational content about AI workflow design. All examples use [fictional personas](../before-you-start/meet-the-personas.md) with fictional amounts.
+    Educational content about AI workflow design. All examples use [fictional personas](the-workflow-overview.md#the-personas) with fictional amounts.
 
 ---
 

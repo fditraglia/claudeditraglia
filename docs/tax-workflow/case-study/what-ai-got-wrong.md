@@ -5,7 +5,7 @@ This is the most important page in the case study. If you only read one page, re
 AI tools are good at structured data extraction, pattern matching, and organizing information. They are bad at context-dependent judgment, ambiguous categorization, and knowing what they don't know. Tax preparation requires all of these.
 
 !!! warning "This is not tax advice"
-    Educational content about AI workflow design. All examples use [fictional personas](../before-you-start/meet-the-personas.md) with fictional amounts.
+    Educational content about AI workflow design. All examples use [fictional personas](the-workflow-overview.md#the-personas) with fictional amounts.
 
 ---
 

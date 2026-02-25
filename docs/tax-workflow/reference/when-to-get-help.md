@@ -106,7 +106,7 @@ The compilation and review process surfaces questions you didn't know you had. "
 
 ## The Priya Test
 
-[Priya Chatterjee](../before-you-start/meet-the-personas.md) — our full professor persona — is the escalation case. Her return includes foreign consulting income, rental property, a K-1 partnership, and FBAR reporting. No amount of AI-assisted organization makes self-filing appropriate for her situation.
+[Priya Chatterjee](../case-study/the-workflow-overview.md#the-personas) — our full professor persona — is the escalation case. Her return includes foreign consulting income, rental property, a K-1 partnership, and FBAR reporting. No amount of AI-assisted organization makes self-filing appropriate for her situation.
 
 But Priya still benefits from the workflow. Her CPA typically needs two meetings: one to review materials and ask questions, one to review the draft return. With organized materials from the AI workflow, the first meeting is shorter and more focused. Last year's CPA bill was lower than expected because Priya handed over a complete, organized package.
 

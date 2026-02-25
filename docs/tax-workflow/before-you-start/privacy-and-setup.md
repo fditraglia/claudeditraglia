@@ -121,4 +121,4 @@ To replicate the full workflow described in this case study, you need:
 
 ---
 
-**Next:** [Meet the Personas](meet-the-personas.md) — the fictional characters used throughout this case study.
+**Next:** [The Workflow Overview](../case-study/the-workflow-overview.md) — how the full pipeline works, and meet the fictional personas.
