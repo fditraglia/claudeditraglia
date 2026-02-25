@@ -49,7 +49,7 @@ graph LR
 | Bank account / routing numbers | High | **Exclude** — never needed for this workflow |
 | Medical provider details | Medium-High | Consider — needed only for medical expense compilation |
 
-The skills described in this case study are designed to **never need SSNs or bank account numbers**. If Claude encounters them while reading a document, they pass through the API conversation but are not stored or extracted. You can add explicit instructions to your CLAUDE.md:
+The skills described in this case study are designed to **never need SSNs or bank account numbers**. You can add explicit instructions to your CLAUDE.md:
 
 ```markdown
 ## Tax Document Rules
@@ -58,9 +58,19 @@ The skills described in this case study are designed to **never need SSNs or ban
 - If you encounter these in a document, skip past them
 ```
 
+!!! danger "PDF extraction transmits sensitive data to the API"
+    CLAUDE.md rules prevent Claude from *displaying* sensitive values, but they do **not prevent transmission**. When Claude reads a W-2 or 1099 PDF, the entire text content — including SSNs, EINs, bank account numbers, and other identifiers — is sent to Anthropic's API as part of the conversation context. To mitigate this:
+
+    - **Redact SSNs and account numbers** from PDFs before giving them to Claude (use your PDF editor's redaction tool, or black out and re-save)
+    - **Or enter figures manually** instead of using PDF extraction for documents that contain SSNs (W-2s, 1099s, 1098s)
+    - Verify Anthropic's current data retention policy at [anthropic.com/policies](https://www.anthropic.com/policies) before proceeding
+
 ### Decision 2: Will you use Gmail MCP for document collection?
 
 **With Gmail MCP:** Claude searches your email, finds tax documents, downloads attachments, and tracks what's missing. This is the core of the `/tax-collect` skill.
+
+!!! note "Gmail MCP grants access to your entire inbox"
+    Gmail MCP does not scope to tax-related emails only. Once configured, Claude Code can search and read **any email** in your account — salary negotiations, medical correspondence, legal matters, and everything else. Consider what's in your inbox before enabling it. If this is a concern, you can create a dedicated Gmail label for tax documents and manually move emails there, then limit your skill's search to that label.
 
 **Without Gmail MCP:** You download documents manually and place them in your tax folder. Claude can still compile, categorize, and review them — you just skip the automated collection step.
 
@@ -70,7 +80,7 @@ The Gmail MCP advantage is significant for people with scattered documents acros
 
 Everything in this workflow runs through Claude Code on your local machine talking to Anthropic's API. There is no separate cloud service, no third-party tax platform, and no data stored beyond the API conversation window.
 
-After each session ends, the conversation context is discarded by the API. Your local files persist.
+After each session ends, the conversation context is discarded per Anthropic's current data retention policy — verify the latest terms at [anthropic.com/policies](https://www.anthropic.com/policies) before proceeding. Your local files persist.
 
 ---
 

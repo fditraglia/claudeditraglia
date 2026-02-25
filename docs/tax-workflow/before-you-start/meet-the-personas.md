@@ -1,6 +1,6 @@
 # Meet the Personas
 
-All examples in this case study use three fictional characters. Their tax situations are designed to illustrate different complexity levels — from a PhD student's first real return to a senior professor who needs a CPA. No real dollar amounts, SSNs, or identifying details appear anywhere in these pages.
+All examples in this case study use three fictional characters. Their tax situations are designed to illustrate different complexity levels — from a simple first return to a complex multi-source filer who needs a CPA. All personas are composites — no character maps to a real person, and no real dollar amounts, SSNs, or identifying details appear anywhere in these pages.
 
 !!! warning "This is not tax advice"
     Educational content about AI workflow design. All personas and amounts are fictional.

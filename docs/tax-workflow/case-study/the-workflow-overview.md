@@ -38,6 +38,8 @@ graph TD
 1. **Searches Gmail** for tax-related emails (W-2, 1099, 1098, payment confirmations)
 2. **Downloads attachments** with your approval, renaming them consistently
 3. **Extracts key figures** from each document (income amounts, withholding, interest paid)
+    !!! warning "PDF extraction transmits document contents to the API"
+        When Claude reads a tax PDF, the full text — including any SSNs, EINs, and account numbers — is sent to Anthropic's API as part of the conversation. Consider redacting sensitive identifiers before processing, or enter figures manually. See [Privacy & Setup](../before-you-start/privacy-and-setup.md) for details.
 4. **Updates a tracking checklist** — what's collected, what's still missing, what requires a portal login
 5. **Runs income reconciliation** — compares this year's payers against last year to catch missing 1099s
 

@@ -82,6 +82,9 @@ Health insurance (1095), 529 contributions, property tax bills, tuition payments
 
 The skill runs repeatedly over several weeks. Each run needs to avoid re-downloading or re-processing documents from prior runs.
 
+!!! warning "PDF extraction transmits document contents to the API"
+    When Claude reads a downloaded PDF, the full text — including any SSNs, EINs, and account numbers on the form — is sent to Anthropic's API. Consider redacting sensitive identifiers before giving documents to Claude, or enter key figures manually. See [Privacy & Setup](../before-you-start/privacy-and-setup.md) for details.
+
 **Three dedup checks:**
 
 1. **Filename match:** Does a file with a similar name already exist in the tax folder?

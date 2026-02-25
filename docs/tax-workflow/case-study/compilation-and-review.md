@@ -172,6 +172,9 @@ graph TD
 
 ### Credit Card CSV Processing
 
+!!! warning "Check your CSV for card numbers"
+    Some credit card issuers include full or partial card numbers in CSV exports. Open the file in a text editor and remove or redact any card numbers before giving the CSV to Claude. The full file contents are sent to Anthropic's API.
+
 When the medical compilation proceeds, it processes credit card transactions using keyword-based classification. (Credit card CSV formats vary by issuer — the examples here describe the general pattern. You may need to adjust column mappings for your specific card.)
 
 | Classification | How it works | Accuracy |

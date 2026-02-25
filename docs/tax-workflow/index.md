@@ -1,8 +1,12 @@
 # Using Claude Code for Tax Season
 
-A case study in building AI workflows for a real, high-stakes personal task — from scattered documents across email, portals, and spreadsheets to an organized, verified tax return.
+This year I decided to use Claude Code for as much of my tax preparation as I could. I used it to assemble my charitable contributions from a sprawling Google Sheet, compile my itemized deductions from scattered receipts across email and credit card statements, and build a Schedule C for my consulting income. Some of it was still manual. I had to eyeball credit card statements to flag which charges were medical and which were childcare. But Claude Code is surprisingly good at the grunt work: sorting transactions, filtering by category, downloading and parsing CSV exports, and assembling it all into spreadsheets ready for tax software.
 
-> *I filed my 2025 taxes using Claude Code skills I built myself. It took about 60% less time than prior years. This is the story of what worked, what didn't, and what you can steal for your own workflows.*
+It also helped me think through some tax planning decisions — weighing different filing software, running a rough cost-benefit on whether hiring an accountant was worth it given how I value my time. (For what it's worth, I think it overestimated how long the DIY route would take. I assembled and filed everything in a few hours.)
+
+Since I'm not going to post my actual tax details on the internet, I had Claude Code invent a few fictional profiles and walk through how they'd use the skills I built. The case study below is the result. Claude Code wrote nearly all of it with minimal input from me — I mostly iterated a few times and let review agents argue with each other about what to fix.
+
+One honest caveat: I expect this entire section to be obsolete by next tax season. The AI tools available a year from now will probably blow this out of the water. But for right now, this is what worked for me, and I think it can help you too.
 
 ---
 

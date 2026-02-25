@@ -31,6 +31,9 @@ graph TD
 
 **The principle:** Every extracted value should be verified against its source document before being used.
 
+!!! warning "Extraction transmits document contents to the API"
+    Every file Claude reads — PDFs, CSVs, spreadsheet exports — is sent to Anthropic's API as conversation context. Redact sensitive identifiers (SSNs, EINs, account numbers) before processing. See [Privacy & Setup](../before-you-start/privacy-and-setup.md).
+
 ### Technique: Side-by-Side Display
 
 After extracting a figure from a document, display it alongside a reference to the source:

@@ -339,6 +339,9 @@ A CLAUDE.md addition for any workflow handling sensitive data.
 
 ---
 
+!!! note "Provider portability"
+    These templates assume Gmail MCP for email search. If you use Outlook, Yahoo, or another email provider, you'll need to adapt the search step — currently there is no equivalent MCP for non-Gmail providers. The compilation and review templates work with any email provider since they operate on local files.
+
 ## Non-Tax Examples
 
 To make these templates concrete, here's how they adapt to other domains:

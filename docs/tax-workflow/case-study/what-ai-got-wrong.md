@@ -11,6 +11,9 @@ AI tools are good at structured data extraction, pattern matching, and organizin
 
 ## Error Category 1: PDF Extraction Failures
 
+!!! warning "PDF extraction transmits document contents to the API"
+    When Claude reads a tax PDF, the full text — including any SSNs, EINs, and account numbers — is sent to Anthropic's API. See [Privacy & Setup](../before-you-start/privacy-and-setup.md) for mitigation options.
+
 **What happened:** Claude reads tax document PDFs and extracts key figures — wages from W-2s, income from 1099s, interest from 1098s. Most of the time this works. Sometimes it doesn't.
 
 **The pattern:** Scanned documents (images of paper forms rather than native PDFs) extract poorly. Some financial institutions generate PDFs with unusual layouts that confuse the extraction. Multi-page documents sometimes have figures pulled from the wrong page.
@@ -138,7 +141,7 @@ These are risks the workflow is designed to prevent, but which remain possible:
 | Filing with wrong amounts | Mandatory verification after every extraction | User skips verification |
 | Missing income (audit trigger) | Prior-year payer reconciliation | New income source with no prior-year reference |
 | Claiming non-deductible expenses | Guided interview with explicit prompts | User answers incorrectly |
-| SSN/bank details in AI conversation | CLAUDE.md exclusion rules | PDF extraction reads them before rules can filter |
+| SSNs, EINs, bank details in AI conversation | CLAUDE.md exclusion rules + pre-processing redaction | PDF extraction transmits full document text before rules can filter — [redact before processing](../before-you-start/privacy-and-setup.md) |
 | Relying on AI for tax law interpretation | Workflow explicitly avoids tax advice | User asks follow-up questions and trusts answers |
 
 The last row is particularly important. The skills are designed to organize and compile, not advise. But if you ask Claude "Is this deductible?" during a tax session, it will answer — and it might be wrong. The workflow deliberately avoids putting Claude in an advisory role, but the user can always override that by asking.
