@@ -6,7 +6,9 @@ This site respects your privacy. Here's what we collect and why.
 
 ## Analytics
 
-This site does not use any analytics or tracking scripts. We do not collect cookies, page views, or any browsing data.
+This site uses [GoatCounter](https://www.goatcounter.com), an open-source, privacy-friendly analytics tool. GoatCounter does not use cookies, does not track you across sites, and does not collect personal information. It counts page views so we know which guides are useful and which need work.
+
+GoatCounter is free for non-commercial use and its code is fully open source. No data is shared with third parties. You can read their [privacy policy](https://www.goatcounter.com/help/privacy) for details.
 
 ## Email Updates
 
