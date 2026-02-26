@@ -28,6 +28,26 @@
     Something broken or unclear?
     <a href="mailto:claudeblattman+feedback@gmail.com?subject=Feedback%3A%20{{ page.title | urlencode }}">Send feedback</a>.
   </p>
+
+  <!-- Email signup slide-in banner -->
+  <div id="email-banner" class="email-banner" style="display:none;">
+    <button class="email-banner__close" aria-label="Close">&times;</button>
+    <p class="email-banner__text">
+      New tools for researchers and managers every few weeks.
+      Email updates only &mdash; a few times a year.
+    </p>
+    <form class="email-banner__form"
+          action="https://buttondown.email/api/emails/embed-subscribe/claudeblattman"
+          method="post" target="popupwindow"
+          onsubmit="window.open('https://buttondown.email/claudeblattman','popupwindow')">
+      <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+      <!-- Honeypot — hidden from humans, bots fill it -->
+      <input type="text" name="url" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit">Subscribe</button>
+    </form>
+    <span class="email-banner__msg" style="display:none;"></span>
+    <a href="/privacy/" class="email-banner__privacy">Privacy policy</a>
+  </div>
 {% endblock %}
 
 {% block scripts %}
@@ -43,6 +63,43 @@
           if (logo) logo.click();
         });
       }
+    })();
+
+    /* Email signup slide-in banner */
+    (function() {
+      var BANNER_KEY = 'cb_email_banner_dismissed';
+      var THIRTY_DAYS = 30 * 24 * 60 * 60 * 1000;
+
+      /* Check if dismissed within last 30 days */
+      var dismissed = localStorage.getItem(BANNER_KEY);
+      if (dismissed && (Date.now() - parseInt(dismissed, 10)) < THIRTY_DAYS) return;
+
+      var banner = document.getElementById('email-banner');
+      if (!banner) return;
+
+      var shown = false;
+      function showBanner() {
+        if (shown) return;
+        shown = true;
+        banner.style.display = 'block';
+      }
+
+      /* Show after 45 seconds */
+      setTimeout(showBanner, 45000);
+
+      /* Show at 50% scroll — whichever comes first */
+      document.addEventListener('scroll', function() {
+        var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        if (scrollable > 0 && (window.scrollY / scrollable) >= 0.5) {
+          showBanner();
+        }
+      }, { passive: true });
+
+      /* Dismiss button — hide and remember for 30 days */
+      banner.querySelector('.email-banner__close').addEventListener('click', function() {
+        banner.style.display = 'none';
+        localStorage.setItem(BANNER_KEY, Date.now().toString());
+      });
     })();
   </script>
 {% endblock %}

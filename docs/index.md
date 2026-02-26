@@ -87,5 +87,5 @@ From there it goes deeper into [Claude Code](https://docs.anthropic.com/en/docs/
 
 </div>
 
-!!! tip "Help other managers and researchers find this"
-    If this guide has been useful, consider [starring it on GitHub](https://github.com/chrisblattman/claudeblattman) or sharing the link with a colleague. The more people find it, the better it gets. Feedback and suggestions are welcome — [send a quick note](mailto:claudeblattman+feedback@gmail.com?subject=Feedback).
+!!! tip "Stay in the loop"
+    I add new tools and guides regularly. [Get email updates](https://buttondown.email/claudeblattman) — a few times a year, no spam. Or [star it on GitHub](https://github.com/chrisblattman/claudeblattman) so others can find it. Something broken or unclear? [Send a quick note](mailto:claudeblattman+feedback@gmail.com?subject=Feedback).

@@ -1,6 +1,6 @@
 site_name: Claude Blattman · AI for Researchers & Managers
 site_url: https://claudeblattman.com
-site_description: A professor's guide to building AI workflows — from chatbots to self-improving systems
+site_description: A project manager's guide to building AI workflows — from chatbots to self-improving systems
 site_author: Chris Blattman
 repo_url: https://github.com/chrisblattman/claudeblattman
 repo_name: chrisblattman/claudeblattman
@@ -105,6 +105,7 @@ nav:
   - About:
     - about.md
     - Resources: resources.md
+    - Privacy: privacy.md
 
 markdown_extensions:
   - admonition
@@ -130,6 +131,8 @@ markdown_extensions:
 
 plugins:
   - search
+  - meta
+  - social
 
 extra:
   social:
