@@ -1,6 +1,6 @@
 # Project Folders for Work
 
-*Part of [AI Project Folders](../project-folders.md). Details coming soon.*
+*Part of [AI Project Folders](../project-folders.md)*
 
 ---
 
