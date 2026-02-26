@@ -1,3 +1,7 @@
+---
+description: AI-powered project management for academic researchers — living dashboards, weekly reviews, and proposal drafting from meeting transcripts, emails, and docs.
+---
+
 # Project Management
 
 How I went from scattered information across five platforms to living project dashboards that write weekly reviews and draft proposals on demand. Built in four layers over several months — each one building on the last.

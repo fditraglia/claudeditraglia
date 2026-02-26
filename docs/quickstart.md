@@ -1,3 +1,7 @@
+---
+description: Get useful AI output in 5 minutes. One structured prompt that demonstrates the difference between casual chatbot use and effective prompting.
+---
+
 # Quickstart: Your First 5 Minutes
 
 **Goal:** Paste one prompt into Claude (or ChatGPT) and get something immediately useful. No setup required.

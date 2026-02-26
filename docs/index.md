@@ -1,6 +1,7 @@
 ---
 hide:
   - navigation
+description: A professor's open-source AI workflow system for managing research projects, email, meetings, and teams using Claude Code. Free tools, setup guides, and tutorials.
 ---
 
 # Claude Blattman

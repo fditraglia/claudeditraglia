@@ -1,3 +1,7 @@
+---
+description: About Claude Blattman — how a professor with no coding background built an AI workflow system for academic research management. Free and open source.
+---
+
 # About
 
 ## About This Project

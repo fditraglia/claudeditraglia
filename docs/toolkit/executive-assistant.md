@@ -1,3 +1,7 @@
+---
+description: Build an AI executive assistant with Claude Code — inbox triage, morning briefings, meeting capture, and project tracking. From 5,000 unread emails to six.
+---
+
 # Building an AI Executive Assistant
 
 A system that manages your inbox, tracks your projects, processes your meetings, and drafts your communications — assembled from skills and integrations that compound over time.
