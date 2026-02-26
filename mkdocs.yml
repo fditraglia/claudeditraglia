@@ -131,7 +131,10 @@ markdown_extensions:
 plugins:
   - search
   - meta
-  - social
+  - social:
+      cards_layout_options:
+        background_color: "#263238"
+        color: "#80cbc4"
 
 extra:
   social:
