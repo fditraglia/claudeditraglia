@@ -12,7 +12,7 @@ Emails scattered across Gmail and institutional accounts. Documents in Google Do
 
 I'd walk into a meeting and spend the first ten minutes trying to remember what we decided last time. An RA would ask about a decision from three months ago and I'd have to search through hundreds of emails. Proposals would cite outdated figures because nobody remembered which version was current.
 
-I know some managers, companies, and labs use Slack to manage all of this. I tried it for one project and found it didn't fit my workflow. The volume of threads was overwhelming — too many conversations that weren't crucial to me, and not great at surfacing strategic priorities. That could be my inexperience, and in a year I might be a Slack convert. But I found that building the system below really suited how I work — especially the project overviews and living documents I'm about to describe. Those then let me automate the most time-consuming parts: proposal and report writing for donors and partners, across complex field projects with large teams doing data collection and analysis in multiple countries.
+I know some teams use Slack to manage all of this. I tried it and it didn't fit my workflow, so I built the system below.
 
 !!! note "If your team uses Slack or Teams"
     Most of this system is communication-tool-agnostic. The folder structure (Layer 1),

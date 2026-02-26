@@ -21,9 +21,7 @@ By [Chris Blattman](https://chrisblattman.com), political economist at UChicago 
 
 ## What Is This?
 
-This site is a guide to getting real work done with AI — from everyday chatbot use to advanced automation. It starts with [the essentials](essentials/index.md): choosing a chatbot, writing better prompts, hands-free dictation, and meeting transcription. No installation needed.
-
-From there it goes deeper into [Claude Code](https://docs.anthropic.com/en/docs/claude-code), a terminal-based AI tool that can read your files, search your email, manage your calendar, and run custom workflows — like having a smart assistant sitting at your computer with you. The site documents how I built a working system with it, and shares everything so you can do the same. No coding required.
+This site covers AI tools for knowledge work — from [chatbot prompting](essentials/index.md) to advanced automation with [Claude Code](https://docs.anthropic.com/en/docs/claude-code), a terminal-based AI tool that can read your files, search your email, manage your calendar, and run custom workflows. The site documents how I built a working system and shares everything so you can do the same.
 
 ## Where to Start
 
@@ -45,7 +43,7 @@ From there it goes deeper into [Claude Code](https://docs.anthropic.com/en/docs/
 
     [:octicons-arrow-right-24: Setup Guide](setup/index.md)
 
--   **:material-format-text: Better Prompts & Claude Code Management**
+-   **:material-format-text: First Session Skills**
 
     ---
 

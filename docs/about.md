@@ -2,7 +2,7 @@
 
 ## About This Project
 
-Claude Blattman is a free, open-source resource for building AI workflows. It documents the system I've built for managing research projects, and shares it so others can learn from it or steal the useful parts.
+Claude Blattman is a free, open-source resource for building AI workflows. It documents the system I've built for managing research projects, shared so others can use it.
 
 The name is a joke. The tools are real.
 
@@ -12,7 +12,7 @@ The name is a joke. The tools are real.
 
 I'm a political economist at the [Harris School of Public Policy](https://harris.uchicago.edu/) at the University of Chicago. My research focuses on violence, crime, and poverty — I design and test interventions in cities across Latin America and Africa. You can read more about my research and writing at [chrisblattman.com](https://chrisblattman.com).
 
-I'm not a coder. I've never written a line of code in my life. Everything on this site was built using AI tools by someone with no software engineering background.
+I'm not a coder — I've never written a line of code in my life. Everything on this site was built with AI tools.
 
 **Website:** [chrisblattman.com](https://chrisblattman.com)
 
@@ -30,15 +30,11 @@ For the past year I intensively used [AI chatbots](essentials/index.md). They we
 
 Then in January 2026 I discovered [Claude Code](https://docs.anthropic.com/en/docs/claude-code), and the center of gravity shifted from chatbots to agentic tools — AI that can read your files, search your email, manage your calendar, and build workflows that improve themselves over time.
 
-I went down a rabbit hole. I spent hours daily for a month building skills and processes. I won't pretend the time investment has paid off yet in pure hours saved. But I can already see where this is going. And things that seemed impossible — a system that triages my inbox, summarizes my meetings, tracks my projects, drafts my proposals, and plans my trips — are working today.
+I spent hours daily for a month building skills and processes. The time investment hasn't paid off yet in pure hours saved, but I can see where this is going — and things that seemed impossible are working today.
 
 ### The One-Time Cleanup
 
-Here's what convinced me this was real: After 20 years of digital life, I had thousands of unread emails, fragmented calendars, files scattered across multiple cloud services, and an overflowing hard drive. A day and a half with Claude Code and my inbox was nearly empty, my calendars were consolidated, obsolete cloud folders were shut down, and everything was cataloged.
-
-It was like having a magic cleanup team come into a hoarder's basement.
-
-That one-time cleanup sold me. Not because AI did it perfectly — it didn't — but because it did in 36 hours what I'd been failing to do for a decade. (I wrote up [the full process](toolkit/executive-assistant.md#the-one-time-cleanup) and a [detailed cloud storage guide](downloads/cloud-storage-guide.md) if you want to try it yourself.)
+After 20 years of digital life, I had thousands of unread emails, fragmented calendars, and files scattered across multiple cloud services. A day and a half with Claude Code and it was under control — 5,000 unread emails down to 6. That sold me. ([Full process](toolkit/executive-assistant.md#the-one-time-cleanup) · [Cloud storage guide](downloads/cloud-storage-guide.md))
 
 ### Why I'm Sharing This
 
@@ -61,15 +57,13 @@ For over a decade I've written practical advice for academics and researchers on
 - [Travel](https://chrisblattman.com/travel/)
 - [Writing Well](https://chrisblattman.com/writing/)
 
-Claude Blattman is the same impulse — figure out something useful, document it, share it — applied to a new set of tools.
-
 ---
 
 ## How This Site Was Built
 
 This site is built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/), hosted on [GitHub Pages](https://pages.github.com/), and auto-deploys on every push via GitHub Actions.
 
-The content was written with help from Claude (naturally). The skills and workflows documented here are the same ones I use daily.
+The content was written with help from Claude. The skills and workflows documented here are the same ones I use daily.
 
 **Source code:** [github.com/chrisblattman/claudeblattman](https://github.com/chrisblattman/claudeblattman)
 

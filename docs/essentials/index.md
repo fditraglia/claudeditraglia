@@ -4,15 +4,7 @@
 
 ??? tip "Some very basic advice before you dive in"
 
-    Get a paid subscription to Claude or ChatGPT (or both). Use the heaviest thinking model available to you — always. The quality difference is not subtle.
-
-    For complex tasks, you need prompt engineering. I give details on the [Prompt Engineering](prompting.md) page and use it almost by default. But at the very least, think in terms of a long conversation. Give any AI project a runway: tell it the role, the context, the goals.
-
-    If you're in a hurry and working narratively — especially if you're dictating with something like [Wispr Flow](wispr-flow.md) — give the AI that runway in multiple prompts. Bursts of information each time, telling it to just listen and absorb, not respond. Repeat until you've gotten everything out, then ask it to organize everything above and start the task. The [Prompt Engineering](prompting.md) page formalizes this approach.
-
-    I also recommend using projects (available in both ChatGPT and Claude) to organize your chats into themes and groups. Below I show some powerful examples of how to use project folders to take advantage of all the power they bring.
-
-    **One warning:** Chatbots hallucinate. They invent citations, state falsehoods confidently, and get current events wrong. Trust the reasoning and the structure, verify the facts. Think of them as a brilliant, well-read colleague with a tendency to make things up — though the advice here will help you get that under control.
+    Get a paid subscription to Claude or ChatGPT (or both). Always use the strongest model available — the quality gap is large. Give the AI context about who you are and what you need before diving into a request. The [Chatbots Done Right](chatbots.md) page covers the fundamentals; the [Prompt Engineering](prompting.md) page formalizes the full framework.
 
 ---
 

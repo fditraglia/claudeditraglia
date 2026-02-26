@@ -60,7 +60,6 @@ nav:
     - "Example: Vacation Planning": essentials/folders/vacation.md
     - "Example: Shopping Decisions": essentials/folders/shopping.md
     - "Example: Health & Fitness": essentials/folders/health.md
-    - "Project Folders for Work": essentials/folders/work.md
     - Wispr Flow: essentials/wispr-flow.md
     - Granola: essentials/granola.md
     - NotebookLM: essentials/notebooklm.md
@@ -70,7 +69,7 @@ nav:
     - setup/index.md
     - Install (Mac): toolkit/install-mac.md
     - Install (Windows): toolkit/install-windows.md
-    - Set Up "VS Code": setup/vscode-setup.md
+    - Set Up VS Code: setup/vscode-setup.md
     - Your CLAUDE.md: toolkit/claude-md.md
     - How Claude Code Thinks: setup/modes.md
     - MCP Setup: toolkit/mcp-setup.md

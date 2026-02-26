@@ -2,9 +2,9 @@
 
 <span class="badge-teal">No Claude Code required</span>
 
-Most people use AI chatbots the way they use Google: type a question, get an answer, move on. That works, but it leaves 90% of the value on the table.
+Most people use AI chatbots like Google: one question, one answer, move on. That's the least valuable way to use them.
 
-This page covers the techniques that separate casual users from people who get genuinely useful work out of ChatGPT, Claude, and similar tools. None of this requires coding. All of it works today with a free or basic subscription.
+This page covers the techniques that separate casual users from people who get genuinely useful work out of AI chatbots.
 
 ---
 
@@ -83,7 +83,7 @@ When I ask for help with proposals:
 - Tell me if a section is too long for the typical funder attention span
 ```
 
-With this in place, every conversation in that project starts with full context. You never have to re-explain who you are or what you're working on.
+With this in place, every conversation in that project starts with full context.
 
 ### The Next Level: Project Folders
 
@@ -112,7 +112,7 @@ The [Quickstart](../quickstart.md) demonstrated this, but it bears repeating: st
 **Strong prompt:**
 > *Write a 250-word abstract for an economics paper. The paper uses a randomized controlled trial to test whether cognitive behavioral therapy reduces criminal behavior among high-risk young men in a major Latin American city. Main finding: 20% reduction in arrests at 12 months, driven by changes in self-regulation rather than employment. The audience is the American Economic Review. Lead with the research question, then design, then result, then implication. Avoid jargon that wouldn't appear in a top-5 journal.*
 
-The second version takes 60 seconds longer to write and saves 20 minutes of back-and-forth.
+The second version takes 60 seconds longer to write and saves 20 minutes of back-and-forth. For the full six-section framework with examples, see [Prompt Engineering](prompting.md).
 
 ---
 
@@ -166,7 +166,7 @@ Being honest about limitations saves more time than any prompting technique.
 
 When you find a prompt that works well for a recurring task, save it. Build a personal collection.
 
-Start simple — a text file, a note in your phone, a Google Doc. The format doesn't matter. What matters is that you don't reinvent the wheel every time you need to:
+Start simple — a text file, a note in your phone. Just stop reinventing the wheel every time you need to:
 
 - Draft a recommendation letter
 - Summarize a paper for a non-academic audience

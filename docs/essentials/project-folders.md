@@ -41,13 +41,13 @@ Generic. Tourist-list. Could be for any family on Earth.
 
 It references your specific constraints without you repeating them. That's the difference.
 
-If your first reaction is "I could just write a better prompt" — you're right, and that's exactly the point. The project file IS the better prompt. You write it once instead of reconstructing it every conversation.
+A project file is just a well-written prompt you write once and reuse forever.
 
 ---
 
 <div class="narrative-block" markdown>
 <p class="narrative-teaser" markdown>
-The first file I built wasn't for research. It was for planning family vacations. That sounds trivial, but it taught me the pattern I now use for everything — shopping, health, finances, even rock climbing trip logistics. We once planned a trip to a great spot for climbing and rafting. Turned out it was one of the hotter times of year — we lost several outdoor days. That failure is what taught me to add explicit temperature thresholds instead of vague preferences like "we don't like heat."
+I built my first project file for family vacation planning. That one file — and the failures that shaped it — taught me the pattern I now use for everything. [Read the full example.](folders/vacation.md)
 </p>
 </div>
 
@@ -55,7 +55,7 @@ The first file I built wasn't for research. It was for planning family vacations
 
 ## Build Your First File {: #build-your-first-file }
 
-This takes about an hour for a first file — 10 minutes to update it after that. You'll end up with a reusable file that makes every future conversation in this domain dramatically better.
+This takes about an hour for a first file, then 10 minutes to update after each use.
 
 But before you keep reading — open ChatGPT or Claude in another tab and think of one domain where you keep repeating yourself to the AI. Vacations, shopping, meal planning, a type of professional writing. Just pick one. That's what you'll build.
 
@@ -264,17 +264,11 @@ The domain changes. The structure doesn't.
 
 ### Work
 
-<div class="grid cards" markdown>
+The same project folder principles apply to professional workflows — writing, proposals, reports, literature reviews. Start with the life examples above to learn the pattern.
 
--   **Research, Writing & Project Management**
+**ChatGPT Deep Research** deserves a special mention: it may be the single most valuable AI tool for faculty right now. Give it a clear, well-engineered prompt and it produces detailed research briefings that would take hours of manual searching.
 
-    ---
-
-    The same principles applied to professional workflows — plus ChatGPT Deep Research and Claude Code skills that build on each other.
-
-    [:octicons-arrow-right-24: Read more](folders/work.md)
-
-</div>
+For project management workflows that go beyond project folders — weekly reviews, living dashboards, automated proposal drafting — see the [Project Management](../workflows/project-management.md) section.
 
 ---
 

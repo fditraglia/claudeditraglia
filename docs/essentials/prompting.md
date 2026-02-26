@@ -4,7 +4,7 @@
 
 Prompt engineering sounds technical. It isn't. It's the skill of asking AI tools for what you actually want, in a way that gets useful results on the first try.
 
-This page covers prompt engineering as a *structured practice* — not a collection of tips, but a repeatable method you can apply to any task.
+This page covers prompt engineering as a repeatable method you can apply to any task.
 
 !!! tip "The single most important thing on this page"
 
@@ -29,7 +29,7 @@ Good prompts share three properties:
 2. **They specify the task** — unambiguously, in 1-2 sentences
 3. **They define the output** — format, length, tone, audience
 
-Most bad interactions fail on #1 (no context) or #3 (no output specification). Fix those two things and you'll get dramatically better results from any model.
+Most bad interactions fail on #1 (no context) or #3 (no output specification).
 
 ---
 
@@ -191,7 +191,7 @@ Chaining works because you can course-correct between steps. If Prompt 1 misses 
 - "Research current best practices for [domain]"
 - "Flag where your approach deviates from [benchmark]"
 
-**Over-prompting.** Modern AI models are good at following instructions. You don't need `CRITICAL: YOU MUST ABSOLUTELY...` — a calm, specific directive works better. Shouting in all-caps doesn't make the AI try harder. In fact, [Anthropic's own guidance for Claude 4.6](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices) specifically warns that anti-laziness prompts like "be thorough" and "think carefully" can cause newer models to overthink and waste time.
+**Over-prompting.** Modern AI models are good at following instructions. You don't need `CRITICAL: YOU MUST ABSOLUTELY...` — a calm, specific directive works better. Shouting in all-caps doesn't make the AI try harder. In fact, [Anthropic's own guidance for Claude Opus 4.6](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices) specifically warns that anti-laziness prompts like "be thorough" and "think carefully" can cause newer models to overthink and waste time.
 
 **No pushback permission.** If you want honest feedback, say so: *"Tell me directly if this approach has problems. Don't just agree with everything."* By default, AI tends toward politeness and agreement.
 

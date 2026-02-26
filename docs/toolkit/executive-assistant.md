@@ -24,7 +24,7 @@ Each skill works on its own — you can install just `/triage-inbox` and get val
 
 ??? quote "How I built this — the full story"
 
-    I started with about 5,000 unread emails going back years. This was partly because I used my unread mails like a to-do list. Any tasks that needed to be done or email that needed to be responded to, I left it unread until I got around to it. It worked well enough — I'm more on top of email than most — but the backlog was a constant low-grade source of stress. I always knew it was an inadequate system of organization. I just never had a better option.
+    I started with about 5,000 unread emails going back years. This was partly because I used my unread email like a to-do list. Any tasks that needed to be done or email that needed to be responded to, I left it unread until I got around to it. It worked well enough — I'm more on top of email than most — but the backlog was a constant low-grade source of stress. I always knew it was an inadequate system of organization. I just never had a better option.
 
     **The first fix was not about email — it was about reminders.** I wasn't using Google Tasks or Apple Reminders at all, which in retrospect was a mistake. After researching and testing both, I chose Apple Reminders for the flexibility and Siri integration. The key insight: emails that create to-do items should become reminders, not stay unread. That's what the triage-inbox skill does — it converts actionable emails into reminders and gets everything else out of the way.
 
@@ -32,23 +32,7 @@ Each skill works on its own — you can install just `/triage-inbox` and get val
 
     A word of advice if you're building something like this: this is where it helps to understand planning mode and to have Claude critically evaluate its own plans from different perspectives. I had to keep a close eye on false positives and false negatives — important emails getting auto-archived, or junk still cluttering my inbox.
 
-    **The folder system evolved organically.** Newsletters, announcements, family, school — each got its own category. Anyone with school-aged children knows the volume: long, detailed emails where 95% is irrelevant and 5% is critical. One of my next projects is a skill that extracts just the essential information from school emails.
-
-    **Maintenance is small and shrinking.** A few weeks in, I still occasionally train it — usually when a type of email shows up for the first time, or something that only arrives monthly. I give feedback during my daily check-in, and the system learns. It takes less attention every week.
-
-    **The honest time savings?** Maybe an hour or two per week of direct time. Substantial, but not the main benefit. The real value is psychological. Knowing I'm on top of things. Knowing nothing will get lost. The occasional exhilaration of reaching actual inbox zero. I don't get sucked into newsletters first thing in the morning anymore. I'm more focused during the day and less likely to fall into email before bed.
-
-    I wouldn't call inbox triage my biggest time saver. But it might be the single biggest *stress* saver. The psychological weight of knowing everything is captured in an iron-clad system of reminders — and that the check-in skill helps triage those reminders too — is pretty terrific.
-
-    ---
-
-    **The Honest Assessment**
-
-    **What works well:** Email triage saves real time once your rules are dialed in. Meeting extraction turns messy transcripts into structured records. Session capture creates institutional memory that persists across sessions. Communication drafting is faster than writing from scratch, especially with voice training.
-
-    **What's still rough:** Calendar management is read-mostly — creating and modifying events works but isn't as smooth as reading. Cross-platform coordination (e.g., linking an email to a calendar event to a project doc) requires explicit instructions each time. Voice training takes iteration — Claude won't perfectly match your style on day one. The initial setup takes hours — it's an investment that pays off over weeks, not immediately.
-
-    **The meta-point:** No skill or configuration is perfect on first try. The value comes from **iterative improvement**: use it, notice what's wrong, fix it, repeat.
+    **Direct time savings:** an hour or two per week. But the bigger value is psychological — knowing nothing will get lost, not getting sucked into newsletters first thing in the morning, the occasional exhilaration of reaching actual inbox zero. Inbox triage might be the single biggest *stress* saver in this system.
 
     !!! tip "What I wish I'd known"
 

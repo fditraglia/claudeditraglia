@@ -2,7 +2,7 @@
 
 <span class="badge-teal">No Claude Code required</span>
 
-Let's be honest about what building an AI workflow costs, who it makes sense for, and who should start smaller.
+What building an AI workflow costs, who it makes sense for, and who should start smaller.
 
 ---
 
@@ -28,7 +28,7 @@ That's **~$1,700/year**. It's real money.
 
 ### Professors and Senior Researchers
 
-If you have a research budget, this is an easy justify. At a $20/hour RA rate, this costs the equivalent of about 7 RA hours per month. If it saves you more than 7 hours — and it will, once configured — the math works.
+If you have a research budget, this is easy to justify. At a $20/hour RA rate, this costs the equivalent of about 7 RA hours per month. If it saves you more than 7 hours — and it will, once configured — the math works.
 
 Many universities allow software subscriptions on research accounts. Check with your grants manager.
 
@@ -54,8 +54,6 @@ You lose the power tools, but you still get the core: a strong AI chatbot with s
 ---
 
 ## ROI Framework
-
-The question isn't "is $140/month a lot?" It's "does this save me more time than it costs?"
 
 **Conservative estimate:** If this system saves you 5 hours per month of administrative work, and your time is worth $40/hour (a modest estimate for a professional), that's $200/month in recovered time. Net gain: $60/month.
 

@@ -1,6 +1,6 @@
 # Workflows
 
-These aren't individual tools — they're **systems** built from skills, integrations, and habits that compound over time. Each page tells the story of how the workflow developed, what it actually does, and how to build it yourself.
+These aren't individual tools — they're **systems** built from skills, integrations, and habits that improve with use. Each page tells the story of how the workflow developed, what it actually does, and how to build it yourself.
 
 ---
 

@@ -8,9 +8,7 @@ This year I decided to use Claude Code for as much of my tax preparation as I co
 
 It also helped me think through some tax planning decisions — weighing different filing software, running a rough cost-benefit on whether hiring an accountant was worth it given how I value my time. What I did in about three hours, I would have had to pay an accountant $1,000 for.
 
-Since I'm not going to post my actual tax details on the internet, I had Claude Code invent a few fictional profiles and walk through how they'd use the skills I built. The case study below is the result. Claude Code wrote nearly all of it with minimal input from me — I mostly iterated a few times and let review agents argue with each other about what to fix.
-
-One honest caveat: I expect this entire section to be obsolete by next tax season. The AI tools available a year from now will probably blow this out of the water. But for right now, this is what worked for me, and I think it can help you too.
+The case study below uses fictional profiles to walk through the skills I built. AI tools in this space are moving fast — expect updated approaches next year.
 
 ---
 

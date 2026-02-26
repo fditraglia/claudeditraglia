@@ -30,27 +30,6 @@ You don't need all of these. Start with whichever service you use most (Gmail is
 
 ---
 
-## Don't Want MCP Yet? That's Fine.
-
-MCP is powerful but optional. Claude Code works without any integrations — it can read and edit files on your computer, format prompts, review plans, and capture session notes. All of the [First Session Skills](../workflows/first-session-skills.md) work without MCP.
-
-**What you can do without MCP:**
-
-- `/prompt` — format and execute structured prompts
-- `/review-plan` — stress-test any plan with expert critique
-- `/done` — capture session decisions and follow-ups
-- Edit files, organize folders, draft documents
-- Everything in the [Essentials](../essentials/index.md) section
-
-**What requires MCP:**
-
-- Email triage and inbox management (Gmail MCP)
-- Calendar queries and scheduling (Google Calendar MCP)
-- Weekly project reviews that pull from Google Docs (Google Docs MCP)
-- Meeting transcript integration (Granola MCP)
-
-You can always come back and add MCP integrations later. The system is designed to layer — start simple, add complexity when you need it.
-
 !!! ask-claude "Getting an error? Ask Claude."
     If something goes wrong during any MCP setup step, paste the error into the
     Claude Code terminal — for example:

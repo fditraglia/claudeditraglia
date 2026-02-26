@@ -1,6 +1,6 @@
 # Claude Code for Newbies
 
-**The terminal is the biggest hurdle.** Once you get past it, everything else is learnable. You don't need to be a coder — I've never written a line of code in my life, and I built everything on this site with Claude Code.
+**The terminal is the biggest hurdle.** Once you get past it, the rest follows. No coding experience required.
 
 This section takes you from zero to a working system. If you want to see what the system *does* before setting it up, start with [Skills in Action](../workflows/index.md).
 
@@ -8,7 +8,7 @@ This section takes you from zero to a working system. If you want to see what th
 
 ## Two Ways to Run Claude Code
 
-Claude Code works the same way regardless of how you run it. But the *container* you run it in makes a real difference in how comfortable the experience feels.
+Claude Code works the same way regardless of how you run it.
 
 **Option 1: Terminal.** The text-only command line that comes with your Mac or PC. Black screen, blinking cursor. This is what the install guides walk you through, and it's all you strictly need.
 
@@ -73,7 +73,7 @@ The two most popular options:
 
 | Step | What You'll Do | Time |
 |------|---------------|------|
-| **[Set Up "VS Code"](vscode-setup.md)** *(optional)* | Install VS Code and the Claude Code extension. My preferred way to work, but not required. | 15 min |
+| **[Set Up VS Code](vscode-setup.md)** *(optional)* | Install VS Code and the Claude Code extension. My preferred way to work, but not required. | 15 min |
 | **[Your CLAUDE.md](../toolkit/claude-md.md)** | Create the instruction file that makes Claude Code work *for you*. | 30 min |
 | **[How Claude Code Thinks](modes.md)** | Understand the three modes that control how Claude behaves. | 5 min read |
 | **[MCP Setup](../toolkit/mcp-setup.md)** | Connect Claude Code to Gmail, Google Docs, Calendar, and other services. | 30-60 min |

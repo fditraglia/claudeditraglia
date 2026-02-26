@@ -140,7 +140,12 @@ Only after approval:
 
 1. Verify all created files are in correct locations
 2. Check that paths in documentation are accurate
-3. Present summary:
+3. If a Google Doc hub was configured, verify it has the required markers for `/weekly-review`:
+   - `=== PROJECT STATUS DASHBOARD ===`
+   - `=== DASHBOARD END ===`
+   - `=== WEEKLY SUMMARIES START ===`
+   - If any are missing, advise user to add them to Tab 1 before running `/weekly-review`
+4. Present summary:
 
 ```
 ## Setup Complete
