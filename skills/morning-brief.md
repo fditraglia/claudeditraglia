@@ -1,6 +1,6 @@
 # Morning Briefing
 
-*v1.0 — Adapted for public use. Daily briefing combining calendar, reminders, inbox state, and optional auto-triage.*
+*v1.4 -- Adapted for public use. Added health check phase, prefetch architecture, improved triage integration, MCP parameter notes.*
 
 Generate a comprehensive daily morning briefing combining calendar, reminders, inbox state, weather, meeting context, and optional email triage into a single view.
 
@@ -9,20 +9,21 @@ Generate a comprehensive daily morning briefing combining calendar, reminders, i
 This skill requires several MCP integrations and config files to function fully. Missing components degrade gracefully (sections are omitted, not errors).
 
 **Required:**
-- **Gmail MCP** — for inbox scanning, VIP detection, waiting-for detection
-- **Google Calendar MCP** — for today's schedule and lookahead
+- **Gmail MCP** -- for inbox scanning, VIP detection, waiting-for detection
+- **Google Calendar MCP** -- for today's schedule and lookahead
 
 **Recommended:**
 - Config files (see First-Time Setup below):
-  - `~/.claude-assistant/config/email-policy.md` — VIP lists, email routing rules
-  - `~/.claude-assistant/config/calendar-policy.md` — calendar IDs, working hours, city name
-  - `~/.claude-assistant/config/triage-config.md` — label IDs, vendor domains, classification rules
-  - `~/.claude-assistant/config/goals.yaml` — objectives and priorities for goal alignment
+  - `~/.claude-assistant/config/email-policy.md` -- VIP lists, email routing rules
+  - `~/.claude-assistant/config/calendar-policy.md` -- calendar IDs, working hours, city name
+  - `~/.claude-assistant/config/triage-config.md` -- label IDs, vendor domains, classification rules
+  - `~/.claude-assistant/config/goals.yaml` -- objectives and priorities for goal alignment
 
 **Optional:**
-- **Granola MCP** — for meeting context from past transcripts
-- **Apple Reminders** (macOS only) — for task/reminder integration
-- `/triage-inbox` skill — for auto-triage phase
+- **Granola MCP** -- for meeting context from past transcripts
+- **Apple Reminders** (macOS only) -- for task/reminder integration
+- `/triage-inbox` skill -- for auto-triage phase
+- Health check script at `~/.claude-assistant/scripts/check-sync.sh` -- for system health monitoring
 
 ## First-Time Setup
 
@@ -31,6 +32,7 @@ This skill requires several MCP integrations and config files to function fully.
    mkdir -p ~/.claude-assistant/config
    mkdir -p ~/.claude-assistant/state
    mkdir -p ~/.claude-assistant/logs
+   mkdir -p ~/.claude-assistant/scripts
    ```
 
 2. **Create calendar-policy.md** with at minimum:
@@ -58,7 +60,7 @@ This skill requires several MCP integrations and config files to function fully.
 
    ## @ToSelf Label
    - Label name: @ToSelf
-   - Label ID: YOUR_LABEL_ID
+   - Label ID: <YOUR_LABEL_ID>
    ```
 
 4. **Create goals.yaml** (optional but recommended):
@@ -77,54 +79,60 @@ This skill requires several MCP integrations and config files to function fully.
 
 | Setting | Where to Configure | Default |
 |---------|-------------------|---------|
-| **Weather city** | `calendar-policy.md` → Location → City | Omitted if not set |
-| **Working hours** | `calendar-policy.md` → Working Hours | 8am-6pm (10 hours) |
-| **Timezone** | `calendar-policy.md` → Timezone | System timezone |
-| **Calendar IDs** | `calendar-policy.md` → Calendars | Primary only |
-| **VIP list** | `email-policy.md` → VIP List | No VIP highlighting |
-| **Goal alignment** | `goals.yaml` → objectives | Section omitted |
-| **Deep work push level** | `goals.yaml` → push_level | `moderate` |
-| **Email delivery** | See Phase 10 below | Terminal only |
+| **Weather city** | `calendar-policy.md` > Location > City | Omitted if not set |
+| **Working hours** | `calendar-policy.md` > Working Hours | 8am-6pm (10 hours) |
+| **Timezone** | `calendar-policy.md` > Timezone | System timezone |
+| **Calendar IDs** | `calendar-policy.md` > Calendars | Primary only |
+| **VIP list** | `email-policy.md` > VIP List | No VIP highlighting |
+| **Goal alignment** | `goals.yaml` > objectives | Section omitted |
+| **Deep work push level** | `goals.yaml` > push_level | `moderate` |
+| **Email delivery** | See Phase 6 below | Terminal only |
 | **Auto-triage** | Requires `/triage-inbox` + `triage-config.md` | Skipped |
 | **Granola meeting context** | Requires Granola MCP | Gmail-only context |
 | **Reminders** | Requires macOS (osascript) | Section omitted |
-
-## CRITICAL: No Permission Prompts
-
-**DO NOT use Task agents or ToolSearch for this skill.** All required MCP tools should be pre-approved in settings.json. Call them directly:
-
-- `mcp__google_workspace__search_gmail_messages`
-- `mcp__google_workspace__get_gmail_message_content`
-- `mcp__google_workspace__get_gmail_messages_content_batch`
-- `mcp__google_workspace__list_gmail_labels`
-- `mcp__google_workspace__batch_modify_gmail_message_labels`
-- `mcp__google_workspace__get_events`
-- `mcp__google_workspace__draft_gmail_message`
-- `mcp__granola__search_meetings` (if available)
-
-Using Task or ToolSearch will trigger unnecessary permission prompts. This skill should run seamlessly with zero user approvals.
+| **Health check** | `~/.claude-assistant/scripts/check-sync.sh` | Skipped if not found |
 
 ## Arguments
 
 `$ARGUMENTS` can include:
-- *(none)* --- full briefing, terminal output only
-- `email` --- also email the briefing (requires email delivery setup)
-- `tomorrow` --- show tomorrow's schedule/reminders instead of today
-- `no-triage` --- skip the auto-triage phase
-- `no-reminders` --- skip the reminders phase (useful on non-macOS)
+- *(none)* -- full briefing, terminal output only
+- `email` -- also email the briefing (requires email delivery setup)
+- `tomorrow` -- show tomorrow's schedule/reminders instead of today
+- `no-triage` -- skip the auto-triage phase
+- `no-reminders` -- skip the reminders phase (useful on non-macOS)
 
 Multiple arguments can be combined: `email tomorrow`, `no-triage no-reminders`, etc.
 
 ## Instructions
 
+### Phase 0: Quick Health Check (< 5 seconds)
+
+If a health check script exists at `~/.claude-assistant/scripts/check-sync.sh`, run it before fetching any data:
+
+```bash
+bash ~/.claude-assistant/scripts/check-sync.sh 2>&1
+```
+
+**Interpretation:**
+- If exit code = 0 (all checks pass): Include a single line at the top of the briefing: `System health: all checks passed`
+- If exit code > 0 (any failures): Include a warning block in the briefing header summarizing failures only (omit passing checks). Format:
+
+```
+!! System health: [N] issue(s)
+  - [failure description 1]
+  - [failure description 2]
+```
+
+**Never block the briefing on health check results** -- failures are informational only. If the script is not found or fails to run, skip this phase silently and continue to Phase 1.
+
 ### Phase 1: Read Config Files
 
-Read available config files. Missing files are not errors --- skip the corresponding sections.
+Read available config files. Missing files are not errors -- skip the corresponding sections.
 
-1. Read `~/.claude-assistant/config/email-policy.md` --- extract VIP lists (Tier 1, Tier 2), family addresses, @ToSelf label ID
-2. Read `~/.claude-assistant/config/calendar-policy.md` --- extract calendar IDs, working hours, city name, timezone
-3. Read `~/.claude-assistant/config/triage-config.md` --- extract label IDs, vendor domains, classification rules (needed only if triage is enabled)
-4. Read `~/.claude-assistant/config/goals.yaml` --- extract objectives, push_level, active priorities
+1. Read `~/.claude-assistant/config/email-policy.md` -- extract VIP lists (Tier 1, Tier 2), family addresses, @ToSelf label ID
+2. Read `~/.claude-assistant/config/calendar-policy.md` -- extract calendar IDs, working hours, city name, timezone
+3. Read `~/.claude-assistant/config/triage-config.md` -- extract label IDs, vendor domains, classification rules (needed only if triage is enabled)
+4. Read `~/.claude-assistant/config/goals.yaml` -- extract objectives, push_level, active priorities
 
 If a config file is missing, note it internally and continue. The briefing adapts to available data.
 
@@ -193,7 +201,7 @@ query: "in:inbox is:unread"
 
 **4c. @ToSelf count:**
 ```
-query: "label:YOUR_LABEL_ID is:unread"
+query: "label:<YOUR_LABEL_ID> is:unread"
 ```
 Use the label ID from email-policy.md. Skip if not configured.
 
@@ -215,9 +223,9 @@ If `/triage-inbox` skill is available and `triage-config.md` exists, run inline 
 
 **Adaptive window:** Read `last_run` from triage-run-state.json. If < 12 hours ago, use `hours_since_last + 2` hours. If >= 12 hours, use 48 hours. Default: 2 days.
 
-If triage-config.md is missing or triage-inbox skill is not installed, skip this phase and report: "Triage skipped --- install /triage-inbox for auto-triage."
+If triage-config.md is missing or triage-inbox skill is not installed, skip this phase and report: "Triage skipped -- install /triage-inbox for auto-triage."
 
-### Phase 6: Meeting Context (next 2 events)
+### Phase 5a: Meeting Context (next 2 events)
 
 Using calendar data from Phase 2:
 
@@ -232,7 +240,7 @@ Using calendar data from Phase 2:
 
 If an event has no attendees (e.g., "Focus time"), skip context lookup. If searches return nothing, show the event without context. Cap at 2 events, 1-2 searches per event.
 
-### Phase 7: Waiting-For Detection
+### Phase 5b: Waiting-For Detection
 
 From the sent-email results (Phase 4d):
 
@@ -244,9 +252,9 @@ From the sent-email results (Phase 4d):
 3. Cap at 5 waiting-for items
 4. Sort by age (oldest waiting first)
 
-If this adds too much latency, it can be skipped --- the briefing should not block on this.
+If this adds too much latency, it can be skipped -- the briefing should not block on this.
 
-### Phase 8: Weather
+### Phase 5c: Weather
 
 Use WebSearch to query "[Your City] weather today" (city from calendar-policy.md) and extract a one-line summary including temperature, conditions, and precipitation chance.
 
@@ -254,28 +262,28 @@ Example: "Portland: 54F, partly cloudy, 20% chance rain"
 
 If WebSearch fails or no city configured, omit the weather line.
 
-### Phase 9: Tomorrow/Weekend Preview
+### Phase 5d: Tomorrow/Weekend Preview
 
 Using lookahead calendar data from Phase 2 and reminders from Phase 3:
 
 - **Normal days:** Show tomorrow's all-day events, timed events, and reminders due tomorrow
 - **Fridays:** Replace with "Weekend Preview" showing Saturday AND Sunday events/reminders grouped by day
 
-### Phase 10: Assemble & Display Briefing
+### Phase 6: Assemble & Display Briefing
 
 #### Reminder Classification Logic
 
 Classify each reminder from Phase 3 into groups:
 
-**HARD DEADLINES** --- Has hard-deadline keywords AND due within 3 days (including today). Also: any item with priority=1 (manually set high).
+**HARD DEADLINES** -- Has hard-deadline keywords AND due within 3 days (including today). Also: any item with priority=1 (manually set high).
 
 Hard-deadline keywords: `grant`, `IRB`, `submit`, `file`, `pay`, `invoice`, `tuition`, `tax`, `letter`, `contract`, `reimburse`, `deposit`, `deadline`, `renew`
 
 Match case-insensitive against reminder title and body.
 
-**DUE TODAY** --- Due date = target date, not classified as hard deadline.
+**DUE TODAY** -- Due date = target date, not classified as hard deadline.
 
-**OVERDUE** --- Due date before target date. Sort oldest first (most days overdue at top).
+**OVERDUE** -- Due date before target date. Sort oldest first (most days overdue at top).
 
 Number all items sequentially across groups (1, 2, 3...) so you can reference them by number in follow-up.
 
@@ -293,17 +301,17 @@ Sort VIP emails oldest-first (most days waiting at top). Display age as "[N]d" n
 #### Overdue Truncation
 
 Show a maximum of 10 overdue items (oldest first). If more than 10:
-`... and [N] more --- run /todo-review to review`
+`... and [N] more -- run /todo-review to review`
 
 #### Meeting Context Lines
 
-For each of the next 2 events (from Phase 6), add an indented context line below the event:
+For each of the next 2 events (from Phase 5a), add an indented context line below the event:
 `  -> [context summary]`
 
 Good context lines surface actionable info:
 - "You owe [Name] draft slides from Jan 30 meeting"
-- "Last discussed IRB amendment timeline --- decision pending"
-- "New contact --- no prior email or meeting history"
+- "Last discussed IRB amendment timeline -- decision pending"
+- "New contact -- no prior email or meeting history"
 - "Follow-up from Feb 10: agreed to share dataset"
 
 If no context found, omit the line.
@@ -332,7 +340,8 @@ If goals.yaml was loaded:
 Compose the briefing in this format. Omit sections with no data. Use tomorrow's date if `tomorrow` argument was provided.
 
 ```
-# Morning Briefing --- [Day of Week], [Month] [Date], [Year]
+# Morning Briefing -- [Day of Week], [Month] [Date], [Year]
+[System health line or warning block from Phase 0, if available]
 [Weather one-liner, e.g., "[Your City]: 54F, partly cloudy, 20% chance rain"]
 
 ## Suggested Priorities
@@ -347,7 +356,7 @@ Compose the briefing in this format. Omit sections with no data. Use tomorrow's 
 ## Goal Alignment
 - Today: [N] meetings ([M] align with goals, [K] are admin/service)
   - [event name] -> [objective name] (if aligned)
-- [N] hours unscheduled --- top research priority: [specific next step from goals.yaml]
+- [N] hours unscheduled -- top research priority: [specific next step from goals.yaml]
 [If push_level >= moderate AND >2 hours free:]
   Research nudge: [specific actionable next step on top-priority task]
 [If push_level = assertive AND <2 hours free:]
@@ -355,7 +364,7 @@ Compose the briefing in this format. Omit sections with no data. Use tomorrow's 
 
 ## Today's Schedule
 - [time range]  [event name] ([calendar name])
-  -> [1-line context from Phase 6, if available]
+  -> [1-line context from Phase 5a, if available]
 - [time range]  [event name] ([calendar name])
 - ...
 [If no events: "No events scheduled today"]
@@ -367,7 +376,7 @@ Compose the briefing in this format. Omit sections with no data. Use tomorrow's 
 [If none: omit entire section]
 
 ## Inbox Highlights
-- **VIP needing response:** [name] ([N]d), [name] ([N]d) --- sorted oldest-first
+- **VIP needing response:** [name] ([N]d), [name] ([N]d) -- sorted oldest-first
 - [N] unread emails remain in inbox
 - [N] emails in @ToSelf (pending todo conversion)
 [If @ToSelf has items: "Run /todo-queue to process"]
@@ -401,21 +410,21 @@ SKIPPED (left in inbox):
   - ...
 
 [If any flagged:]
-  !! Flagged: [sender] -> [label] (new sender --- suggest filter)
-[If no-triage: "Triage skipped --- run /triage-inbox manually"]
+  !! Flagged: [sender] -> [label] (new sender -- suggest filter)
+[If no-triage: "Triage skipped -- run /triage-inbox manually"]
 
 ## Overdue ([N] items)
   N. [[list]] [task name] (N days overdue)
   ... [max 10 items, oldest first]
-[If >10: "... and [N] more --- run /todo-review to review"]
+[If >10: "... and [N] more -- run /todo-review to review"]
 [If none: omit section]
 
 To adjust reminders: tell me "defer 8-12 to Monday" or "move 9 to Someday"
 ```
 
-**Display in terminal** --- this is the default output.
+**Display in terminal** -- this is the default output.
 
-### Phase 11: Email Delivery (only if `email` argument provided)
+### Phase 7: Email Delivery (only if `email` argument provided)
 
 Email delivery is opt-in. There are two approaches:
 
@@ -424,7 +433,7 @@ Email delivery is opt-in. There are two approaches:
 mcp__google_workspace__draft_gmail_message
   user_google_email: your-email@gmail.com
   to: your-email@gmail.com
-  subject: "Morning Briefing --- [Day], [Month] [Date], [Year]"
+  subject: "Morning Briefing -- [Day], [Month] [Date], [Year]"
   body: [HTML version of briefing]
   is_html: true
 ```
@@ -443,7 +452,7 @@ BRIEFING_EOF
 # Send
 python3 ~/.claude-assistant/scripts/send-email.py \
   --to your-email@gmail.com \
-  --subject "Morning Briefing --- [Day], [Month] [Date], [Year]" \
+  --subject "Morning Briefing -- [Day], [Month] [Date], [Year]" \
   --body-file /tmp/morning-briefing.html \
   --html
 ```
@@ -452,14 +461,14 @@ See the project wiki for send-email.py setup instructions.
 
 #### HTML Email Template
 
-When generating the email version, convert the briefing to HTML using this template structure. Keep it simple --- inline styles only (no external CSS), compatible with all email clients.
+When generating the email version, convert the briefing to HTML using this template structure. Keep it simple -- inline styles only (no external CSS), compatible with all email clients.
 
 ```html
 <html>
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; max-width: 640px; margin: 0 auto; padding: 16px; font-size: 15px; line-height: 1.5;">
 
 <h1 style="font-size: 22px; font-weight: 700; border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 4px;">
-  Morning Briefing --- [Day], [Month] [Date], [Year]
+  Morning Briefing -- [Day], [Month] [Date], [Year]
 </h1>
 <p style="color: #666; margin: 0 0 16px 0; font-size: 14px;">
   [Your City]: 54F, partly cloudy, 20% chance rain
@@ -479,7 +488,7 @@ When generating the email version, convert the briefing to HTML using this templ
 </h2>
 <ul style="margin: 0 0 12px 0; padding-left: 20px;">
   <li>Today: [N] meetings ([M] goal-aligned, [K] admin)</li>
-  <li>[N] hours unscheduled --- top research priority: <b>[specific next step]</b></li>
+  <li>[N] hours unscheduled -- top research priority: <b>[specific next step]</b></li>
 </ul>
 
 <!-- Today's Schedule -->
@@ -577,8 +586,17 @@ When generating the email version, convert the briefing to HTML using this templ
 - Schedule times: bold
 - VIP names and counts: bold
 - Helper text: smaller gray text
-- No images, no background colors, no external resources --- pure inline HTML
+- No images, no background colors, no external resources -- pure inline HTML
 - Omit sections with no data (same as terminal version)
+
+## MCP Parameter Notes
+
+These validated behaviors help avoid common issues:
+
+- `search_gmail_messages`: Does NOT accept `max_results` parameter
+- `batch_modify_gmail_message_labels`: Use `add_label_ids`/`remove_label_ids` (NOT `add_label_names`/`remove_label_names`). Pass JSON arrays (`["id1","id2"]`). Works reliably when called sequentially -- failures are caused by parallel sibling-call cascades, not parameter issues.
+- `get_gmail_messages_content_batch`: May reject list parameters -- fall back to individual `mcp__google_workspace__get_gmail_message_content` calls
+- All search/label tools require `user_google_email: your-email@gmail.com`
 
 ## Error Handling
 
@@ -589,7 +607,8 @@ When generating the email version, convert the briefing to HTML using this templ
 - **WebSearch fails**: Omit weather line.
 - **Granola MCP unavailable**: Use Gmail-only context for meetings.
 - **Config file missing**: Skip dependent sections, note in internal log.
-- **Batch label apply fails**: Fall back to individual per-message calls. Report which emails failed.
+- **Batch label apply fails**: Retry once standalone, then fall back to individual per-message calls. Report which emails failed.
+- **Sibling tool call failures**: If one MCP call in a parallel batch fails, siblings may also fail. Never fire multiple `batch_modify_gmail_message_labels` calls in parallel -- run them sequentially. Retry failed calls in a separate standalone invocation.
 - **Email delivery fails**: Report error. Briefing still displayed in terminal.
 - **Permission prompt appears**: A tool is missing from settings.json allow list. Add it under `permissions.allow`.
 
@@ -606,8 +625,9 @@ When generating the email version, convert the briefing to HTML using this templ
 
 ## Integration Notes
 
-- **Triage rules by reference:** This skill uses `/triage-inbox` classification logic and `triage-config.md` for data tables. Updates to those files propagate automatically --- no rules are duplicated here.
-- **Shared triage window:** Morning brief and `/triage-inbox` read the same `triage-run-state.json`. Whichever runs first sets the baseline for the next run. Morning brief uses a 2-day floor (vs 1 day for triage-inbox).
+- **Triage rules by reference:** This skill uses `/triage-inbox` classification logic and `triage-config.md` for data tables. Updates to those files propagate automatically -- no rules are duplicated here.
+- **Auto-apply is pre-approved:** Unlike `/triage-inbox` which requires `apply` argument, the morning briefing auto-applies all labels during triage. Both skills read and write the same triage state file, so whichever runs first sets the baseline for the next run.
+- **Shared triage window:** Morning brief and `/triage-inbox` read the same `triage-run-state.json`. Morning brief uses a 2-day floor (vs 1 day for triage-inbox).
 - **VIP detection:** Uses the VIP list from `email-policy.md` to highlight unanswered emails from important senders.
 - **@ToSelf integration:** Checks for pending todo-queue items and reminds to run `/todo-queue`.
 - **Goal alignment:** Reads `goals.yaml` for priorities. Keep this file updated for relevant suggestions.

@@ -16,7 +16,7 @@ Every major AI provider offers multiple models at different capability levels. T
 
 | Provider | Weaker Default | Stronger Option | How to Switch |
 |----------|---------------|----------------|---------------|
-| **Claude** | Sonnet (the default on free/Pro) | Opus (more capable, slower) | Click the model selector in Claude.ai, or use `/model opus` in Claude Code |
+| **Claude** | Sonnet 4.6 (the default on free/Pro) | Opus 4.6 (more capable, slower) | Click the model selector in Claude.ai, or use `/model opus` in Claude Code |
 | **ChatGPT** | GPT-4o (the default) | o1-pro or o3 (stronger reasoning) | Click the model dropdown in ChatGPT |
 
 ![Claude.ai model selector showing Opus 4.6, Extended thinking toggle, and additional models](../images/claude-model-selector-v1.png){ alt="Claude.ai interface showing the model selector dropdown with Opus 4.6 selected, Extended thinking toggle, and More models menu expanded" style="max-width: 400px" }

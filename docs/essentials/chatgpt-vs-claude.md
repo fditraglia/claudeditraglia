@@ -41,7 +41,7 @@ For drafting and editing prose — proposals, papers, reports — Claude consist
 
 ### Complex Reasoning
 
-For tasks that require careful, multi-step reasoning — research design, methodology review, strategic planning — Claude's Opus model tends to produce more thoughtful, nuanced output than GPT-4o. (ChatGPT's o1 and o3 models are competitive for pure reasoning puzzles, but less practical for open-ended analysis.)
+For tasks that require careful, multi-step reasoning — research design, methodology review, strategic planning — Claude Opus 4.6 tends to produce more thoughtful, nuanced output than GPT-4o. (ChatGPT's o1 and o3 models are competitive for pure reasoning puzzles, but less practical for open-ended analysis.)
 
 ### Projects and Persistent Context
 
@@ -55,12 +55,12 @@ Claude.ai's Projects feature lets you create a workspace with instructions and f
 
 | Tier | ChatGPT | Claude |
 |------|---------|--------|
-| **Free** | GPT-4o (limited) | Sonnet (limited) |
+| **Free** | GPT-4o (limited) | Sonnet 4.6 (limited) |
 | **Basic paid** | Plus: $20/mo | Pro: $20/mo |
 | **Power user** | Pro: $200/mo | Max: $100-200/mo |
 | **API/developer** | Pay per token | Pay per token |
 
-The $200/mo ChatGPT Pro tier gets you unlimited access to all models including o1-pro. Claude's Max tiers ($100 or $200/mo) get you higher usage limits for Opus and Claude Code.
+The $200/mo ChatGPT Pro tier gets you unlimited access to all models including o1-pro. Claude's Max tiers ($100 or $200/mo) get you higher usage limits for Opus 4.6 and Claude Code.
 
 **My setup:** Claude Max ($100/mo) + ChatGPT Plus ($20/mo). I use Claude for 80% of my work and ChatGPT for research and web tasks. Total: $120/mo.
 

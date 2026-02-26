@@ -225,13 +225,13 @@ Claude should reference information from your file. If it doesn't, check:
 
 ## Model Choice
 
-Claude Code defaults to the Sonnet model, which is fast and capable for most tasks. For complex work — long-form writing, nuanced analysis, multi-step reasoning — consider switching to Opus:
+Claude Code defaults to the Sonnet 4.6 model, which is fast and capable for most tasks. For complex work — long-form writing, nuanced analysis, multi-step reasoning — consider switching to Opus 4.6:
 
 ```
 /model opus
 ```
 
-Opus is more capable but uses more tokens per response (higher cost, faster usage against plan limits). This setting applies to the current session only. Switch back with `/model sonnet`.
+Opus 4.6 is more capable but uses more tokens per response (higher cost, faster usage against plan limits). This setting applies to the current session only. Switch back with `/model sonnet`.
 
 ---
 

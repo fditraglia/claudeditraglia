@@ -14,7 +14,7 @@ Here's what my current setup costs per month:
 
 | Tool | What It Does | Monthly Cost |
 |------|-------------|-------------|
-| **Claude Max** | Primary AI tool + Claude Code | ~$100 |
+| **Claude Max** (Opus 4.6 + Sonnet 4.6) | Primary AI tool + Claude Code | ~$100 |
 | **ChatGPT Plus** | Deep Research, web search, images | ~$20 |
 | **Wispr Flow** | Dictation (Mac + iPhone) | ~$10 |
 | **Granola** | Meeting transcription | ~$10 |

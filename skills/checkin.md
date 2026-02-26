@@ -1,9 +1,6 @@
----
-model: sonnet
----
 # Check-In Session
 
-*v1.0 — Adapted for public use. Interactive check-in combining inbox triage, reminders, meeting prep, email drafting, and priorities.*
+*v1.3 — Added mandatory phase execution order, phase completion checklist*
 
 Interactive check-in with Claude as chief of staff. Combines inbox triage, reminder triage, meeting prep, email quick-fire drafting, and priority management. Time-aware — works for morning, afternoon, or evening runs.
 
@@ -61,7 +58,6 @@ This skill requires several MCP integrations and config files. Missing component
 
 | Setting | Where to Configure | Default |
 |---------|-------------------|---------|
-| **Model** | Frontmatter `model:` line | `sonnet` (speed-critical for interactive flow; remove this line to use default model) |
 | **VIP list** | `email-policy.md` → VIP List | No VIP highlighting |
 | **Calendar IDs** | `calendar-policy.md` → Calendars | Primary only |
 | **Working hours** | `calendar-policy.md` → Working Hours | 8am-6pm |
@@ -74,16 +70,23 @@ This skill requires several MCP integrations and config files. Missing component
 | **Email quick-fire cap** | Phase 4 | 10 emails |
 | **Meeting prep cap** | Phase 3 | 3 meetings |
 
-## CRITICAL: No Permission Prompts
+## MANDATORY: Phase Execution Order
 
-**DO NOT use Task agents or ToolSearch for this skill.** All required MCP tools should be pre-approved in settings.json. Call them directly:
+**Execute phases sequentially. Do NOT skip any phase unless its skip-argument is set. Do NOT jump ahead based on user phrasing like "focus on email" — that adjusts emphasis within phases, not which phases run. Complete each phase before starting the next.**
 
-- `mcp__google_workspace__search_gmail_messages`
-- `mcp__google_workspace__get_gmail_message_content`
-- `mcp__google_workspace__get_events`
-- `mcp__google_workspace__draft_gmail_message`
-- `mcp__google_workspace__batch_modify_gmail_message_labels`
-- `mcp__granola__search_meetings` (if available)
+```
+Phase 0   → Data fetch (always runs)
+Phase 0.5 → Triage (skip ONLY if `no-triage` argument)
+Phase 1   → Status display (always runs — includes phase completion checklist)
+Phase 2   → Reminders (skip if `no-reminders`)
+Phase 3   → Meeting prep (skip if `no-prep`)
+Phase 4   → Email quick-fire (skip if `no-email`)
+Phase 5   → Priorities (always runs)
+Phase 6   → Save state (always runs)
+Phase 7   → Log performance (always runs)
+```
+
+User arguments like "focus on email" or "quick" control **depth and emphasis**, not phase order. The only way to skip a phase is an explicit skip-argument listed above.
 
 ## Arguments
 
@@ -182,6 +185,15 @@ If `/triage-inbox` is not installed or triage-config.md is missing, skip and rep
 ---
 
 ### Phase 1: Quick Status (30 seconds, display only)
+
+**Phase completion checklist (MUST appear first):**
+Before any other output, display which phases completed. Source triage counts from actual results, not memory:
+```
+Phases: ✓ Data Fetch | ✓ Triage ([N] processed) | Status | Reminders | Prep | Email | Priorities
+                      — or —
+Phases: ✓ Data Fetch | ✗ Triage (skipped: no-triage) | Status | ...
+```
+Remaining phases show as unchecked (they haven't run yet). This line is the user's verification that mandatory phases actually executed.
 
 **Time-aware header:**
 
@@ -320,7 +332,9 @@ SUBSTANTIVE (needs input):
    ```
    Run sends sequentially (not parallel) to avoid race conditions on thread replies.
 
-3. **Confirm:** Report batch results: "Sent: 3 emails. Skipped: 2. Failed: 0." (or "Created: 3 drafts" for Option A)
+3. **Mark as read:** After all sends complete, mark the original inbound messages as read (remove UNREAD label) for every thread where a reply was sent. Use `mcp__google_workspace__batch_modify_gmail_message_labels` to remove the UNREAD label. This prevents replied-to threads from inflating the unread count.
+
+4. **Confirm:** Report batch results: "Sent: 3 emails. Skipped: 2. Failed: 0." (or "Created: 3 drafts" for Option A)
 
 **CRITICAL:** Never send without user saying "Send" or approving. The collect phase is the approval gate — no emails leave until each one is reviewed.
 
@@ -355,7 +369,7 @@ Deep work score this week: [N]/5 days with 2+ hrs research time
 [If writing_on_track is false:] ⚠ Writing hours below target — consider protecting [largest free block] for writing
 
 [If push_level >= assertive AND unrepresented high-weight goals:]
-🔴 Calendar misalignment: [objective] has [weight]% weight but zero calendar time today.
+Calendar misalignment: [objective] has [weight]% weight but zero calendar time today.
    Consider: [specific scheduling suggestion]
 
 Anything to add or change? Otherwise, have a great [period].
@@ -424,7 +438,6 @@ Replace TOOL_CALLS with approximate count and NOTES with brief summary.
 
 ## Speed Notes
 
-- **Sonnet model** (frontmatter) — speed critical for interactive flow. Remove the `model: sonnet` line to use your default model instead.
 - **Pre-compute everything** in Phase 0 before interaction
 - **Parallel MCP calls** wherever possible
 - **Cap meeting prep** at 3 meetings, 2 searches per meeting
