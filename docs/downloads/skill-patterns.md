@@ -1,15 +1,15 @@
 # Skill Patterns & Conventions
 
-Extracted from our 20 production skills + best practices from Anthropic's guide, @rohit4verse's overview, and skillmaxxer-3000.
+Extracted from 20 production skills + best practices from [Anthropic's skill-building guide](https://claude.com/blog/complete-guide-to-building-skills-for-claude), [@rohit4verse's overview](https://x.com/rohit4verse), and internal quality rubrics.
 
 ---
 
-## Our Conventions
+## Design Conventions
 
 ### 1. Policy-First Architecture
 Every non-trivial skill reads config/policy files **before** doing anything:
-- `~/Dropbox/Claude/Projects/Exec-Assistant/policies/` — VIP lists, skip-inbox rules, calendar IDs
-- `~/Dropbox/Claude/Projects/Exec-Assistant/config/` — Label IDs, vendor domains, classification rules
+- A `policies/` directory — VIP lists, skip-inbox rules, calendar IDs
+- A `config/` directory — Label IDs, vendor domains, classification rules
 - Config is the source of truth; the skill body describes *workflow*, not *data*
 
 ### 2. Config/State Separation
@@ -52,7 +52,7 @@ Standard override syntax: `days:N`, `since:YYYY-MM-DD`, `month:MM`, `list:Name`,
 
 ## Archetype Mapping
 
-How our 20 skills map to the three standard categories from Anthropic's guide:
+How 20 production skills map to the three standard categories from Anthropic's guide:
 
 ### Simple / Lightweight (< 500 words, single-purpose)
 | Skill | Category | Notes |
@@ -98,7 +98,7 @@ How our 20 skills map to the three standard categories from Anthropic's guide:
 Add as the final step of any skill:
 
 ```bash
-echo "$(date +%Y-%m-%d),SKILL_NAME,TOOL_CALLS,NOTES" >> ~/Dropbox/Claude/Settings/logs/skill-performance.csv
+echo "$(date +%Y-%m-%d),SKILL_NAME,TOOL_CALLS,NOTES" >> ~/.claude/logs/skill-performance.csv
 ```
 
 - `SKILL_NAME`: kebab-case skill name (e.g., `morning-brief`, `todo-add`)
@@ -111,18 +111,17 @@ Currently only "High-tier" skills log consistently. Extend this to all skills so
 
 ## Skill Locations
 
-- **Standard skills**: `~/Dropbox/Claude/Settings/commands/` (symlinked to `~/.claude/commands/`)
-- **Domain-specific skills**: Can live in their own directories (e.g., `~/Dropbox/Research & Writing/Proposal_Resources/skills/`) and be symlinked into `commands/`. Use this pattern for skills that:
+- **Standard skills**: `~/.claude/commands/`
+- **Domain-specific skills**: Can live in their own directories (e.g., a `proposal-resources/skills/` folder) and be symlinked into `commands/`. Use this pattern for skills that:
   - Share domain-specific reference files (voice packs, templates)
   - May be used by team members independently
   - Belong logically with their domain data, not with general tools
-- **Current symlinked skills**: `proposal-write`, `proposal-revise`, `donor-profile` (all from `Proposal_Resources/skills/`)
 
 ---
 
 ## Gap Analysis
 
-### What We Do Well
+### What Works Well
 - **Config externalization** — Rules live in policy files, not hardcoded in skills
 - **Graceful degradation** — MCP failures never block execution
 - **Safety gates** — Confirmation tiers match risk level
@@ -137,11 +136,11 @@ Currently only "High-tier" skills log consistently. Extend this to all skills so
 
 **2. ~~No validation or testing checklist~~ — ADDRESSED (Feb 15, 2026)**
 - Created `skill-testing-protocol.md` with systematic testing for trigger accuracy, execution correctness, graceful degradation, and performance baselines
-- See `skill-testing-protocol.md` in this directory for the full protocol
+- See the [Skill Testing Protocol](skill-testing-protocol.md) for the full protocol
 
 **3. No decomposition discipline**
 - Some skills bundle distinct responsibilities (e.g., morning-brief does calendar + reminders + email + weather + triage)
-- skillmaxxer-3000 recommends: *"If a skill does 3+ unrelated things, decompose it"*
+- A common recommendation: *"If a skill does 3+ unrelated things, decompose it"*
 - **Counter-argument:** Our bundled skills are intentionally orchestrated workflows where the combination *is* the value. Decomposition would add overhead without benefit for most of these.
 
 **4. No failure mode documentation**
@@ -157,7 +156,7 @@ Currently only "High-tier" skills log consistently. Extend this to all skills so
 
 ## Best Practices Adopted
 
-From Anthropic's guide, @rohit4verse, skillmaxxer-3000, and @eyaborai — practices we should follow for new skills:
+From Anthropic's guide, @rohit4verse, and @eyaborai — practices to follow for new skills:
 
 ### Architecture (Why These Conventions Matter)
 - **Progressive disclosure**: Claude pre-loads only skill name + description (~100 tokens each) at startup. The full body loads only when the description matches the user's request. This is why the "description includes WHAT + WHEN" checklist item is critical — it's literally the trigger mechanism.
@@ -191,7 +190,7 @@ From Anthropic's guide, @rohit4verse, skillmaxxer-3000, and @eyaborai — practi
 
 ## Quality Checklist
 
-Simplified from skillmaxxer-3000's rubric. Use when creating or reviewing skills.
+Use when creating or reviewing skills.
 
 ### Structure
 - [ ] `name` field is kebab-case
@@ -211,7 +210,7 @@ Simplified from skillmaxxer-3000's rubric. Use when creating or reviewing skills
 - [ ] All MCP tools called directly (no unnecessary ToolSearch)
 - [ ] State files have `schema_version` field (if stateful)
 - [ ] Output format matches destination (no markdown tables in Google Docs)
-- [ ] File paths use `~/Dropbox/Claude/` conventions
+- [ ] File paths use consistent conventions (`~/.claude/` for skills, project directories for config)
 
 ### Testing
 - [ ] Triggers on 2-3 natural phrasings of the request

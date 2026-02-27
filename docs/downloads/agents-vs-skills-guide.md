@@ -53,7 +53,7 @@ Use agents when the task benefits from **fresh perspective or parallel execution
 
 **Pattern**: Claude (or user) launches it, agent works independently, returns structured feedback.
 
-## Your Current Agents
+## Example Agents
 
 ### `review-writing`
 - Reviews academic prose for clarity, argument structure, voice consistency
@@ -104,7 +104,7 @@ tools:
 3. **Structure the output format** -- tell the agent exactly how to format its response
 4. **Run in parallel** -- launch multiple agents simultaneously for different review dimensions
 
-## Practical Examples for Chris's Workflow
+## Practical Examples
 
 ### Draft Review (Parallel Agents)
 After writing a paper section:
