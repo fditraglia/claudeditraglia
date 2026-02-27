@@ -77,7 +77,7 @@ nav:
     - Skill Library: setup/skill-reference.md
   - Workflows:
     - workflows/index.md
-    - First Session Skills: workflows/first-session-skills.md
+    - "Prompt, Plan, Review, Revise": workflows/first-session-skills.md
     - Executive Assistant: toolkit/executive-assistant.md
     - Project Management: workflows/project-management.md
     - "Example: Project Dashboard": workflows/examples/project-overview-example.md

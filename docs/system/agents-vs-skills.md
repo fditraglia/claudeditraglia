@@ -48,6 +48,36 @@ Agents work best when the task:
 
 ---
 
+## Agent Debates: Multiple Perspectives on the Same Problem
+
+One of the most powerful uses of agents is getting them to argue with each other. Instead of a single review, you set up multiple agents with different expertise or perspectives and let them debate your data, your plan, or your design.
+
+??? example "Qualitative researchers analyzing pilot field data"
+
+    We'd just finished a pilot — seven university students visited low-income neighborhoods in Bogota they'd never been to. We had memos the students wrote, open-ended survey responses, and quantitative survey data. Normally, a first pass through qualitative data like this takes days.
+
+    I set up two agents as qualitative researchers from different traditions — one grounded theory, one thematic analysis — and gave them the anonymized memos, open-ended responses, and quantitative results. Their tasks: produce an initial interpretive report, compare the qualitative themes against the survey patterns, and draft best practices for a post-pilot debriefing interview guide.
+
+    Twenty minutes later, we had intelligent first glimpses across the whole dataset. The agents flagged where the memos contradicted the survey numbers — students reported feeling safer in the quantitative data, but their memos focused on discovery and surprise rather than safety. They caught that one survey item moved in an unexpected direction and proposed interview questions to probe it. Each agent emphasized different things depending on their methodological lens, which told us what to pay attention to when we went back to read carefully.
+
+    It didn't replace our own close reading. But it meant we had quick analysis and multiple perspectives immediately — a starting point for reflection rather than starting from scratch. We then used our own custom LLMs for the deeper qualitative analysis.
+
+??? example "Behavioral economists critiquing a research design"
+
+    For the same project, I asked Claude to impersonate three close colleagues of mine — Alex Imas, Leonardo Bursztyn, and Richard Thaler, all behavioral economists at UChicago — and debate our study design.
+
+    "Imas" reframed our entire finding: the treatment wasn't reducing prejudice, it was shifting students' *reference point* for public goods. They'd seen parks in low-income areas that were better than parks in their own wealthy neighborhoods. That's not attitude change — it's a recalibration of what they thought was normal.
+
+    "Bursztyn" was blunt: self-reported attitudes are "essentially worthless" in this context. Students know the right answer. He proposed three revealed-preference measures — including offering students a restaurant gift card redeemable in either their own neighborhood or the one they visited. The choice reveals what they actually believe, not what they'll say on a survey.
+
+    "Thaler" argued we were framing the whole study wrong. This isn't a "contact hypothesis" paper — it's a study about *choice architecture*. The cable car that takes you to the neighborhood *is* the intervention. His proposed title: "The Blank Map: How Elites Think About Neighborhoods They've Never Visited."
+
+    Each persona saw a different paper in the same data. The debate generated a table of nine new measures to add to the full study — none of which were in our original design.
+
+The pattern: give agents distinct identities (methodological traditions, named colleagues, opposing stakeholders) and let the disagreements surface assumptions you hadn't examined. The value isn't in any single perspective — it's in where they clash.
+
+---
+
 ## The Self-Bias Problem
 
 This is the most important reason to use agents for review tasks.

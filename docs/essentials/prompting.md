@@ -14,7 +14,7 @@ This page covers prompt engineering as a repeatable method you can apply to any 
     [Jump to the how-to below.](#make-the-ai-do-this-for-you)
 
     Once you start using Claude Code, you can automate this further with
-    a [`/prompt` skill](../setup/skill-reference.md) that formats and
+    the [`/prompt` skill](../workflows/first-session-skills.md#step-1-structure-your-thinking-prompt) that formats and
     executes prompts in a single command.
 
 ---

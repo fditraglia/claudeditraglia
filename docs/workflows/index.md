@@ -6,6 +6,14 @@ These aren't individual tools — they're **systems** built from skills, integra
 
 <div class="grid cards" markdown>
 
+-   **:material-sync: Prompt, Plan, Review, Revise**
+
+    ---
+
+    A repeatable loop for getting high-quality AI output. Brain-dump an idea, structure it, stress-test it with fresh agents, and capture what you learned. Works on day one — no integrations needed.
+
+    [:octicons-arrow-right-24: Learn the loop](first-session-skills.md)
+
 -   **:material-view-dashboard-outline: Project Management**
 
     ---
@@ -21,14 +29,6 @@ These aren't individual tools — they're **systems** built from skills, integra
     From 5,000 unread emails to inbox zero. Morning briefings, smart triage, calendar queries, and communication drafting — assembled from components over three weeks.
 
     [:octicons-arrow-right-24: Read the full story](../toolkit/executive-assistant.md)
-
--   **:material-format-text: First Session Skills**
-
-    ---
-
-    Three skills that work on day one. No MCP setup, no configuration files, no integrations. Install Claude Code, install these, and get better results immediately.
-
-    [:octicons-arrow-right-24: Get started](first-session-skills.md)
 
 -   **:material-file-document-check-outline: Tax Season Case Study**
 
@@ -48,7 +48,7 @@ The three workflows serve different needs and timelines:
 
 | Workflow | What it solves | Setup time | When to start |
 |----------|---------------|------------|---------------|
-| **First Session Skills** | Better prompts and session capture | 5 minutes | Day 1 |
+| **Prompt, Plan, Review, Revise** | Structured prompts, plan review, session capture | 5 minutes | Day 1 |
 | **Executive Assistant** | Email, calendar, daily workflow | 1-3 weeks of iteration | After MCP is configured |
 | **Project Management** | Multi-project oversight and reporting | 3+ weeks of iteration | After EA basics are working |
 | **Tax Season** | Document collection, compilation, verification | 2-3 hours one-time | When you're comfortable with MCP + skills |

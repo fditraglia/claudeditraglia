@@ -48,13 +48,13 @@ This site covers AI tools for knowledge work — from [chatbot prompting](essent
 
     [:octicons-arrow-right-24: Setup Guide](setup/index.md)
 
--   **:material-format-text: First Session Skills**
+-   **:material-sync: Prompt, Plan, Review, Revise**
 
     ---
 
-    Three skills that require nothing but Claude Code. No integrations needed. Format rough dictation into structured prompts. Stress-test any plan with expert critique. Capture session decisions automatically.
+    A repeatable loop: brain-dump an idea, structure it with `/prompt`, stress-test it with fresh agents via `/review-plan`, and capture what you learned with `/done`. Works on day one — no integrations needed.
 
-    [:octicons-arrow-right-24: First Session Skills](workflows/first-session-skills.md)
+    [:octicons-arrow-right-24: Learn the loop](workflows/first-session-skills.md)
 
 -   **:material-view-dashboard-outline: Project Management with Claude Code**
 

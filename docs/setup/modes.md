@@ -56,4 +56,4 @@ Plan mode is ideal for thinking through changes before committing to them. Claud
 
 ## What's Next
 
-Once you're comfortable with modes, see [First Session Skills](../workflows/first-session-skills.md) for skills that take advantage of them — like `/review-plan` for stress-testing ideas in Plan mode.
+Once you're comfortable with modes, see [Prompt, Plan, Review, Revise](../workflows/first-session-skills.md) for a workflow that puts Plan mode at the center — structuring your thinking, stress-testing plans with `/review-plan`, and capturing what you learned.
