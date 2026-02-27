@@ -63,36 +63,76 @@ graph LR
 === "Before: raw dictation"
 
     ```
-    OK so I want like a website that has all my Claude Code stuff on it,
-    the skills and the workflows and how I set it all up, and it should
-    be aimed at researchers and managers who aren't technical, and I want
-    it to be open source and hosted on GitHub Pages I think, and use
-    that Material for MkDocs thing, and it needs to look good on phones
+    OK so I want to take all of the more polished skills and workflows
+    and knowledge I've developed, both about general AI usage and tools
+    but especially about Claude Code, and push it out as a website. I
+    want it aimed at researchers and managers who aren't that technical,
+    but I also want material for power users who are used to Claude Code
+    but might not have used some of my skills like proposal writing and
+    the review plan stuff.
+
+    I have no idea how to set up or host a website so I need step by
+    step instructions on that — like literally what service to use,
+    how to get a URL, how to make it live, all of it. I want it to be
+    open source and free.
+
+    For the planning I want you to work as two personas. One should be
+    an expert web designer who's used to working with academics and
+    knows how to make documentation sites that don't look terrible. The
+    other should be a Claude Code skills engineer who understands how
+    skills and agents and integrations actually work and can make sure
+    the site structure matches how people would actually learn this.
+    I want the two of them to debate the structure before committing.
+    The designer should push back if it's too technical. The skills
+    engineer should push back if it's too shallow.
+
+    And every instruction on the site needs to be something you can
+    copy and paste. No assumed knowledge. The audience has literally
+    never used a terminal.
     ```
 
 === "After: what /prompt produces"
 
     ```
-    Role: You are an expert web developer experienced with MkDocs Material
-    and static site generators, working with a non-technical academic.
+    Role: You are two experts collaborating on a project plan.
+      Persona 1 — Expert web designer experienced with academic
+      documentation sites. Prioritize clarity, visual hierarchy, and
+      mobile responsiveness. Push back on anything too technical.
+      Persona 2 — Claude Code skills engineer who understands skills,
+      agents, MCP integrations, and CLAUDE.md architecture. Ensure
+      the site structure matches how someone actually learns this
+      system. Push back on anything too shallow.
 
-    Task: Design and build a documentation website for sharing Claude Code
-    skills, workflows, and setup guides.
+    Task: Design and build a documentation website for sharing Claude
+    Code skills, workflows, and setup guides. Debate the site structure
+    between both personas before converging on a single plan.
 
-    Context: The author is a professor who built an AI workflow system and
-    wants to share it publicly. Target audience is researchers and managers
-    with no technical background. The site should serve as both documentation
-    and tutorial.
+    Context: The author is a professor who built an AI workflow system
+    using Claude Code — skills, email triage, meeting capture, project
+    dashboards, proposal writing. He wants to share it publicly.
+    Two audiences: (1) researchers and managers with no technical
+    background who've never opened a terminal, and (2) existing Claude
+    Code users who want advanced skills and workflows.
 
     Constraints:
-    - Use Material for MkDocs (already chosen)
-    - Host on GitHub Pages
-    - Open source (MIT license)
+    - Open source and free to host
     - Mobile-responsive
-    - No assumed technical knowledge in the reader
+    - Every instruction must be copy-pasteable — no assumed knowledge
+    - Recommend the hosting platform and tech stack (the author has
+      no web development experience)
+    - Include step-by-step deployment instructions (domain, hosting,
+      making it live)
+    - The two personas must debate structure before committing
 
-    Output: A complete project plan including site structure, navigation,
-    content outline, and deployment steps.
+    Output: A complete project plan including: recommended tech stack
+    with rationale, site structure, navigation hierarchy, content
+    outline for each page, and step-by-step deployment instructions.
+    Include key disagreements between the personas and how they
+    were resolved.
+
+    Remember: the author has never built a website. If a step requires
+    knowledge he doesn't have, explain it or recommend a service that
+    handles it.
     ```
 
 <!-- TODO: Replace content tabs above with screenshot once prompt-before-after-v1.png is captured -->
@@ -102,55 +142,64 @@ Here's what a well-structured prompt looks like — each section labeled. Not ev
 === "Full example (labeled)"
 
     !!! example "Role"
-        You are an expert web developer experienced with MkDocs Material and static site generators, working with a non-technical academic.
+        You are two experts collaborating. Persona 1 — Expert web designer experienced with academic documentation sites. Push back on anything too technical. Persona 2 — Claude Code skills engineer who understands skills, agents, and integrations. Push back on anything too shallow.
 
     !!! info "Context"
-        The author is a professor who built an AI workflow system using Claude Code — skills, integrations, project management. He wants to share it publicly as a documentation website. Target audience is researchers and managers with no technical background.
+        The author is a professor who built an AI workflow system using Claude Code — skills, email triage, meeting capture, project dashboards, proposal writing. He wants to share it publicly. Two audiences: (1) researchers and managers who've never opened a terminal, and (2) existing Claude Code users who want advanced skills.
 
     !!! success "Task"
-        Design and build a documentation website for sharing Claude Code skills, workflows, and setup guides.
+        Design and build a documentation website for sharing Claude Code skills, workflows, and setup guides. Debate the site structure between both personas before converging on a single plan.
 
     !!! warning "Constraints"
-        - Use Material for MkDocs (already chosen)
-        - Host on GitHub Pages
-        - Open source (MIT license)
+        - Open source and free to host
         - Mobile-responsive
-        - No assumed technical knowledge in the reader
+        - Every instruction must be copy-pasteable — no assumed knowledge
+        - Recommend the hosting platform and tech stack (author has no web dev experience)
+        - Include step-by-step deployment instructions
+        - The two personas must debate structure before committing
 
     !!! quote "Output Format"
-        A complete project plan including site structure, navigation hierarchy, content outline for each page, and deployment steps.
+        A complete project plan including: recommended tech stack with rationale, site structure, navigation hierarchy, content outline, and step-by-step deployment instructions. Include key disagreements and how they were resolved.
 
     !!! tip "Bookend"
-        Remember: the audience has never used a terminal. Every instruction needs to be copy-pasteable. Prioritize clarity over completeness.
+        Remember: the author has never built a website. If a step requires knowledge he doesn't have, explain it or recommend a service that handles it.
 
 === "Just the prompt (copy-paste)"
 
     ```text
-    You are an expert web developer experienced with MkDocs Material
-    and static site generators, working with a non-technical academic.
+    You are two experts collaborating on a project plan.
+    Persona 1 — Expert web designer experienced with academic
+    documentation sites. Push back on anything too technical.
+    Persona 2 — Claude Code skills engineer who understands skills,
+    agents, and integrations. Push back on anything too shallow.
 
     The author is a professor who built an AI workflow system using
-    Claude Code — skills, integrations, project management. He wants
-    to share it publicly as a documentation website. Target audience
-    is researchers and managers with no technical background.
+    Claude Code — skills, email triage, meeting capture, project
+    dashboards, proposal writing. He wants to share it publicly.
+    Two audiences: (1) researchers and managers who've never opened
+    a terminal, and (2) existing Claude Code users who want advanced
+    skills and workflows.
 
     Design and build a documentation website for sharing Claude Code
-    skills, workflows, and setup guides.
+    skills, workflows, and setup guides. Debate the site structure
+    between both personas before converging on a single plan.
 
     Constraints:
-    - Use Material for MkDocs (already chosen)
-    - Host on GitHub Pages
-    - Open source (MIT license)
+    - Open source and free to host
     - Mobile-responsive
-    - No assumed technical knowledge in the reader
+    - Every instruction must be copy-pasteable — no assumed knowledge
+    - Recommend the hosting platform and tech stack (author has no
+      web dev experience)
+    - Include step-by-step deployment instructions
+    - The two personas must debate structure before committing
 
-    Output: A complete project plan including site structure,
-    navigation hierarchy, content outline for each page, and
-    deployment steps.
+    Output: Recommended tech stack with rationale, site structure,
+    navigation hierarchy, content outline, and step-by-step
+    deployment instructions. Include key disagreements and resolutions.
 
-    Remember: the audience has never used a terminal. Every
-    instruction needs to be copy-pasteable. Prioritize clarity
-    over completeness.
+    Remember: the author has never built a website. If a step requires
+    knowledge he doesn't have, explain it or recommend a service
+    that handles it.
     ```
 
 For the full breakdown, see [The Anatomy of a Good Prompt](../essentials/prompting.md#the-anatomy-of-a-good-prompt) and [Depth Calibration](../essentials/prompting.md#depth-calibration) on the Prompt Engineering page.
@@ -206,7 +255,9 @@ Claude reviewing its own plan in the same conversation is like asking someone to
 
 `/review-plan` fixes this. It spins up a **fresh agent** — a separate instance of Claude that has never seen your conversation. That agent reads the plan cold, auto-detects the domain, assigns an appropriate expert persona, researches best practices, and returns a red/yellow/green assessment with specific recommendations.
 
-<!-- TODO: Add screenshot of review-plan scorecard once review-plan-scorecard-v1.png is captured -->
+Here's what a `/review-plan` scorecard looks like — this one is from a review of this very page:
+
+![/review-plan scorecard showing strengths, red/yellow/green findings, and a REVISE verdict](../images/review-plan-scorecard-v1.png){ alt="Terminal output from /review-plan showing best practices context, strengths, color-coded weaknesses and gaps, and a verdict" style="max-width: 720px" }
 
 **Install:**
 ```bash
@@ -224,6 +275,30 @@ curl -o ~/.claude/commands/review-plan.md \
 
 **Iteration matters.** I ran `/review-plan` twice on the website plan. The first round caught structural problems — missing pages, unclear navigation. The second round, with the tutorial expert leading, caught usability issues — jargon, assumed knowledge, missing prerequisites. Each round took about five minutes.
 
+??? example "Example: Reviewing this very page"
+
+    I ran `/review-plan` on this page — the one you're reading now — with a "technical documentation and learning experience specialist" persona. It came back with a REVISE verdict and three red flags:
+
+    - **No prerequisites** — The page never states you need Claude Code installed. A newcomer arriving via search has no entry point.
+    - **No invocation instructions** — After installing `/prompt` via curl, the reader is never told: open terminal, run `claude`, type `/prompt [text]`. The entire slash-command mechanism is assumed knowledge.
+    - **Passive structure** — The reader scrolls through all four steps before doing anything. No "try it now" moment.
+
+    It also flagged six yellow issues: CLAUDE.md should be mentioned earlier, no single install-all block, "Shift+Tab" lacks context about where you're pressing it, the persona technique is described but not explained mechanically, `/done` overpromises on automatic context loading, and skills may need a Claude Code restart to appear.
+
+    The scorecard above is the actual output from that review.
+
+??? example "Example: Three personas reviewing the whole site"
+
+    For a broader review, I ran `/review-plan` on the entire site structure with three personas: a department chair who's never used a terminal (**The Newcomer**), an advanced Claude Code user (**The Power User**), and a professional documentation site developer (**The Web Hosting Expert**).
+
+    They found different problems:
+
+    - **The Newcomer** flagged that cost and account setup are buried at the bottom of the Setup page — but that's the first decision someone actually needs to make. There's also no preview of what Claude Code looks like before you commit to installing it.
+    - **The Power User** pointed out the Advanced section labels all its pages "Initial content" in a status column — which signals the most valuable section for experienced users is unfinished, even when the pages are actually solid.
+    - **The Web Hosting Expert** caught that the Tax Workflow is a top-level nav tab alongside Setup and Essentials, when it should be nested inside Workflows. A structural error that makes the site look unfinished.
+
+    The three agreed on a joint top-3: move Tax Workflow inside Workflows, put cost/account setup first in the Setup flow, and remove the "Initial content" labels that undercut finished pages. Each review took about five minutes.
+
 ---
 
 ## Step 4: Close the loop — `/done`
@@ -231,6 +306,8 @@ curl -o ~/.claude/commands/review-plan.md \
 `/done` captures key decisions, open questions, and follow-ups from your current session. It writes a structured handoff note so your next session starts with context instead of from scratch.
 
 Over time, this builds a searchable history of what you've done across sessions. It's the simplest skill here — and the one you'll use most often.
+
+`/done project` goes further — it writes a handoff note anchored to a specific project directory. The next time you open Claude Code in that directory, the handoff is automatically loaded. This means you can close your laptop, switch to a different machine, or come back three days later, and the session picks up where you left off. It's how I keep continuity across the dozen or so projects I work on simultaneously.
 
 **Install:**
 ```bash
@@ -242,6 +319,7 @@ curl -o ~/.claude/commands/done.md \
 ```
 /done              # Full capture
 /done quick        # Abbreviated (decisions + follow-ups only)
+/done project      # Write a project-level handoff (auto-loads next session)
 /done project:xyz  # Tag with a project name
 ```
 
