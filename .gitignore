@@ -7,3 +7,5 @@ planning/
 .env
 credentials/
 *.json.bak
+.claude/
+HANDOFF.md
