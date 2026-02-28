@@ -3,7 +3,7 @@ site/
 __pycache__/
 *.pyc
 .DS_Store
-planning/
+# planning/ — tracked; contains Francis's working docs for this fork
 .env
 credentials/
 *.json.bak
